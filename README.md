@@ -11,7 +11,7 @@ documents, and check the sources behind each answer.
 Gemma trích xuất và viết câu trả lời. JEV kiểm tra từng phát biểu với nguồn được
 trích dẫn. Người dùng chọn kho tri thức, internet hoặc kết hợp cả hai.
 
-![Giao diện Graph của Bloop: chọn nguồn, tìm tên, xem node và nhập PDF](/web/frontend/assets/workspace-preview.png)
+![Giao diện Graph của Bloop: chọn nguồn, tìm tên, xem node và nhập PDF](web/frontend/assets/workspace-preview.png)
 
 *Ảnh từ browser fixture với dữ liệu mẫu.*
 
@@ -109,11 +109,11 @@ gate; kết quả có citations, `verification_status`, `trace_id`, snapshot và
 
 | Nhu cầu | Cách xử lí và bằng chứng cụ thể |
 | --- | --- |
-| Giữ đường về PDF gốc | Units lưu page, bbox và offsets; quote phải có trong nguồn. [Test provenance và quote](backend/tests/test_pipeline_update.py). |
-| Tránh draft tự xác nhận đúng | JEV nhận request riêng. Test giả lập `unknown` trả `insufficient`, không phát hành draft. [Test independent verifier](backend/tests/test_pipeline_update.py). |
-| Tìm được cả thông tin ngoài graph | Snapshot đã kiểm tra có **120 PDF / 28.850 source units**; retrieval tìm cả text, graph và ontology. [Đường retrieval](backend/knowledge_store.py). |
-| Giữ retrieval khi reranker lỗi | Qwen lỗi thì giữ thứ tự retrieval, vẫn kiểm chứng câu trả lời. Pool ≤10 bỏ rerank. [Tests fallback và pool nhỏ](backend/tests/test_harness.py). |
-| Giữ tên và nguồn tách biệt | Namespace riêng; giữ dấu `tri` / `trĩ`; dedup theo nguồn/ngữ cảnh và giữ các assertion khác nhau để kiểm tra. [Tests identity và masks](backend/tests/test_pipeline_update.py). |
+| Giữ đường về PDF gốc | Units lưu page, bbox và offsets; quote phải có trong nguồn. [Test provenance và quote](web/backend/tests/test_pipeline_update.py). |
+| Tránh draft tự xác nhận đúng | JEV nhận request riêng. Test giả lập `unknown` trả `insufficient`, không phát hành draft. [Test independent verifier](web/backend/tests/test_pipeline_update.py). |
+| Tìm được cả thông tin ngoài graph | Snapshot đã kiểm tra có **120 PDF / 28.850 source units**; retrieval tìm cả text, graph và ontology. [Đường retrieval](web/backend/knowledge_store.py). |
+| Giữ retrieval khi reranker lỗi | Qwen lỗi thì giữ thứ tự retrieval, vẫn kiểm chứng câu trả lời. Pool ≤10 bỏ rerank. [Tests fallback và pool nhỏ](web/backend/tests/test_harness.py). |
+| Giữ tên và nguồn tách biệt | Namespace riêng; giữ dấu `tri` / `trĩ`; dedup theo nguồn/ngữ cảnh và giữ các assertion khác nhau để kiểm tra. [Tests identity và masks](web/backend/tests/test_pipeline_update.py). |
 
 Snapshot trên được kiểm tra ngày **15/10/2026**. Các tests xác nhận hành vi của
 pipeline; chưa phải phép đo độ đúng của mọi câu trả lời trên toàn corpus.
@@ -130,22 +130,6 @@ pipeline; chưa phải phép đo độ đúng của mọi câu trả lời trên
 
 `KNOWLEDGE_BM25=0` chuyển sang candidate lookup FTS giữ dấu. Thiếu JEV key hoặc
 verifier lỗi thì kết quả chưa được xác minh; NER và Qwen không thay answer gate.
-
-### BamiBERT: context dài có giúp không?
-
-Đã chạy lại trên **RTX 3060**, FP32, batch16, ba lượt warm và cùng checkpoint:
-
-| Bami raw | Đúng trong 27 span có gold khi đọc cả trang | Warm trên 128 trang | Peak CUDA allocated |
-| --- | ---: | ---: | ---: |
-| 128 token | 3/27 | 3,361 giây | 466 MiB |
-| 512 token | 3/27 | 3,358 giây | 668 MiB |
-| 1024 token | 2/27 | 3,962 giây | 944 MiB |
-
-Checkpoint chạy được 512/1024; **128 không phải trần inference**. 20 ca gold ngắn
-đều dưới 128 token nên F1 không đổi. Sau SaT, unit dài nhất chỉ 470 subword, nên
-512 và 1024 tạo cùng windows. Phép thử này chưa cho thấy tăng recall nhờ context
-dài; 27 span chỉ là gold một phần, không dùng để tính precision/F1 toàn trang.
-Timing chưa gồm khởi động model, parse PDF hoặc xây index.
 
 ## Chọn nguồn và effort
 
@@ -190,13 +174,13 @@ draft sections, verdict, snapshot và usage. Không lưu khóa API hoặc chuỗ
 
 | File | Nhiệm vụ |
 | --- | --- |
-| [main.py](backend/main.py) | FastAPI, upload, Graph và SSE |
-| [ingestion.py](backend/ingestion.py), [document_jobs.py](backend/document_jobs.py) | Parse PDF, extraction, admission và checkpoint |
-| [knowledge_store.py](backend/knowledge_store.py) | Import ontology, snapshot và retrieval |
-| [harness.py](backend/harness.py) | Planner, budget, chọn nguồn và answer gate |
-| [evidence.py](backend/evidence.py), [reranking.py](backend/reranking.py) | Masks, dedup, coverage packing và Qwen |
-| [internet.py](backend/internet.py) | JEV typed Choice API, search và đọc web |
-| [schemas](backend/schemas), [evidence policy](backend/policies/evidence_policy.json) | Hợp đồng JSON và policy bằng chứng |
+| [main.py](web/backend/main.py) | FastAPI, upload, Graph và SSE |
+| [ingestion.py](web/backend/ingestion.py), [document_jobs.py](web/backend/document_jobs.py) | Parse PDF, extraction, admission và checkpoint |
+| [knowledge_store.py](web/backend/knowledge_store.py) | Import ontology, snapshot và retrieval |
+| [harness.py](web/backend/harness.py) | Planner, budget, chọn nguồn và answer gate |
+| [evidence.py](web/backend/evidence.py), [reranking.py](web/backend/reranking.py) | Masks, dedup, coverage packing và Qwen |
+| [internet.py](web/backend/internet.py) | JEV typed Choice API, search và đọc web |
+| [schemas](web/backend/schemas), [evidence policy](web/backend/policies/evidence_policy.json) | Hợp đồng JSON và policy bằng chứng |
 
 ## Kiểm tra
 
@@ -224,3 +208,42 @@ mà frontend đang dùng. `backend/tests/smoke_live.py` là phép thử riêng c
   Chất lượng nội dung vẫn cần kiểm định riêng trên gold chuyên gia.
 - `.env`, model cache, `docs/` và `mascot_creator/` là tài nguyên local được ignore;
   giữ `.env.example` để chia sẻ cấu hình mà không đưa key vào source.
+
+## References / Nguồn tham khảo
+
+### Dữ liệu và ontology
+
+| Nguồn | Vai trò trong dự án |
+| --- | --- |
+| [VietHerb — Vietnamese Herbal Medicine Database](https://vietherb.com.vn/) | Nguồn tham khảo về dữ liệu dược liệu Việt Nam |
+| [MeSH trên NCBO BioPortal](https://bioportal.bioontology.org/ontologies/MESH), [MeSH — U.S. National Library of Medicine](https://www.nlm.nih.gov/mesh/meshhome.html) | Thuật ngữ y sinh và quan hệ phân cấp cho nhánh MeSH; backend đọc bản TTL local |
+| [VietHerbs / VHO](knowledge/VietHerbs/VHO.owl) | Ontology local cho nhánh VietHerbs; giữ URI và assertion của nguồn |
+
+PDF được chuẩn bị riêng trong `Dataset/` hoặc nhập qua giao diện. Trích dẫn trong
+câu trả lời trỏ về tài liệu/trang hoặc URL cụ thể đã dùng làm bằng chứng.
+
+### Mã nguồn, mô hình và skill
+
+| Nguồn | Phần được sử dụng |
+| --- | --- |
+| [AI Powered Knowledge Graph Generator — Robert McDermott](https://github.com/robert-mcdermott/ai-knowledge-graph) | Thư viện graph trong `knowledge/ai-knowledge-graph`; tái sử dụng graph index và truy hồi lân cận |
+| [Medical Research Skills — AIPOCH](https://github.com/aipoch/medical-research-skills) | Nguồn tham khảo cho kỹ năng nghiên cứu, kiểm tra claim/citation và văn phong y khoa; đã clone, chưa nạp vào runtime. [Danh sách skill và phiên bản](web/references/README.md) |
+| [PyMuPDF](https://github.com/pymupdf/PyMuPDF), [PyOxigraph](https://github.com/oxigraph/oxigraph/tree/main/python) | Đọc PDF và parse ontology RDF/OWL |
+| [Qdrant/bm25](https://huggingface.co/Qdrant/bm25), [FastEmbed](https://github.com/qdrant/fastembed), [Qdrant Client](https://github.com/qdrant/qdrant-client) | Tạo sparse vectors và truy hồi BM25 |
+| [Qwen3-Reranker-0.6B](https://huggingface.co/Qwen/Qwen3-Reranker-0.6B) | Reranking local cho bằng chứng |
+| [Hugging Face Transformers](https://github.com/huggingface/transformers), [PyTorch](https://pytorch.org/) | Runtime cho mô hình local |
+| [FastAPI](https://github.com/fastapi/fastapi), [Uvicorn](https://github.com/encode/uvicorn) | API backend, upload và SSE |
+| [daisyUI](https://github.com/saadeghi/daisyui) | Các component giao diện |
+| [vis-network](https://github.com/visjs/vis-network), [Marked](https://github.com/markedjs/marked), [DOMPurify](https://github.com/cure53/DOMPurify) | Hiển thị graph, render Markdown và làm sạch HTML |
+| [DDGS](https://github.com/deedy5/ddgs), [SearXNG](https://github.com/searxng/searxng) | Các đường tìm kiếm web theo cấu hình |
+| [Crawl4AI](https://github.com/unclecode/crawl4ai), [Jina Reader](https://github.com/jina-ai/reader) | Đọc nội dung trang nguồn; Crawl4AI là lựa chọn cấu hình riêng |
+| [PhoBERT Medical NER](https://huggingface.co/nnguyen96/phobert-medical-finetuned_ner), [BamiBERT-ViMedNER](https://huggingface.co/cbc-528a/BamiBERT-ViMedNER) | Các checkpoint NER đã dùng trong thử nghiệm, chưa nằm trong runtime |
+
+### Dịch vụ suy luận và tìm kiếm
+
+[FPT Cloud](https://fptcloud.com/) cung cấp endpoint Gemma đang cấu hình;
+[TypeSafe / JEV](https://docs.typesafe.ai/introduction/quickstart) cung cấp typed
+decisions và verification. [Brave Search API](https://brave.com/search/api/) là
+một lựa chọn provider tìm kiếm. Các dịch vụ này được ghi nhận riêng với các thư
+viện mã nguồn mở ở trên; từng nguồn dữ liệu, mô hình và dịch vụ có điều khoản sử
+dụng riêng.
