@@ -1,0 +1,935 @@
+subject,predicate,object,subject_type,object_type,inferred,method,via,chunk,document,source
+chỉ catgut,sử dụng trong,nhu châm,product,technology,false,,,1,10+Le+La+Vuong+Linh.pdf,Bài báo đánh giá hiệu quả của phương pháp nhu châm (cấy chỉ catgut)
+nhu châm,giảm,điểm đau vas,technology,concept,false,,,1,10+Le+La+Vuong+Linh.pdf,"kết quả cho thấy điểm đau VAS trung bình giảm mạnh từ 7,78"
+nhu châm,đạt,phục hồi hoàn toàn,technology,concept,false,,,1,10+Le+La+Vuong+Linh.pdf,"Tỷ lệ phục hồi hoàn toàn đạt 88,33%"
+nhu châm,đạt,đáp ứng tổng thể,technology,concept,false,,,1,10+Le+La+Vuong+Linh.pdf,tỷ lệ đáp ứng tổng thể đạt 100%
+thoát vị đĩa đệm,điều trị bằng,nhu châm,concept,technology,false,,,1,10+Le+La+Vuong+Linh.pdf,đánh giá hiệu quả của phương pháp nhu châm (cấy chỉ catgut)
+nhu châm,là,giải pháp an toàn,technology,concept,false,,,1,10+Le+La+Vuong+Linh.pdf,"nhu châm là giải pháp can thiệp có hiệu quả cao, an toàn"
+sản phụ khoa,khảo sát,mô hình bệnh tật,concept,concept,false,,,1,1039-Văn bản của bài báo-13154-1-10-20221010.pdf,khảo sát mô hình bệnh tật và tình hình điều trị các bệnh lý sản phụ khoa
+dọa sảy thai,là,bệnh sản phụ khoa,concept,concept,false,,,1,1039-Văn bản của bài báo-13154-1-10-20221010.pdf,
+u xơ tử cung,là,bệnh sản phụ khoa,concept,concept,false,,,1,1039-Văn bản của bài báo-13154-1-10-20221010.pdf,"sa sinh dục, u xơ tử cung, áp xe vú"
+sản phụ khoa,điều trị bằng,nội khoa,concept,concept,false,,,1,1039-Văn bản của bài báo-13154-1-10-20221010.pdf,Phương pháp điều trị chủ yếu là nội khoa
+y học cổ truyền,kết hợp,y học hiện đại,concept,concept,false,,,1,1039-Văn bản của bài báo-13154-1-10-20221010.pdf,nội khoa kết hợp Y học cổ truyền và Y học hiện đại
+lưỡng địa thang,điều trị,rong kinh,product,concept,false,,,1,1068-Văn bản của bài báo-13149-1-10-20221010.pdf,
+lưỡng địa thang,giảm,điểm blatt kuperman,product,concept,false,,,1,1068-Văn bản của bài báo-13149-1-10-20221010.pdf,
+lưỡng địa thang,cải thiện,triệu chứng tiền mãn kinh,product,concept,false,,,1,1068-Văn bản của bài báo-13149-1-10-20221010.pdf,
+y học cổ truyền,khảo sát,thực trạng sử dụng,concept,concept,false,,,1,12.pdf,
+thoái hóa cột sống,điều trị bằng,phương pháp kết hợp,concept,concept,false,,,1,121.pdf,mô hình phối hợp YHCT và YHHĐ trong điều trị thoái hóa cột sống
+yhct,sử dụng nhiều,thuốc thành phẩm,concept,product,false,,,1,121.pdf,
+yhct,kết hợp,y học hiện đại,concept,concept,false,,,1,121.pdf,thuốc thành phẩm YHCT kết hợp thuốc YHHĐ
+thoái hóa cột sống,điều trị bằng,mô hình phối hợp,concept,concept,false,,,1,121.pdf,mô hình phối hợp YHCT và YHHĐ trong điều trị thoái hóa cột sống
+thoái hóa cột sống,điều trị bằng,y học cổ truyền,,concept,false,,,2,121.pdf,nghiên cứu ghi nhận điều trị THCS tại hai cơ sở
+cấy chỉ,điều trị,thoái hóa cột sống,technology,,false,,,2,121.pdf,với các kỹ thuật được sử dụng nhiều nhất là cấy chỉ
+xoa bóp bấm huyệt,điều trị,thoái hóa cột sống,technology,,false,,,2,121.pdf,
+châm cứu,điều trị,thoái hóa cột sống,technology,,false,,,2,121.pdf,
+thoái hóa cột sống,hỗ trợ,giảm đau,,concept,false,,,2,121.pdf,
+thoái hóa cột sống,cải thiện,chức năng vận động,,concept,false,,,2,121.pdf,nhằm hỗ trợ giảm đau và cải thiện chức năng vận động
+y học cổ truyền,phối hợp,y học hiện đại,concept,concept,false,,,2,121.pdf,
+phục hồi chức năng,điều trị,thoái hóa cột sống,technology,,false,,,2,121.pdf,mô hình kết hợp các biện pháp phục hồi chức năng và vật lý trị liệu
+y học cổ truyền,sử dụng,thuốc thang,concept,product,false,,,2,121.pdf,hình thức phối hợp sử dụng thuốc thang YHCT chiếm tỷ lệ thấp
+bệnh viện y học cổ truyền tp.hcm,áp dụng,xoa bóp bấm huyệt,organization,technology,false,,,2,121.pdf,
+bệnh viện đại học y dược tp.hcm,áp dụng,vật lý trị liệu,organization,technology,false,,,2,121.pdf,"tại bệnh viện Đại học Y Dược TP.HCM – Cơ sở 3, các phương pháp YHHĐ"
+thoái hóa cột sống,được điều trị,y học cổ truyền–y học hiện đại,,concept,false,,,2,121.pdf,
+người cao tuổi,sử dụng,y học cổ truyền,person,concept,false,,,2,121.pdf,
+táo bón chức năng,tỷ lệ,"8,9%",,concept,false,,,2,13(7)_2023_08.pdf,
+táo bón chức năng,cần điều trị,y học cổ truyền,,concept,false,,,2,13(7)_2023_08.pdf,
+nữ giới,tỷ lệ cao,nam giới,person,person,false,,,2,13(7)_2023_08.pdf,
+táo bón chức năng,biểu hiện,hư chứng,,concept,false,,,2,13(7)_2023_08.pdf,"Theo Y học cổ truyền, hư chứng: 65,0%"
+táo bón chức năng,biểu hiện,thực chứng,,concept,false,,,2,13(7)_2023_08.pdf,"thực chứng: 60,0%"
+táo bón chức năng,biểu hiện,thể khí uất trệ,,concept,false,,,2,13(7)_2023_08.pdf,
+xoa bóp bấm huyệt,điều trị,táo bón chức năng,technology,,false,,,2,13(7)_2023_08.pdf,
+stress,li quan,táo bón chức năng,concept,,false,,,2,13(7)_2023_08.pdf,"có sự khác biệt có ý nghĩa thống kê giữa lo âu, stress với táo bón"
+thoái hóa khớp gối,điều trị bằng,điện châm,,technology,false,,,2,13(7)_2023_13.pdf,nghiên cứu hiệu quả điều trị thoái hóa khớp gối bằng điện châm
+tam tỷ thang,điều trị,thoái hóa khớp gối,product,,false,,,2,13(7)_2023_13.pdf,
+xông hơi thuốc,điều trị,thoái hóa khớp gối,technology,,false,,,2,13(7)_2023_13.pdf,
+điểm vas,giảm,"1,60",concept,concept,false,,,2,13(7)_2023_13.pdf,"Điểm VAS trung bình giảm còn 1,60 ± 1,32"
+chỉ số lequesne,giảm,"5,01",concept,concept,false,,,2,13(7)_2023_13.pdf,
+chỉ số womac,giảm,"74,69%",concept,concept,false,,,2,13(7)_2023_13.pdf,
+tầm vận động khớp gối,tăng,"129,410",concept,concept,false,,,2,13(7)_2023_13.pdf,
+chỉ số gót-mông,giảm,"8,95",concept,concept,false,,,2,13(7)_2023_13.pdf,
+thoái hóa khớp gối,biểu hiện,phong hàn thấp,,concept,false,,,2,13(7)_2023_13.pdf,
+tim mạch,liên quan,tăng huyết áp,,concept,false,,,2,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+tim mạch,điều trị bằng,y học cổ truyền,,concept,false,,,2,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+người dân,nên dùng,5g muối,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,"Theo khuyến cáo của WHO, mỗi người chỉ nên dùng 5g muối/người/ngày."
+người việt nam,ăn,nhiều muối,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,"Trên thực tế, người Việt Nam chúng ta đang có khuynh hướng ăn khá nhiều muối."
+who,khuyến cáo,400 gam rau củ,organization,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+kém hoạt động thể lực,định nghĩa,30 phút mỗi ngày,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,"Theo Tổ chức Y tế thế giới (2011), kém hoạt động thể lực được định nghĩa như sau"
+nghiên cứu,khảo sát,300 người bệnh,work,person,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,Qua khảo sát 300 người bệnh tại Bệnh viện Y học cổ truyền Hải Phòng được chẩn đoán mắc bệnh hệ tim mạch
+bệnh tim mạch,mặc,tăng huyết áp phát,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,tại Bệnh viện Y học cổ truyền Hải Phòng được chẩn đoán mắc bệnh hệ tim mạch
+hưu trí,chiếm,tỷ lệ cao,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+nam giới,chiếm,tỷ lệ cao,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,"Nhận xét: Nam giới chiếm tỷ lệ 52,33% cao hơn nữ giới"
+tuổi trên 60,chiếm,phần lớn,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+bmi,ở tình trạng,thừa cân béo phì,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,"Nhận xét: Phần lớn người bệnh có chỉ số khối của cơ thể ở tình trạng thừa cân, béo phì chiếm 80,33%"
+vòng eo,tăng,hơn bình thường,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+tiền sử gia đình,mắc,bệnh tim mạch,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,"Nhận xét: đối tượng nghiên cứu có tiền sử mắc các bệnh về tim mạch chiếm 35,67%."
+tăng huyết áp phát,thuộc,chứng huyễn vựng,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,Phần lớn đối tượng nghiên cứu được chẩn đoán mắc tăng huyết áp nguyên phát thuộc chứng Huyễn vựng
+hút thuốc lá,liên quan,tăng huyết áp phát,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,Nhận xét: đối tượng nghiên cứu có hút thuốc lá chiếm tỷ lệ là 26%.
+ăn mặn,liên quan,"huyễn vựng, chứng nuy",concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,"100% người bệnh đều có thói quen ăn mặn, sự khác biệt có ý nghĩa thống kê với p < 0,05"
+ăn rau củ quả,không đạt,tiêu chuẩn,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+kém hoạt động thể lực,chiếm,tỷ lệ thấp,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+uống rượu bia,ở mức nguy,nguy cơ,concept,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+yhct kết hợp yhhđ,có kết quả,đỡ,technology,concept,false,,,3,13. Luận văn Nguyễn Thị Thùy Lê.pdf,
+hậu covid-19,gây,suy giảm sức khỏe,concept,concept,false,,,3,14(1)_2024_25.pdf,Những người có tình trạng hậu COVID-19 khiến sức khỏe bị suy giảm
+hậu covid-19,biểu hiện,dễ quên,concept,concept,false,,,3,14(1)_2024_25.pdf,
+hậu covid-19,biểu hiện,mệt mỏi,concept,concept,false,,,3,14(1)_2024_25.pdf,
+hậu covid-19,biểu hiện,rụng tóc,concept,concept,false,,,3,14(1)_2024_25.pdf,"rụng tóc (42,6%)"
+tạng thận,triệu chứng chính,"dễ quên, rụng tóc",concept,concept,false,,,3,14(1)_2024_25.pdf,"tạng Thận, triệu chứng chính là dễ quên và rụng tóc"
+tạng tỳ,triệu chứng chính,mệt mỏi,concept,concept,false,,,3,14(1)_2024_25.pdf,"tạng Tỳ, triệu chứng chính là mệt mỏi"
+tạng phế,triệu chứng chính,hụt hơi,concept,concept,false,,,3,14(1)_2024_25.pdf,"tạng Phế, triệu chứng chính là hụt hơi"
+tạng can,triệu chứng chính,khó ngủ,concept,concept,false,,,3,14(1)_2024_25.pdf,"tạng Can, triệu chứng chính là khó ngủ"
+tạng tâm,triệu chứng chính,"rối loạn ý, mất ngủ",concept,concept,false,,,3,14(1)_2024_25.pdf,
+mề đay,thuộc thể,phong hàn,concept,concept,false,,,3,14(3)_2024_17.pdf,
+mề đay,thuộc thể,phong nhiệt,concept,concept,false,,,3,14(3)_2024_17.pdf,
+mề đay,thuộc thể,vị trường thấp nhiệt,concept,concept,false,,,3,14(3)_2024_17.pdf,"thể vị trường thấp nhiệt (13,0%)"
+mề đay,thuộc thể,khí huyết lưỡng hư,concept,concept,false,,,3,14(3)_2024_17.pdf,"thể khí huyết lưỡng hư (13,0%)"
+mề đay,biểu hiện,ngứa rất nhiều,concept,concept,false,,,3,14(3)_2024_17.pdf,
+mề đay,biểu hiện,mạch phù,concept,concept,false,,,3,14(3)_2024_17.pdf,
+mề đay,biểu hiện,chất lưỡi hồng,concept,concept,false,,,3,14(3)_2024_17.pdf,
+mề đay,phân loại,mề đay mãn tính,concept,concept,false,,,4,14(3)_2024_17.pdf,"The EAACI/GA(2)LEN/EDF/ WAO guideline for the definition, classification, diagnosis and management of urticaria."
+mề đay,nghiên cứu tại,đặc điểm lâm sàng,concept,concept,false,,,4,14(3)_2024_17.pdf,Đặc điểm lâm sàng và các yếu tố liên quan trên bệnh nhân Mề đay đến khám tại Bệnh viện Da liễu Thành phố Hồ Chí Minh
+mề đay,liên quan,hormone sinh dục,concept,concept,false,,,4,14(3)_2024_17.pdf,Sex hormones and urticaria.
+kháng thể ige,xét nghiệm,lẩy da trên bệnh nhân mày đay,concept,concept,false,,,4,14(3)_2024_17.pdf,Kháng thể IgE đặc hiệu và xét nghiệm lẩy da trên bệnh nhân mày đay.
+mề đay,phổ biến tại,"makkah, saudi ập xê",concept,place,false,,,4,14(3)_2024_17.pdf,"The Prevalence of Urticaria and Its Clinical Patterns in Makkah, Saudi Arabia."
+y học cổ truyền,giáo trình về,da liễu,concept,concept,false,,,4,14(3)_2024_17.pdf,Giáo trình Da liễu y học cổ truyền.
+y học cổ truyền,chẩn đoán bằng,tứ chẩn,concept,concept,false,,,4,14(3)_2024_17.pdf,"Tứ chẩn, Đông Y Toàn Tập."
+đau cột sống thắt lưng,liên quan,chức năng tạng thận,concept,concept,false,,,4,14(7)_2024_22.pdf,Nghiên cứu một số yếu tố liên quan đến đặc điểm chức năng tạng thận theo y học cổ truyền ở bệnh nhân đau cột sống thắt lưng
+đau cột sống thắt lưng,biểu hiện là,thận âm hư,concept,concept,false,,,4,14(7)_2024_22.pdf,"Bệnh nhân đau cột sống thắt lưng có ảnh hưởng đến chức năng tạng Thận 52,7%, trong đó thận âm hư chiếm tỷ lệ cao nhất 32,0%."
+thận âm hư,liên quan,độ tuổi,concept,concept,false,,,4,14(7)_2024_22.pdf,Về mối liên quan giữa chức năng tạng Thận với độ tuổi
+đau cột sống thắt lưng,tên gọi là,yêu thống,concept,concept,false,,,4,14(7)_2024_22.pdf,"Theo Y học cổ truyền, đau cột sống thắt lưng có bệnh danh là Yêu thống"
+đau thắt lưng,nguyên nhân,thận hư,concept,concept,false,,,4,14(7)_2024_22.pdf,"Thận chủ âm dương của cơ thể, tàng tinh, hóa khí, chủ cốt tuỷ."
+covid-19,phân loại bằng,mô hình cây tiềm ẩn,concept,concept,false,,,4,1563-Văn bản của bài báo-5097-2-10-20240324.pdf,
+covid-19 mức nhẹ,nguyên nhân do,"dị khí, dịch khí",concept,concept,false,,,4,1563-Văn bản của bài báo-5097-2-10-20240324.pdf,
+covid-19 nhẹ,biểu hiện tại,vệ phận,concept,concept,false,,,4,1563-Văn bản của bài báo-5097-2-10-20240324.pdf,Qua phân tích LTMs ghi nhận 2 bệnh cảnh Covid-19 theo YHCT là bệnh tại vệ phận và bệnh tại khí phận.
+covid-19 nhẹ,biểu hiện tại,khí phận,concept,concept,false,,,4,1563-Văn bản của bài báo-5097-2-10-20240324.pdf,bệnh cảnh Covid-19 theo YHCT là bệnh tại vệ phận và bệnh tại khí phận.
+vệ phận,triệu chứng,"phát sốt, sợ gió",concept,concept,false,,,4,1563-Văn bản của bài báo-5097-2-10-20240324.pdf,
+khí phận,triệu chứng,"sắc mặt đỏ, môi khô",concept,concept,false,,,4,1563-Văn bản của bài báo-5097-2-10-20240324.pdf,
+covid-19 nhẹ,điều trị bằng,ngân kiều tán,concept,concept,false,,,4,1563-Văn bản của bài báo-5097-2-10-20240324.pdf,
+nhồi máu não giai đoạn cấp,thuộc,hậu trúng phong,concept,concept,false,,,4,172.pdf,
+nhồi máu não,sử dụng,"đương quy, hoàng kỳ",concept,concept,false,,,4,172.pdf,
+đương quy,tần suất cao,vị thuốc,concept,concept,false,,,4,172.pdf,tần suất cao nhất bao gồm Đương quy
+nhồi máu não,phối hợp,"bổ huyết, hoạt huyết",concept,concept,false,,,4,172.pdf,"mạng lưới phối hợp cho thấy các vị bổ huyết, bổ khí và hoạt huyết giữ vị trí trung tâm"
+địa long,xuất hiện trong,tổ hợp,concept,concept,false,,,4,172.pdf,Địa long thường đồng xuất hiện trong các tổ hợp phối hợp có confidence cao
+ung thư,sử dụng,y học cổ truyền giảm nhẹ,concept,concept,false,,,4,1815-Article Text-2670-1-10-20230701.pdf,Phân tích thực trạng sử dụng các phương pháp y học cổ truyền trong chăm sóc giảm nhẹ
+triệu chứng đau,điều trị,bệnh nhân ung thư,concept,concept,false,,,4,1815-Article Text-2670-1-10-20230701.pdf,"77,1% đã từng sử dụng YHCT để CSGN triệu chứng đau"
+mệt mỏi,điều trị,bệnh nhân ung thư,concept,concept,false,,,4,1815-Article Text-2670-1-10-20230701.pdf,
+rối loạn giấc ngủ,điều trị,bệnh nhân ung thư,concept,concept,false,,,4,1815-Article Text-2670-1-10-20230701.pdf,
+hội chứng thắt lưng hông,nguyên nhân,thoái hóa sống,concept,concept,false,,,4,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,Hội chứng thắt lưng hông là một bệnh lý phổ biến gây ra bởi tổn thương
+hội chứng thắt lưng hông,điều trị bằng,y học và cổ truyền,concept,concept,false,,,4,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,
+hội chứng thắt lưng hông,liệu pháp,châm cứu,concept,concept,false,,,4,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,Phương pháp điều trị chủ yếu sử dụng các biện pháp như châm cứu
+nhóm tuổi trên 60,gây ra,lão hóa,concept,concept,false,,,5,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,nhóm tuổi trên 60. Nguyên nhân có thể do tuổi càng cao thì cơ thể có nhiều chuyển biến
+nữ giới,hồi phục chậm,hctlh,concept,concept,false,,,5,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,"theo nghiên cứu của Wilco C Peul, nữ giới có tốc độ hồi phục chậm hơn"
+giới tính,không ảnh hưởng,kết quả điều trị,concept,concept,false,,,5,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,
+thời gian mắc bệnh,ảnh hưởng,sự cải thiện kém,concept,concept,false,,,5,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,thời gian đau thần kinh hông to kéo dài là một trong những yếu tố độc lập ảnh hưởng tới sự cải thiện kém
+y học hiện đại,tập trung,nguyên nhân cơ học,concept,concept,false,,,5,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,
+y học cổ truyền,tập trung vào,cân bằng tổng thể,concept,concept,false,,,5,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,Y học cổ truyền lại tập trung vào sự cân bằng tổng thể của cơ thể
+y học hiện đại,kối hợp,y học cổ truyền,concept,concept,false,,,5,2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf,Sự phối hợp giữa y học hiện đại và y học cổ truyền có thể mang lại lợi ích toàn diện hơn
+thoái hóa khớp,ảnh hưởng bởi,thời tiết,concept,concept,false,,,5,2022_1_15.pdf,Khảo sát mối liên quan giữa điều kiện thời tiết với tính chất đau dựa theo thang điểm VAS
+nhiệt độ,có tương quan,đau khớp,concept,concept,false,,,5,2022_1_15.pdf,
+độ ẩm,có tương quan,đau khớp,concept,concept,false,,,5,2022_1_15.pdf,"độ ẩm (r=0,508, p<0,05)"
+áp suất khí quyển,không ảnh hưởng,đau khớp,concept,concept,false,,,5,2022_1_15.pdf,
+độ ẩm,tương tác,đau khớp,concept,concept,false,,,5,2022_1_15.pdf,
+tình trạng sức khỏe dưới tối ưu,có ở,sinh viên,concept,concept,false,,,5,2022_3_08.pdf,"Tỷ lệ có SHS là 13,8%. Trong số những sinh viên có SHS, chứng khí hư chiếm 51,6%"
+chứng khí hư,chiếm ở,shs,concept,concept,false,,,5,2022_3_08.pdf,"Trong số những sinh viên có SHS, chứng khí hư chiếm 51,6%"
+chứng uất,chiếm ở,shs,concept,concept,false,,,5,2022_3_08.pdf,
+giới tính,liên quan đến,shs,concept,concept,false,,,5,2022_3_08.pdf,"Các yếu tố liên quan đến SHS là giới tính, sự yêu thích ngành học"
+sử dụng thiết bị điện tử,liên quan đến,shs,concept,concept,false,,,5,2022_3_08.pdf,"sử dụng thiết bị điện tử, hoạt động thể chất và thời gian ăn uống"
+tọa cốt phong,chiếm tỷ lệ,mô hình bệnh tật,concept,concept,false,,,5,2763-Văn bản của bài báo-8125-1-10-20240525.pdf,
+chứng tý,chiếm là,mô hình bệnh tật,concept,concept,false,,,5,2763-Văn bản của bài báo-8125-1-10-20240525.pdf,"năm 2021 chứng bệnh chiếm tỷ lệ lớn nhất là chứng tý (44,0%)"
+thời gian điều trị,tăng dần,nội trú,concept,concept,false,,,5,2763-Văn bản của bài báo-8125-1-10-20240525.pdf,
+cốm tan trị gút,cải thiện,điểm nimodipin,concept,concept,false,,,5,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+cốm tan trị gút,giảm,acid uric,concept,concept,false,,,5,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+thể phong nhiệt,cải thiện nhanh,điểm nimodipin,concept,concept,false,,,5,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+dây gắm,giảm,triệu chứng,concept,concept,false,,,5,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+thổ phục linh,trừ,phong thấp,concept,concept,false,,,5,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+tỳ giải,tăng bài tiết,urat,concept,concept,false,,,5,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+gút,gây ra,tăng acid uric,,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+acid uric huyết thanh,liên quan,cứng động mạch,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,elevated serum uric acid and arterial stiffness
+hướng dẫn điều trị,áp dụng cho,gút,work,,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,American College of Rheumatology Guideline for the Management of Gout
+nguyễn minh hà,nghiên cứu,thống phong,person,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+y học cổ truyền,giảng dạy,học viên chuyên khoa,concept,person,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+nguyễn thị thu hằng,đánh giá,cao trị gút,person,product,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+đỗ tất lợi,viết về,cây thuốc việt nam,person,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,Những cây thuốc và vị thuốc Việt Nam
+bộ y tế,xuất bản,dược điển việt nam,organization,product,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,Dược điển Việt Nam
+bộ y tế trung,hướng dẫn,nghiên cứu lâm sàng thuốc,organization,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+nguyễnuyễn minh hà,nghiên cứu,thống phong hoàn,person,product,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,Nghiên cứu tác dụng hạ acid uric máu bằng bài thuốc Thống phong hoàn
+busso n,giải thích,cơ chế viêm gút,person,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,Mechanisms of inflammation in gout
+dây gắm,chứa,stilbenoid,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+ông bình nguyên,khảo sát,hoạt tính sinh học cao chiết dây gắm,person,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+du f y,chiết xuất,resveratrol,person,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+resveratrol,tác động,phản ứng viêm,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,Effects of resveratrol on the inflammatory response and renal injury in hyperuricemic rats
+thanh ntv,ứcức chế,xanthine oxidase,person,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+dây gắm,hảm,"acid uric, đau, viêm",concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,"Đánh giá tác dụng hạ acid uric, giảm đau và kháng viêm của dây gắm"
+leonurus japonicus,là thuốc,thuốc cổ truyền trung quốc,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+genistein,giảm,acid uric huyết,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,"Effects of Genistein, Apigenin, Quercetin, Rutin and Astilbin on serum uric acid levels"
+rhizoma smilacis glabrae,bảo vệ,hyperuricemia và gút,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+dioscin,tăng thải,acid uric,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,Effect and mechanism of dioscin from Dioscorea spongiosa on uric acid excretion in animal model of hyperuricemia
+sesquiterpenoids,kháng viêm,viêm,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+berberine,tăng cường,phân bố khớp,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+tinospora sinensis,sử dụng,y học cổ truyền,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,"Review on Traditional Uses, Phytochemistry, Pharmacology and Clinical Application of Tinospora sinensis (Lour.)"
+cóm tan tri gut,điều trị,chronic gout according to the classification of traditional medicine,concept,concept,false,,,6,2946-Văn bản của bài báo-38854-1-10-20241227.pdf,
+dược lý mạng,dựa trên,tin sinh học,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,Overview of network pharmacology in traditional medicinal material research
+tin sinh học,chuyển đổi,mô hình,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,
+dược lý mạng,khám phá,cơ chế thuốc yhct,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,
+mạng lưới tương tác,giữa,protein mục tiêu,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,
+sinh học hệ thống,giải thích,khái niệm yhct,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,
+bậc,xác định,tầm quan trọng,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,
+con đường ngắn nhất,xác định,đường đi hiệu quả,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,
+tính trung tâm,định lượng,tầm quan trọng nút,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,tính trung tâm giúp định lượng tầm quan trọng của một nút hoặc cạnh
+docking phân tử,xác nhận,mạng lưới,technology,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,các mạng lưới sẽ được xác nhận thông qua docking phân tử
+đại hoàng,điều trị,chống động kinh,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,nghiên cứu cơ chế của Đại hoàng trong chống động kinh
+nhân sâm,điều trị,đái tháo đường tuýp 2,concept,concept,false,,,6,3450-Văn bản của bài báo-10821-1-10-20251125.pdf,
+dược lý mạng,ứng dụng,tính vị quy kinh,concept,concept,false,,,6,4.pdf,Tổng quan ứng dụng các phương pháp dược lý hiện đại trong nghiên cứu tính vị quy kinh
+mạng neuron truyền ngược,chuyển đổi,ứng dụng thuốc yhct,concept,concept,false,,,6,4.pdf,
+tứ tính,quyết định,lựa chọn thuốc,concept,concept,false,,,6,4.pdf,
+ngũ vị,quyết định,lựa chọn thuốc,concept,concept,false,,,6,4.pdf,
+quy kinh,quyết định,lựa chọn thuốc,concept,concept,false,,,6,4.pdf,
+viêm da chàm,tương ứng,phong chẩn,concept,concept,false,,,6,4.pdf,
+viêm da do virus,tương ứng,bạch chẩn,concept,concept,false,,,6,4.pdf,
+vảy nến,tương ứng,thấp chẩn,concept,concept,false,,,6,4.pdf,
+y học cổ truyền,kết hợp,y học hiện đại,concept,concept,false,,,6,4.pdf,
+thuốc đông y,sử dụng,điều trị nội trú,concept,concept,false,,,6,4.pdf,
+châm cứu,kết hợp,thuốc yhhđ,concept,concept,false,,,6,4.pdf,
+kháng histamin,sử dụng,điều trị nội trú-điều trị nội trú,concept,concept,false,,,6,4.pdf,
+corticoid,sử dụng,điều trị nội trú,concept,concept,false,,,6,4.pdf,
+thuốc thang,sử dụng,điều trị nội trú,concept,concept,false,,,6,4.pdf,
+thuốc ngâm,sử dụng,điều trị nội trú,concept,concept,false,,,6,4.pdf,
+châm cứu,sử dụng,điều trị nội trú,concept,concept,false,,,6,4.pdf,
+điện châm,sử dụng,điều trị nội trú,concept,concept,false,,,6,4.pdf,
+xoa bóp bấm huyệt,sử dụng,điều trị nội trú,concept,concept,false,,,6,4.pdf,
+thời tiết,liên quan,bệnh da liễu,concept,concept,false,,,6,4.pdf,
+sự thay đổi thời tiết,kích hoạt,tái phát bệnh,concept,concept,false,,,6,4.pdf,
+nóng ẩm,gây,bệnh da liễu,concept,concept,false,,,6,4.pdf,
+mùa hè,tăng,nhập viện nội- trú,concept,concept,false,,,6,4.pdf,
+mùa thu,tăng,nhập viện nội- trú,concept,concept,false,,,6,4.pdf,
+mùa đông,giảm,nhập viện nội- trú,concept,concept,false,,,6,4.pdf,
+tháng 5,tăng,nhập viện nội- trú,concept,concept,false,,,6,4.pdf,
+tháng 8,tăng,nhập viện nội- trú,concept,concept,false,,,6,4.pdf,
+tháng 2,giảm,nhập viện nội- trú,concept,concept,false,,,6,4.pdf,
+phương pháp pca,xác định,đặc điểm khác biệt,concept,concept,false,,,6,4.pdf,sử dụng PCA để
+phương pháp pls,xác định,mối quan hệ đa biến,concept,concept,false,,,6,4.pdf,
+phương pháp cooman,xác định,sự khác biệt các mẫu,concept,concept,false,,,6,4.pdf,
+mạng bpnn,dự đoán,thông số dược học,concept,concept,false,,,6,4.pdf,
+thuật toán apriori,khai thác,dữ liệu lớn,concept,concept,false,,,6,4.pdf,
+cây quyết định,phân loại,dữ liệu,concept,concept,false,,,6,4.pdf,
+in vitro in vivo,thẩm định,hiệu quả thuốc,concept,concept,false,,,6,4.pdf,
+sinh viên y khoa,có tỷ lệ,stress,concept,concept,false,,,7,4675-Văn bản của bài báo-63319-1-10-20260310.pdf,"tỷ lệ stress ở sinh viên y khoa tại Học viện Y - Dược học cổ truyền Việt Nam là 44,1%"
+stress,cao hơn,nữ giới,concept,concept,false,,,7,4675-Văn bản của bài báo-63319-1-10-20260310.pdf,tỷ lệ này cao hơn ở nữ giới
+stress,tăng dầnđo,năm học,concept,date,false,,,7,4675-Văn bản của bài báo-63319-1-10-20260310.pdf,tăng dần theo năm học
+thể khí uất,liên quan,stress,concept,concept,false,,,7,4675-Văn bản của bài báo-63319-1-10-20260310.pdf,thể Khí uất có mối liên quan độc lập với stress
+thể khí hư,liên quan,stress,concept,concept,false,,,7,4675-Văn bản của bài báo-63319-1-10-20260310.pdf,"tiếp theo là thể Khí hư (aOR = 2,22"
+nghiên cứu,sử dụng,bâu hỏi,work,technology,false,,,7,4675-Văn bản của bài báo-63319-1-10-20260310.pdf,nghiên cứu đã sử dụng bảng câu hỏi về thể chất YHCT
+dass-21,là thang đo,tự báo cáo,technology,concept,false,,,7,4675-Văn bản của bài báo-63319-1-10-20260310.pdf,sử dụng thang đo tự báo cáo như DASS-21
+sinh viên y khoa,cần,sàng lọc định kỳ,concept,concept,false,,,7,4675-Văn bản của bài báo-63319-1-10-20260310.pdf,
+y học cổ truyền,điều trị,rối loạn tiền đình,concept,concept,false,,,7,47.pdf,phối hợp vị thuốc YHCT trong điều trị rối loạn tiền đình
+rối loạn tiền đình,thuộc,huyễn vựng,concept,concept,false,,,7,47.pdf,
+đương quy,có tần suất,"71,6%",product,concept,false,,,7,47.pdf,"tần suất cao nhất gồm Đương quy (71,6%)"
+cam thảo,có tần suất,"61,9%",product,concept,false,,,7,47.pdf,"Cam thảo (61,9%)"
+bạch linh,có tần suất,"58,8%",product,concept,false,,,7,47.pdf,"Bạch linh (58,8%)"
+đảng sâm,có tần suất,"55,2%",product,concept,false,,,7,47.pdf,"Đảng sâm (55,2%)"
+sơn thù,xuất hiện cùng,thục địa,product,product,false,,,7,47.pdf,
+đau thần kinh tọa,điều trị bằng,y học cổ truyền,concept,concept,false,,,7,89.Khảo sát sự phối hợp mạng lưới của các nhóm thuốc trong đơn thuốc sắc y học cổ truyền điều trị đau thần kinh tọa dựa trên dữ liệu lâm sàng.pdf,
+bổ dương bổ khí,phổ biến,"97,4%",concept,concept,false,,,7,89.Khảo sát sự phối hợp mạng lưới của các nhóm thuốc trong đơn thuốc sắc y học cổ truyền điều trị đau thần kinh tọa dựa trên dữ liệu lâm sàng.pdf,phổ biến nhất là bổ dương bổ khí
+hoạt huyết khử ứ,phổ biến,"78,3%",concept,concept,false,,,7,89.Khảo sát sự phối hợp mạng lưới của các nhóm thuốc trong đơn thuốc sắc y học cổ truyền điều trị đau thần kinh tọa dựa trên dữ liệu lâm sàng.pdf,"hoạt huyết khử ứ (78,3%)"
+bổ âm bổ huyết,phổ biến,"70,8%",concept,concept,false,,,7,89.Khảo sát sự phối hợp mạng lưới của các nhóm thuốc trong đơn thuốc sắc y học cổ truyền điều trị đau thần kinh tọa dựa trên dữ liệu lâm sàng.pdf,"bổ âm bổ huyết (70,8%)"
+viêm âm đạo,điều trị bằng,yh cổ truyền,concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,
+viêm âm đạo,đạt hiệu quả,"94,7%",concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,
+thể âm hư,chiếm tỷ lệ,"22,7%",concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,"bệnh nhân có thể chất Âm hư chiếm tỷ lệ cao nhất là 22,7%"
+thể khí hư,chiếm tỷ lệ,"20,5%",concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,"tiếp theo là nhóm thể chất khí hư chiếm 20,5%"
+thể đàm thấp,chiếm tỷ lệ,"17,8%",concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,"nhóm Đàm thấp chiếm 17,8%"
+thể thấp nhiệt,chiếm tỷ lệ,"12,2%",concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,"Thấp nhiệt chiếm 12,2%"
+thể dương hư,chiếm tỷ lệ,"11,5%",concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,"Dương hư chiếm 11,5%"
+thể khí uất,chiếm tỷ lệ,"7,8%",concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,
+thể huyết ứ,chiếm tỷ lệ,"5,6%",concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,
+thể cơ địa bẩm sinh,chiếm tỷ lệ,2%,concept,concept,false,,,7,Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf,Cơ địa bẩm sinh chỉ chiếm 2%
+phụ tử,có độc tính,cần chế biến,product,concept,false,,,7,95463-2173-203284-1-10-20240513.pdf,vị thuốc có độc dễ nhầm lẫn
+tế tân,có độc tính,cần chế biến,product,concept,false,,,7,95463-2173-203284-1-10-20240513.pdf,
+mộc thông,có độc tính,cần phân biệt,product,concept,false,,,7,95463-2173-203284-1-10-20240513.pdf,Xuyên Mộc thông và Quản Mộc thông
+xương bồ,có độc tính,cần phân biệt,product,concept,false,,,7,95463-2173-203284-1-10-20240513.pdf,"Thủy xương bồ, Thạc xương bồ và Cửu tiết xương bồ"
+viêm âm đạo,gây ra,vi khuẩn,,,false,,,8,Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf,
+viêm âm đạo,triệu chứng,khí hư mùi hôi,,,false,,,8,Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf,
+viêm âm đạo,triệu chứng,ngứa,,,false,,,8,Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf,
+viêm âm đạo,điều trị bằng,hoàng bá kết polygynax,,,false,,,8,Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf,
+viêm âm đạo,hiệu quả,tốt,,,false,,,8,Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf,
+táo bón chức năng,phổ biến ở,người cao tuổi,,person,false,,,8,Bài+1.pdf,
+táo bón chức năng,triệu chứng,"rặn, gắng sức",,,false,,,8,Bài+1.pdf,
+táo bón chức năng,thuộc thể,hư chứng,,concept,false,,,8,Bài+1.pdf,
+táo bón chức năng,liên quan,nhịn đại tiện,,,false,,,8,Bài+1.pdf,
+táo bón chức năng,liên quan,thiếu chất xơ,,,false,,,8,Bài+1.pdf,
+táo bón chức năng,liên quan,thiếu nước,,,false,,,8,Bài+1.pdf,
+rối loạn cương dương,điều trị bằng,y học cổ truyền,,,false,,,8,Bài+7.pdf,
+rối loạn cương dương,thuộc chứng,dương nuy,,concept,false,,,8,Bài+7.pdf,
+rối loạn cương dương,điều trị bằng,hữu quy hoàn,,,false,,,8,Bài+7.pdf,
+rối loạn cương dương,hiệu quả,tăng testosterone,,,false,,,8,Bài+7.pdf,
+bệnh nhân nội trú,sử dụng,thuốc y học cổ truyền,person,,false,,,8,CTUMP.1876.pdf,
+bệnh nhân nội trú,thường dùng nhiều,thuốc thang,person,,false,,,8,CTUMP.1876.pdf,
+bệnh nhân nội trú,dùng nhiều nhất,"viên bao, viên nang",person,,false,,,8,CTUMP.1876.pdf,
+đau cột sống thắt lưng,do,thoái hóa cột sống,,,false,,,8,CTUMP.195.pdf,
+đau cột sống thắt lưng,triệu chứng,hạn chế vận động,,,false,,,8,CTUMP.195.pdf,
+đau cột sống thắt lưng,điều trị bằng,yh cổ truyền,,,false,,,8,CTUMP.195.pdf,
+đau thần kinh tọa,điều trị bằng,độc hoạt ký sinh thang,,,false,,,8,CTUMP.2378.pdf,
+đau thần kinh tọa,điều trị bằng,"điện châm, hồng ngoại",,,false,,,8,CTUMP.2378.pdf,
+đau thần kinh tọa,hiệu quả,giảm đau,,,false,,,8,CTUMP.2378.pdf,
+thoái hóa cột sống cổ,triệu chứng,đau cổ gáy,,,false,,,8,CTUMP.3574.pdf,
+thoái hóa cột sống cổ,triệu chứng,hạn chế vận động,,,false,,,8,CTUMP.3574.pdf,
+thoái hóa cột sống cổ,điều trị bằng,rheumapain,,,false,,,8,CTUMP.3574.pdf,
+đau cổ gáy,do,chấn thương,concept,concept,false,,,9,CTUMP.3574.pdf,"Đau cổ gáy do các nguyên nhân gồm chấn thương, lao cột sống, u cột sống, viêm cột sống dính khớp."
+đau cổ gáy,do,lao cột sống,concept,concept,false,,,9,CTUMP.3574.pdf,"Đau cổ gáy do các nguyên nhân gồm chấn thương, lao cột sống, u cột sống, viêm cột sống dính khớp."
+đau cổ gáy,do,u cột sống,concept,concept,false,,,9,CTUMP.3574.pdf,"Đau cổ gáy do các nguyên nhân gồm chấn thương, lao cột sống, u cột sống, viêm cột sống dính khớp."
+đau cổ gáy,do,viêm cột sống dính khớp,concept,concept,false,,,9,CTUMP.3574.pdf,"Đau cổ gáy do các nguyên nhân gồm chấn thương, lao cột sống, u cột sống, viêm cột sống dính khớp."
+rêu lưỡi,có,trắng mỏng,concept,concept,false,,,9,CTUMP.3574.pdf,Rêu lưỡi trắng mỏng + Mạch phù hữu lực.
+mạch,tính,phù hữu lực,concept,concept,false,,,9,CTUMP.3574.pdf,Rêu lưỡi trắng mỏng + Mạch phù hữu lực.
+điện châm,là,phương pháp điều trị có chống chỉ định,technology,concept,false,,,9,CTUMP.3574.pdf,"Người bệnh có các chống chỉ định của phương pháp điều trị điện châm, kéo giãn cột sống cổ, thủy châm."
+kéo giãn cột sống cổ,là,phương pháp điều trị có chống chỉ định,technology,concept,false,,,9,CTUMP.3574.pdf,"Người bệnh có các chống chỉ định của phương pháp điều trị điện châm, kéo giãn cột sống cổ, thủy châm."
+thủy châm,là,phương pháp điều trị có chống chỉ định,technology,concept,false,,,9,CTUMP.3574.pdf,"Người bệnh có các chống chỉ định của phương pháp điều trị điện châm, kéo giãn cột sống cổ, thủy châm."
+nghiên cứu,thiết kế,can thiệp lâm sàng không nhóm chứng,work,concept,false,,,9,CTUMP.3574.pdf,Thiết kế nghiên cứu: Can thiệp lâm sàng không nhóm chứng.
+vas,dùng để,đánh giá đau,technology,concept,false,,,9,CTUMP.3574.pdf,
+npq,dùng để,đánh giá mức độ ảnh hưởng của đau,technology,concept,false,,,9,CTUMP.3574.pdf,
+nghiên cứu,thực hiện tại,bệnh viện y học cổ truyền đồng tháp,work,organization,false,,,9,CTUMP.3574.pdf,Nghiên cứu thực hiện tại các khoa điều trị nội trú bệnh viện Y học cổ truyền Đồng Tháp
+nghiên cứu,thời gian,07/2024 đến 02/2025,work,date,false,,,9,CTUMP.3574.pdf,Nghiên cứu thực hiện tại các khoa điều trị nội trú bệnh viện Y học cổ truyền Đồng Tháp từ 07/2024 đến tháng 02/2025.
+nhóm tuổi,cao nhất ở,≥ 60 tuổi,concept,concept,false,,,9,CTUMP.3574.pdf,"Nhóm tuổi ≥ 60 chiếm tỷ lệ mắc bệnh cao nhất (48,3%)"
+nữ giới,mắc bệnh cao,nam,concept,concept,false,,,9,CTUMP.3574.pdf,nữ giới mắc bệnh cao hơn nam
+nhân viên văn phòng,có tỷ lệ,nghề nghiệp,concept,concept,false,,,9,CTUMP.3574.pdf,nhân viên văn phòng là nghề nghiệp có tỷ lệ mắc bệnh cao nhất với 25%.
+thoái hóa cột sống cổ,tổ biến nhất,c6,concept,concept,false,,,9,CTUMP.3574.pdf,
+thời tiết lạnh,thúc đẩy,triệu chứng đau,concept,concept,false,,,9,CTUMP.3574.pdf,
+co cứng cơ cạnh cột sống,là,triệu chứng thường gặp,concept,concept,false,,,9,CTUMP.3574.pdf,
+rheumapain,điều trị,đau khớp,product,concept,false,,,9,CTUMP.3574.pdf,"kết hợp thuốc Rheumapain, điện châm, thủy châm"
+điện châm,kết hợp với,rheumapain,technology,product,false,,,9,CTUMP.3574.pdf,"kết hợp thuốc Rheumapain, điện châm, thủy châm"
+thủy châm,kết hợp với,rheumapain,technology,product,false,,,9,CTUMP.3574.pdf,"kết hợp thuốc Rheumapain, điện châm, thủy châm"
+điểm vas,cải thiện,sau ngày 7 và ngày 14,concept,concept,false,,,9,CTUMP.3574.pdf,sự cải thiện điểm VAS giữa ngày 7 so với ngày 1 và ngày 14 so với ngày 1 có ý nghĩa thống kê
+điểm npq,cải thiện,ở ngày 7 và ngày 14,concept,concept,false,,,9,CTUMP.3574.pdf,"Điểm trung bình NPQ cải thiện dần ở ngày 7, ngày 14"
+biên độ vận động,cải thiện,ở các động tác,concept,concept,false,,,9,CTUMP.3574.pdf,
+danh mục thuốc,thuại,bệnh viện y học cổ truyền hải dương,concept,organization,false,,,9,CTUMP.4038.pdf,
+vị thuốc yhct,chiếm tỷ lệ,về số lượng,concept,concept,false,,,9,CTUMP.4038.pdf,
+thuốc hóa dược,chiếm tỷ lệ,"21,78% giá trị",concept,concept,false,,,9,CTUMP.4038.pdf,"thuốc hóa dược chiếm 21,78% giá trị"
+thuốc tim mạch,chiếm lớn nhất,hóa dược,concept,concept,false,,,9,CTUMP.4038.pdf,
+phương pháp abc,dùng để,phân loại danh mục thuốc,technology,concept,false,,,9,CTUMP.4038.pdf,
+phương pháp ven,dùng để,phân loại danh mục thuốc,technology,concept,false,,,9,CTUMP.4038.pdf,
+nhóm phát tán phong thấp,chiếm cao nhất,giá trị,concept,concept,false,,,9,CTUMP.4038.pdf,
+nhóm hoạt huyết khứ ứ,chiếm thứ hai,giá trị,concept,concept,false,,,9,CTUMP.4038.pdf,
+nhóm thuốc a,chiếm,80% giá trị,concept,concept,false,,,9,CTUMP.4038.pdf,
+nhóm thuốc b,chiếm,20% giá trị,concept,concept,false,,,9,CTUMP.4038.pdf,
+nhóm thuốc c,chiếm,10% giá trị,concept,concept,false,,,9,CTUMP.4038.pdf,
+nhóm thuốc v,là,thiết yếu,concept,concept,false,,,9,CTUMP.4038.pdf,
+nhóm thuốc e,là,cần thiết,concept,concept,false,,,9,CTUMP.4038.pdf,
+kê đơn,có,chưa đúng quy định,concept,concept,false,,,9,CTUMP.4676.pdf,
+sai thuốc,là,lỗi cao nhất,concept,concept,false,,,9,CTUMP.4676.pdf,Sai thuốc chiếm tỷ lệ cao nhất
+saiối hợp thuốc,là,lỗi thứ hai,concept,concept,false,,,9,CTUMP.4676.pdf,"phối hợp thuốc không hợp lý (33,5%)"
+sai liều và cách dùng,là,lỗi thứ ba,concept,concept,false,,,9,CTUMP.4676.pdf,"sai liều/cách dùng (25,6%)"
+mức độ hiểu thông tư,li quan đến,kê đơn chưa đúng,concept,concept,false,,,9,CTUMP.4676.pdf,
+tự đánh giá tuân thủ,li quan đến,kê đơn chưa đúng,concept,concept,false,,,9,CTUMP.4676.pdf,
+tham gia tập huấn gần đây,li quan đến,kê đơn chưa đúng,concept,concept,false,,,9,CTUMP.4676.pdf,tham gia tập huấn gần đây thấp hơn
+số lượng thuốc mỗi đơn,cao hơn,kê đơn chưa đúng,concept,concept,false,,,9,CTUMP.4676.pdf,
+tình chí vui vẻ,xuất hiện,thường xuyên 1 lần/ngày,concept,concept,false,,,9,CTUMP.5033.pdf,
+tình chí giận dữ,cao hơn ở,nhóm 60-69 tuổi,concept,concept,false,,,9,CTUMP.5033.pdf,điểm giận dữ cao hơn ở nhóm 60-69 tuổi
+tình chí vui vẻ,cao hơn ở,nhóm thu nhập riêng,concept,concept,false,,,9,CTUMP.5033.pdf,điểm vui vẻ cao hơn ở nhóm có thu nhập riêng
+tình chí buồn rầu,cao hơn ở,nhóm không hoạt động thể lực,concept,concept,false,,,9,CTUMP.5033.pdf,điểm buồn rầu cao hơn ở nhóm không tham gia luyện tập thể dục
+tình chí sợ hãi,cao hơn ở,nhóm nữ giới,concept,concept,false,,,9,CTUMP.5033.pdf,điểm sợ hãi cao hơn ở nhóm nữ giới
+tình chí sợ hãi,cao hơn ở,mắc ≥2 bệnh mạn tính,concept,concept,false,,,9,CTUMP.5033.pdf,
+điện châm kết hợp siêu âm,điều trị tốt,thoái hóa khớp gối,technology,concept,false,,,9,CVv46V503SDB22021074.pdf,Phương pháp Điện châm kết hợp Siêu âm điều trị có hiệu quả điều trị tốt trên bệnh nhân thoái hoá khớp gối.
+điểm vas,giảm,sau điều trị,concept,concept,false,,,9,CVv46V503SDB22021074.pdf,Sau điều trị điểm VAS trung bình giảm
+điểm lequesne,giảm,sau điều trị,concept,concept,false,,,9,CVv46V503SDB22021074.pdf,
+độ gấp duỗi khớp gối,tăng,sau điều trị,concept,concept,false,,,9,CVv46V503SDB22021074.pdf,
+tác dụng không mong muốn,không xuất hiện,trong quá trình điều trị,concept,concept,false,,,9,CVv46V503SDB22021074.pdf,Không phát hiện tác dụng không mong muốn trong quá trình điều trị.
+đồ thị tri thức mờ dạng cặp,ứng dụng cho,chẩn đoán bệnh y học cổ truyền,technology,concept,false,,,9,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+fkg-pairs,áp dụng cho,chẩn đoán sản phụ,technology,concept,false,,,9,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+hệ suy diễn mờ,sử dụng,luật dạng if-then,technology,concept,false,,,9,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+hệ thống đề xuất,cải thiện,độ chính xác tiểu đường thai phụ,technology,concept,false,,,9,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+thuật toán fisa,sử dụng để,suy luận xấp xỉ,technology,concept,false,,,10,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+đồ thị tri thức mờ dạng cặp,hỗ trợ,chẩn đoán bệnh,technology,concept,false,,,10,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+phép toán max-min,dùng để,tính giá trị ed,technology,concept,false,,,10,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+thuật toán fkg,có độ phức,o(nmk),technology,concept,false,,,10,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+bệnh nhân bn1,có triệu chứng,s1 là cao,person,concept,false,,,10,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+bác sĩ,đưa ra,kết luận chẩn đoán,person,concept,false,,,10,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,Các bác sĩ đã xem xét và đưa ra kết luận chẩn đoán bệnh
+hồ sơ bệnh nhân mới,biểu diễn,luật mờ,concept,concept,false,,,10,Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf,
+điện châm và xoa bóp,điều trị,viêm quanh khớp vai,technology,,false,,,10,JMPM.927.pdf,
+điểm vas,giảm,mức độ đau,concept,concept,false,,,10,JMPM.927.pdf,
+điểm efa,tăng,vận động khớp,concept,concept,false,,,10,JMPM.927.pdf,
+điện châm và xoa bóp,mang lại,hiệu quả tốt,technology,concept,false,,,10,JMPM.927.pdf,
+nấm,gây ra,aflatoxin,concept,concept,false,,,10,LA Hồ Văn Thăng nén.pdf,
+aflatoxin,gây,ung thư gan,concept,concept,false,,,10,LA Hồ Văn Thăng nén.pdf,
+thuốc cổ truyền,bị nhiễm,nấm,concept,concept,false,,,10,LA Hồ Văn Thăng nén.pdf,
+môi trường vi khí hậu,cải thiện,bảo quản thuốc,concept,concept,false,,,10,LA Hồ Văn Thăng nén.pdf,cải thiện môi trường vi khí hậu trong kho bảo quản thuốc
+kỹ thuật pcr,xác định,aàioxin,technology,concept,false,,,10,LA Hồ Văn Thăng nén.pdf,
+nấm mốc,nhiễm trong,thuốc cổ truyền,concept,concept,false,,,10,LA Hồ Văn Thăng nén.pdf,
+phương pháp elisa,dùng để,định lượng aflatoxin,technology,concept,false,,,10,LA Hồ Văn Thăng nén.pdf,
+thuốc cổ truyền,nhiễm,nấm,product,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,Nhiễm nấm/không nhiễm nâm Có/không có nấm hoại sinh
+nấm,nuôi cấy trong,môi trường saboraud,concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,Nuôi cấy nấm trong môi trường Saboraud
+thuốc cổ truyền,xác định,tỷ lệ nhiễm nấm,product,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,Xác định tỷ lệ nhiễm nấm; Xác định thành phần loài nấm
+thuốc cổ truyền,xác định,thành phần loài nấm,product,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,Xác định thành phần loài nấm từ các mẫu thuốc cổ truyền
+nấm,định danh bằng,sinh học phân tử,concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,Nhiễm nhiều loài nấm (đa nhiễm ) bằng kỹ thuật sinh học phân tử
+nấm,định danh bằng,pcr,concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,Số loài nấm xác định được bằng kỹ thuật PCR
+thuốc cổ truyền,lấy mẫu,170 mẫu,product,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,chọn 170 mẫu thuốc cổ truyền
+thuốc cổ truyền,chuyển về,bệnh viện y học cổ truyền nghệ an,product,organization,false,,,11,LA Hồ Văn Thăng nén.pdf,"chuyển về labo vi sinh, của Bệnh viện Y học Cổ truyền Nghệ An"
+nấm,nuôi cấy,môi trường sabouraud,concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,Kỹ thuật nuôi cấy nấm trong môi trường Sabouraud
+nấm,nhuộm,methylene blue,concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,bào tử Aspergillus được nhuộm Methylene blue
+nấm,tách chiết,adn,concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,
+adn,chiết xuất bằng,fungi/yeast genomic isolation kit,concept,product,false,,,11,LA Hồ Văn Thăng nén.pdf,
+adn,khuếch đại,đạn gen,concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,
+pcr,kiểm tra bằng,điện di gel,concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,
+pcr,tinh sạch bằng,genejet pcr purification kit,concept,product,false,,,11,LA Hồ Văn Thăng nén.pdf,
+thuốc cổ truyền,tìm,aflatoxin,product,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,
+aflatoxin,định lượng bằng,hplc,concept,technology,false,,,11,LA Hồ Văn Thăng nén.pdf,
+aflatoxin,gồm các,"b1, b2, g1, g2",concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,"Loại aflatoxin nhiễm (B1, B2, G1, G2)"
+kho thuốc,cải thiện,điều kiện vi khí hậu,place,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,Cải thiện điều kiện vi khí hậu tại 2 kho thuốc
+can thiệp,giảm,tỷ lệ nhiễm nấm,concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,Hiệu quả can thiệp làm giảm tỷ lệ nhiễm nấm ở thuốc cổ truyền
+aspergillus niger,chiếm tỷ lệ,"35,72%",concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,
+rhizopus arrhizus,chiếm tỷ lệ,"22,22%",concept,concept,false,,,11,LA Hồ Văn Thăng nén.pdf,
+nấm,phát triển do,thời tiết nóng ẩm,concept,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,"nấm, các yếu tố ảnh hưởng nhiều nhất là: Thời tiết nóng ẩm"
+nấm,phát triển mạnh,độ ẩm > 70%,concept,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,nấm phát triển mạnh nhất ở điều kiện môi trường phù hợp khi độ ẩm > 70%
+nấm,phát triển ở,nhiệt độ > 25ºc,concept,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,
+thuốc cổ truyền,cần bảo quản,nhiệt độ < 25 ºc,product,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,để bảo quản thuốc cổ truyền tốt cần tạo điều kiện môi trường vi khí hậu có nhiệt độ < 25 ºC
+thuốc cổ truyền,cần bảo quản,độ ẩm thấp < 70%,product,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,
+máy hút ẩm,dùng để,giảm nhiễm nấm,technology,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,cần có các trang thiết bị như máy hút ẩm
+bào tử nấm,bị diệt bởi,tia cực tím,concept,technology,false,,,12,LA Hồ Văn Thăng nén.pdf,"có thể sử dụng các loại tia cực tím, tia hồng ngoại tiêu diệt bào tử nấm"
+mô hình gompertz,dự đoán,sự phát triển nấm,technology,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,ứng dụng mô hình của Gompertz mô hình hóa và dự đoán quá trình phát triển của nấm mốc
+bệnh viện y học cổ truyền nghệ an,trang bị,kho bảo quản thuốc,organization,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,
+thuốc cổ truyền,cải thiện,tình trạng nhiễm nấm,product,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,qua đó đã cải thiện giảm tình trạng nhiễm nấm ở thuốc cổ truyền
+quy trình kỹ thuật,áp dụng,thực hành thuốc tốt,work,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,Bệnh viện đã đưa ra quy trình kỹ thuật thực hành thuốc tốt của nhà kho
+nhiễm nấm,giảm sau,can thiệp,concept,event,false,,,12,LA Hồ Văn Thăng nén.pdf,"Tỷ lệ nhiễm nấm chung sau can thiệp 12 tháng đã giảm có ý nghĩa thống kê từ 32,94% xuống còn 22,35%"
+aflatoxin,xử lý bằng,phương pháp hóa học,concept,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,Các nỗ lực giảm thiểu ô nhiễm aflatoxin trước đây chủ yếu dựa vào các phương pháp xử lý hóa học
+aflatoxin,xử lý bằng,phân tách vật lý,concept,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,phân tách vật lý và phân hủy sinh học.
+đậu huy hoàn,nghiên cứu,giảm nhiễm nấm,person,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,
+phan thị kim liên,nghiên cứu,ảnh hưởng hoạt độ nước,person,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,"Phan Thị Kim Liên, có nghiên cứu về ảnh hưởng các điều kiện nhiệt độ, hoạt độ nước theo mùa vụ"
+nguyễn thị hải,nghiên cứu,xử lý aflatoxin,person,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,"Nguyễn Thị Hải (2017), nghiên cứu xử lý ô nhiễm aflatoxin trong thực phẩm bằng acid sorbic kết hợp hấp ướt"
+gạo,bảo quản,hoạt độ nước thấp,product,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,tác giả có khuyến cáo người dân nên bảo quản gạo ở hoạt độ nước thấp
+who,khuyến cáo,tiêu chuẩn giám sát aflatoxin,organization,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,
+plasma lạnh,phân hủy,aflatoxin,technology,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,
+aspergillus,nhiễm,thuốc cổ truyền,concept,product,false,,,12,LA Hồ Văn Thăng nén.pdf,
+rhizopus spp,nhiễm,thuốc cổ truyền,concept,product,false,,,12,LA Hồ Văn Thăng nén.pdf,
+aflatoxin,nhiễm trong,thuốc cổ truyền,concept,product,false,,,12,LA Hồ Văn Thăng nén.pdf,
+aflatoxin b2,nhiễm cao nhất,thuốc cổ truyền,concept,product,false,,,12,LA Hồ Văn Thăng nén.pdf,
+aflatoxin,giảm,sau can thiệp,concept,concept,false,,,12,LA Hồ Văn Thăng nén.pdf,
+bệnh viện y học cổ truyền lào cai,nghiên cứu,đặc điểm bệnh tật,organization,concept,false,,,12,Nội dung bài số 4_5-70-112_Văn bản của bài báo.pdf,
+bệnh cơ xương khớp,chiếm tỷ lệ,chương xiii,concept,concept,false,,,12,Nội dung bài số 4_5-70-112_Văn bản của bài báo.pdf,"Tỷ lệ mắc bệnh cao nhất thuộc 3 chương: Chương XIII: Bệnh hệ cơ, xương, khớp và mô liên kết chiếm tỷ lệ cao nhất với 32,92%"
+bệnh tuần hoàn,chiếm tỷ lệ,chương ix,concept,concept,false,,,12,Nội dung bài số 4_5-70-112_Văn bản của bài báo.pdf,
+bệnh hô hấp,chiếm tỷ lệ,chương x,concept,concept,false,,,12,Nội dung bài số 4_5-70-112_Văn bản của bài báo.pdf,
+đau thần kinh tọa,điều trị bằng,cấy chỉ kết hợp thuốc,concept,concept,false,,,12,PDF_2020m03d018_8_45_2.pdf,"Bệnh viện YHCT.TT-Huế đã áp dụng phương pháp cấy chỉ kết hợp thuốc YHCT điều trị, bước đầu có hiệu quả"
+đau thần kinh tọa,giảm,thang điểm vas,concept,concept,false,,,12,PDF_2020m03d018_8_45_2.pdf,Đánh giá hiệu quả điều trị đau thần kinh tọa thể phong hàn thấp bằng phương pháp cấy chỉ kết hợp thuốc y học cổ truyền
+cấy chỉ,giảm,đau thần kinh tọa,technology,concept,false,,,12,PDF_2020m03d018_8_45_2.pdf,
+đau thần kinh tọa,thể,phong hàn thấp,concept,concept,false,,,12,PDF_2020m03d018_8_45_2.pdf,Đánh giá hiệu quả điều trị đau thần kinh tọa thể phong hàn thấp bằng phương pháp cấy chỉ kết hợp thuốc y học cổ truyền
+lưỡi,có màu sắc,nhợt nhạt,concept,concept,false,,,12,PDF_2020m03d020_8_21_17.pdf,
+lưỡi,có hình thể,to bệu,concept,concept,false,,,12,PDF_2020m03d020_8_21_17.pdf,
+rêu lưỡi,có màu sắc,màu trắng,concept,concept,false,,,12,PDF_2020m03d020_8_21_17.pdf,
+mạch,có vị trí,trầm,concept,concept,false,,,12,PDF_2020m03d020_8_21_17.pdf,
+mạch,có tần số,hòa hoãn,concept,concept,false,,,12,PDF_2020m03d020_8_21_17.pdf,
+thể lâm sàng,liên quan,"tuổi, giới tính",concept,concept,false,,,12,PDF_2020m03d020_8_21_17.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới và thời gian mắc bệnh"
+thể lâm sàng,phổ biến nhất,huyết ứ,concept,concept,false,,,12,PDF_2020m03d020_8_21_17.pdf,
+thể lâm sàng,phổ biến nhất,phong thấp,concept,concept,false,,,12,PDF_2020m03d020_8_21_17.pdf,
+thể lâm sàng,có liên quan,tuổi,concept,concept,false,,,13,PDF_2020m03d020_8_21_17.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh và tần số mạch."
+thể lâm sàng,có liên quan,giới,concept,concept,false,,,13,PDF_2020m03d020_8_21_17.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh và tần số mạch."
+thể lâm sàng,có liên quan,thời gian bệnh,concept,concept,false,,,13,PDF_2020m03d020_8_21_17.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh và tần số mạch."
+thể lâm sàng,có liên quan,tần số mạch,concept,concept,false,,,13,PDF_2020m03d020_8_21_17.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh và tần số mạch."
+đau vai gáy,khảo sát,triệu chứng lâm sàng,,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,Khảo sát tần suất xuất hiện một số triệu chứng lâm sàng theo y học cổ truyền ở bệnh nhân đau vai gáy
+lưỡi nhạt màu,chiếm cao,bất thường,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Về chất lưỡi: nhóm bất thường chiếm tỷ lệ cao là 18,4% lưỡi nhạt màu, 27,6% lưỡi bệu."
+lưỡi bệu,chiếm cao,bất thường,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Về chất lưỡi: nhóm bất thường chiếm tỷ lệ cao là 18,4% lưỡi nhạt màu, 27,6% lưỡi bệu."
+rêu lưỡi trắng,chiếm cao,bất thường,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Về rêu lưỡi: 75,9% rêu lưỡi trắng, 58,6% rêu mỏng, rêu ướt (31%) cao hơn rêu khô (17,2%)."
+rêu ướt,chiếm cao,bất thường,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Về rêu lưỡi: 75,9% rêu lưỡi trắng, 58,6% rêu mỏng, rêu ướt (31%) cao hơn rêu khô (17,2%)."
+chườm ấm đỡ đau,chiếm cao,hàn chứng,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Chứng trạng về hàn: chườm ấm đỡ đau chiếm tỷ lệ cao nhất (62,1%)."
+miệng họng khô khát,chiếm cao,nhiệt chứng,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Chứng trạng về nhiệt: miệng họng khô khát chiếm tỷ lệ cao nhất (34,5%)."
+đau thiện án,thường gặp,đặc điểm đau,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,
+đau âm ĩ,thường gặp,đặc điểm đau,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,
+mạch trầm,chiếm cao,chứng trạng,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Về mạch: chứng trạng mạch trầm chiếm tỷ lệ 65,5%, mạch trì (31,1%), mạch hoãn (47,1%), mạch vô lực (55,2%)."
+thể lâm sàng,có liên quan,tuổi,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh, chườm ấm đỡ đau, án chẩn và tần số mạch (p < 0,05)."
+thể lâm sàng,có liên quan,giới,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh, chườm ấm đỡ đau, án chẩn và tần số mạch (p < 0,05)."
+thể lâm sàng,có liên quan,thời gian bệnh,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh, chườm ấm đỡ đau, án chẩn và tần số mạch (p < 0,05)."
+thể lâm sàng,có liên quan,chườm ấm,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh, chườm ấm đỡ đau, án chẩn và tần số mạch (p < 0,05)."
+thể lâm sàng,có liên quan,án chẩn,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh, chườm ấm đỡ đau, án chẩn và tần số mạch (p < 0,05)."
+thể lâm sàng,có liên quan,tần số mạch,concept,concept,false,,,13,PDF_2021m05d04_16_34_37.pdf,"Có mối liên quan giữa thể lâm sàng với tuổi, giới, thời gian mắc bệnh, chườm ấm đỡ đau, án chẩn và tần số mạch (p < 0,05)."
+bệnh không lây nhiễm,cần,y học cổ truyền,concept,concept,false,,,13,VMJ.11227.pdf,Vai trò của Y học cổ truyền trong phòng và điều trị bệnh không lây nhiễm
+y học cổ truyền,phòng ngừa,bệnh không lây nhiễm,concept,concept,false,,,13,VMJ.11227.pdf,Vai trò của Y học cổ truyền trong phòng và điều trị bệnh không lây nhiễm
+y học cổ truyền,điều trị,bệnh không lây nhiễm,concept,concept,false,,,13,VMJ.11227.pdf,Vai trò của Y học cổ truyền trong phòng và điều trị bệnh không lây nhiễm
+mất cân bằng âm dương,là nguyên nhân,bệnh đới không lây nhiễm,concept,concept,false,,,13,VMJ.11227.pdf,
+đau thần kinh tọa,khảo sát,đặc điểm lâm sàng,,concept,false,,,13,VMJ.11302.pdf,
+đau lưng,chiếm cao,triệu chứng,concept,concept,false,,,13,VMJ.11302.pdf,
+mất ngủ,chiếm cao,triệu chứng,concept,concept,false,,,13,VMJ.11302.pdf,
+tiểu đêm,chiếm cao,triệu chứng,concept,concept,false,,,13,VMJ.11302.pdf,
+gai xương,chiếm cao,hình xquang,concept,concept,false,,,13,VMJ.11302.pdf,"Hình ảnh Xquang (71,18% gai xương, 31,76% hẹp khe khớp);"
+hẹp khe khớp,chiếm cao,hình xquang,concept,concept,false,,,13,VMJ.11302.pdf,"Hình ảnh Xquang (71,18% gai xương, 31,76% hẹp khe khớp);"
+thoát vị đĩa đệm,chiếm cao,hình mri,concept,concept,false,,,13,VMJ.11302.pdf,
+phong hàn thấp can thận hư,phổ biến,thể lâm sàng,concept,concept,false,,,13,VMJ.11417.pdf,
+huyết ứ,phổ biến,thể lâm sàng,concept,concept,false,,,13,VMJ.11417.pdf,
+pulse methylprednisolon,điều trị,nhãn viêm cảm,product,concept,false,,,13,VMJ.11417.pdf,quyết định điều trị tấn công lại pulse methylprednisolon 1000mg/ ngày
+cyclosin a,điều trị,nhãn viêm cảm,product,concept,false,,,13,VMJ.11417.pdf,
+thị lực,cải thiện,sau điều trị,concept,concept,false,,,13,VMJ.11417.pdf,
+thể thấp nhiệt khốn tỳ,có chỉ số,triglycerid trung bình cao nhất,concept,concept,false,,,14,VMJ.11535.pdf,"Chỉ số triglycerid trung bình cao nhất ở thể thấp nhiệt khốn tỳ 2,36 ± 1,61 mmol/L"
+thể huyết ứ mạch lạc,có chỉ số,"triglycerid trung bình 2,15 ± 1,18",concept,concept,false,,,14,VMJ.11535.pdf,"tiếp theo là ở thể huyết ứ mạch lạc 2,15 ± 1,18 mmol/L"
+thể khí âm lưỡng hư,chiếm tỷ lệ,"bệnh nhân đái tháo đường type 2 kèm tăng huyết áp 29,5%",concept,concept,false,,,14,VMJ.11535.pdf,"thể khí âm lưỡng hư chiếm tỷ lệ cao nhất là 29,5%"
+"thể âm dương lưỡng hư, khí huyết nội đình",chiếm tỷ lệ,"29,1%",concept,concept,false,,,14,VMJ.11535.pdf,"tiếp đến là thể âm dương lưỡng hư, khí huyết nội đình là 29,1%"
+thể thấp nhiệt khốn tỳ,có bmi cao,"chỉ số bmi trung bình cao nhất 25,98 ± 3,21",concept,concept,false,,,14,VMJ.11535.pdf,"thể thấp nhiệt khốn tỳ có chỉ số BMI trung bình cao nhất 25,98 ± 3,21"
+thể âm hư nhiệt thịnh,có bmi đứng,"23,80 ± 3,91",concept,concept,false,,,14,VMJ.11535.pdf,
+thể khí âm lưỡng hư,có đường huyết,"7,48 ± 3,01 mmol/l",concept,concept,false,,,14,VMJ.11535.pdf,"Chỉ số đường huyết trước ăn trong nghiên cứu có kết quả trung bình cao nhất ở thể khí âm lưỡng hư 7,48 ± 3,01mmol/L"
+thể huyết ứ mạch lạc,có đường huyết,"6,06 ± 1,51 mmol/l",concept,concept,false,,,14,VMJ.11535.pdf,"thể huyết ứ mạch lạc có chỉ số đường huyết lúc đói trung bình thấp nhất là 6,06 ± 1,51 mmol/L"
+thể thấp nhiệt khốn tỳ,có cholesterol cao,"5,21 ± 1,30 mmol/l",concept,concept,false,,,14,VMJ.11535.pdf,"chỉ số Cholesterol trung bình cao nhất ở thể thấp nhiệt khốn tỳ 5,21 ± 1,30 mmol/L"
+thể thấp nhiệt khốn tỳ,có triglycerid cao,"2,33 ± 1,60 mmol/l",concept,concept,false,,,14,VMJ.11535.pdf,
+kỹ thuật thở hfto,đạt kết quả,"tỷ lệ thành công 86,67%",technology,concept,false,,,14,VMJ.11535.pdf,"Tỷ lệ thành công của kỹ thuật này đạt 86,67%, với tỷ lệ thất bại 13,33%"
+kỹ thuật thở hfto,không gây,bất kỳ biến chứng,technology,concept,false,,,14,VMJ.11535.pdf,không ghi nhận bất kỳ biến chứng nào do HFTO gây ra cho bệnh nhân
+liệu pháp oxy hfto,giúp tăng,spo2 nhanh trong 15 phút,technology,concept,false,,,14,VMJ.11535.pdf,Mức SpO2 tăng nhanh trong 15 phút đầu và giữ ổn định trong 24 giờ tiếp theo
+tạng phủ hư suy,là nguyên nhân,"43,9%",concept,concept,false,,,14,VMJ.11776.pdf,
+thể thượng tiêu,có nguyên nhân,tình chí thất điều,concept,concept,false,,,14,VMJ.11776.pdf,"Bệnh nhân thể thượng tiêu có nguyên nhân gây bệnh chủ yếu là tình chí thất điều (17,5%)"
+thể trung tiêu,có nguyên nhân,ẩm thực bất tiết,concept,concept,false,,,14,VMJ.11776.pdf,"thể trung tiêu có nguyên nhân gây bệnh chủ yếu là ẩm thực bất tiết (5,2%)"
+thể hạ tiêu,có nguyên nhân,tạng phủ hư suy,concept,concept,false,,,14,VMJ.11776.pdf,"thể hạ tiêu có nguyên nhân gây bệnh chủ yếu là tạng phủ hư suy (44,3%)"
+bệnh nhân đtđ ≥60 tuổi,chiếm tỷ lệ,"69,2%",concept,concept,false,,,14,VMJ.11776.pdf,
+bệnh nhân nữ giới,chiếm tỷ lệ,"61,7%",concept,concept,false,,,14,VMJ.11776.pdf,"bệnh nhân nữ giới (61,7%) chiếm tỷ lệ cao hơn nam giới"
+thể âm hư,chiếm tỷ lệ,"53,6%",concept,concept,false,,,14,VMJ.11776.pdf,"Bệnh nhân có tình trạng âm hư chiếm tỷ lệ cao nhất (53,6%)"
+huyết hư,chiếm tỷ lệ,"33,0%",concept,concept,false,,,14,VMJ.11776.pdf,
+thể hạ tiêu,chiếm tỷ lệ,68%,concept,concept,false,,,14,VMJ.11776.pdf,
+thể thượng tiêu,chiếm tỷ lệ,"21,6%",concept,concept,false,,,14,VMJ.11776.pdf,
+thể chất âm hư,chiếm tỷ lệ,"32,3%",concept,concept,false,,,14,VMJ.11776.pdf,
+thể chất khí uất,chiếm tỷ lệ,"21,5%",concept,concept,false,,,14,VMJ.11776.pdf,
+thể chất bình hòa,có điểm psqi,"7,50",concept,concept,false,,,14,VMJ.11776.pdf,
+thể chất dương hư,có thời gian,"3,31 giờ",concept,concept,false,,,14,VMJ.11776.pdf,
+thể chất bình hòa,có hiệu suất,"79,29%",concept,concept,false,,,14,VMJ.11776.pdf,
+tăng huyết áp,thuộc,huyễn vựng,concept,concept,false,,,14,VMJ.14073.pdf,Tăng huyết áp thuộc phạm vi chứng Huyễn vựng của Y học cổ truyền
+yh hiện đại kết hợp yhct,điều trị hiệu,tăng huyết áp,concept,concept,false,,,14,VMJ.14073.pdf,
+thuốc chẹn kênh canxi,sử dụng nhiều,"45,8%",concept,concept,false,,,14,VMJ.14073.pdf,
+thuốc thang,sử dụng nhiều,"91,9%",concept,concept,false,,,14,VMJ.14073.pdf,
+lục vị địa hoàn,đi trị hiệu,thể can thận hư,concept,concept,false,,,14,VMJ.14073.pdf,
+vận động khớp,giảm đau,thoái hóa đốt sống cổ,concept,concept,false,,,14,VMJ.14369.pdf,
+vận động khớp,cải thiện,biên độ vận động (rom),concept,concept,false,,,14,VMJ.14369.pdf,
+xoa bóp yhct,ngăn ngừa,thoái hóa đốt sống cổ,concept,concept,false,,,14,VMJ.14369.pdf,
+vận động cổ,làm tăng,nhiệt độ,work,concept,false,,,15,VMJ.14369.pdf,
+vận động cổ,tương quan,nhiệt độ,work,concept,false,,,15,VMJ.14369.pdf,
+vận động cổ,cải thiện,rom,work,concept,false,,,15,VMJ.14369.pdf,thay đổi có ý nghĩa thống kê của các thông số đo ROM
+vận động cổ,giảm,co cứng cơ,work,concept,false,,,15,VMJ.14369.pdf,Nguyễn Minh Hoài ghi nhận rằng VĐKC làm giảm co thắt cơ
+vận động cổ,cải thiện,rom cổ,work,concept,false,,,15,VMJ.14369.pdf,
+vận động cổ,tăng,lưu lượng hoàn,work,concept,false,,,15,VMJ.14369.pdf,
+nhiệt độ da,tương quan,rom vai,concept,concept,false,,,15,VMJ.14369.pdf,
+kéo giãn thủ công,tăng,rom cổ,work,concept,false,,,15,VMJ.14369.pdf,
+vận động cổ,hỗ trợ,sơ cân lạc,work,concept,false,,,15,VMJ.14369.pdf,
+vận động cổ,hỗ trợ,hoạt huyết hóa ứ,work,concept,false,,,15,VMJ.14369.pdf,
+vận động cổ,giảm,triệu chứng bệnh,work,concept,false,,,15,VMJ.14369.pdf,hỗ trợ lưu thông khí huyết và giảm triệu chứng bệnh
+apob,đánh giá,nguy cơ tim mạch,concept,concept,false,,,15,VMJ.14369.pdf,
+apob,tương quan,tăng triglyceride,concept,concept,false,,,15,VMJ.14369.pdf,
+apob,tương quan,ldl-c,concept,concept,false,,,15,VMJ.14369.pdf,
+đái tháo đường,phổ biến,nữ giới,,person,false,,,15,VMJ.14626.pdf,Đái tháo đường gặp nhiều hơn ở nữ giới
+đái tháo đường,thuộc thể,khí âm lưỡng hư,,concept,false,,,15,VMJ.14626.pdf,
+mất ngủ,triệu chứng,đái tháo đường,concept,,false,,,15,VMJ.14626.pdf,
+đái tháo đường,kèm theo,tăng huyết áp,,concept,false,,,15,VMJ.14626.pdf,bệnh lý kèm theo thường gặp là tăng huyết áp
+hba1c,kiểm soát,đái tháo đường,concept,,false,,,15,VMJ.14626.pdf,
+men gan,tăng,năm mắc bệnh,concept,concept,false,,,15,VMJ.14626.pdf,men gan và creatinin máu xu hướng tăng theo số năm mắc bệnh
+gây tê vuông,đánh giá,sự hài lòng,technology,concept,false,,,15,VMJ.14626.pdf,
+gây tê vuông,giảm,đau,technology,concept,false,,,15,VMJ.14626.pdf,
+gây tê vuông,duy trì,thời gian,technology,concept,false,,,15,VMJ.14626.pdf,
+sản phụ,thấy,hài lòng,person,concept,false,,,15,VMJ.14626.pdf,
+trầm cảm,thuộc thể,can khí uất kết,,concept,false,,,15,VMJ.15265.pdf,can khí uất kết là chứng hậu gặp nhiều nhất
+trầm cảm,liên quan,vị trí đau,,concept,false,,,15,VMJ.15265.pdf,"có mối liên quan với vị trí đau, kiểu đau"
+trầm cảm,liên quan,mức độ đau,,concept,false,,,15,VMJ.15265.pdf,
+đau mạn sườn,triệu chứng,trầm cảm,concept,,false,,,15,VMJ.15265.pdf,đau mạn sườn chiếm tỷ lệ cao nhất
+stress,làm tăng,đau,concept,concept,false,,,15,VMJ.15265.pdf,tăng khi gặp stress
+apob,phân phối,phân phối chuẩn,concept,concept,false,,,15,VMJ.14369.pdf,nồng độ ApoB huyết thanh có phân phối chuẩn
+đột quỵ não,gây ra,liệt nửa người,,concept,false,,,15,VMJ.162.pdf,khảo sát thực trạng bệnh nhân liệt nửa người do đột quỵ
+nhồi máu,nguyên nhân,đột quỵ,concept,,false,,,15,VMJ.162.pdf,
+thể thể bằng,tương quan,bất cân bằng,concept,concept,false,,,15,VMJ.14752.pdf,
+bất ổn thần kinh,tăng nguy cơ,không cân bằng,concept,concept,false,,,15,VMJ.14752.pdf,
+nội soi dải tần hẹp,nhận diện,polyp ác tính,technology,concept,false,,,15,VMJ.14752.pdf,nội soi dải tần hẹp theo phân loại NICE có độ chính xác cao trong phân biệt polyp ác tính và lành tính
+thoái hóa cột sống cổ,gây ra,đau cổ,concept,concept,false,,,16,VMJ.16348.pdf,
+phần mềm spss 20.0,xử lý,dữ liệu nghiên cứu,technology,concept,false,,,16,VMJ.16348.pdf,sử dụng phần mềm SPSS 20.0
+nhóm tuổi trên 60 tuổi,chiếm đa số,bối nhân nhân thoái hóa cột sống cổ,concept,concept,false,,,16,VMJ.16348.pdf,"Nhóm tuổi trên 60 tuổi chiếm đa số (76,7%)"
+thang điểm vas,đo,mức độ đau,concept,concept,false,,,16,VMJ.16348.pdf,"Điểm VAS trung bình trong nghiên cứu là 4,4 ± 0,85"
+thang điểm ndi,đo,mức độ hạn chế sinh hoạt,concept,concept,false,,,16,VMJ.16348.pdf,Mức độ hạn chế sinh hoạt hàng ngày theo thang điểm NDI
+gai xương,xuất hiện trên,xquang cột sống cổ,concept,concept,false,,,16,VMJ.16348.pdf,100% bệnh nhân trong nghiên cứu có hình ảnh gai xương
+hẹp khe đốt sống,xuất hiện trên,xquang cột sống cổ,concept,concept,false,,,16,VMJ.16348.pdf,
+mất đường cong sinh lý,xuất hiện trên,xquang cột sống cổ,concept,concept,false,,,16,VMJ.16348.pdf,"mất đường cong sinh lý là 76,6%"
+lao động trí óc,nguyên nhân gây,thoái hóa cột sống cổ,concept,concept,false,,,16,VMJ.16348.pdf,"Đối tượng lao động trí óc chiếm 61,7%"
+hen phế quản,mục tiêu là,kiểm soát,concept,concept,false,,,16,VMJ.16348.pdf,Kiểm soát hen là mục tiêu chính trong điều trị hen
+trẻ dưới 5 tuổi,đối tượng nghiên,hen phế quản,concept,concept,false,,,16,VMJ.16348.pdf,mô tả tình trạng kiểm soát hen ở trẻ dưới 5 tuổi
+điệu pháp dự phòng,giúp cải thiện,kiểm soát hen,concept,concept,false,,,16,VMJ.16348.pdf,
+đau thần kinh do zona,mục tiêu,giảm đau bổ trợ,concept,concept,false,,,16,VMJ.16557.pdf,
+y học cổ truyền,điều trị,đau thần kinh do zona,concept,concept,false,,,16,VMJ.16557.pdf,phương pháp điều trị Y học cổ truyền (YHCT)
+điện châm,điều trị,đau thần kinh do zona,concept,concept,false,,,16,VMJ.16557.pdf,
+thủy châm,điều trị,đau thần kinh do zona,concept,concept,false,,,16,VMJ.16557.pdf,
+xoa bóp bấm huyệt,điều trị,đau thần kinh do zona,concept,concept,false,,,16,VMJ.16557.pdf,
+tia hồng ngoại,điều trị,đau thần kinh do zona,concept,concept,false,,,16,VMJ.16557.pdf,chiếu tia hồng ngoại
+gabapentin,điều trị,đau thần kinh do zona,concept,concept,false,,,16,VMJ.16557.pdf,
+lidocaine,điều trị,đau thần kinh do zona,concept,concept,false,,,16,VMJ.16557.pdf,
+nấm móng,mục tiêu,đánh giá kết quả,concept,concept,false,,,16,VMJ.16557.pdf,
+itraconazole,điều trị,nấm móng,concept,concept,false,,,16,VMJ.16557.pdf,
+phương pháp dùng xung,điều trị,nấm móng,concept,concept,false,,,16,VMJ.16557.pdf,
+sinh viên y học cổ truyền,đối tượng,khảo sát lo âu,concept,concept,false,,,16,VMJ.17283.pdf,
+gad-7,đo,lo âu,concept,concept,false,,,16,VMJ.17283.pdf,
+lo lắng kết quả học tập,nguyên nhân gây,lo âu,concept,concept,false,,,16,VMJ.17283.pdf,Các yếu tố liên quan phổ biến gồm: lo lắng kết quả học tập
+thiếu ngủ,nguyên nhân gây,lo âu,concept,concept,false,,,16,VMJ.17283.pdf,
+kỳ vọng từ gia đình,nguyên nhân gây,lo âu,concept,concept,false,,,16,VMJ.17283.pdf,
+thiếu hỗ trợ xã hội,nguyên nhân gây,lo âu,concept,concept,false,,,16,VMJ.17283.pdf,
+hội chứng suy nhược mạn tính,mục tiêu,mô tả lâm sàng,concept,concept,false,,,16,VMJ.18734.pdf,
+tâm tỳ lưỡng hư,thể bệnh chính,hội chứng suy nhược mạn tính,concept,concept,false,,,16,VMJ.18734.pdf,
+thận âm hư,thể bệnh,hội chứng suy nhược mạn tính,concept,concept,false,,,16,VMJ.18734.pdf,
+tỳ thận dương hư,thể bệnh phụ,hội chứng suy nhược mạn tính,concept,concept,false,,,16,VMJ.18734.pdf,thấp nhất là thể tỳ thận dương hư
+khung cố định ngoài,điều trị,gãy xương cẳng chân,concept,concept,false,,,16,VMJ.17756.pdf,
+muller,loại khung,cố định xương cẳng chân,concept,concept,false,,,16,VMJ.17756.pdf,
+khung chữ t,loại khung,cố định xương cẳng chân,concept,concept,false,,,16,VMJ.17756.pdf,khung cố định ngoài chữ T
+kim kirschner,phương pháp cố,gãy xương cẳng chân,concept,concept,false,,,16,VMJ.17756.pdf,cố định bằng kim Kirschner
+viêm loét dạ dày tá tràng,cần kiểm soát,tái phát,,concept,false,,,17,VMJ.18734.pdf,Kết luận: Thực trạng kiểm soát tái phát viêm loét dạ dày tá tràng của người bệnh trong phạm vi nghiên cứu còn thấp
+người bệnh,có kiến thức,"45,2%",person,concept,false,,,17,VMJ.18734.pdf,
+người bệnh,có thái độ,"57,5%",person,concept,false,,,17,VMJ.18734.pdf,"người bệnh có kiến thức đạt và 57,5% người bệnh có thái độ đạt"
+người bệnh,chưa chú trọng,đổi dinh dưỡng,person,concept,false,,,17,VMJ.18734.pdf,"Vẫn còn 42,5% người bệnh chưa chú trọng thay đổi chế độ dinh dưỡng"
+người bệnh,cần tăng cường,tư vấn sức khỏe,person,work,false,,,17,VMJ.18734.pdf,Điều này cho thấy cần tăng cường tư vấn và giáo dục sức khỏe cho người bệnh
+người nghiện thuốc lá,tại,hà nội,person,place,false,,,17,VMJ.2331.pdf,Mục tiêu nghiên cứu: Mô tả đặc điểm lâm sàng của người nghiện thuốc lá tại thành phố Hà Nội
+nam giới,hút thuốc,"96,4%",person,concept,false,,,17,VMJ.2331.pdf,"tỷ lệ nam giới hút thuốc là 96,4%, lao động tự do 48,1%"
+la động tự do,chiếm,"48,1%",person,concept,false,,,17,VMJ.2331.pdf,"tỷ lệ nam giới hút thuốc là 96,4%, lao động tự do 48,1%"
+tuổi hút thuốc,trong khoảng,40 – 59 tuổi,concept,concept,false,,,17,VMJ.2331.pdf,tuổi hút thuốc lá trong khoảng từ 40 – 59 tuổi chiếm tỷ lệ 43.8%
+thời gian hút thuốc,từ,11 – 20 năm,concept,concept,false,,,17,VMJ.2331.pdf,thời gian hút thuốc từ 11 – 20 năm chiếm tỷ lệ 26.5%
+thiết chẩn chất lưỡi đỏ,chiếm,"62,7%",concept,concept,false,,,17,VMJ.2331.pdf,tỷ lệ thiệt chẩn chất lưỡi đỏ chiếm 62.7% và tỷ lệ thích ăn
+người nghiện thuốc lá,có thể tạng,thiên nhiệt,person,concept,false,,,17,VMJ.2331.pdf,
+nghiện thuốc lá,gây,rối loạn tâm thần,concept,concept,false,,,17,VMJ.2331.pdf,Nghiện thuốc lá là trạng thái rối loạn tâm thần - hành vi
+nghiện thuốc lá,xuất hiện,triệu chứng,concept,concept,false,,,17,VMJ.2331.pdf,
+ngữ liệu,xử lý bằng,phần mềm spss,concept,technology,false,,,17,VMJ.2331.pdf,Số liệu được xử lý bằng phần mềm thống kê y sinh học SPSS 20.0
+thuốc hb,điều thiện,triệu chứng,product,concept,false,,,17,VMJ.2331.pdf,
+tăng tiết mồ hôi tay chân,điều trị,thuốc hb,concept,product,false,,,17,VMJ.2331.pdf,
+thuốc ppi,dự phòng,loét tiêu hóa,product,concept,false,,,17,VMJ.3449.pdf,
+thất miên,điều trị bằng,hạt vương lưu hành,concept,product,false,,,17,VMJ.3449.pdf,
+mất ngủ,cải thiện,điểm isi,concept,concept,false,,,17,VMJ.3449.pdf,
+tăng huyết áp,là,bệnh lý nền,concept,concept,false,,,17,VMJ.3449.pdf,
+thất miên,điều trị,huyệt nada,concept,concept,false,,,17,VMJ.3449.pdf,
+mất ngủ,cải thiện,mức rõ rệt,concept,concept,false,,,17,VMJ.3449.pdf,bệnh nhân có gia đình và sống cùng gia đình có tỷ lệ cải thiện điểm
+thoái hóa cột sống,gây,đau thắt lưng,concept,concept,false,,,17,VMJ.3636.pdf,Đánh giá kết quả điều trị đau thắt lưng do thoái hóa cột sống
+độc hoạt ký sinh thang,phối hợp,điện châm,product,technology,false,,,17,VMJ.3636.pdf,
+đau thắt lưng,giảm,thang điểm vas,concept,concept,false,,,17,VMJ.3636.pdf,
+chỉ số schober,tăng,đcm,concept,concept,false,,,17,VMJ.3636.pdf,
+khoảng cách tay - đất,giảm,đcm,concept,concept,false,,,17,VMJ.3636.pdf,
+trào ngược dạ dày thực quản,khảo sát,thể y học cổ truyền,concept,concept,false,,,17,VMJ.3773.pdf,
+can khí phạm vị,chiếm,"83,3%",concept,concept,false,,,17,VMJ.3773.pdf,
+tỳ vị hư hàn,chiếm,"16,7%",concept,concept,false,,,17,VMJ.3773.pdf,
+nuốt chua,chiếm,"83,3%",concept,concept,false,,,17,VMJ.3773.pdf,
+phiền muộn chịu,chiếm,80%,concept,concept,false,,,17,VMJ.3773.pdf,
+bệnh mắt basedow,mô tả,đặc điểm lâm sàng,concept,concept,false,,,17,VMJ.3854.pdf,
+tỷ lệ nữ,cao hơn,tỷ lệ nam (4:1),concept,concept,false,,,17,VMJ.3854.pdf,
+điểm cas,trung bình,"3,45",concept,concept,false,,,17,VMJ.3854.pdf,
+lồi mắt,trung bình,"19,18mm",concept,concept,false,,,17,VMJ.3854.pdf,
+co mi trên,trung bình,"1,43cm",concept,concept,false,,,17,VMJ.3854.pdf,
+song thị,chiếm,40%,concept,concept,false,,,17,VMJ.3854.pdf,
+điểm go-qol,trung bình,"30,33",concept,concept,false,,,17,VMJ.3854.pdf,
+bệnh go,cải thiện,chất lượng cuộc sống,concept,concept,false,,,18,VMJ.4127.pdf,việc điều trị có hiệu quả đối với bệnh GO sẽ cải thiện chất lượng cuộc sống
+bệnh nhân,có độ tuổi,"40,85 tuổi",person,concept,false,,,18,VMJ.4127.pdf,"Tuổi trung bình của các bệnh nhân trong nghiên cứu là 40,85 ± 12,63 tuổi"
+bệnh nhân,tổn thương,cả 2 mắt,person,place,false,,,18,VMJ.4127.pdf,Tất cả các bệnh nhân đều tổn thương ở cả 2 mắt
+bệnh nhân,có mức độ,viẹ nhẹ,person,concept,false,,,18,VMJ.4127.pdf,Bệnh nhân trong nghiên cứu đa số có mức độ viêm nhẹ
+bệnh nhân,có mức độ,nhẹ,person,concept,false,,,18,VMJ.4127.pdf,Các bệnh nhân đều có mức độ lồi mắt nhẹ
+bệnh song thị,chiếm,40%,concept,concept,false,,,18,VMJ.4127.pdf,
+bệnh mắt,ảnh hưởng,chất lượng cuộc sống,concept,concept,false,,,18,VMJ.4127.pdf,Bệnh mắt ảnh hưởng đến chất lượng cuộc sống của người bệnh
+ghép thận,so sánh,ctnt và tppm,work,concept,false,,,18,VMJ.4127.pdf,"khảo sát đặc điểm lâm sàng, cận lâm sàng và kết quả sau ghép"
+bệnh nhân,nhận thận,từ người sống,person,concept,false,,,18,VMJ.4127.pdf,
+ghép thận,gây,chậm hồi phục chức năng,work,concept,false,,,18,VMJ.4127.pdf,
+đái tháo đường 2,có,rối loạn cảm xúc,concept,concept,false,,,18,VMJ.5509.pdf,tình trạng rối loạn cảm xúc rất phổ biến ở BN ĐTĐ type 2
+trầm cảm,chiếm,42%,concept,concept,false,,,18,VMJ.5509.pdf,Tỷ lệ trầm cảm ở BN ĐTĐ type 2 trên thang BECK là 42%
+lo âu,là,yếu tố nguy cơ,concept,concept,false,,,18,VMJ.5509.pdf,
+lo âu,làm tăng,gánh nặng triệu chứng,concept,concept,false,,,18,VMJ.5509.pdf,Sự có mặt của lo âu có thể làm tăng gánh nặng những triệu chứng của ĐTĐ
+hội chứng cổ vai tay,do,thoái hóa cột sống cổ,concept,concept,false,,,18,VMJ.5509.pdf,
+bệnh nhân,đ mức đau,vừa theo vas,person,concept,false,,,18,VMJ.5509.pdf,
+bệnh nhân,có hình ảnh,gai xương trên xquang,person,concept,false,,,18,VMJ.5509.pdf,
+hội chứng rễ,chiếm,95%,concept,concept,false,,,18,VMJ.5509.pdf,
+bệnh nhân,hạn chế,tầm vận động cột sống,person,concept,false,,,18,VMJ.5509.pdf,
+công nghệ xspect,ứng dụng trong,ghi hình phóng xạ spect/ct,technology,work,false,,,18,VMJ.5509.pdf,Ứng dụng công nghệ xử lý ảnh xSPECT trong ghi hình phóng xạ SPECT/CT
+xspect quant,là phương pháp,tái tạo ảnh,technology,concept,false,,,18,VMJ.5509.pdf,
+lao khớp,đòi hỏi,phát hiện sớm,concept,concept,false,,,18,VMJ.5967.pdf,
+sinh thiết mhd,có,hiệu quả chẩn đoán cao,work,concept,false,,,18,VMJ.5967.pdf,
+nam giới,chiếm,95%,concept,concept,false,,,18,VMJ.5967.pdf,
+hút thuốc lá,gây,rối loạn chuyển hóa,concept,concept,false,,,18,VMJ.5967.pdf,
+thể khí hư,chiếm,tỷ lệ cao nhất,concept,concept,false,,,18,VMJ.5967.pdf,
+bệnh viện tuệ tĩnh,phân tích,cơ cấu danh mục thuốc,organization,concept,false,,,18,VMJ.646.pdf,
+thuốc hóa dược,chiếm,"44,5% khoản mục",product,concept,false,,,18,VMJ.646.pdf,
+thuốc thang,có số lượng,338 khoản mục,product,concept,false,,,18,VMJ.646.pdf,
+bệnh nhân,thuộc thể,can thận hư kết hợp hàn thấp,person,concept,false,,,18,VMJ.646.pdf,tỉ lệ bệnh nhân thể can thận hư kết hợp hàn thấp chiếm phần lớn (32%)
+ruellia tuberosa,đi trị,tăng huyết áp và tiểu đường,concept,concept,false,,,18,VMJ.6491.pdf,
+hoạt tính ức chế,mạnh nhất,ethyl acetate (ea),concept,concept,false,,,18,VMJ.6491.pdf,
+hội chứng cổ vai tay,thường gặp,ở độ tuổi 40-59,concept,concept,false,,,18,VMJ.6795.pdf,
+lao động trí óc,chiếm,"58,3%",concept,concept,false,,,18,VMJ.6795.pdf,
+đau thắt lưng,do,thoái hóa cột sống,concept,concept,false,,,19,VMJ.6795.pdf,can thận hư gây đau lưng mỏi gối
+can thận hư,gây ra,đau lưng mỏi gối,concept,concept,false,,,19,VMJ.6795.pdf,can thận hư gây đau lưng mỏi gối
+thoái hóa cột sống thắt lưng,gây ra,đau thắt lưng,concept,concept,false,,,19,VMJ.6795.pdf,đau thắt lưng do thoái hóa cột sống thắt lưng
+phong hàn thấp,gây ra,đau thắt lưng,concept,concept,false,,,19,VMJ.6795.pdf,bệnh nhân có phong hàn thấp kết hợp can thận hư
+phong hàn thấp,gây ra,sợ lạnh,concept,concept,false,,,19,VMJ.6795.pdf,đặc trưng cho thể Phong hàn thấp
+can thận hư,gây ra,ù tai,concept,concept,false,,,19,VMJ.6795.pdf,can thận hư gây đau lưng mỏi gối
+phong hàn thấp,biểu hiện,lưỡi nhạt,concept,concept,false,,,19,VMJ.6795.pdf,"chất lưỡi nhạt, rêu trắng dính (61,7%)"
+bệnh nhân,có độ tuổi,trên 60 tuổi,person,date,false,,,19,VMJ.6795.pdf,Độ tuổi trên 60 tuổi chiếm tỷ lệ cao nhất
+bệnh nhân,chiếm tỷ lệ,nữ,person,concept,false,,,19,VMJ.6795.pdf,nữ chiếm tỷ lệ 75% nhiều hơn nam
+thời gian mắc bệnh,là,trên 6 tháng,concept,date,false,,,19,VMJ.6795.pdf,Thời gian mắc bệnh trên 6 tháng chiếm tỷ lệ cao nhất
+đột quỵ não,gây ra,dương hư,concept,concept,false,,,19,VMJ.6836.pdf,
+đột quỵ não,gây ra,âm hư,concept,concept,false,,,19,VMJ.6836.pdf,
+đột quỵ não,gây ra,khí hư,concept,concept,false,,,19,VMJ.6836.pdf,
+đột quỵ não,gây ra,đàm thấp,concept,concept,false,,,19,VMJ.6836.pdf,
+đột quỵ não,gây ra,ứ huyết,concept,concept,false,,,19,VMJ.6836.pdf,
+đột quỵ não,gây ra,khí uất,concept,concept,false,,,19,VMJ.6836.pdf,
+đột quỵ não,gây ra,thấp nhiệt,concept,concept,false,,,19,VMJ.6836.pdf,
+vảy nến,biểu hiện,khí hư,concept,concept,false,,,19,VMJ.6851.pdf,
+vảy nến,biểu hiện,đặc biệt,concept,concept,false,,,19,VMJ.6851.pdf,
+vảy nến,biểu hiện,khí uất,concept,concept,false,,,19,VMJ.6851.pdf,"và Khí uất (18,49%)"
+đàm thấp,quan,thời gian mắc bệnh,concept,date,false,,,19,VMJ.6851.pdf,
+dương hư,quan,nhiễm trùng,concept,concept,false,,,19,VMJ.6851.pdf,
+khí uất,quan,stress,concept,concept,false,,,19,VMJ.6851.pdf,
+tăng huyết áp,biểu hiện,can thận âm hư,concept,concept,false,,,19,VMJ.7171.pdf,
+tăng huyết áp,biểu hiện,đàm thấp,concept,concept,false,,,19,VMJ.7171.pdf,"tiếp theo là thể đàm thấp (24,8%)"
+tăng huyết áp,biểu hiện,can dương thượng cang,concept,concept,false,,,19,VMJ.7171.pdf,"và thể can dương thượng cang (14,3%)"
+tăng huyết áp,quan,tiền sử đột quỵ,concept,concept,false,,,19,VMJ.7171.pdf,
+tăng huyết áp,quan,nhẹ cân,concept,concept,false,,,19,VMJ.7171.pdf,
+tăng huyết áp,quan,tiền sử rối loạn lipid,concept,concept,false,,,19,VMJ.7171.pdf,
+tăng huyết áp,quan,thừa cân béo phì,concept,concept,false,,,19,VMJ.7171.pdf,"Bệnh nhân thừa cân, béo phì có nguy cơ THA thể đàm thấp"
+thoái hóa cột sống cổ,điều trị bằng,điệnâm,concept,technology,false,,,19,VMJ.8050.pdf,
+thoái hóa cột sống cổ,điều trị bằng,xoa bóp bấm huyệt,concept,technology,false,,,19,VMJ.8050.pdf,
+thoái hóa cột sống cổ,sử dụng,quyên tý thang gia giảm,concept,product,false,,,19,VMJ.8050.pdf,
+thoái hóa cột sống cổ,sử dụng,lục vị địa hoàng thang gia giảm,concept,product,false,,,19,VMJ.8050.pdf,
+thoái hóa cột sống cổ,hiệu quả đạt,khá,concept,concept,false,,,19,VMJ.8050.pdf,
+thoái hóa cột sống cổ,hiệu quả đạt,tốt,concept,concept,false,,,19,VMJ.8050.pdf,
+ung thư biểu mô tế bào,dự báo bằng,chỉ số palbi,concept,technology,false,,,19,VMJ.8363.pdf,
+nghiên cứu,khảo sát,thoái hóa cột sống,work,concept,false,,,20,VMJ.8363.pdf,
+bệnh nhân,có triệu chứng,đau vùng cổ vai-gáy,person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,hạn chế,vận động cổ vai tay,person,,false,,,20,VMJ.8363.pdf,
+x-quang cổ,phát hiện,gai xương thân sống,technology,,false,,,20,VMJ.8363.pdf,
+mri cột sống,phát hiện,hẹp khoang gian đốt,technology,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,chẩn đoán mắc,thoái hóa cột sống cổ,person,,false,,,20,VMJ.8363.pdf,
+hội chứng,chiếm tỷ lệ,phong hàn,concept,concept,false,,,20,VMJ.8363.pdf,
+bệnh nhân,điều trị bằng,"thuốc thang, thành phẩm, ppkdt",person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,sử dụng,độc hoạt tang ký sinh,person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,sử dụng,thân thống trục ứ,person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,sử dụng,ục vị địa hoàng,person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,sử dụng,điện châm,person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,sử dụng,thủy châm,person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,sử dụng,cấy chỉ,person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,chẩn đoán mắc,ung thư trực tràng,person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,điều trị bằng,hóa xạ trị tiền phẫu,person,,false,,,20,VMJ.8363.pdf,
+bệnh nhân,chẩn đoán mắc,xơ cứng toàn thể,person,,false,,,20,VMJ.8460.pdf,
+bệnh nhân,điều trị bằng,tứ vật đào hồng gia giảm,person,,false,,,20,VMJ.8460.pdf,
+bệnh nhân,điều trị bằng,hương sa lục quân gia giảm,person,,false,,,20,VMJ.8460.pdf,
+bệnh nhân,cải thiện,thang điểm rodnan,person,,false,,,20,VMJ.8460.pdf,
+bệnh nhân,cải thiện,điểm đau vas,person,,false,,,20,VMJ.8460.pdf,
+bệnh nhân,chẩn đoán mắc,covid-19 kéo dài,person,,false,,,20,VMJ.9366.pdf,
+bệnh nhân,có triệu chứng,mệt mỏi,person,,false,,,20,VMJ.9366.pdf,
+bệnh nhân,có triệu chứng,mất ngủ,person,,false,,,20,VMJ.9366.pdf,
+bệnh nhân,có triệu chứng,ho kéo dài,person,,false,,,20,VMJ.9366.pdf,
+bệnh nhân,có triệu chứng,đau nhức toàn thân,person,,false,,,20,VMJ.9366.pdf,
+bệnh nhân,chẩn đoán thể,phế tỳ khí hư,person,concept,false,,,20,VMJ.9366.pdf,
+bệnh nhân,chẩn đoán thể,khí âm lưỡng hư,person,concept,false,,,20,VMJ.9366.pdf,
+mệt mỏi,chiếm,đa số,concept,concept,false,,,21,VMJ.9366.pdf,"Tỷ lệ bệnh nhân mệt mỏi chiếm đa số (82,5%)"
+ho kéo dài,chiếm,"53,5%",concept,concept,false,,,21,VMJ.9366.pdf,"53,5% bệnh nhân ho kéo dài"
+mất ngủ,chiếm,"57,5%",concept,concept,false,,,21,VMJ.9366.pdf,
+đau nhức toàn thân,chiếm,53%,concept,concept,false,,,21,VMJ.9366.pdf,53% bệnh nhân đau nhức toàn thân
+đoản khí,xuất hiện,"32,5%",concept,concept,false,,,21,VMJ.9366.pdf,"các triệu chứng theo YHCT thường xuất hiện như: đoản khí (32,5%)"
+miệng khô,xuất hiện,38%,concept,concept,false,,,21,VMJ.9366.pdf,miệng khô (38%)
+chất lưỡi nhợt,xuất hiện,45%,concept,concept,false,,,21,VMJ.9366.pdf,chất lưỡi nhợt (45%)
+rêu lưỡi dày,xuất hiện,45%,concept,concept,false,,,21,VMJ.9366.pdf,rêu lưỡi dày (45%)
+chất lưỡi đỏ sẫm,xuất hiện,41%,concept,concept,false,,,21,VMJ.9366.pdf,chất lưỡi đỏ sẫm (41%)
+thể phế tỳ khí hư,chiếm,"47,5%",concept,concept,false,,,21,VMJ.9366.pdf,"Thể phế tỳ khí hư chiếm đa số với 47,5%"
+thể khí âm lưỡng hư,chiếm,"33,5%",concept,concept,false,,,21,VMJ.9366.pdf,"thể khí âm lưỡng hư chiếm 33,5%"
+thể phế vị âm hư,chiếm,"12,5%",concept,concept,false,,,21,VMJ.9366.pdf,"thể phế vị âm hư chiếm 12,5%"
+nữ/nam,tỷ lệ,"2,08",concept,concept,false,,,21,VMJ.9366.pdf,"ghi nhận tỷ lệ nữ/ nam là 2,08"
+bệnh covid-19 kéo dài,gặp,nữ giới,concept,concept,false,,,21,VMJ.9366.pdf,
+độ tuổi trung bình,là,"51,23",concept,concept,false,,,21,VMJ.9366.pdf,"độ tuổi trung bình là 51,23 ± 15,79 (tuổi)"
+tiêm vaccine,đạt,100%,concept,concept,false,,,21,VMJ.9366.pdf,100% bệnh nhân đã tiêm vaccine
+tiêm mũi 3,chiếm,92%,concept,concept,false,,,21,VMJ.9366.pdf,số bệnh nhân đã tiêm mũi 3 chiếm tỷ lệ cao tới 92%
+bệnh covid-19,mức độ,nhẹ,concept,concept,false,,,21,VMJ.9366.pdf,100% bệnh nhân trong nghiên cứu mắc COVID – 19 ở mức độ nhẹ
+tiêm chủng vaccine,giảm,ca nặng,concept,concept,false,,,21,VMJ.9366.pdf,tiêm chủng vaccine có thể giảm bớt được số ca nặng
+bệnh van tim,giảm,27%,concept,concept,false,,,21,VMJ.9753.pdf,
+bệnh tim thiếu cục bộ,tăng,24%,concept,concept,false,,,21,VMJ.9753.pdf,
+bệnh cơ xương khớp và mô liên kết,chiếm,"50,69%",concept,concept,false,,,21,VMJ.9753.pdf,
+bệnh hệ thần kinh,chiếm,"39,83%",concept,concept,false,,,21,VMJ.9753.pdf,
+tổn thương thần kinh hông to,chiếm,"27,93%",concept,concept,false,,,21,VMJ.9753.pdf,
+điện châm,sử dụng,"93,5%",concept,concept,false,,,21,VMJ.9753.pdf,
+thủy châm,áp dụng,"43,7%",concept,concept,false,,,21,VMJ.9753.pdf,"thủy châm áp dụng cho 43,7%"
+cấy chỉ,đạt,"6,95%",concept,concept,false,,,21,VMJ.9753.pdf,"phương pháp cấy chỉ còn hạn chế, chỉ đạt 6,95%"
+rối loạn lo âu thi cử,chiếm,68%,concept,concept,false,,,21,VMJ.9767.pdf,
+lưỡi ám tím,chiếm,"43,3%",concept,concept,false,,,21,VMJ.9767.pdf,
+lưỡi gầy,chiếm,"55,8%",concept,concept,false,,,21,VMJ.9767.pdf,"lưỡi gầy (55,8%)"
+lưỡi đường nứt,chiếm,60%,concept,concept,false,,,21,VMJ.9767.pdf,
+rêu trắng,chiếm,"31,5%",concept,concept,false,,,21,VMJ.9767.pdf,"rêu trắng (31,5%)"
+rêu nhuận,chiếm,"69,1%",concept,concept,false,,,21,VMJ.9767.pdf,"rêu nhuận (69,1%)"
+rối loạn lo âu thi cử,mức,rất nặng,concept,concept,false,,,21,VMJ.9767.pdf,
+phong hàn phế,chiếm,"73,5%",concept,concept,false,,,21,"admin,+10.8-100.pdf",
+phong nhiệt phế,chiếm,"26,5%",concept,concept,false,,,21,"admin,+10.8-100.pdf",
+hen nhẹ,chiếm,"93,8%",concept,concept,false,,,21,"admin,+10.8-100.pdf","đa số là hen nhẹ (93,8%)"
+hen nặng,chiếm,"6,2%",concept,concept,false,,,21,"admin,+10.8-100.pdf","còn lại là hen nặng (6,2%)"
+hen phế quản,gây,phong hàn phạm phế,,concept,false,,,22,"admin,+10.8-100.pdf","tỉ lệ Phong Hàn phạm Phế chiếm đa số (73,5%)"
+hen phế quản,gây,phong nhiệt phạm phế,,concept,false,,,22,"admin,+10.8-100.pdf",trong khi Phong Nhiệt phạm Phế phổ biến ở nhóm hen nặng (90%)
+trẻ nam,mắc,hen phế quản,person,,false,,,22,"admin,+10.8-100.pdf",tỉ lệ trẻ nam mắc hen phế quản cao gấp đôi
+trẻ nam,khởi phát,hen sớm,person,event,false,,,22,"admin,+10.8-100.pdf",trẻ nam có xu hướng khởi phát hen sớm hơn
+bạch cầu ái toan,tăng,trẻ nam,concept,person,false,,,22,"admin,+10.8-100.pdf",do sự tăng nồng độ bạch cầu ái toan
+trẻ 24-60 tháng tuổi,chiếm,nhiều hơn,concept,concept,false,,,22,"admin,+10.8-100.pdf","nhóm từ 24- 60 tháng tuổi (67,9%) chiếm tỉ lệ nhiều hơn"
+hen nặng,xuất hiện,trẻ dưới 24 tháng,,person,false,,,22,"admin,+10.8-100.pdf",hen nặng xuất hiện nhiều hơn ở nhóm tuổi dưới 24 tháng
+trẻ nhỏ,có nguy cơ,hen nặng,person,,false,,,22,"admin,+10.8-100.pdf",
+phong hàn phạm phế,chiếm ở,hen nhẹ,concept,,false,,,22,"admin,+10.8-100.pdf","Phong Hàn phạm Phế chiếm ưu thế ở nhóm hen nhẹ (77,6%)"
+phong nhiệt phạm phế,phổ biến,hen nặng,concept,,false,,,22,"admin,+10.8-100.pdf",Phong Nhiệt phạm Phế phổ biến ở nhóm hen nặng (90%)
+xuất tinh sớm,liên quan,"thận, tâm, can",,concept,false,,,22,"admin,+10.pdf",
+xuất tinh sớm,điều trị,y học cổ truyền,,concept,false,,,22,"admin,+10.pdf",hiệu quả điều trị xuất tinh sớm bằng y học cổ truyền
+châm cứu,cải thiện,thời gian xuất tinh,technology,concept,false,,,22,"admin,+10.pdf",
+qiaoshao fang,cải thiện,xuất tinh sớm,product,,false,,,22,"admin,+10.pdf",
+shugan yidan fang,cải thiện,xuất tinh sớm,product,,false,,,22,"admin,+10.pdf",
+acmella oleracea,điều trị,xuất tinh sớm,product,,false,,,22,"admin,+10.pdf",
+ôn châm,điều trị,xuất tinh sớm,technology,,false,,,22,"admin,+10.pdf",
+đốc mạch,kết nối,"não, tâm",concept,concept,false,,,22,"admin,+12.pdf",
+thận tinh,cung cấp,tủy não,concept,concept,false,,,22,"admin,+12.pdf",sự đầy đủ của tủy Não phụ thuộc vào sự phong phú của Thận tinh
+tâm huyết,hóa thành,thận tinh,concept,concept,false,,,22,"admin,+12.pdf",huyết của Tâm có thể hóa tinh để bổ sung cho Thận
+thận tinh,hóa thành,tâm huyết,concept,concept,false,,,22,"admin,+12.pdf",
+nam khoa,dùng,trục não - tâm - thận - tinh thất,concept,concept,false,,,22,"admin,+12.pdf",
+đái tháo đường,dùng,dây thìa canh,,product,false,,,22,"admin,+17.5-03.pdf",
+đái tháo đường,dùng,trà hoa vàng,,product,false,,,22,"admin,+17.5-03.pdf",
+đái tháo đường,dùng,đậu biếc,,product,false,,,22,"admin,+17.5-03.pdf",
+đái tháo đường,dùng,bồ công anh,,product,false,,,22,"admin,+17.5-03.pdf",
+dây thìa canh,hạ,glucose,product,concept,false,,,22,"admin,+17.5-03.pdf",
+trà hoa vàng,hạ,glucose,product,concept,false,,,22,"admin,+17.5-03.pdf",
+viêm mũi xoang,dùng,thuốc phẩm,,product,false,,,22,"admin,+20.pdf",
+viêm mũi xoang,dùng,thuốc thang,,product,false,,,22,"admin,+20.pdf",
+viêm mũi xoang,dùng,cấy chỉ,,technology,false,,,22,"admin,+20.pdf",
+cam thảo,trị,viêm mũi xoang,product,,false,,,22,"admin,+20.pdf",
+bạch chỉ,trị,viêm mũi xoang,product,,false,,,22,"admin,+20.pdf",
+tiêu u hoàn,trị,ung thư,product,,false,,,22,"admin,+20.pdf",
+viêm mũi xoang mạn tính,điều trị bằng,y học cổ truyền,,concept,false,,,23,"admin,+25.8-92.pdf","điều trị VMX mạn tính, cùng với sự tiện lợi của cấy chỉ"
+cấy chỉ,sử dụng trị,viêm mũi xoang mạn tính,technology,,false,,,23,"admin,+25.8-92.pdf",cấy chỉ là phương pháp được sử dụng nhiều hơn
+thuốc thành phẩm,điều trị,viêm mũi xoang mạn tính,product,,false,,,23,"admin,+25.8-92.pdf",nghiên cứu ghi nhận các phương pháp YHCT điều trị VMX
+thuốc thang,điều trị,viêm mũi xoang mạn tính,product,,false,,,23,"admin,+25.8-92.pdf",nghiên cứu ghi nhận các phương pháp YHCT điều trị VMX
+điều không dùng thuốc,điều trị,viêm mũi xoang mạn tính,concept,,false,,,23,"admin,+25.8-92.pdf","điều trị không dùng thuốc (48,2%)"
+thuốc thành phẩm,tác dụng,giải biểu,product,concept,false,,,23,"admin,+25.8-92.pdf","các thành phẩm có tác dụng giải biểu, thanh nhiệt"
+thuốc thành phẩm,tác dụng,thanh nhiệt,product,concept,false,,,23,"admin,+25.8-92.pdf","các thành phẩm có tác dụng giải biểu, thanh nhiệt"
+thuốc thành phẩm,tác dụng,bổ khí,product,concept,false,,,23,"admin,+25.8-92.pdf","các thành phẩm có tác dụng giải biểu, thanh nhiệt, bổ khí"
+thuốc thang,thường dùng,bổ dưỡng,product,concept,false,,,23,"admin,+25.8-92.pdf","Trong các bài thuốc thang, nhóm thuốc thường dùng là bổ dưỡng"
+thuốc thang,thường dùng,giải biểu,product,concept,false,,,23,"admin,+25.8-92.pdf","Trong các bài thuốc thang, nhóm thuốc thường dùng là bổ dưỡng và giải biểu"
+cấy chỉ,sử dụng nhất,không dùng thuốc,technology,concept,false,,,23,"admin,+25.8-92.pdf",
+thoái hóa cột sống,điều trị bằng,y học cổ truyền,,concept,false,,,23,"admin,+28.6-55.pdf",kết hợp y học cổ truyền và y học hiện đại trong điều trị thoái hóa cột sống
+thoái hóa cột sống,điều trị bằng,y học hiện đại,,concept,false,,,23,"admin,+28.6-55.pdf",kết hợp y học cổ truyền và y học hiện đại trong điều trị thoái hóa cột sống
+bệnh mắc kèm,liên quan,kết hợp điều trị,concept,concept,false,,,23,"admin,+28.6-55.pdf",
+bệnh tim mạch,liên quan,kết hợp điều trị,,concept,false,,,23,"admin,+28.6-55.pdf",
+bệnh cơ xương khớp,phổ biến nhất,bệnh mắc kèm,,concept,false,,,23,"admin,+28.6-55.pdf",
+rối loạn giấc ngủ,điều trị bằng,y học cổ truyền,,concept,false,,,23,"admin,+31.6-44.pdf",
+rối loạn giấc ngủ,điều trị bằng,y học hiện đại,,concept,false,,,23,"admin,+31.6-44.pdf",
+nơi cư trú thành phố,liên quan,kết hợp điều trị,place,concept,false,,,23,"admin,+31.6-44.pdf",
+bệnh cơ xương khớp,liên quan,kết hợp điều trị,,concept,false,,,23,"admin,+31.6-44.pdf",
+gout,điều trị bằng,y học cổ truyền,,concept,false,,,23,"admin,+38.pdf",
+gout,điều trị bằng,y học hiện đại,,concept,false,,,23,"admin,+38.pdf",
+y học cổ truyền,tác dụng,hạ acid uric,concept,concept,false,,,23,"admin,+38.pdf",
+y học cổ truyền,tác dụng,giảm đau,concept,concept,false,,,23,"admin,+38.pdf",
+nguyên dương bất túc,triệu chứng,liệt dương,,,false,,,23,"admin,+8.pdf",
+nguyên dương bất túc,triệu chứng,đau lưng,,,false,,,23,"admin,+8.pdf",
+nguyên dương bất túc,triệu chứng,mỏi gối,,,false,,,23,"admin,+8.pdf",
+tâm tỳ hư,triệu chứng,ăn kém,,,false,,,23,"admin,+8.pdf",
+tâm tỳ hư,triệu chứng,bụng đầy,,,false,,,23,"admin,+8.pdf",
+thấp nhiệt,triệu chứng,rêu vàng,,,false,,,23,"admin,+8.pdf",
+thấp nhiệt,triệu chứng,tiểu vàng đỏ,,,false,,,23,"admin,+8.pdf",
+dọa sảy thai,điều trị bằng,y học cổ truyền,,concept,false,,,23,"admin,+BT-1-10-trang-3.pdf",sử dụng các vị thuốc y học cổ truyền trong điều trị dọa sảy thai
+dọa sảy thai,thể bệnh,khí huyết hư,,concept,false,,,23,"admin,+BT-1-10-trang-3.pdf",
+dọa sảy thai,thể bệnh,thận hư,,concept,false,,,23,"admin,+BT-1-10-trang-3.pdf","48,2% thai phụ thuộc thể thận hư"
+dọa sảy thai,thể bệnh,huyết nhiệt,,concept,false,,,23,"admin,+BT-1-10-trang-3.pdf",
+dọa sảy thai,điều trị bằng,yhct kết hợp,,concept,false,,,23,"admin,+BT-1-10-trang-3.pdf",62% thai phụ được kết hợp điều trị giữa y học cổ truyền và y học hiện đại
+dọa sảy thai,sử dụng,cam thảo,,product,false,,,24,"admin,+BT-1-10-trang-3.pdf",Trong số 15 vị thuốc thường được sử dụng để điều trị dọa sảy thai có 100% vị cam thảo
+dọa sảy thai,sử dụng,đảng sâm,,product,false,,,24,"admin,+BT-1-10-trang-3.pdf",
+thai phụ,thuộc nhóm,18 đến 35 tuổi,person,concept,false,,,24,"admin,+BT-1-10-trang-3.pdf",
+dọa sảy thai,gặp nhiều nhất,dưới 9 tuần,,concept,false,,,24,"admin,+BT-1-10-trang-3.pdf","Tình trạng dọa sảy gặp nhiều nhất ở nhóm tuổi thai dưới 9 tuần với 54,6%"
+thai phụ,thuộc thể,thận hư,person,concept,false,,,24,"admin,+BT-1-10-trang-3.pdf","chúng tôi ghi nhận tỷ lệ thai phụ thuộc thể Thận hư chiếm tỷ lệ cao nhất với 48,2%"
+thai phụ,thuộc thể,khí huyết hư,person,concept,false,,,24,"admin,+BT-1-10-trang-3.pdf","thể Khí huyết hư chiếm tỷ lệ 47,2%"
+tỳ hư,gây ra,thai động bất an,concept,concept,false,,,24,"admin,+BT-1-10-trang-3.pdf","Tỳ hư không vận hóa được thủy cốc, làm nguồn sinh hóa ra khí huyết không đủ dẫn đến không nuôi dưỡng được thai làm thai động bất an"
+thận hư,gây ra,thai động không yên,concept,concept,false,,,24,"admin,+BT-1-10-trang-3.pdf","Thận hư không ôn ấm được bào cung, không cố được xung nhâm làm cho thai động không yên"
+điều trị,kết hợp,yhct,work,technology,false,,,24,"admin,+BT-1-10-trang-3.pdf",Tỷ lệ kết hợp điều trị giữa YHCT và YHHĐ chiếm 62%
+điều trị,đơn thuần,yhđ,work,technology,false,,,24,"admin,+BT-1-10-trang-3.pdf",tỷ lệ điều trị đơn thuần bằng YHHĐ chiếm 38%
+trĩ,thuộc thể,tỳ hư,,concept,false,,,24,"admin,+Bai+48.pdf",
+trĩ,thuộc thể,thấp nhiệt trở trệ,,concept,false,,,24,"admin,+Bai+48.pdf",
+nghiên cứu,sử dụng,phân tích nhân tố,work,technology,false,,,24,"admin,+Bai+48.pdf",sử dụng phương pháp phân tích nhân tố và phân tích cụm
+trĩ,triệu chứng,sa hậu môn sau đại tiện,,concept,false,,,24,"admin,+Bai+48.pdf",
+rối loạn giấc ngủ,điều trị bằng,sài hồ gia long cốt mẫu lệ thang,,product,false,,,24,"admin,+CD1-VTT_B25.pdf",
+rối loạn giấc ngủ,điều trị bằng,long đởm tả can thang,,product,false,,,24,"admin,+CD1-VTT_B25.pdf",
+sài hồ gia long cốt mẫu lệ thang,cải thiện,điểm psqi,product,concept,false,,,24,"admin,+CD1-VTT_B25.pdf",cả 2 nhóm đều có sự cải thiện rõ rệt điểm PSQI
+rối loạn giấc ngủ,cải thiện,triệu chứng can uất hóa hỏa,,concept,false,,,24,"admin,+CD1-VTT_B25.pdf",
+aflatoxin,gây ra,nhiễm độc,concept,concept,false,,,24,"admin,+Vol+67+No+2+2026-trang-39.pdf",
+thuốc đông dược,nhiễm,nấm,product,concept,false,,,24,"admin,+Vol+67+No+2+2026-trang-39.pdf",
+nấm,nhiễm ở,rễ,concept,place,false,,,24,"admin,+Vol+67+No+2+2026-trang-39.pdf",
+tăng sản lành tính tuyến tiền liệt,thuộc thể,thấp nhiệt bàng quang,,concept,false,,,24,"admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",
+tăng sản lành tính tuyến tiền liệt,thuộc thể,phế nhiệt ủng thịnh,,concept,false,,,24,"admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",phế nhiệt ủng thịnh
+tăng sản lành tính tuyến tiền liệt,thuộc thể,niệu đạo ứ nghẽn,,concept,false,,,24,"admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",niệu đạo ứ nghẽn
+tăng sản lành tính tuyến tiền liệt,thuộc thể,can khí uất kết,,concept,false,,,24,"admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",can khí uất kết
+tăng sản lành tính tuyến tiền liệt,thuộc thể,thận dương hư,,concept,false,,,24,"admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",thận dương hư
+tăng sản lành tính tuyến tiền liệt,thuộc thể,thận âm hư,,concept,false,,,24,"admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",thận âm hư
+tăng sản lành tính tuyến tiền liệt,thuộc thể,trung khí bất túc,,concept,false,,,24,"admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",trung khí bất túc
+vô sinh nam,điều trị bằng,bổ thận tráng dương,,concept,false,,,24,"admin,+Vol+67_CD2_B29.pdf",
+vô sinh nam,cải thiện,tỷ lệ thai,,concept,false,,,24,"admin,+Vol+67_CD2_B29.pdf",
+vô sinh nam,cải thiện,thông số tinh dịch,,concept,false,,,24,"admin,+Vol+67_CD2_B29.pdf",cải thiện nhiều thông số tinh dịch/testosterone
+bài thuốc bổ thận,điều trị,vô sinh nam,concept,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",
+icariin,tác động,trục nội tiết,product,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",Hoạt chất/đơn vị thuốc đại diện (ví dụ icariin từ dâm dương hoắc)
+l-carnitine,phối hợp,yhct,product,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf","Phối hợp với chất bổ sung (vitamin, L-carnitine)"
+vitamin,phối hợp,yhct,product,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf","Phối hợp với chất bổ sung (vitamin, L-carnitine)"
+châm cứu,điều trị,bổ thận,technology,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",Can thiệp không dùng thuốc (châm cứu theo nguyên tắc bổ thận/điều khí huyết)
+l-carnitine + yhct,cải thiện,tỷ lệ có thai,concept,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",phân tích gộp về L-carnitine + YHCT ghi nhận tỷ lệ có thai cao hơn
+vitamin + yhct,cải thiện,tỷ lệ có thai,concept,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",
+l-carnitine + yhct,cải thiện,mật độ tinh trùng,concept,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",Phân tích gộp về L-carnitine + YHCT cho thấy cải thiện có ý nghĩa
+l-carnitine + yhct,cải thiện,testosterone,concept,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",Phân tích gộp về L-carnitine + YHCT cho thấy cải thiện có ý nghĩa
+bushen shenjing pill,đánh giá,tinh dịch đồ,product,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",Nghiên cứu quan sát kinh điển về Bushen Shengjing Pill mô tả
+wuzi yanzong pill,đánh giá,tinh dịch đồ,product,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf","Đối với Wuzi Yanzong Pill, tài liệu Trials mô tả thiết kế thử nghiệm"
+icariin,tăng,testosterone,product,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",
+icariin,bảo vệ,tinh hoàn,product,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",
+icariin,giảm,stress oxy hóa,product,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",
+châm cứu,điều hòa,nội tiết,technology,concept,false,,,25,"admin,+Vol+67_CD2_B29.pdf",
+nguyễn thị nhu quỳnh,nghiên cứu,thể thể,person,concept,false,,,25,"admin,+Vol+67_No+3_B52.pdf",
+y học cổ truyền,điều trị,vô sinh nam,concept,concept,false,,,25,"admin,+Vol+67_No+3_B52.pdf",
+giác hơi khô,giảm đau,đau cơ xương khớp,technology,concept,false,,,25,"admin,+Y+te+cong+dong-Chuyen+de+10+-+T9+2024+-+color-Bai+4.pdf",Dry and wet cupping techniques can be applied to effectively relieve musculoskeletal pain
+giác hơi ướt,hỗ trợ điều,rối loạn hệ thống,technology,concept,false,,,25,"admin,+Y+te+cong+dong-Chuyen+de+10+-+T9+2024+-+color-Bai+4.pdf",studies was indicated that wet cupping may be beneficial for systemic disorders
+mụn trứng cá,phân loại,y học cổ truyền,concept,concept,false,,,25,bai+1.pdf,CLINICAL TYPES OF ACNE VULGARIS ACCORDING TO TRADITIONAL MEDICINE
+phong nhiệt,thể thể,mụn trứng cá,concept,concept,false,,,25,bai+1.pdf,
+thấp nhiệt,thể thể,mụn trứng cá,concept,concept,false,,,25,bai+1.pdf,
+giới tính,liên quan,thể phong nhiệt,concept,concept,false,,,25,bai+1.pdf,"nam giới dễ mắc thể Phong nhiệt hơn (50,0%)"
+điện châm,điều trị,mất ngủ,technology,concept,false,,,25,bài+23.pdf,Đánh giá tác dụng của điện châm kết hợp xoa bóp
+tâm tỳ hư,thể thể,mất ngủ,concept,concept,false,,,25,bài+23.pdf,điều trị mất ngủ không thực tổn thể Tâm tỳ hư
+điện châm + xoa bóp,cải thiện,thời gian ngủ,concept,concept,false,,,25,bài+23.pdf,
+điện châm + xoa bóp,giảm,điểm psqi,concept,concept,false,,,25,bài+23.pdf,
+thuốc y cổ truyền,sử dụng,động vật hoang dã,concept,concept,false,,,25,bài+3.pdf,
+trình độ học vấn,liên quan,nhận thức pháp luật,concept,concept,false,,,25,bài+3.pdf,
+tp huế,có,mức độ đa dạng sinh học cao,place,concept,false,,,26,bài+3.pdf,TP Huế được đánh giá là địa phương có mức độ đa dạng sinh học cao
+người dân tp huế,sử dụng,thuốc yhct,person,product,false,,,26,bài+3.pdf,việc sử dụng thuốc YHCT có nguồn gốc từ ĐVHD trong cộng đồng vẫn còn tồn tại
+tp thừa thiên huế,sở hữu,1223 loài động vật,place,concept,false,,,26,bài+3.pdf,
+người dân tp huế,khảo sát,nhận thức pháp luật,person,concept,false,,,26,bài+3.pdf,mô tả nhận thức pháp luật của người dân TP Huế
+trình độ học vấn,liên quan,nhận thức pháp luật,concept,concept,false,,,26,bài+3.pdf,Phân tích mối liên quan giữa trình độ học vấn và việc biết đến quy định
+nghiên cứu,thiết kế,mô tả cắt ngang,work,concept,false,,,26,bài+3.pdf,
+cỡ mẫu nghiên cứu,là,380 người dân,concept,person,false,,,26,bài+3.pdf,Cỡ mẫu trong nghiên cứu là 380 người dân
+phương pháp chọn mẫu,sử dụng,nhiều giai đoạn,,concept,false,,,26,bài+3.pdf,Phương pháp chọn mẫu nhiều giai đoạn
+người dân,chưa từng sử,thuốc từ đvhd,person,product,false,,,26,bài+3.pdf,
+người dân,đã từng sử,mật gấu,person,product,false,,,26,bài+3.pdf,
+người dân,không định sử,thuốc từ đvhd,person,product,false,,,26,bài+3.pdf,
+người dân,biết,vuy định pháp luật,person,concept,false,,,26,bài+3.pdf,từng biết đến quy định/văn bản pháp luật
+người dân,tiếp cận qua,tivi,person,technology,false,,,26,bài+3.pdf,tivi là nguồn thông tin được lựa chọn nhiều nhất
+người dân,tiếp cận qua,internet,person,technology,false,,,26,bài+3.pdf,
+luật lâm nghiệp 2017,là,văn bản được biết,work,concept,false,,,26,bài+3.pdf,
+bộ luật hình sự 2015,là,văn bản được biết,work,concept,false,,,26,bài+3.pdf,
+thuốc y học cổ truyền,điều trị,đau thắt lưng mạn tính,product,concept,false,,,26,bài+38.pdf,
+yiqi shujin decoction,có,tỷ lệ đáp ứng tốt nhất,product,concept,false,,,26,bài+38.pdf,network meta-analysis showed that Yiqi Shujin decoction had the best clinical response rate
+jiawei si miao san,giảm,điểm đau vas,product,concept,false,,,26,bài+38.pdf,Jiawei Si Miao San achieved the highest pain relief effect on the VAS scale
+shenghua decoction,cải thiện,chức năng vận động,product,concept,false,,,26,bài+38.pdf,
+duhuo jisheng decoction,cải thiện,chức năng vận động,product,concept,false,,,26,bài+38.pdf,Duhuo Jisheng decoction combined with Percutaneous Coblation Nucleoplasty the best improvement of motor function according to the JOA
+tongbi shujin decoction,gây,biến cố bất lợi cao nhất,product,concept,false,,,26,bài+38.pdf,Tongbi Shujin decoction combined with exercise according to nursing guidance had the highest incidence of adverse events
+đau thắt lưng,thuộc,thể hàn thấp,concept,concept,false,,,26,bài+4.pdf,
+thể hàn thấp,có triệu chứng,"chất lưỡi hồng nhuận (60,7%)",concept,concept,false,,,26,bài+4.pdf,
+thể hàn thấp,có triệu chứng,"rêu lưỡi trắng mỏng (87,3%)",concept,concept,false,,,26,bài+4.pdf,
+thể hàn thấp,liên quan,mức độ đau vas,concept,concept,false,,,26,bài+4.pdf,
+thể hàn thấp,liên quan,chất lượng giấc ngủ,concept,concept,false,,,26,bài+4.pdf,
+thể hàn thấp,chiếm,"tỷ lệ 40,7%",concept,concept,false,,,26,bài+4.pdf,
+đái tháo đường type 2,có,tuân thủ điều trị,,concept,false,,,26,current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf,treatment adherence
+tỷ lệ tuân thủ chung,là,"51,3%",concept,concept,false,,,26,current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf,
+tuân thủ dùng thuốc,cao nhất,"79,7%",concept,concept,false,,,26,current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf,
+tuân thủ dinh dưỡng,là,"61,8%",concept,concept,false,,,26,current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf,
+tuân thủ theo dõi đường huyết,là,"58,7%",concept,concept,false,,,26,current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf,
+tuân thủ hoạt động thể lực,thấp nhất,"52,9%",concept,concept,false,,,26,current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf,
+nhắc nhở từ người thân,liên quan,tuân thủ điều trị,concept,concept,false,,,26,current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf,
+bệnh đau bụng kinh nguyên phát,có độ tuổi,"24,0 tuổi",concept,date,false,,,27,VMJ.15116.pdf,"Độ tuổi trung vị là 24,0 (22,0-26,0) tuổi"
+hội chứng khí trệ huyết ứ,chiếm tỷ lệ,"59,7%",concept,concept,false,,,27,VMJ.15116.pdf,"Hội chứng bệnh Khí trệ huyết ứ chiếm 59,7%"
+mật độ xương cột sống thắt lưng,trung bình là,"-1,64 ± 1,53",concept,concept,false,,,27,VMJ.8058.pdf,"mật độ xương trung bình ở cột sống thắt lưng là -1,64 ± 1,53"
+tỷ lệ loãng xương,cao nhất ở,thể trạng gầy,concept,concept,false,,,27,VMJ.8058.pdf,"Tỷ lệ loãng xương cao nhất ở nhóm thể trạng gầy, chiếm 75%"
+hệ hỗ trợ chẩn đoán,sử dụng,thuật toán suy diễn,technology,technology,false,,,27,247-502-1-SM.pdf,"chúng tôi đã xây dựng ứng dụng qua các bước: xây dựng cơ sở tri thức, xây dựng tập luật"
+tập luật,chắt lọc từ,y văn và hồ sơ bệnh án,concept,concept,false,,,27,247-502-1-SM.pdf,
+phương pháp điều trị,kết hợp,y học cổ truyền và y học hiện đại,concept,concept,false,,,27,4547-Văn bản của bài báo-60846-1-10-20260128.pdf,"Phương pháp điều trị kết hợp Y học cổ truyền và Y học hiện đại chiếm đa số (91,3%)"
+tình trạng bệnh khi ra viện,là,đỡ,concept,concept,false,,,27,4547-Văn bản của bài báo-60846-1-10-20260128.pdf,"Tình trạng bệnh khi ra viện chủ yếu là đỡ (86,7%)"
+tuổi trung bình của đối tượng,là,30 tuổi,date,date,false,,,27,Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf,cho thấy tuổi trung bình là 30 tuổi
+chứng trạng hay gặp,là,sốt,concept,concept,false,,,27,Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf,"các chứng trạng hay gặp là sốt (54,17%)"
+hệ chẩn đoán,xây dựng,một số bệnh phổ biến,technology,concept,false,,,27,VMJ.12008.pdf,
+phương pháp sử dụng,là,suy diễn tiến,concept,technology,false,,,27,VMJ.12008.pdf,
+mật độ xương tại cột sống,là,"-1,64 ± 1,53",concept,concept,false,,,27,VMJ.14360.pdf,
+mật độ xương tại cổ xương đùi,là,"-1,39 ± 1,06",concept,concept,false,,,27,VMJ.14360.pdf,
+granisetron,sử dụng trong,"dự phòng nôn, buồn nôn",product,concept,false,,,27,VMJ.8462.pdf,"Granisetron sử dụng trong dự phòng nôn, buồn nôn sau mổ lấy thai"
+kháng histamin,giữ vai trò,kiểm soát triệu chứng,product,concept,false,,,27,VMJ.8462.pdf,
+tđcs,cải thiện,tầm vận động cstl,technology,concept,false,,,27,VMJ.8691.pdf,TĐCS giúp cải thiện tầm vận động CSTL
+điện châm kết hợp tđcs,tốt hơn,điện châm và xoa bóp,technology,technology,false,,,27,VMJ.8691.pdf,điện châm và TĐCS có tác dụng cải thiện tầm vận động cột sống sau 14 ngày điều trị tốt hơn điện châm và xoa bóp
+đau thần kinh sau zona,là,biến chứng thần kinh gặp nhất,event,event,false,,,27,VMJ.9281.pdf,
+mất ngủ,là,tình trạng dai dẳng,event,event,false,,,27,VMJ.9281.pdf,
+mất ngủ sau đột quỵ,là,biến chứng rất phổ biến,event,event,false,,,27,VMJ.9851.pdf,Mất ngủ sau đột quỵ (PSI: Post- stroke insomnia) là một biến chứng rất phổ biến
+thể âm hư hỏa vượng,chiếm tỷ lệ,"40,8%",concept,concept,false,,,27,VMJ.9851.pdf,
+suy tim mạn,là,hội chứng phức tạp,concept,concept,false,,,27,Vol2Issue3_74-82.pdf,Suy tim mạn là một hội chứng phức tạp do bất thường về cấu trúc và/hoặc chức năng tim
+mạch trầm,là,"90,6%",concept,concept,false,,,27,Vol2Issue3_74-82.pdf,
+dương hư,chiếm tỷ lệ,"64,5%",concept,concept,false,,,27,"admin,+9.pdf",
+thấp nhiệt,chiếm tỷ lệ,"7,7%",concept,concept,false,,,27,"admin,+9.pdf",
+thể đàm thấp,chiếm tỷ lệ,"26,4%",concept,concept,false,,,27,"admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf",
+thể đàm thấp,tương quan với,chỉ số ldl c,concept,concept,false,,,27,"admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf",
+y học cổ truyền,đánh giá,cải thiện rối loạn kinh nguy,concept,concept,false,,,27,"admin,+TAP+65_SO+2-2024_BAI+19.pdf",
+y học cổ truyền,đánh giá,phát triển nang trứng,concept,concept,false,,,27,"admin,+TAP+65_SO+2-2024_BAI+19.pdf",
+đau bụng kinh,chiếm tỷ lệ,"88,6%",concept,concept,false,,,27,bài+18.pdf,"biểu hiện đau bụng kinh mức độ từ vừa đến nặng chiếm tỷ lệ 88,6%"
+khí trệ,có liên quan,mức độ đau bụng kinh,concept,concept,false,,,27,bài+18.pdf,

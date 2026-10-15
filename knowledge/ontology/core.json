@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "status": "candidate_application_profile",
+  "classes": ["BiologicalTaxon", "MedicinalMaterial", "PlantPart", "ProcessedMaterial", "Preparation", "Compound", "FormulaVersion", "TraditionalPattern", "Symptom", "BiomedicalDisease", "TraditionalProperty", "NonDrugIntervention", "Community", "Locality", "Concept"],
+  "predicates": {
+    "derivedFromTaxon": {"domain": ["MedicinalMaterial", "ProcessedMaterial"], "range": ["BiologicalTaxon"]},
+    "usesPart": {"domain": ["MedicinalMaterial", "Preparation", "ProcessedMaterial"], "range": ["PlantPart"]},
+    "processedFrom": {"domain": ["ProcessedMaterial", "Preparation"], "range": ["MedicinalMaterial", "ProcessedMaterial"]},
+    "hasIngredient": {"domain": ["FormulaVersion", "Preparation"], "range": ["MedicinalMaterial", "ProcessedMaterial", "Compound"]},
+    "containsCompound": {"domain": ["MedicinalMaterial", "Preparation", "ProcessedMaterial", "BiologicalTaxon"], "range": ["Compound"]},
+    "hasManifestation": {"domain": ["TraditionalPattern", "BiomedicalDisease"], "range": ["Symptom"]},
+    "describedWithProperty": {"domain": ["MedicinalMaterial", "ProcessedMaterial"], "range": ["TraditionalProperty"]},
+    "studiedFor": {"domain": ["MedicinalMaterial", "ProcessedMaterial", "Preparation", "Compound", "FormulaVersion", "NonDrugIntervention"], "range": ["BiomedicalDisease", "Symptom", "TraditionalPattern", "Concept"]},
+    "traditionallyUsedFor": {"domain": ["MedicinalMaterial", "ProcessedMaterial", "Preparation", "FormulaVersion", "NonDrugIntervention"], "range": ["TraditionalPattern", "Symptom", "BiomedicalDisease"]},
+    "recordedInCommunity": {"range": ["Community"]},
+    "recordedAt": {"range": ["Locality"]},
+    "relatedTo": {"description": "Source-stated relation; never a claim of equivalence or therapeutic efficacy."}
+  },
+  "branches": {
+    "mesh": {"path": "knowledge/MeSH/MESH.ttl", "role": "terminology", "entry_terms_are_equivalent": false},
+    "vietherbs": {"path": "knowledge/VietHerbs/VHO.owl", "role": "source_ontology"},
+    "graph": {"path": "knowledge/dataset-run/dataset_graph.json", "role": "document_assertions"}
+  },
+  "identity": {"normalization": "NFC, casefold, whitespace; preserve accents", "cross_source_merge": "requires reviewed mapping", "formula_version": "scoped to document version"},
+  "prohibited_inferences": ["formula efficacy transferred to ingredients", "cell or animal finding generalized to humans", "traditional use upgraded to proven efficacy", "MeSH co-indexing interpreted as treatment", "entry term interpreted as owl:sameAs"]
+}

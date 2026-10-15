@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d12" for="edge" attr.name="document" attr.type="string"/>
+<key id="d11" for="edge" attr.name="source" attr.type="string"/>
+<key id="d10" for="edge" attr.name="via" attr.type="string"/>
+<key id="d9" for="edge" attr.name="method" attr.type="string"/>
+<key id="d8" for="edge" attr.name="inferred" attr.type="boolean"/>
+<key id="d7" for="edge" attr.name="predicate" attr.type="string"/>
+<key id="d6" for="edge" attr.name="label" attr.type="string"/>
+<key id="d5" for="node" attr.name="color" attr.type="string"/>
+<key id="d4" for="node" attr.name="degree" attr.type="long"/>
+<key id="d3" for="node" attr.name="community_name" attr.type="string"/>
+<key id="d2" for="node" attr.name="community" attr.type="long"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="label" attr.type="string"/>
+<graph edgedefault="directed"><node id="bác sĩ bộ y tế">
+  <data key="d0">bác sĩ bộ y tế</data>
+  <data key="d1">person</data>
+  <data key="d2">1</data>
+  <data key="d3">Community 2</data>
+  <data key="d4">1</data>
+  <data key="d5">#f28e2b</data>
+</node>
+<node id="bệnh mãn tính">
+  <data key="d0">bệnh mãn tính</data>
+  <data key="d1">concept</data>
+  <data key="d2">0</data>
+  <data key="d3">Community 1</data>
+  <data key="d4">1</data>
+  <data key="d5">#4e79a7</data>
+</node>
+<node id="bệnh tiêu hóa">
+  <data key="d0">bệnh tiêu hóa</data>
+  <data key="d1">concept</data>
+  <data key="d2">0</data>
+  <data key="d3">Community 1</data>
+  <data key="d4">1</data>
+  <data key="d5">#4e79a7</data>
+</node>
+<node id="bệnh viện quân y 354">
+  <data key="d0">bệnh viện quân y 354</data>
+  <data key="d1">organization</data>
+  <data key="d2">0</data>
+  <data key="d3">Community 1</data>
+  <data key="d4">1</data>
+  <data key="d5">#4e79a7</data>
+</node>
+<node id="bệnh xương khớp">
+  <data key="d0">bệnh xương khớp</data>
+  <data key="d1">concept</data>
+  <data key="d2">0</data>
+  <data key="d3">Community 1</data>
+  <data key="d4">1</data>
+  <data key="d5">#4e79a7</data>
+</node>
+<node id="bộ y tế">
+  <data key="d0">bộ y tế</data>
+  <data key="d1">organization</data>
+  <data key="d2">3</data>
+  <data key="d3">Community 4</data>
+  <data key="d4">1</data>
+  <data key="d5">#76b7b2</data>
+</node>
+<node id="chữa bệnh">
+  <data key="d0">chữa bệnh</data>
+  <data key="d1">concept</data>
+  <data key="d2">0</data>
+  <data key="d3">Community 1</data>
+  <data key="d4">1</data>
+  <data key="d5">#4e79a7</data>
+</node>
+<node id="dạng viên nén">
+  <data key="d0">dạng viên nén</data>
+  <data key="d1">product</data>
+  <data key="d2">0</data>
+  <data key="d3">Community 1</data>
+  <data key="d4">1</data>
+  <data key="d5">#4e79a7</data>
+</node>
+<node id="người người bệnh">
+  <data key="d0">người người bệnh</data>
+  <data key="d1">person</data>
+  <data key="d2">0</data>
+  <data key="d3">Community 1</data>
+  <data key="d4">7</data>
+  <data key="d5">#4e79a7</data>
+</node>
+<node id="nội dung">
+  <data key="d0">nội dung</data>
+  <data key="d1">concept</data>
+  <data key="d2">4</data>
+  <data key="d3">Community 5</data>
+  <data key="d4">1</data>
+  <data key="d5">#59a14f</data>
+</node>
+<node id="phát triển y học cổ truyền">
+  <data key="d0">phát triển y học cổ truyền</data>
+  <data key="d1">concept</data>
+  <data key="d2">3</data>
+  <data key="d3">Community 4</data>
+  <data key="d4">1</data>
+  <data key="d5">#76b7b2</data>
+</node>
+<node id="t việt nam">
+  <data key="d0">t việt nam</data>
+  <data key="d1">place</data>
+  <data key="d2">2</data>
+  <data key="d3">Community 3</data>
+  <data key="d4">1</data>
+  <data key="d5">#e15759</data>
+</node>
+<node id="ths lê thị hồng gấm">
+  <data key="d0">ths lê thị hồng gấm</data>
+  <data key="d1">person</data>
+  <data key="d2">4</data>
+  <data key="d3">Community 5</data>
+  <data key="d4">1</data>
+  <data key="d5">#59a14f</data>
+</node>
+<node id="thuốc y học cổ truyền">
+  <data key="d0">thuốc y học cổ truyền</data>
+  <data key="d1">technology</data>
+  <data key="d2">1</data>
+  <data key="d3">Community 2</data>
+  <data key="d4">3</data>
+  <data key="d5">#f28e2b</data>
+</node>
+<node id="tác dụng không mong muốn">
+  <data key="d0">tác dụng không mong muốn</data>
+  <data key="d1">concept</data>
+  <data key="d2">1</data>
+  <data key="d3">Community 2</data>
+  <data key="d4">1</data>
+  <data key="d5">#f28e2b</data>
+</node>
+<node id="tây y">
+  <data key="d0">tây y</data>
+  <data key="d1">technology</data>
+  <data key="d2">2</data>
+  <data key="d3">Community 3</data>
+  <data key="d4">1</data>
+  <data key="d5">#e15759</data>
+</node>
+<node id="y học cổ truyền">
+  <data key="d0">y học cổ truyền</data>
+  <data key="d1">technology</data>
+  <data key="d2">2</data>
+  <data key="d3">Community 3</data>
+  <data key="d4">2</data>
+  <data key="d5">#e15759</data>
+</node>
+<edge source="bác sĩ bộ y tế" target="thuốc y học cổ truyền" id="0">
+  <data key="d6">chỉ định</data>
+  <data key="d7">chỉ định</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="bộ y tế" target="phát triển y học cổ truyền" id="0">
+  <data key="d6">chỉ đạo</data>
+  <data key="d7">chỉ đạo</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="người người bệnh" target="thuốc y học cổ truyền" id="0">
+  <data key="d6">sử dụng</data>
+  <data key="d7">sử dụng</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="người người bệnh" target="thuốc y học cổ truyền" id="1">
+  <data key="d6">tự tin dụng</data>
+  <data key="d7">tự tin dụng</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="người người bệnh" target="bệnh viện quân y 354" id="0">
+  <data key="d6">khám tại</data>
+  <data key="d7">khám tại</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="người người bệnh" target="dạng viên nén" id="0">
+  <data key="d6">sử dụng</data>
+  <data key="d7">sử dụng</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="người người bệnh" target="chữa bệnh" id="0">
+  <data key="d6">sử dụng để</data>
+  <data key="d7">sử dụng để</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="người người bệnh" target="bệnh mãn tính" id="0">
+  <data key="d6">điều trị</data>
+  <data key="d7">điều trị</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="người người bệnh" target="bệnh xương khớp" id="0">
+  <data key="d6">sử dụng</data>
+  <data key="d7">sử dụng</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="người người bệnh" target="bệnh tiêu hóa" id="0">
+  <data key="d6">sử dụng</data>
+  <data key="d7">sử dụng</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="ths lê thị hồng gấm" target="nội dung" id="0">
+  <data key="d6">chịu trách</data>
+  <data key="d7">chịu trách</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="thuốc y học cổ truyền" target="tác dụng không mong muốn" id="0">
+  <data key="d6">không có</data>
+  <data key="d7">không có</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="y học cổ truyền" target="t việt nam" id="0">
+  <data key="d6">phát triển</data>
+  <data key="d7">phát triển</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+<edge source="y học cổ truyền" target="tây y" id="0">
+  <data key="d6">kết hợp</data>
+  <data key="d7">kết hợp</data>
+  <data key="d8">False</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">12.pdf</data>
+</edge>
+</graph></graphml>

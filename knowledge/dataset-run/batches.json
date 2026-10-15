@@ -1,0 +1,1372 @@
+{
+  "inputs": [
+    {
+      "name": "10+Le+La+Vuong+Linh.pdf",
+      "sha256": "5bb31b770893e516a21814c2771608b62b6ab8f97f52ea3efd5e0444dc30512e"
+    },
+    {
+      "name": "1039-Văn bản của bài báo-13154-1-10-20221010.pdf",
+      "sha256": "beeb2b10bf0e5d0cdc807b3b7e12c26bd93070561f0baf2735e10bfc446009c9"
+    },
+    {
+      "name": "1068-Văn bản của bài báo-13149-1-10-20221010.pdf",
+      "sha256": "8566bb1a630ece4f0c6ae4d45742012276dee30c8fa35afbeb9ad0f962241ea4"
+    },
+    {
+      "name": "12.pdf",
+      "sha256": "03e852816903c2b252267832fa32fb802219877b9386c421d8139c089e27b741"
+    },
+    {
+      "name": "121.pdf",
+      "sha256": "666ada15928e365d0b1c6d510f5a1bf2e03f66cf40d56ed8ba262c9d4fc533d7"
+    },
+    {
+      "name": "13(7)_2023_08.pdf",
+      "sha256": "4af7225e347407efee3ba6b7c8fff443831e9186ff39c6486c5bee3d53fe79bb"
+    },
+    {
+      "name": "13(7)_2023_13.pdf",
+      "sha256": "cd1e8195516892a269f848faf231f4f22620c72eb53459962c8089763ffd26dd"
+    },
+    {
+      "name": "13. Luận văn Nguyễn Thị Thùy Lê.pdf",
+      "sha256": "5ae4e4774f6e0a1bc505b93ecee91b85e212ef0a15f286986ed353be24b940ab"
+    },
+    {
+      "name": "14(1)_2024_25.pdf",
+      "sha256": "ce4dbc9222025002bb61035b9694ad27f7362e0d0fe1f78b336ebed8ea3d424b"
+    },
+    {
+      "name": "14(3)_2024_17.pdf",
+      "sha256": "fd3cdc804b92cddd2d34aa1806ffa4896da967bc7536fdd38d1ca618533545c7"
+    },
+    {
+      "name": "14(7)_2024_22.pdf",
+      "sha256": "42c673133ee2296ab29f39604b1158a26f1dfb8902659616664fcd9d22e98043"
+    },
+    {
+      "name": "1563-Văn bản của bài báo-5097-2-10-20240324.pdf",
+      "sha256": "0d85d1d3412ac5022d70004ae9372d0622c0400c3e6c620088f7a31320202052"
+    },
+    {
+      "name": "172.pdf",
+      "sha256": "b35198818b04d70f53a94c994de7ce9592c15fa4fa9c0be220ee98c415ad23d4"
+    },
+    {
+      "name": "1815-Article Text-2670-1-10-20230701.pdf",
+      "sha256": "6a4c6db8503e4f9a60e262773b0f47838c0c13c5bccc41817b0e32a43d2de1e5"
+    },
+    {
+      "name": "2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf",
+      "sha256": "305a4f2da430e6c95ee2753946b9fd7ef7c23a94a839cd348eb1af71e014aea9"
+    },
+    {
+      "name": "2022_1_15.pdf",
+      "sha256": "2adacb8ddfee572f92222fd4e22a5265c5afeb4cb04d2c2261a431e9207d7393"
+    },
+    {
+      "name": "2022_3_08.pdf",
+      "sha256": "3ff9a3058a4ed1aec8a84db05165afc0dff0d43bb03584b237d394c28939cbe3"
+    },
+    {
+      "name": "247-502-1-SM.pdf",
+      "sha256": "55c17ceef034b5344b0c15e34cf6f49f1b866e353ab1d495762f7449d4e4f363"
+    },
+    {
+      "name": "2763-Văn bản của bài báo-8125-1-10-20240525.pdf",
+      "sha256": "1c6d58ecfd5f856ebf365cb16b41e4dca90ed8f4dd7c62d9ddaa87f9cafb53ba"
+    },
+    {
+      "name": "2946-Văn bản của bài báo-38854-1-10-20241227.pdf",
+      "sha256": "72b6f6cf7a3ff2de24efd008a6d6463808f03a0d42e7b08524fdc0d80820c6a3"
+    },
+    {
+      "name": "3450-Văn bản của bài báo-10821-1-10-20251125.pdf",
+      "sha256": "709d541383e2f9b0bea938931fb8240f0caef4d4c42234089a9088d7b5efb7fc"
+    },
+    {
+      "name": "4.pdf",
+      "sha256": "faed319dcc6db9b832bcbb6b8db4f25b90135f95c692952082e26b1ef5a8d119"
+    },
+    {
+      "name": "4547-Văn bản của bài báo-60846-1-10-20260128.pdf",
+      "sha256": "396e8803923028f379e42cba5fdbf43c2cb75b7025df3b6dc1c3c79869fc7f26"
+    },
+    {
+      "name": "4675-Văn bản của bài báo-63319-1-10-20260310.pdf",
+      "sha256": "00b3d10e1927a4976fac97db22a76a5b3f5fae9bc29af74d916df5a2704ebb38"
+    },
+    {
+      "name": "47.pdf",
+      "sha256": "70e8c4101b51ac0e1727d3b2c967015ba689ab2901bdac3681294582068bb46f"
+    },
+    {
+      "name": "89.Khảo sát sự phối hợp mạng lưới của các nhóm thuốc trong đơn thuốc sắc y học cổ truyền điều trị đau thần kinh tọa dựa trên dữ liệu lâm sàng.pdf",
+      "sha256": "c122714cea6c55e47c5d32fa757e4f99aec13535cb6ff0aa69edd23a0643c9cd"
+    },
+    {
+      "name": "95463-2173-203284-1-10-20240513.pdf",
+      "sha256": "1dcbca533c5031e2e9a2963a48306a7ed724b7e95196071a4b20171dd6c252a5"
+    },
+    {
+      "name": "Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf",
+      "sha256": "6fcf50cac28106efb9595ba7080a1ef3d6c8353bfed1c302e125710583af8934"
+    },
+    {
+      "name": "Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf",
+      "sha256": "d09ec88d3e61ef621ac833f1ad092979b007b8eb4b48c2659438cf76be0581ad"
+    },
+    {
+      "name": "Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf",
+      "sha256": "ca49886a58a57d479833c6b4211cf3f390142dce7a41c59942fec7000c26085e"
+    },
+    {
+      "name": "Bài+1.pdf",
+      "sha256": "a468ad12f190adc5be9f78007073720db25b51a41d1721cadc72c2a610467ca9"
+    },
+    {
+      "name": "Bài+7.pdf",
+      "sha256": "207f66c162e93d64d3a42f78ee696299221fc57f0bab4d8dc65ac4804acf7049"
+    },
+    {
+      "name": "CTUMP.1876.pdf",
+      "sha256": "ab4f3ee73fe99e0b1841a642243e380962bcb79893be5cd2ddb05c6e0afd7a73"
+    },
+    {
+      "name": "CTUMP.195.pdf",
+      "sha256": "34d9a4dc6d8ae1bfbd15135e54e0d6fa46b588a608683fc6c1dbbcef516f1a81"
+    },
+    {
+      "name": "CTUMP.2378.pdf",
+      "sha256": "7e2931cc359c9b51f3ef2b156f0b011dbd7b22ca8dc2b695e8b8a4179ea0eb7a"
+    },
+    {
+      "name": "CTUMP.3574.pdf",
+      "sha256": "2d405c3a3c08d408068a496ace1bacd76ea2c640ec87dbf7e39a59219a4106c1"
+    },
+    {
+      "name": "CTUMP.4038.pdf",
+      "sha256": "5416430291b640548590e8283e3f93f0dd78557f9d5bbbef7cd98bb6f7eb12d7"
+    },
+    {
+      "name": "CTUMP.4676.pdf",
+      "sha256": "993b3c9d51486aa917f7f7caa35778395bfffbd568699bc80fa525f4f5d78410"
+    },
+    {
+      "name": "CTUMP.5033.pdf",
+      "sha256": "390e48a411551b393a8976b3d961ad64f1c94d7f7ece049d9357c576c5dd5b6a"
+    },
+    {
+      "name": "CVv46V503SDB22021074.pdf",
+      "sha256": "158ab0060e818ea8a30074e9664e0f52ae74c56c64a0433b13490f965a5da505"
+    },
+    {
+      "name": "Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf",
+      "sha256": "36335d134cfc4d7f01efd03d1b8ce3a793a179316ca537ea5b987db6530dfa95"
+    },
+    {
+      "name": "JMPM.927.pdf",
+      "sha256": "f3cd2d4011fdb08abf581704583c6de783850997d6cbb6206aedfca12c28b89d"
+    },
+    {
+      "name": "LA Hồ Văn Thăng nén.pdf",
+      "sha256": "1625df1b803ad1c718c756d30c0d69ca17fe3962fec99c2b18fba86b615601ea"
+    },
+    {
+      "name": "Nội dung bài số 4_5-70-112_Văn bản của bài báo.pdf",
+      "sha256": "b3dcf0020099aa7c150effa6de480e7f993c73c86b7f72407c354e045845cc00"
+    },
+    {
+      "name": "PDF_2020m03d018_8_45_2.pdf",
+      "sha256": "4a34e970bc861c41b3c0efc5d99d08549f5bd8e86657f8968371ed414cb79006"
+    },
+    {
+      "name": "PDF_2020m03d020_8_21_17.pdf",
+      "sha256": "601e6f2de9a56f097ae96e00b97abf407a4204f17f65c445af77acbf99679e7c"
+    },
+    {
+      "name": "PDF_2021m05d04_16_34_37.pdf",
+      "sha256": "2091acbe6830a75894cb83aa19c9fe915c0c16c24877c225280f76396f16a60e"
+    },
+    {
+      "name": "VMJ.11227.pdf",
+      "sha256": "1e7a4fa04299646e62fd746daa5d8b3d8e94d3452bfa9b35d13d173a1ae461a8"
+    },
+    {
+      "name": "VMJ.11302.pdf",
+      "sha256": "167e6e7547aa1a7cd3df597566e56b8e72d4570f648acb5d7d1c03223dbde86e"
+    },
+    {
+      "name": "VMJ.11417.pdf",
+      "sha256": "ec5ccc72124198f01e04b1b4c9b95cdd2a4c055d9cc6e6c0f9de620dc35b8b5c"
+    },
+    {
+      "name": "VMJ.11535.pdf",
+      "sha256": "bfbc61af3a7932a221d7a5ba721c8f57c2d11b36ede6319d84d4f7a005809bfd"
+    },
+    {
+      "name": "VMJ.11776.pdf",
+      "sha256": "792a33f04959716372c1a4dbb76d6b708870275a779a1c96cfe4d0dc63a0ce25"
+    },
+    {
+      "name": "VMJ.12008.pdf",
+      "sha256": "a88ca960892fcb002ce467667bb36e030619910ccc7718304cf5fcb43e29e311"
+    },
+    {
+      "name": "VMJ.14073.pdf",
+      "sha256": "0b4ce5c034783938fcac0625804d6d07fcae6a83ed22b28b6ec0e139c447edb5"
+    },
+    {
+      "name": "VMJ.14360.pdf",
+      "sha256": "4b53b3b1b7be6ab0b59e1f46b2b703dafb9247d1bad7217eb69c243ec081baf0"
+    },
+    {
+      "name": "VMJ.14369.pdf",
+      "sha256": "da004a399701bd59dd118137e7c4a64a5e20e9a3e05b2d2973dfe723948d30ca"
+    },
+    {
+      "name": "VMJ.14626.pdf",
+      "sha256": "b451197f9dd09a372f14a4be0a93cc023733577fde852e733f571c33870b3c24"
+    },
+    {
+      "name": "VMJ.14752.pdf",
+      "sha256": "dd7cdd5cc1d44e7e25b4a3e1ea8dac514834b95af98fd8c4c8ab4ce0f4167d39"
+    },
+    {
+      "name": "VMJ.15116.pdf",
+      "sha256": "d5deb1cc940c58f442569fdd6cc1057f7afff7b3988ddbb2cb1ca72748e47140"
+    },
+    {
+      "name": "VMJ.15265.pdf",
+      "sha256": "f37029eafb5267e17812f41ee96e22d8f4131c546ab576fc09413ec7a1c565d4"
+    },
+    {
+      "name": "VMJ.162.pdf",
+      "sha256": "f51a58657e9bacce6a8322177411c8cbae2b472514ea38144e336c89a9768391"
+    },
+    {
+      "name": "VMJ.16348.pdf",
+      "sha256": "4184f0cd8bda86cde0ee1ebf112aa4470ba0b1519aa35da22f8ed2f1176ef219"
+    },
+    {
+      "name": "VMJ.16557.pdf",
+      "sha256": "8b45959558d8ede0693f5f19052de5b92938e9b2462f73ef18e720c3586e6a5b"
+    },
+    {
+      "name": "VMJ.17283.pdf",
+      "sha256": "7b8dd255063776e20cd4dfedca09413f58600d2459ea19424059431c29ceda52"
+    },
+    {
+      "name": "VMJ.17756.pdf",
+      "sha256": "6c852fab43529d9526c2444d8f183938796b8086d03afb15410f74c704569dbd"
+    },
+    {
+      "name": "VMJ.18734.pdf",
+      "sha256": "ebaff4ddf4257d115544ccf7001cf570276d016fba17def87b8ab20c2de64c9a"
+    },
+    {
+      "name": "VMJ.2331.pdf",
+      "sha256": "d42395cbd1afd24dafea9b75e1e22de4dad24ebd898951a59195bf5e61b106f4"
+    },
+    {
+      "name": "VMJ.3449.pdf",
+      "sha256": "2df96b7e8392016186014b2056074f04cf9d77ac859f361719f85cfcc668106a"
+    },
+    {
+      "name": "VMJ.3636.pdf",
+      "sha256": "3b16900a3f666934ae1f002ac81654eab9345ae86fab7f2727c14b0c938ed14a"
+    },
+    {
+      "name": "VMJ.3773.pdf",
+      "sha256": "8adfdad55b6788782083ef15f9fb10ca459c545dddd34e323643dc36ff8b8e7b"
+    },
+    {
+      "name": "VMJ.3854.pdf",
+      "sha256": "82f5410b59c864f8258a011d843e75e1f9aea4294ccb5f853ac8e3ec6615c702"
+    },
+    {
+      "name": "VMJ.4127.pdf",
+      "sha256": "0e2af6c3aa7f201e5e92be50a7f5aef42a642d449f14a69268831ce69e36246f"
+    },
+    {
+      "name": "VMJ.5509.pdf",
+      "sha256": "6baa18ba4ea11353c806bbceea225173544285947c7bd7d9a13425f949447b3c"
+    },
+    {
+      "name": "VMJ.5967.pdf",
+      "sha256": "e8aeeb12afa4ccc056c805fa2461684f9289e277480d19878ff2fdf9f6558f06"
+    },
+    {
+      "name": "VMJ.646.pdf",
+      "sha256": "9317136bb0244242b1bbf7cb7d25176c0e6774a903d0755584e275f831e054c7"
+    },
+    {
+      "name": "VMJ.6491.pdf",
+      "sha256": "96789ede863c743e2078d1d0c119f271e660d34cbe30022c2d6ee67e27c3a56a"
+    },
+    {
+      "name": "VMJ.6795.pdf",
+      "sha256": "3c3349098c645836f86cb3d44df22ada952da2a03b665884097a58cacc404297"
+    },
+    {
+      "name": "VMJ.6836.pdf",
+      "sha256": "9216ddd1483ee75986ba83b404a115112205317d69e9a206a9acbc053669853d"
+    },
+    {
+      "name": "VMJ.6851.pdf",
+      "sha256": "6feb17b337a835c2ad6269591c75a35aa4a935972185ee188addd605f4fc3831"
+    },
+    {
+      "name": "VMJ.7171.pdf",
+      "sha256": "6fc0ee8884466a9856d73f69db1c865955c7d3775cbd5b870cc5924b42dbe5f8"
+    },
+    {
+      "name": "VMJ.8050.pdf",
+      "sha256": "b05a5ebca8fa228221cd6f1d19e98c12726e0a53eb3eaac410b6ec5297aebb95"
+    },
+    {
+      "name": "VMJ.8058.pdf",
+      "sha256": "8e80558ded0149d2f75cfc8d33db6d896f6c3533733a80957ea485adf8ead2f4"
+    },
+    {
+      "name": "VMJ.8363.pdf",
+      "sha256": "e839c323db07caaec570056e44d7f080a58ec149aa177f8e0e672d572429a218"
+    },
+    {
+      "name": "VMJ.8460.pdf",
+      "sha256": "34285ba1e5a2a3322ef8a5409b161156dbb0b3a2b43102a2fa4c677f6aa687bd"
+    },
+    {
+      "name": "VMJ.8462.pdf",
+      "sha256": "291e9a349e6dc20b94d6aec6287b16d56d379e56b85da0fa3dce4c17ee7125d7"
+    },
+    {
+      "name": "VMJ.8691.pdf",
+      "sha256": "81876ef137d22c13b65988b454b609d1400bd58267fb0c1479b58955664e8475"
+    },
+    {
+      "name": "VMJ.9281.pdf",
+      "sha256": "6557819809491bdb0b3b10439fdc8c83bfc6d6b19ca8eee1496a36cebce65a90"
+    },
+    {
+      "name": "VMJ.9366.pdf",
+      "sha256": "1868c9631d48174dd263bf742b5d8b28a7f3112083fd80ff32b6d72a251b8877"
+    },
+    {
+      "name": "VMJ.9753.pdf",
+      "sha256": "6fca16859d439781b6560727dd9129d63e0f267a6ebb8953bd2bbdf37f4f9ecf"
+    },
+    {
+      "name": "VMJ.9767.pdf",
+      "sha256": "479d85fa920f0c866d7eeaf3cb19caea053831054607865207109496b1f18c9d"
+    },
+    {
+      "name": "VMJ.9851.pdf",
+      "sha256": "f4f4b4e27ec84364458f955f313a45780678d8402e161c1f8a744836d4f17f8e"
+    },
+    {
+      "name": "Vol2Issue3_74-82.pdf",
+      "sha256": "e8a8f03092d33495c28b1517f747e171168a7c08e8bd88461d851d1e4f16d501"
+    },
+    {
+      "name": "admin,+10.8-100.pdf",
+      "sha256": "afe497b16214c1cffa068f418f0cba6185a71cd19e799824af6465e1649b8245"
+    },
+    {
+      "name": "admin,+10.pdf",
+      "sha256": "ed37e5ae3ed87308f7d6d4a8293fdf01f601519eff2c927a17a34fc46210a1db"
+    },
+    {
+      "name": "admin,+12.pdf",
+      "sha256": "11b32a4e881f66b38e6bd7f493c9a6a96f144a23ff485f5bf3064394102a29c1"
+    },
+    {
+      "name": "admin,+17.5-03.pdf",
+      "sha256": "470b7c466a181e3c01400cb5987ef17706405ebbec51cc7d16766cfa10c6565a"
+    },
+    {
+      "name": "admin,+20.pdf",
+      "sha256": "c68effac9e0e1c345fdd1c0ca366eec216d52f42aa623cf57d020e2dc9040d70"
+    },
+    {
+      "name": "admin,+25.8-92.pdf",
+      "sha256": "08fc1e8e8f325f0232b7fbbc0fc52c2961d91dce63ebe4768c27115fe611913e"
+    },
+    {
+      "name": "admin,+28.6-55.pdf",
+      "sha256": "b397109b4b610e372e5c4ff4edffbf1fa9cb2d56903b4d6f1fe120fad4428f73"
+    },
+    {
+      "name": "admin,+31.6-44.pdf",
+      "sha256": "03e550bd86139c681bfb43db3f238f46dc8ccb766f1a969bd4206a8b84a732c7"
+    },
+    {
+      "name": "admin,+38.pdf",
+      "sha256": "d3838bcf4301f6ebc35378f62e49b886cd0b8bba8b026e2d7c82ddc0bd771a46"
+    },
+    {
+      "name": "admin,+8.pdf",
+      "sha256": "792fb7a08dd1d060075fa7342ad624807eeaf96219077e029d86d84b5a6bdec1"
+    },
+    {
+      "name": "admin,+9.pdf",
+      "sha256": "82251d7740f094310cd18ca69fd821924205b698db080afa5c88d7ad9f40aeeb"
+    },
+    {
+      "name": "admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf",
+      "sha256": "f9c1f6a814ac1c0c55304232cf9afa53be4af12b4b99aaf714f7df362e4ab777"
+    },
+    {
+      "name": "admin,+BT-1-10-trang-3.pdf",
+      "sha256": "68f0880d43cce2597b9215c2f0d5ebc494f25327593a83a68b19f1e1c80c9584"
+    },
+    {
+      "name": "admin,+Bai+48.pdf",
+      "sha256": "c42421678d8e931bb2cc41c0c936d0ae3fc1e498d986bfac3b945d7bed4c27f7"
+    },
+    {
+      "name": "admin,+CD1-VTT_B25.pdf",
+      "sha256": "370cf97fa675042f04f192d86511883ab6743a18c56e37cbebd9d099df2ee9f9"
+    },
+    {
+      "name": "admin,+TAP+65_SO+2-2024_BAI+19.pdf",
+      "sha256": "ebd1551411956a4b02d33c577aee33958204ce64a0912189ec99034936840be3"
+    },
+    {
+      "name": "admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",
+      "sha256": "052e43584c5a2ee995a552dd511ba052243ad1fd7ce1475480a496d4ce0742fe"
+    },
+    {
+      "name": "admin,+Vol+67+No+2+2026-trang-39.pdf",
+      "sha256": "9c6ca9451c43269bee71561d7528c77456337cfa03ac19ea4d2751de2cf0400c"
+    },
+    {
+      "name": "admin,+Vol+67_CD2_B29.pdf",
+      "sha256": "2e8acb38ff3882ac8cf8053ae7661f43f95fd7f8f7bcdc6aafdd46b856d5a49f"
+    },
+    {
+      "name": "admin,+Vol+67_No+3_B52.pdf",
+      "sha256": "3bb0ecbd252d5ac4b60fcad8ba197fab0c31edb158702357f0cbd53f344eaf85"
+    },
+    {
+      "name": "admin,+Y+te+cong+dong-Chuyen+de+10+-+T9+2024+-+color-Bai+4.pdf",
+      "sha256": "ff8ea9dc973c51b1ab8497d6a6de781653cfcbe9d758074417294e8df9a06242"
+    },
+    {
+      "name": "bai+1.pdf",
+      "sha256": "48ba820aaf2162e2ab4684c340ce254a0412beb734446462cdd5e059b81c2418"
+    },
+    {
+      "name": "bài+18.pdf",
+      "sha256": "73065ae19c3454b36ca94a6ffd8232b81a951eafba52848a9fe0c7b7e286a9d2"
+    },
+    {
+      "name": "bài+23.pdf",
+      "sha256": "6def16561497ac4586e36924a72ce06def5f7127e3b6a20c612d7fcf47737fea"
+    },
+    {
+      "name": "bài+3.pdf",
+      "sha256": "bf8f581d42f5b92c200b735855742eab55e0395bb57e901ebc8619e3a1a44536"
+    },
+    {
+      "name": "bài+38.pdf",
+      "sha256": "568ddfc71594cc6e9dc08b13f82dd26c133cc96d54aca6a2fcca37bf9f4c1b62"
+    },
+    {
+      "name": "bài+4.pdf",
+      "sha256": "e9b6f9fc2a44156bd886286a5398b814eaebf4ec34e113209b8fb1aa3943520c"
+    },
+    {
+      "name": "current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf",
+      "sha256": "bebca287d8cd14813c6d7d0f2e352f19882d898c8e70e41ad1850c42c772f84b"
+    }
+  ],
+  "extractor": "pymupdf-control-clean-v1",
+  "documents": 120,
+  "pages": 1009,
+  "words": 597624,
+  "batch_count": 26,
+  "batches": [
+    {
+      "id": 1,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "10+Le+La+Vuong+Linh.pdf",
+          "start": 0,
+          "end": 4379
+        },
+        {
+          "document": "1039-Văn bản của bài báo-13154-1-10-20221010.pdf",
+          "start": 0,
+          "end": 4627
+        },
+        {
+          "document": "1068-Văn bản của bài báo-13149-1-10-20221010.pdf",
+          "start": 0,
+          "end": 4459
+        },
+        {
+          "document": "12.pdf",
+          "start": 0,
+          "end": 5326
+        },
+        {
+          "document": "121.pdf",
+          "start": 0,
+          "end": 4195
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "121.pdf",
+          "start": 4195,
+          "end": 6298
+        },
+        {
+          "document": "13(7)_2023_08.pdf",
+          "start": 0,
+          "end": 4886
+        },
+        {
+          "document": "13(7)_2023_13.pdf",
+          "start": 0,
+          "end": 4895
+        },
+        {
+          "document": "13. Luận văn Nguyễn Thị Thùy Lê.pdf",
+          "start": 0,
+          "end": 11102
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "13. Luận văn Nguyễn Thị Thùy Lê.pdf",
+          "start": 11102,
+          "end": 24467
+        },
+        {
+          "document": "14(1)_2024_25.pdf",
+          "start": 0,
+          "end": 3978
+        },
+        {
+          "document": "14(3)_2024_17.pdf",
+          "start": 0,
+          "end": 5643
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "14(3)_2024_17.pdf",
+          "start": 5643,
+          "end": 6081
+        },
+        {
+          "document": "14(7)_2024_22.pdf",
+          "start": 0,
+          "end": 5460
+        },
+        {
+          "document": "1563-Văn bản của bài báo-5097-2-10-20240324.pdf",
+          "start": 0,
+          "end": 3461
+        },
+        {
+          "document": "172.pdf",
+          "start": 0,
+          "end": 5711
+        },
+        {
+          "document": "1815-Article Text-2670-1-10-20230701.pdf",
+          "start": 0,
+          "end": 3507
+        },
+        {
+          "document": "2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf",
+          "start": 0,
+          "end": 4409
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf",
+          "start": 4409,
+          "end": 5312
+        },
+        {
+          "document": "2022_1_15.pdf",
+          "start": 0,
+          "end": 5197
+        },
+        {
+          "document": "2022_3_08.pdf",
+          "start": 0,
+          "end": 5593
+        },
+        {
+          "document": "247-502-1-SM.pdf",
+          "start": 0,
+          "end": 3988
+        },
+        {
+          "document": "2763-Văn bản của bài báo-8125-1-10-20240525.pdf",
+          "start": 0,
+          "end": 3155
+        },
+        {
+          "document": "2946-Văn bản của bài báo-38854-1-10-20241227.pdf",
+          "start": 0,
+          "end": 4150
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "2946-Văn bản của bài báo-38854-1-10-20241227.pdf",
+          "start": 4150,
+          "end": 5049
+        },
+        {
+          "document": "3450-Văn bản của bài báo-10821-1-10-20251125.pdf",
+          "start": 0,
+          "end": 7639
+        },
+        {
+          "document": "4.pdf",
+          "start": 0,
+          "end": 5577
+        },
+        {
+          "document": "4547-Văn bản của bài báo-60846-1-10-20260128.pdf",
+          "start": 0,
+          "end": 4222
+        },
+        {
+          "document": "4675-Văn bản của bài báo-63319-1-10-20260310.pdf",
+          "start": 0,
+          "end": 4649
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "4675-Văn bản của bài báo-63319-1-10-20260310.pdf",
+          "start": 4649,
+          "end": 6009
+        },
+        {
+          "document": "47.pdf",
+          "start": 0,
+          "end": 7098
+        },
+        {
+          "document": "89.Khảo sát sự phối hợp mạng lưới của các nhóm thuốc trong đơn thuốc sắc y học cổ truyền điều trị đau thần kinh tọa dựa trên dữ liệu lâm sàng.pdf",
+          "start": 0,
+          "end": 4626
+        },
+        {
+          "document": "95463-2173-203284-1-10-20240513.pdf",
+          "start": 0,
+          "end": 1885
+        },
+        {
+          "document": "Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf",
+          "start": 0,
+          "end": 2656
+        },
+        {
+          "document": "Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf",
+          "start": 0,
+          "end": 3790
+        },
+        {
+          "document": "Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf",
+          "start": 0,
+          "end": 1571
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf",
+          "start": 1571,
+          "end": 2693
+        },
+        {
+          "document": "Bài+1.pdf",
+          "start": 0,
+          "end": 4566
+        },
+        {
+          "document": "Bài+7.pdf",
+          "start": 0,
+          "end": 3519
+        },
+        {
+          "document": "CTUMP.1876.pdf",
+          "start": 0,
+          "end": 3863
+        },
+        {
+          "document": "CTUMP.195.pdf",
+          "start": 0,
+          "end": 4672
+        },
+        {
+          "document": "CTUMP.2378.pdf",
+          "start": 0,
+          "end": 3994
+        },
+        {
+          "document": "CTUMP.3574.pdf",
+          "start": 0,
+          "end": 1250
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "CTUMP.3574.pdf",
+          "start": 1250,
+          "end": 4054
+        },
+        {
+          "document": "CTUMP.4038.pdf",
+          "start": 0,
+          "end": 4807
+        },
+        {
+          "document": "CTUMP.4676.pdf",
+          "start": 0,
+          "end": 4528
+        },
+        {
+          "document": "CTUMP.5033.pdf",
+          "start": 0,
+          "end": 5358
+        },
+        {
+          "document": "CVv46V503SDB22021074.pdf",
+          "start": 0,
+          "end": 2468
+        },
+        {
+          "document": "Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf",
+          "start": 0,
+          "end": 3021
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf",
+          "start": 3021,
+          "end": 7005
+        },
+        {
+          "document": "JMPM.927.pdf",
+          "start": 0,
+          "end": 3289
+        },
+        {
+          "document": "LA Hồ Văn Thăng nén.pdf",
+          "start": 0,
+          "end": 15713
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "LA Hồ Văn Thăng nén.pdf",
+          "start": 15713,
+          "end": 38699
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "LA Hồ Văn Thăng nén.pdf",
+          "start": 38699,
+          "end": 48951
+        },
+        {
+          "document": "Nội dung bài số 4_5-70-112_Văn bản của bài báo.pdf",
+          "start": 0,
+          "end": 3662
+        },
+        {
+          "document": "PDF_2020m03d018_8_45_2.pdf",
+          "start": 0,
+          "end": 5441
+        },
+        {
+          "document": "PDF_2020m03d020_8_21_17.pdf",
+          "start": 0,
+          "end": 3631
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "PDF_2020m03d020_8_21_17.pdf",
+          "start": 3631,
+          "end": 3940
+        },
+        {
+          "document": "PDF_2021m05d04_16_34_37.pdf",
+          "start": 0,
+          "end": 5112
+        },
+        {
+          "document": "VMJ.11227.pdf",
+          "start": 0,
+          "end": 4896
+        },
+        {
+          "document": "VMJ.11302.pdf",
+          "start": 0,
+          "end": 4092
+        },
+        {
+          "document": "VMJ.11417.pdf",
+          "start": 0,
+          "end": 5892
+        },
+        {
+          "document": "VMJ.11535.pdf",
+          "start": 0,
+          "end": 2685
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "VMJ.11535.pdf",
+          "start": 2685,
+          "end": 5375
+        },
+        {
+          "document": "VMJ.11776.pdf",
+          "start": 0,
+          "end": 4398
+        },
+        {
+          "document": "VMJ.12008.pdf",
+          "start": 0,
+          "end": 5467
+        },
+        {
+          "document": "VMJ.14073.pdf",
+          "start": 0,
+          "end": 4249
+        },
+        {
+          "document": "VMJ.14360.pdf",
+          "start": 0,
+          "end": 3507
+        },
+        {
+          "document": "VMJ.14369.pdf",
+          "start": 0,
+          "end": 2675
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "VMJ.14369.pdf",
+          "start": 2675,
+          "end": 3902
+        },
+        {
+          "document": "VMJ.14626.pdf",
+          "start": 0,
+          "end": 3322
+        },
+        {
+          "document": "VMJ.14752.pdf",
+          "start": 0,
+          "end": 4387
+        },
+        {
+          "document": "VMJ.15116.pdf",
+          "start": 0,
+          "end": 4260
+        },
+        {
+          "document": "VMJ.15265.pdf",
+          "start": 0,
+          "end": 3499
+        },
+        {
+          "document": "VMJ.162.pdf",
+          "start": 0,
+          "end": 4952
+        },
+        {
+          "document": "VMJ.16348.pdf",
+          "start": 0,
+          "end": 1339
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "VMJ.16348.pdf",
+          "start": 1339,
+          "end": 4309
+        },
+        {
+          "document": "VMJ.16557.pdf",
+          "start": 0,
+          "end": 5184
+        },
+        {
+          "document": "VMJ.17283.pdf",
+          "start": 0,
+          "end": 3963
+        },
+        {
+          "document": "VMJ.17756.pdf",
+          "start": 0,
+          "end": 6576
+        },
+        {
+          "document": "VMJ.18734.pdf",
+          "start": 0,
+          "end": 4293
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "VMJ.18734.pdf",
+          "start": 4293,
+          "end": 4750
+        },
+        {
+          "document": "VMJ.2331.pdf",
+          "start": 0,
+          "end": 3512
+        },
+        {
+          "document": "VMJ.3449.pdf",
+          "start": 0,
+          "end": 4293
+        },
+        {
+          "document": "VMJ.3636.pdf",
+          "start": 0,
+          "end": 4213
+        },
+        {
+          "document": "VMJ.3773.pdf",
+          "start": 0,
+          "end": 3402
+        },
+        {
+          "document": "VMJ.3854.pdf",
+          "start": 0,
+          "end": 4451
+        },
+        {
+          "document": "VMJ.4127.pdf",
+          "start": 0,
+          "end": 2658
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "VMJ.4127.pdf",
+          "start": 2658,
+          "end": 3479
+        },
+        {
+          "document": "VMJ.5509.pdf",
+          "start": 0,
+          "end": 5417
+        },
+        {
+          "document": "VMJ.5967.pdf",
+          "start": 0,
+          "end": 5440
+        },
+        {
+          "document": "VMJ.646.pdf",
+          "start": 0,
+          "end": 3505
+        },
+        {
+          "document": "VMJ.6491.pdf",
+          "start": 0,
+          "end": 4706
+        },
+        {
+          "document": "VMJ.6795.pdf",
+          "start": 0,
+          "end": 3097
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "VMJ.6795.pdf",
+          "start": 3097,
+          "end": 3707
+        },
+        {
+          "document": "VMJ.6836.pdf",
+          "start": 0,
+          "end": 4472
+        },
+        {
+          "document": "VMJ.6851.pdf",
+          "start": 0,
+          "end": 4586
+        },
+        {
+          "document": "VMJ.7171.pdf",
+          "start": 0,
+          "end": 3963
+        },
+        {
+          "document": "VMJ.8050.pdf",
+          "start": 0,
+          "end": 3387
+        },
+        {
+          "document": "VMJ.8058.pdf",
+          "start": 0,
+          "end": 4399
+        },
+        {
+          "document": "VMJ.8363.pdf",
+          "start": 0,
+          "end": 1569
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "VMJ.8363.pdf",
+          "start": 1569,
+          "end": 4552
+        },
+        {
+          "document": "VMJ.8460.pdf",
+          "start": 0,
+          "end": 3272
+        },
+        {
+          "document": "VMJ.8462.pdf",
+          "start": 0,
+          "end": 5315
+        },
+        {
+          "document": "VMJ.8691.pdf",
+          "start": 0,
+          "end": 5135
+        },
+        {
+          "document": "VMJ.9281.pdf",
+          "start": 0,
+          "end": 4854
+        },
+        {
+          "document": "VMJ.9366.pdf",
+          "start": 0,
+          "end": 1427
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "VMJ.9366.pdf",
+          "start": 1427,
+          "end": 4382
+        },
+        {
+          "document": "VMJ.9753.pdf",
+          "start": 0,
+          "end": 4286
+        },
+        {
+          "document": "VMJ.9767.pdf",
+          "start": 0,
+          "end": 4582
+        },
+        {
+          "document": "VMJ.9851.pdf",
+          "start": 0,
+          "end": 4115
+        },
+        {
+          "document": "Vol2Issue3_74-82.pdf",
+          "start": 0,
+          "end": 4364
+        },
+        {
+          "document": "admin,+10.8-100.pdf",
+          "start": 0,
+          "end": 2684
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "admin,+10.8-100.pdf",
+          "start": 2684,
+          "end": 4353
+        },
+        {
+          "document": "admin,+10.pdf",
+          "start": 0,
+          "end": 4274
+        },
+        {
+          "document": "admin,+12.pdf",
+          "start": 0,
+          "end": 4187
+        },
+        {
+          "document": "admin,+17.5-03.pdf",
+          "start": 0,
+          "end": 4109
+        },
+        {
+          "document": "admin,+20.pdf",
+          "start": 0,
+          "end": 5094
+        },
+        {
+          "document": "admin,+25.8-92.pdf",
+          "start": 0,
+          "end": 3653
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "admin,+25.8-92.pdf",
+          "start": 3653,
+          "end": 4354
+        },
+        {
+          "document": "admin,+28.6-55.pdf",
+          "start": 0,
+          "end": 3458
+        },
+        {
+          "document": "admin,+31.6-44.pdf",
+          "start": 0,
+          "end": 3908
+        },
+        {
+          "document": "admin,+38.pdf",
+          "start": 0,
+          "end": 2922
+        },
+        {
+          "document": "admin,+8.pdf",
+          "start": 0,
+          "end": 3544
+        },
+        {
+          "document": "admin,+9.pdf",
+          "start": 0,
+          "end": 3759
+        },
+        {
+          "document": "admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf",
+          "start": 0,
+          "end": 2761
+        },
+        {
+          "document": "admin,+BT-1-10-trang-3.pdf",
+          "start": 0,
+          "end": 1933
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "admin,+BT-1-10-trang-3.pdf",
+          "start": 1933,
+          "end": 3506
+        },
+        {
+          "document": "admin,+Bai+48.pdf",
+          "start": 0,
+          "end": 4044
+        },
+        {
+          "document": "admin,+CD1-VTT_B25.pdf",
+          "start": 0,
+          "end": 3753
+        },
+        {
+          "document": "admin,+TAP+65_SO+2-2024_BAI+19.pdf",
+          "start": 0,
+          "end": 3773
+        },
+        {
+          "document": "admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",
+          "start": 0,
+          "end": 3839
+        },
+        {
+          "document": "admin,+Vol+67+No+2+2026-trang-39.pdf",
+          "start": 0,
+          "end": 3950
+        },
+        {
+          "document": "admin,+Vol+67_CD2_B29.pdf",
+          "start": 0,
+          "end": 2054
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "words": 22986,
+      "segments": [
+        {
+          "document": "admin,+Vol+67_CD2_B29.pdf",
+          "start": 2054,
+          "end": 5224
+        },
+        {
+          "document": "admin,+Vol+67_No+3_B52.pdf",
+          "start": 0,
+          "end": 1013
+        },
+        {
+          "document": "admin,+Y+te+cong+dong-Chuyen+de+10+-+T9+2024+-+color-Bai+4.pdf",
+          "start": 0,
+          "end": 3286
+        },
+        {
+          "document": "bai+1.pdf",
+          "start": 0,
+          "end": 5554
+        },
+        {
+          "document": "bài+18.pdf",
+          "start": 0,
+          "end": 3582
+        },
+        {
+          "document": "bài+23.pdf",
+          "start": 0,
+          "end": 5282
+        },
+        {
+          "document": "bài+3.pdf",
+          "start": 0,
+          "end": 1099
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "words": 22974,
+      "segments": [
+        {
+          "document": "bài+3.pdf",
+          "start": 1099,
+          "end": 6101
+        },
+        {
+          "document": "bài+38.pdf",
+          "start": 0,
+          "end": 7838
+        },
+        {
+          "document": "bài+4.pdf",
+          "start": 0,
+          "end": 5244
+        },
+        {
+          "document": "current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf",
+          "start": 0,
+          "end": 4890
+        }
+      ]
+    }
+  ]
+}

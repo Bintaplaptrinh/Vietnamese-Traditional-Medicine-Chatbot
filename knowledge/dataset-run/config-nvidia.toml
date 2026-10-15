@@ -1,0 +1,36 @@
+[llm]
+model = "google/diffusiongemma-26b-a4b-it"
+base_url = "https://integrate.api.nvidia.com/v1/chat/completions"
+api_key = "env:NVIDIA_API_KEY"
+max_tokens = 16384
+temperature = 0.2
+timeout = 900
+max_retries = 0
+token_param = "max_tokens"
+concurrency = 1
+cache_dir = "../dataset-run/.kg-cache"
+
+[llm.extra_body]
+stream = false
+top_p = 0.95
+
+[llm.extra_body.chat_template_kwargs]
+enable_thinking = false
+
+[extraction]
+language = "Vietnamese"
+
+[standardization]
+enabled = true
+use_llm_for_entities = false
+merge_word_subsets = false
+
+[inference]
+enabled = false
+
+[visualization]
+name_communities = false
+edge_labels = "selection"
+show_inferred = false
+title_case = false
+theme = "light"

@@ -1,0 +1,282 @@
+{
+  "batch": 8,
+  "triples": [
+    {
+      "subject": "viêm âm đạo",
+      "predicate": "gây ra",
+      "object": "vi khuẩn",
+      "document": "Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf",
+      "chunk": 8,
+      "document_word_start": 1571,
+      "document_word_end": 2693,
+      "source_verified": false
+    },
+    {
+      "subject": "viêm âm đạo",
+      "predicate": "triệu chứng",
+      "object": "khí hư mùi hôi",
+      "document": "Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf",
+      "chunk": 8,
+      "document_word_start": 1571,
+      "document_word_end": 2693,
+      "source_verified": false
+    },
+    {
+      "subject": "viêm âm đạo",
+      "predicate": "triệu chứng",
+      "object": "ngứa",
+      "document": "Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf",
+      "chunk": 8,
+      "document_word_start": 1571,
+      "document_word_end": 2693,
+      "source_verified": false
+    },
+    {
+      "subject": "viêm âm đạo",
+      "predicate": "điều trị bằng",
+      "object": "hoàng bá kết polygynax",
+      "document": "Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf",
+      "chunk": 8,
+      "document_word_start": 1571,
+      "document_word_end": 2693,
+      "source_verified": false
+    },
+    {
+      "subject": "viêm âm đạo",
+      "predicate": "hiệu quả",
+      "object": "tốt",
+      "document": "Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf",
+      "chunk": 8,
+      "document_word_start": 1571,
+      "document_word_end": 2693,
+      "source_verified": false
+    },
+    {
+      "subject": "táo bón chức năng",
+      "predicate": "phổ biến ở",
+      "object": "người cao tuổi",
+      "object_type": "person",
+      "document": "Bài+1.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 4566,
+      "source_verified": false
+    },
+    {
+      "subject": "táo bón chức năng",
+      "predicate": "triệu chứng",
+      "object": "rặn, gắng sức",
+      "document": "Bài+1.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 4566,
+      "source_verified": false
+    },
+    {
+      "subject": "táo bón chức năng",
+      "predicate": "thuộc thể",
+      "object": "hư chứng",
+      "object_type": "concept",
+      "document": "Bài+1.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 4566,
+      "source_verified": false
+    },
+    {
+      "subject": "táo bón chức năng",
+      "predicate": "liên quan",
+      "object": "nhịn đại tiện",
+      "document": "Bài+1.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 4566,
+      "source_verified": false
+    },
+    {
+      "subject": "táo bón chức năng",
+      "predicate": "liên quan",
+      "object": "thiếu chất xơ",
+      "document": "Bài+1.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 4566,
+      "source_verified": false
+    },
+    {
+      "subject": "táo bón chức năng",
+      "predicate": "liên quan",
+      "object": "thiếu nước",
+      "document": "Bài+1.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 4566,
+      "source_verified": false
+    },
+    {
+      "subject": "rối loạn cương dương",
+      "predicate": "điều trị bằng",
+      "object": "y học cổ truyền",
+      "document": "Bài+7.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3519,
+      "source_verified": false
+    },
+    {
+      "subject": "rối loạn cương dương",
+      "predicate": "thuộc chứng",
+      "object": "dương nuy",
+      "object_type": "concept",
+      "document": "Bài+7.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3519,
+      "source_verified": false
+    },
+    {
+      "subject": "rối loạn cương dương",
+      "predicate": "điều trị bằng",
+      "object": "hữu quy hoàn",
+      "document": "Bài+7.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3519,
+      "source_verified": false
+    },
+    {
+      "subject": "rối loạn cương dương",
+      "predicate": "hiệu quả",
+      "object": "tăng testosterone",
+      "document": "Bài+7.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3519,
+      "source_verified": false
+    },
+    {
+      "subject": "bệnh nhân nội trú",
+      "predicate": "sử dụng",
+      "object": "thuốc y học cổ truyền",
+      "subject_type": "person",
+      "document": "CTUMP.1876.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3863,
+      "source_verified": false
+    },
+    {
+      "subject": "bệnh nhân nội trú",
+      "predicate": "thường dùng nhiều",
+      "object": "thuốc thang",
+      "subject_type": "person",
+      "document": "CTUMP.1876.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3863,
+      "source_verified": false
+    },
+    {
+      "subject": "bệnh nhân nội trú",
+      "predicate": "dùng nhiều nhất",
+      "object": "viên bao, viên nang",
+      "subject_type": "person",
+      "document": "CTUMP.1876.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3863,
+      "source_verified": false
+    },
+    {
+      "subject": "đau cột sống thắt lưng",
+      "predicate": "do",
+      "object": "thoái hóa cột sống",
+      "document": "CTUMP.195.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 4672,
+      "source_verified": false
+    },
+    {
+      "subject": "đau cột sống thắt lưng",
+      "predicate": "triệu chứng",
+      "object": "hạn chế vận động",
+      "document": "CTUMP.195.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 4672,
+      "source_verified": false
+    },
+    {
+      "subject": "đau cột sống thắt lưng",
+      "predicate": "điều trị bằng",
+      "object": "YH cổ truyền",
+      "document": "CTUMP.195.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 4672,
+      "source_verified": false
+    },
+    {
+      "subject": "đau thần kinh tọa",
+      "predicate": "điều trị bằng",
+      "object": "độc hoạt ký sinh thang",
+      "document": "CTUMP.2378.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3994,
+      "source_verified": false
+    },
+    {
+      "subject": "đau thần kinh tọa",
+      "predicate": "điều trị bằng",
+      "object": "điện châm, hồng ngoại",
+      "document": "CTUMP.2378.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3994,
+      "source_verified": false
+    },
+    {
+      "subject": "đau thần kinh tọa",
+      "predicate": "hiệu quả",
+      "object": "giảm đau",
+      "document": "CTUMP.2378.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 3994,
+      "source_verified": false
+    },
+    {
+      "subject": "thoái hóa cột sống cổ",
+      "predicate": "triệu chứng",
+      "object": "đau cổ gáy",
+      "document": "CTUMP.3574.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 1250,
+      "source_verified": false
+    },
+    {
+      "subject": "thoái hóa cột sống cổ",
+      "predicate": "triệu chứng",
+      "object": "hạn chế vận động",
+      "document": "CTUMP.3574.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 1250,
+      "source_verified": false
+    },
+    {
+      "subject": "thoái hóa cột sống cổ",
+      "predicate": "điều trị bằng",
+      "object": "rheumapain",
+      "document": "CTUMP.3574.pdf",
+      "chunk": 8,
+      "document_word_start": 0,
+      "document_word_end": 1250,
+      "source_verified": false
+    }
+  ],
+  "rejected": []
+}

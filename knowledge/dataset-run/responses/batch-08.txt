@@ -1,0 +1,31 @@
+```json
+[
+  {"subject": "viêm âm đạo", "predicate": "gây ra", "object": "vi khuẩn", "subject_type": "disease", "object_type": "pathogen", "document": "S001", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "viêm âm đạo", "predicate": "triệu chứng", "object": "khí hư mùi hôi", "subject_type": "disease", "object_type": "symptom", "document": "S001", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "viêm âm đạo", "predicate": "triệu chứng", "object": "ngứa", "subject_type": "disease", "object_type": "symptom", "document": "S001", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "viêm âm đạo", "predicate": "điều trị bằng", "object": "hoàng bá kết polygynax", "subject_type": "disease", "object_type": "treatment", "document": "S001", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "viêm âm đạo", "predicate": "hiệu quả", "object": "tốt", "subject_type": "disease", "object_type": "outcome", "document": "S001", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "táo bón chức năng", "predicate": "phổ biến ở", "object": "người cao tuổi", "subject_type": "disease", "object_type": "person", "document": "S002", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "táo bón chức năng", "predicate": "triệu chứng", "object": "rặn, gắng sức", "subject_type": "disease", "object_type": "symptom", "document": "S002", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "táo bón chức năng", "predicate": "thuộc thể", "object": "hư chứng", "subject_type": "disease", "object_type": "concept", "document": "S002", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "táo bón chức năng", "predicate": "liên quan", "object": "nhịn đại tiện", "subject_type": "disease", "object_type": "habit", "document": "S002", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "táo bón chức năng", "predicate": "liên quan", "object": "thiếu chất xơ", "subject_type": "disease", "object_type": "diet", "document": "S002", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "táo bón chức năng", "predicate": "liên quan", "object": "thiếu nước", "subject_type": "disease", "object_type": "habit", "document": "S002", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "rối loạn cương dương", "predicate": "điều trị bằng", "object": "y học cổ truyền", "subject_type": "disease", "object_type": "treatment", "document": "S003", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "rối loạn cương dương", "predicate": "thuộc chứng", "object": "dương nuy", "subject_type": "disease", "object_type": "concept", "document": "S003", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "rối loạn cương dương", "predicate": "điều trị bằng", "object": "hữu quy hoàn", "subject_type": "disease", "object_type": "medicine", "document": "S003", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "rối loạn cương dương", "predicate": "hiệu quả", "object": "tăng testosterone", "subject_type": "disease", "object_type": "outcome", "document": "S003", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "bệnh nhân nội trú", "predicate": "sử dụng", "object": "thuốc y học cổ truyền", "subject_type": "person", "object_type": "medicine", "document": "S004", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "bệnh nhân nội trú", "predicate": "thường dùng nhiều nhất", "object": "thuốc thang", "subject_type": "person", "object_type": "medicine", "document": "S004", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "bệnh nhân nội trú", "predicate": "dùng nhiều nhất", "object": "viên bao, viên nang", "subject_type": "person", "object_type": "medicine", "document": "S004", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "đau cột sống thắt lưng", "predicate": "do", "object": "thoái hóa cột sống", "subject_type": "disease", "object_type": "cause", "document": "S005", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "đau cột sống thắt lưng", "predicate": "triệu chứng", "object": "hạn chế vận động", "subject_type": "disease", "object_type": "symptom", "document": "S005", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "đau cột sống thắt lưng", "predicate": "điều trị bằng", "object": "YH cổ truyền", "subject_type": "disease", "object_type": "treatment", "document": "S005", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "đau thần kinh tọa", "predicate": "điều trị bằng", "object": "độc hoạt ký sinh thang", "subject_type": "disease", "object_type": "medicine", "document": "S006", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "đau thần kinh tọa", "predicate": "điều trị bằng", "object": "điện châm, hồng ngoại", "subject_type": "disease", "object_type": "treatment", "document": "S006", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "đau thần kinh tọa", "predicate": "hiệu quả", "object": "giảm đau", "subject_type": "disease", "object_type": "outcome", "document": "S006", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "thoái hóa cột sống cổ", "predicate": "triệu chứng", "object": "đau cổ gáy", "subject_type": "disease", "object_type": "symptom", "document": "S007", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "thoái hóa cột sống cổ", "predicate": "triệu chứng", "object": "hạn chế vận động", "subject_type": "disease", "object_type": "symptom", "document": "S007", "source": "nghiên cứu khảo sát đau thắt lưng"},
+  {"subject": "thoái hóa cột sống cổ", "predicate": "điều trị bằng", "object": "rheumapain", "subject_type": "disease", "object_type": "medicine", "document": "S007", "source": "nghiên cứu khảo sát đau thắt lưng"}
+]
+```

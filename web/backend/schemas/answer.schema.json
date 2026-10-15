@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ygibiteo:verified-answer:1.0.0",
+  "type": "object",
+  "required": ["answer", "citations", "verification_status", "trace_id", "ontology_version", "snapshot", "usage"],
+  "properties": {
+    "answer": {"type": "string", "minLength": 1},
+    "citations": {"type": "array", "items": {"type": "object", "required": ["id", "kind"]}},
+    "verification_status": {"enum": ["verified", "insufficient"]},
+    "trace_id": {"type": "string", "minLength": 1},
+    "ontology_version": {"const": "1.0.0"},
+    "snapshot": {"type": ["string", "null"]},
+    "usage": {"type": "object"}
+  }
+}

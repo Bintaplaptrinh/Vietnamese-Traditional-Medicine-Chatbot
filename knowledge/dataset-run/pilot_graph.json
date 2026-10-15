@@ -1,0 +1,156 @@
+[
+  {
+    "subject": "người người bệnh",
+    "predicate": "sử dụng",
+    "object": "thuốc y học cổ truyền",
+    "subject_type": "person",
+    "object_type": "technology",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "người người bệnh",
+    "predicate": "khám tại",
+    "object": "bệnh viện quân y 354",
+    "subject_type": "person",
+    "object_type": "organization",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "thuốc y học cổ truyền",
+    "predicate": "không có",
+    "object": "tác dụng không mong muốn",
+    "subject_type": "technology",
+    "object_type": "concept",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "người người bệnh",
+    "predicate": "sử dụng",
+    "object": "dạng viên nén",
+    "subject_type": "person",
+    "object_type": "product",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "người người bệnh",
+    "predicate": "sử dụng để",
+    "object": "chữa bệnh",
+    "subject_type": "person",
+    "object_type": "concept",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "người người bệnh",
+    "predicate": "điều trị",
+    "object": "bệnh mãn tính",
+    "subject_type": "person",
+    "object_type": "concept",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "người người bệnh",
+    "predicate": "sử dụng",
+    "object": "bệnh xương khớp",
+    "subject_type": "person",
+    "object_type": "concept",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "người người bệnh",
+    "predicate": "sử dụng",
+    "object": "bệnh tiêu hóa",
+    "subject_type": "person",
+    "object_type": "concept",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "ths lê thị hồng gấm",
+    "predicate": "chịu trách",
+    "object": "nội dung",
+    "subject_type": "person",
+    "object_type": "concept",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "bác sĩ bộ y tế",
+    "predicate": "chỉ định",
+    "object": "thuốc y học cổ truyền",
+    "subject_type": "person",
+    "object_type": "technology",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "y học cổ truyền",
+    "predicate": "phát triển",
+    "object": "t việt nam",
+    "subject_type": "technology",
+    "object_type": "place",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "bộ y tế",
+    "predicate": "chỉ đạo",
+    "object": "phát triển y học cổ truyền",
+    "subject_type": "organization",
+    "object_type": "concept",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "y học cổ truyền",
+    "predicate": "kết hợp",
+    "object": "tây y",
+    "subject_type": "technology",
+    "object_type": "technology",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  },
+  {
+    "subject": "người người bệnh",
+    "predicate": "tự tin dụng",
+    "object": "thuốc y học cổ truyền",
+    "subject_type": "person",
+    "object_type": "technology",
+    "document": "12.pdf",
+    "chunk": 1,
+    "source_verified": false,
+    "source_method": "local_sentence_match"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "source_requirement": "quote must match original unit; citation must exist in the packed snapshot",
+  "semantic_admission": "JEV supported required for new accepted graph claims",
+  "legacy_claims": "pending; verified original source can be retrieved, extracted assertion never self-authorizes an answer",
+  "answer_requirement": "separate JEV call must support every atomic section and every evidence need",
+  "inferred_claims": "excluded from answer evidence",
+  "quarantine": "visible in explorer; excluded from answer evidence",
+  "ontology": "terminology and source-stated taxonomy only; no efficacy from aliases or co-indexing",
+  "duplicates": "same namespace, source, statement, polarity, context and evidence content",
+  "conflicts": "retain alternative source assertions, flag for validation; never infer contradiction from different objects alone",
+  "packing": {"max_characters": 24000, "max_items": 32, "reserve_per_need": 2},
+  "missing_evidence": "return insufficient or bounded clarification",
+  "ocr": "missing native text requires OCR review; no fabricated scan text"
+}

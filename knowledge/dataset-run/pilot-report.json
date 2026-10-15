@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "document": "12.pdf",
+  "stats": {
+    "nodes": 17,
+    "edges": 14,
+    "original_edges": 14,
+    "inferred_edges": 0,
+    "communities": 5
+  },
+  "full_corpus_complete": false,
+  "source_method": "local_sentence_match",
+  "verified_source_triples": 0
+}

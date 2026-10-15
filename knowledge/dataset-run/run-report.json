@@ -1,0 +1,502 @@
+{
+  "complete": true,
+  "completed_batches": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "total_batches": 26,
+  "input_documents": 120,
+  "input_pages": 1009,
+  "input_words": 597624,
+  "documents_with_triples": 120,
+  "triples_by_document": {
+    "10+Le+La+Vuong+Linh.pdf": 6,
+    "1039-Văn bản của bài báo-13154-1-10-20221010.pdf": 5,
+    "1068-Văn bản của bài báo-13149-1-10-20221010.pdf": 3,
+    "12.pdf": 1,
+    "121.pdf": 17,
+    "13(7)_2023_08.pdf": 8,
+    "13(7)_2023_13.pdf": 9,
+    "13. Luận văn Nguyễn Thị Thùy Lê.pdf": 21,
+    "14(1)_2024_25.pdf": 9,
+    "14(3)_2024_17.pdf": 14,
+    "14(7)_2024_22.pdf": 5,
+    "1563-Văn bản của bài báo-5097-2-10-20240324.pdf": 7,
+    "172.pdf": 5,
+    "1815-Article Text-2670-1-10-20230701.pdf": 4,
+    "2.TONG QUAN HOI CHUNG THAT LUNG HONG1748705574.pdf": 10,
+    "2022_1_15.pdf": 5,
+    "2022_3_08.pdf": 5,
+    "2763-Văn bản của bài báo-8125-1-10-20240525.pdf": 3,
+    "2946-Văn bản của bài báo-38854-1-10-20241227.pdf": 31,
+    "3450-Văn bản của bài báo-10821-1-10-20251125.pdf": 11,
+    "4.pdf": 34,
+    "4675-Văn bản của bài báo-63319-1-10-20260310.pdf": 8,
+    "47.pdf": 7,
+    "89.Khảo sát sự phối hợp mạng lưới của các nhóm thuốc trong đơn thuốc sắc y học cổ truyền điều trị đau thần kinh tọa dựa trên dữ liệu lâm sàng.pdf": 4,
+    "Bài 8 Tạp chí số 3. 2021-trang-47-53-151-258_Văn bản của bài báo.pdf": 10,
+    "95463-2173-203284-1-10-20240513.pdf": 4,
+    "Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf": 5,
+    "Bài+1.pdf": 6,
+    "Bài+7.pdf": 4,
+    "CTUMP.1876.pdf": 3,
+    "CTUMP.195.pdf": 3,
+    "CTUMP.2378.pdf": 3,
+    "CTUMP.3574.pdf": 29,
+    "CTUMP.4038.pdf": 13,
+    "CTUMP.4676.pdf": 8,
+    "CTUMP.5033.pdf": 6,
+    "CVv46V503SDB22021074.pdf": 5,
+    "Chan_doan_benh_trong_y_hoc_co_truyen_Huong_tiep_ca.pdf": 11,
+    "JMPM.927.pdf": 4,
+    "LA Hồ Văn Thăng nén.pdf": 54,
+    "Nội dung bài số 4_5-70-112_Văn bản của bài báo.pdf": 4,
+    "PDF_2020m03d018_8_45_2.pdf": 4,
+    "PDF_2020m03d020_8_21_17.pdf": 12,
+    "PDF_2021m05d04_16_34_37.pdf": 16,
+    "VMJ.11227.pdf": 4,
+    "VMJ.11302.pdf": 7,
+    "VMJ.11417.pdf": 5,
+    "VMJ.11535.pdf": 13,
+    "VMJ.11776.pdf": 15,
+    "VMJ.14073.pdf": 5,
+    "VMJ.14369.pdf": 18,
+    "VMJ.14626.pdf": 10,
+    "VMJ.15265.pdf": 5,
+    "VMJ.162.pdf": 2,
+    "VMJ.14752.pdf": 3,
+    "VMJ.16348.pdf": 12,
+    "VMJ.16557.pdf": 11,
+    "VMJ.17283.pdf": 6,
+    "VMJ.18734.pdf": 9,
+    "VMJ.17756.pdf": 4,
+    "VMJ.2331.pdf": 12,
+    "VMJ.3449.pdf": 6,
+    "VMJ.3636.pdf": 5,
+    "VMJ.3773.pdf": 5,
+    "VMJ.3854.pdf": 7,
+    "VMJ.4127.pdf": 10,
+    "VMJ.5509.pdf": 11,
+    "VMJ.5967.pdf": 5,
+    "VMJ.646.pdf": 4,
+    "VMJ.6491.pdf": 2,
+    "VMJ.6795.pdf": 12,
+    "VMJ.6836.pdf": 7,
+    "VMJ.6851.pdf": 6,
+    "VMJ.7171.pdf": 7,
+    "VMJ.8050.pdf": 6,
+    "VMJ.8363.pdf": 17,
+    "VMJ.8460.pdf": 5,
+    "VMJ.9366.pdf": 26,
+    "VMJ.9753.pdf": 8,
+    "VMJ.9767.pdf": 7,
+    "admin,+10.8-100.pdf": 14,
+    "admin,+10.pdf": 7,
+    "admin,+12.pdf": 5,
+    "admin,+17.5-03.pdf": 6,
+    "admin,+20.pdf": 6,
+    "admin,+25.8-92.pdf": 11,
+    "admin,+28.6-55.pdf": 5,
+    "admin,+31.6-44.pdf": 4,
+    "admin,+38.pdf": 4,
+    "admin,+8.pdf": 7,
+    "admin,+BT-1-10-trang-3.pdf": 15,
+    "admin,+Bai+48.pdf": 4,
+    "admin,+CD1-VTT_B25.pdf": 4,
+    "admin,+Vol+67+No+2+2026-trang-39.pdf": 3,
+    "admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf": 7,
+    "admin,+Vol+67_CD2_B29.pdf": 18,
+    "admin,+Vol+67_No+3_B52.pdf": 2,
+    "admin,+Y+te+cong+dong-Chuyen+de+10+-+T9+2024+-+color-Bai+4.pdf": 2,
+    "bai+1.pdf": 4,
+    "bài+23.pdf": 4,
+    "bài+3.pdf": 18,
+    "bài+38.pdf": 6,
+    "bài+4.pdf": 6,
+    "current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf": 7,
+    "VMJ.15116.pdf": 2,
+    "VMJ.8058.pdf": 2,
+    "247-502-1-SM.pdf": 2,
+    "4547-Văn bản của bài báo-60846-1-10-20260128.pdf": 2,
+    "Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf": 2,
+    "VMJ.12008.pdf": 2,
+    "VMJ.14360.pdf": 2,
+    "VMJ.8462.pdf": 2,
+    "VMJ.8691.pdf": 2,
+    "VMJ.9281.pdf": 2,
+    "VMJ.9851.pdf": 2,
+    "Vol2Issue3_74-82.pdf": 2,
+    "admin,+9.pdf": 2,
+    "admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf": 2,
+    "admin,+TAP+65_SO+2-2024_BAI+19.pdf": 2,
+    "bài+18.pdf": 2
+  },
+  "missing_documents": [],
+  "verified_source_triples": 403,
+  "stats": {
+    "nodes": 1170,
+    "edges": 934,
+    "original_edges": 934,
+    "inferred_edges": 0,
+    "communities": 312
+  },
+  "inference_enabled": false,
+  "extraction_scope": "Key relationships, 15-25 per document block; maximum 120 per batch.",
+  "api_attempts": [
+    {
+      "started": "2026-09-29T12:20:57.371279+00:00",
+      "status": "ConnectionError",
+      "finished": "2026-09-29T12:20:57.375535+00:00",
+      "sent": false,
+      "note": "Confirmed DNS failure; no HTTP request sent (see first failure in run.log)."
+    },
+    {
+      "started": "2026-09-29T12:22:17.450488+00:00",
+      "status": "ReadTimeout",
+      "finished": "2026-09-29T12:37:17.821927+00:00"
+    },
+    {
+      "started": "2026-09-29T12:37:56.746475+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 17674,
+        "total_tokens": 18518,
+        "completion_tokens": 844,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T12:38:25.124868+00:00"
+    },
+    {
+      "started": "2026-09-29T12:44:59.685188+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 38210,
+        "total_tokens": 39437,
+        "completion_tokens": 1227,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T12:45:16.726036+00:00"
+    },
+    {
+      "started": "2026-09-29T12:47:35.353654+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 35707,
+        "total_tokens": 37671,
+        "completion_tokens": 1964,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T12:48:05.581878+00:00"
+    },
+    {
+      "started": "2026-09-29T12:48:05.614726+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 39578,
+        "total_tokens": 41758,
+        "completion_tokens": 2180,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T12:48:53.019554+00:00"
+    },
+    {
+      "started": "2026-09-29T12:54:51.719484+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 36728,
+        "total_tokens": 38866,
+        "completion_tokens": 2138,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T12:55:16.913721+00:00"
+    },
+    {
+      "started": "2026-09-29T12:55:16.939616+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 37348,
+        "total_tokens": 39351,
+        "completion_tokens": 2003,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T12:55:27.716972+00:00"
+    },
+    {
+      "started": "2026-09-29T13:00:07.978463+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 37148,
+        "total_tokens": 42079,
+        "completion_tokens": 4931,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:00:52.331871+00:00"
+    },
+    {
+      "started": "2026-09-29T13:00:52.393402+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 37176,
+        "total_tokens": 39119,
+        "completion_tokens": 1943,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:01:16.467651+00:00"
+    },
+    {
+      "started": "2026-09-29T13:01:16.494325+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 36590,
+        "total_tokens": 38501,
+        "completion_tokens": 1911,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:01:27.396146+00:00"
+    },
+    {
+      "started": "2026-09-29T13:01:27.418084+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 40129,
+        "total_tokens": 43990,
+        "completion_tokens": 3861,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:02:06.748507+00:00"
+    },
+    {
+      "started": "2026-09-29T13:02:06.797352+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 38685,
+        "total_tokens": 39850,
+        "completion_tokens": 1165,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:03:03.416037+00:00"
+    },
+    {
+      "started": "2026-09-29T13:03:03.452431+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 38881,
+        "total_tokens": 40255,
+        "completion_tokens": 1374,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:04:09.181403+00:00"
+    },
+    {
+      "started": "2026-09-29T13:04:09.276175+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 42793,
+        "total_tokens": 45632,
+        "completion_tokens": 2839,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:04:39.325563+00:00"
+    },
+    {
+      "started": "2026-09-29T13:04:39.393754+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 35281,
+        "total_tokens": 37892,
+        "completion_tokens": 2611,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:05:01.852231+00:00"
+    },
+    {
+      "started": "2026-09-29T13:05:01.884675+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 37341,
+        "total_tokens": 40101,
+        "completion_tokens": 2760,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:05:42.230235+00:00"
+    },
+    {
+      "started": "2026-09-29T13:05:42.259872+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 38548,
+        "total_tokens": 41053,
+        "completion_tokens": 2505,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:06:07.090844+00:00"
+    },
+    {
+      "started": "2026-09-29T13:06:07.111982+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 39617,
+        "total_tokens": 41827,
+        "completion_tokens": 2210,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:06:24.102717+00:00"
+    },
+    {
+      "started": "2026-09-29T13:06:24.137053+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 36354,
+        "total_tokens": 38965,
+        "completion_tokens": 2611,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:06:40.429135+00:00"
+    },
+    {
+      "started": "2026-09-29T13:06:40.459235+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 36729,
+        "total_tokens": 38928,
+        "completion_tokens": 2199,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:06:57.971649+00:00"
+    },
+    {
+      "started": "2026-09-29T13:08:19.426431+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 38164,
+        "total_tokens": 40916,
+        "completion_tokens": 2752,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:08:52.108155+00:00"
+    },
+    {
+      "started": "2026-09-29T13:08:52.135655+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 36557,
+        "total_tokens": 38511,
+        "completion_tokens": 1954,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:09:16.052854+00:00"
+    },
+    {
+      "started": "2026-09-29T13:09:16.071724+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 39390,
+        "total_tokens": 41656,
+        "completion_tokens": 2266,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:09:31.340428+00:00"
+    },
+    {
+      "started": "2026-09-29T13:09:31.369321+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 36064,
+        "total_tokens": 38477,
+        "completion_tokens": 2413,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:09:55.451155+00:00"
+    },
+    {
+      "started": "2026-09-29T13:09:55.479601+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 37089,
+        "total_tokens": 39322,
+        "completion_tokens": 2233,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:10:10.112857+00:00"
+    },
+    {
+      "started": "2026-09-29T13:10:10.133243+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 36930,
+        "total_tokens": 38910,
+        "completion_tokens": 1980,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:10:32.077170+00:00"
+    },
+    {
+      "started": "2026-09-29T13:10:32.099383+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 54530,
+        "total_tokens": 56691,
+        "completion_tokens": 2161,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:10:51.723948+00:00"
+    },
+    {
+      "started": "2026-09-29T13:10:51.747684+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 36786,
+        "total_tokens": 39190,
+        "completion_tokens": 2404,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:11:06.423285+00:00"
+    },
+    {
+      "started": "2026-09-29T13:11:06.471966+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 50940,
+        "total_tokens": 53500,
+        "completion_tokens": 2560,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:11:48.437081+00:00"
+    },
+    {
+      "started": "2026-09-29T13:16:03.880251+00:00",
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 14841,
+        "total_tokens": 15245,
+        "completion_tokens": 404,
+        "prompt_tokens_details": null
+      },
+      "finished": "2026-09-29T13:16:06.477643+00:00"
+    }
+  ]
+}

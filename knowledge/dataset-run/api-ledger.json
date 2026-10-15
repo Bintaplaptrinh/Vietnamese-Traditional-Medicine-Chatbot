@@ -1,0 +1,333 @@
+[
+  {
+    "started": "2026-09-29T12:20:57.371279+00:00",
+    "status": "ConnectionError",
+    "finished": "2026-09-29T12:20:57.375535+00:00",
+    "sent": false,
+    "note": "Confirmed DNS failure; no HTTP request sent (see first failure in run.log)."
+  },
+  {
+    "started": "2026-09-29T12:22:17.450488+00:00",
+    "status": "ReadTimeout",
+    "finished": "2026-09-29T12:37:17.821927+00:00"
+  },
+  {
+    "started": "2026-09-29T12:37:56.746475+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 17674,
+      "total_tokens": 18518,
+      "completion_tokens": 844,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T12:38:25.124868+00:00"
+  },
+  {
+    "started": "2026-09-29T12:44:59.685188+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 38210,
+      "total_tokens": 39437,
+      "completion_tokens": 1227,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T12:45:16.726036+00:00"
+  },
+  {
+    "started": "2026-09-29T12:47:35.353654+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 35707,
+      "total_tokens": 37671,
+      "completion_tokens": 1964,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T12:48:05.581878+00:00"
+  },
+  {
+    "started": "2026-09-29T12:48:05.614726+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 39578,
+      "total_tokens": 41758,
+      "completion_tokens": 2180,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T12:48:53.019554+00:00"
+  },
+  {
+    "started": "2026-09-29T12:54:51.719484+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 36728,
+      "total_tokens": 38866,
+      "completion_tokens": 2138,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T12:55:16.913721+00:00"
+  },
+  {
+    "started": "2026-09-29T12:55:16.939616+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 37348,
+      "total_tokens": 39351,
+      "completion_tokens": 2003,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T12:55:27.716972+00:00"
+  },
+  {
+    "started": "2026-09-29T13:00:07.978463+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 37148,
+      "total_tokens": 42079,
+      "completion_tokens": 4931,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:00:52.331871+00:00"
+  },
+  {
+    "started": "2026-09-29T13:00:52.393402+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 37176,
+      "total_tokens": 39119,
+      "completion_tokens": 1943,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:01:16.467651+00:00"
+  },
+  {
+    "started": "2026-09-29T13:01:16.494325+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 36590,
+      "total_tokens": 38501,
+      "completion_tokens": 1911,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:01:27.396146+00:00"
+  },
+  {
+    "started": "2026-09-29T13:01:27.418084+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 40129,
+      "total_tokens": 43990,
+      "completion_tokens": 3861,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:02:06.748507+00:00"
+  },
+  {
+    "started": "2026-09-29T13:02:06.797352+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 38685,
+      "total_tokens": 39850,
+      "completion_tokens": 1165,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:03:03.416037+00:00"
+  },
+  {
+    "started": "2026-09-29T13:03:03.452431+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 38881,
+      "total_tokens": 40255,
+      "completion_tokens": 1374,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:04:09.181403+00:00"
+  },
+  {
+    "started": "2026-09-29T13:04:09.276175+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 42793,
+      "total_tokens": 45632,
+      "completion_tokens": 2839,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:04:39.325563+00:00"
+  },
+  {
+    "started": "2026-09-29T13:04:39.393754+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 35281,
+      "total_tokens": 37892,
+      "completion_tokens": 2611,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:05:01.852231+00:00"
+  },
+  {
+    "started": "2026-09-29T13:05:01.884675+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 37341,
+      "total_tokens": 40101,
+      "completion_tokens": 2760,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:05:42.230235+00:00"
+  },
+  {
+    "started": "2026-09-29T13:05:42.259872+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 38548,
+      "total_tokens": 41053,
+      "completion_tokens": 2505,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:06:07.090844+00:00"
+  },
+  {
+    "started": "2026-09-29T13:06:07.111982+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 39617,
+      "total_tokens": 41827,
+      "completion_tokens": 2210,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:06:24.102717+00:00"
+  },
+  {
+    "started": "2026-09-29T13:06:24.137053+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 36354,
+      "total_tokens": 38965,
+      "completion_tokens": 2611,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:06:40.429135+00:00"
+  },
+  {
+    "started": "2026-09-29T13:06:40.459235+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 36729,
+      "total_tokens": 38928,
+      "completion_tokens": 2199,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:06:57.971649+00:00"
+  },
+  {
+    "started": "2026-09-29T13:08:19.426431+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 38164,
+      "total_tokens": 40916,
+      "completion_tokens": 2752,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:08:52.108155+00:00"
+  },
+  {
+    "started": "2026-09-29T13:08:52.135655+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 36557,
+      "total_tokens": 38511,
+      "completion_tokens": 1954,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:09:16.052854+00:00"
+  },
+  {
+    "started": "2026-09-29T13:09:16.071724+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 39390,
+      "total_tokens": 41656,
+      "completion_tokens": 2266,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:09:31.340428+00:00"
+  },
+  {
+    "started": "2026-09-29T13:09:31.369321+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 36064,
+      "total_tokens": 38477,
+      "completion_tokens": 2413,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:09:55.451155+00:00"
+  },
+  {
+    "started": "2026-09-29T13:09:55.479601+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 37089,
+      "total_tokens": 39322,
+      "completion_tokens": 2233,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:10:10.112857+00:00"
+  },
+  {
+    "started": "2026-09-29T13:10:10.133243+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 36930,
+      "total_tokens": 38910,
+      "completion_tokens": 1980,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:10:32.077170+00:00"
+  },
+  {
+    "started": "2026-09-29T13:10:32.099383+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 54530,
+      "total_tokens": 56691,
+      "completion_tokens": 2161,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:10:51.723948+00:00"
+  },
+  {
+    "started": "2026-09-29T13:10:51.747684+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 36786,
+      "total_tokens": 39190,
+      "completion_tokens": 2404,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:11:06.423285+00:00"
+  },
+  {
+    "started": "2026-09-29T13:11:06.471966+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 50940,
+      "total_tokens": 53500,
+      "completion_tokens": 2560,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:11:48.437081+00:00"
+  },
+  {
+    "started": "2026-09-29T13:16:03.880251+00:00",
+    "status": 200,
+    "usage": {
+      "prompt_tokens": 14841,
+      "total_tokens": 15245,
+      "completion_tokens": 404,
+      "prompt_tokens_details": null
+    },
+    "finished": "2026-09-29T13:16:06.477643+00:00"
+  }
+]

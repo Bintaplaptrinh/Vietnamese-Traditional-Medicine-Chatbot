@@ -1,0 +1,606 @@
+Prepared 120 PDFs, 617,251 words, 26 batches; full input coverage verified.
+Batch 1/26: 23,741 words, 6 document blocks
+API attempt 1/30 (rolling 24h)
+Stopped: Could not reach https://integrate.api.nvidia.com/v1/chat/completions after 1 attempts: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno -2] Name or service not known)"))
+Prepared 120 PDFs, 617,251 words, 26 batches; full input coverage verified.
+Batch 1/26: 23,741 words, 6 document blocks
+API attempt 2/30 (rolling 24h)
+Stopped: Could not reach https://integrate.api.nvidia.com/v1/chat/completions after 1 attempts: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=900.0)
+Prepared 120 PDFs, 617,251 words, 26 batches; full input coverage verified.
+Diagnostic document: 12.pdf, 799 words; one request only.
+API attempt 3/30 (rolling 24h)
+Diagnostic extraction failed: No valid triples or missing documents in batch: ['12.pdf']
+Prepared 120 PDFs, 597,624 words, 26 batches; full input coverage verified.
+Batch 1/26: 22,986 words, 5 document blocks
+API attempt 4/30 (rolling 24h)
+Stopped: Expecting ',' delimiter: line 1 column 156 (char 155)
+Prepared 120 PDFs, 597,624 words, 26 batches; full input coverage verified.
+Batch 1: loaded checkpoint
+Batch 2/26: 22,986 words, 4 document blocks
+API attempt 5/30 (rolling 24h)
+Batch 2: 32 triples; checkpoint saved
+Batch 3/26: 22,986 words, 3 document blocks
+API attempt 6/30 (rolling 24h)
+JSON array was incomplete; salvaged 2 complete objects
+Stopped: No valid triples or missing documents in batch: ['14(1)_2024_25.pdf', '14(3)_2024_17.pdf']
+Standardizing entity names across all triples...
+Standardized 62 entities into 62 standard forms
+Processing 51 triples for visualization
+Found 62 unique nodes
+Found 0 inferred relationships
+Detected 15 communities using Louvain method
+Knowledge graph visualization saved to /mnt/new-volume/Project/YGiBiTeo/knowledge/dataset-run/dataset_graph.html
+Graph Statistics: {
+  "nodes": 62,
+  "edges": 51,
+  "original_edges": 51,
+  "inferred_edges": 0,
+  "communities": 15
+}
+{
+  "complete": false,
+  "completed_batches": [
+    1,
+    2
+  ],
+  "total_batches": 26,
+  "input_documents": 120,
+  "input_pages": 1009,
+  "input_words": 597624,
+  "documents_with_triples": 8,
+  "verified_source_triples": 24,
+  "stats": {
+    "nodes": 62,
+    "edges": 51,
+    "original_edges": 51,
+    "inferred_edges": 0,
+    "communities": 15
+  },
+  "inference_enabled": false,
+  "extraction_scope": "Key relationships, 15-25 per document block; maximum 120 per batch."
+}
+Prepared 120 PDFs, 597,624 words, 26 batches; full input coverage verified.
+Batch 1: loaded checkpoint
+Batch 2: loaded checkpoint
+Batch 3: loaded checkpoint
+Batch 4/26: 22,986 words, 6 document blocks
+API attempt 7/30 (rolling 24h)
+JSON array was incomplete; salvaged 29 complete objects
+Recovered 32 individually valid JSON objects
+Batch 4: 31 triples; checkpoint saved
+Batch 5/26: 22,986 words, 6 document blocks
+API attempt 8/30 (rolling 24h)
+Stopped: No valid triples or missing documents in batch: ['247-502-1-SM.pdf']
+Standardizing entity names across all triples...
+Standardized 158 entities into 158 standard forms
+Processing 117 triples for visualization
+Found 158 unique nodes
+Found 0 inferred relationships
+Detected 45 communities using Louvain method
+Knowledge graph visualization saved to /mnt/new-volume/Project/YGiBiTeo/knowledge/dataset-run/dataset_graph.html
+Graph Statistics: {
+  "nodes": 158,
+  "edges": 117,
+  "original_edges": 117,
+  "inferred_edges": 0,
+  "communities": 45
+}
+{
+  "complete": false,
+  "completed_batches": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "total_batches": 26,
+  "input_documents": 120,
+  "input_pages": 1009,
+  "input_words": 597624,
+  "documents_with_triples": 15,
+  "verified_source_triples": 64,
+  "stats": {
+    "nodes": 158,
+    "edges": 117,
+    "original_edges": 117,
+    "inferred_edges": 0,
+    "communities": 45
+  },
+  "inference_enabled": false,
+  "extraction_scope": "Key relationships, 15-25 per document block; maximum 120 per batch."
+}
+  File "/mnt/new-volume/Project/YGiBiTeo/knowledge/dataset-run/run_dataset.py", line 393
+    triples, rejected = validate_response(content, batch, segments)
+    ^^^^^^^
+IndentationError: expected an indented block after 'try' statement on line 392
+Prepared 120 PDFs, 597,624 words, 26 batches; full input coverage verified.
+Batch 1: loaded checkpoint
+Batch 2: loaded checkpoint
+Batch 3: loaded checkpoint
+Batch 4: loaded checkpoint
+Batch 5/26: 22,986 words, 6 document blocks
+Batch 5: validating saved response without an API call
+Documents without triples in this block: ['247-502-1-SM.pdf']; checking overall coverage at the end
+Batch 5: 26 triples; checkpoint saved
+Batch 6/26: 22,986 words, 5 document blocks
+API attempt 9/30 (rolling 24h)
+Documents without triples in this block: ['4547-Văn bản của bài báo-60846-1-10-20260128.pdf', '4675-Văn bản của bài báo-63319-1-10-20260310.pdf']; checking overall coverage at the end
+Batch 6: 70 triples; checkpoint saved
+Batch 7/26: 22,986 words, 7 document blocks
+API attempt 10/30 (rolling 24h)
+Documents without triples in this block: ['Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf', 'Bài 8 Tạp chí số 4. 2021-trang-48-52-164-282_Văn bản của bài báo.pdf']; checking overall coverage at the end
+Batch 7: 33 triples; checkpoint saved
+Batch 8/26: 22,986 words, 7 document blocks
+API attempt 11/30 (rolling 24h)
+Batch 8: 27 triples; checkpoint saved
+Batch 9/26: 22,986 words, 6 document blocks
+API attempt 12/30 (rolling 24h)
+Batch 9: 62 triples; checkpoint saved
+Batch 10/26: 22,986 words, 3 document blocks
+API attempt 13/30 (rolling 24h)
+Batch 10: 18 triples; checkpoint saved
+Batch 11/26: 22,986 words, 1 document blocks
+API attempt 14/30 (rolling 24h)
+JSON array was incomplete; salvaged 4 complete objects
+Recovered 22 individually valid JSON objects
+Batch 11: 22 triples; checkpoint saved
+Batch 12/26: 22,986 words, 4 document blocks
+API attempt 15/30 (rolling 24h)
+JSON array was incomplete; salvaged 14 complete objects
+Recovered 41 individually valid JSON objects
+Batch 12: 41 triples; checkpoint saved
+Batch 13/26: 22,986 words, 6 document blocks
+API attempt 16/30 (rolling 24h)
+Documents without triples in this block: ['VMJ.11535.pdf']; checking overall coverage at the end
+Batch 13: 36 triples; checkpoint saved
+Batch 14/26: 22,986 words, 6 document blocks
+API attempt 17/30 (rolling 24h)
+JSON array was incomplete; salvaged 26 complete objects
+Recovered 36 individually valid JSON objects
+Documents without triples in this block: ['VMJ.12008.pdf', 'VMJ.14360.pdf']; checking overall coverage at the end
+Batch 14: 36 triples; checkpoint saved
+Batch 15/26: 22,986 words, 7 document blocks
+API attempt 18/30 (rolling 24h)
+Documents without triples in this block: ['VMJ.15116.pdf', 'VMJ.16348.pdf']; checking overall coverage at the end
+Batch 15: 35 triples; checkpoint saved
+Batch 16/26: 22,986 words, 5 document blocks
+API attempt 19/30 (rolling 24h)
+Batch 16: 37 triples; checkpoint saved
+Batch 17/26: 22,986 words, 7 document blocks
+API attempt 20/30 (rolling 24h)
+Documents without triples in this block: ['VMJ.4127.pdf']; checking overall coverage at the end
+Batch 17: 40 triples; checkpoint saved
+Batch 18/26: 22,986 words, 6 document blocks
+API attempt 21/30 (rolling 24h)
+No JSON array could be extracted from the model response
+Stopped: Expected a non-empty complete JSON array.
+Standardizing entity names across all triples...
+Standardized 802 entities into 801 standard forms
+Processing 600 triples for visualization
+Found 801 unique nodes
+Found 0 inferred relationships
+Detected 237 communities using Louvain method
+Knowledge graph visualization saved to /mnt/new-volume/Project/YGiBiTeo/knowledge/dataset-run/dataset_graph.html
+Graph Statistics: {
+  "nodes": 801,
+  "edges": 600,
+  "original_edges": 600,
+  "inferred_edges": 0,
+  "communities": 237
+}
+{
+  "complete": false,
+  "completed_batches": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "total_batches": 26,
+  "input_documents": 120,
+  "input_pages": 1009,
+  "input_words": 597624,
+  "documents_with_triples": 65,
+  "missing_documents": [
+    "247-502-1-SM.pdf",
+    "4547-Văn bản của bài báo-60846-1-10-20260128.pdf",
+    "Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf",
+    "VMJ.12008.pdf",
+    "VMJ.14360.pdf",
+    "VMJ.15116.pdf",
+    "VMJ.4127.pdf",
+    "VMJ.5509.pdf",
+    "VMJ.5967.pdf",
+    "VMJ.646.pdf",
+    "VMJ.6491.pdf",
+    "VMJ.6795.pdf",
+    "VMJ.6836.pdf",
+    "VMJ.6851.pdf",
+    "VMJ.7171.pdf",
+    "VMJ.8050.pdf",
+    "VMJ.8058.pdf",
+    "VMJ.8363.pdf",
+    "VMJ.8460.pdf",
+    "VMJ.8462.pdf",
+    "VMJ.8691.pdf",
+    "VMJ.9281.pdf",
+    "VMJ.9366.pdf",
+    "VMJ.9753.pdf",
+    "VMJ.9767.pdf",
+    "VMJ.9851.pdf",
+    "Vol2Issue3_74-82.pdf",
+    "admin,+10.8-100.pdf",
+    "admin,+10.pdf",
+    "admin,+12.pdf",
+    "admin,+17.5-03.pdf",
+    "admin,+20.pdf",
+    "admin,+25.8-92.pdf",
+    "admin,+28.6-55.pdf",
+    "admin,+31.6-44.pdf",
+    "admin,+38.pdf",
+    "admin,+8.pdf",
+    "admin,+9.pdf",
+    "admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf",
+    "admin,+BT-1-10-trang-3.pdf",
+    "admin,+Bai+48.pdf",
+    "admin,+CD1-VTT_B25.pdf",
+    "admin,+TAP+65_SO+2-2024_BAI+19.pdf",
+    "admin,+TAP+65_SO+CHUYEN+DE+4_BAI+36.pdf",
+    "admin,+Vol+67+No+2+2026-trang-39.pdf",
+    "admin,+Vol+67_CD2_B29.pdf",
+    "admin,+Vol+67_No+3_B52.pdf",
+    "admin,+Y+te+cong+dong-Chuyen+de+10+-+T9+2024+-+color-Bai+4.pdf",
+    "bai+1.pdf",
+    "bài+18.pdf",
+    "bài+23.pdf",
+    "bài+3.pdf",
+    "bài+38.pdf",
+    "bài+4.pdf",
+    "current_status_of_treatment_adherence_among_outpatients_with_type_2.pdf"
+  ],
+  "verified_source_triples": 266,
+  "stats": {
+    "nodes": 801,
+    "edges": 600,
+    "original_edges": 600,
+    "inferred_edges": 0,
+    "communities": 237
+  },
+  "inference_enabled": false,
+  "extraction_scope": "Key relationships, 15-25 per document block; maximum 120 per batch."
+}
+Prepared 120 PDFs, 597,624 words, 26 batches; full input coverage verified.
+Batch 1: loaded checkpoint
+Batch 2: loaded checkpoint
+Batch 3: loaded checkpoint
+Batch 4: loaded checkpoint
+Batch 5: loaded checkpoint
+Batch 6: loaded checkpoint
+Batch 7: loaded checkpoint
+Batch 8: loaded checkpoint
+Batch 9: loaded checkpoint
+Batch 10: loaded checkpoint
+Batch 11: loaded checkpoint
+Batch 12: loaded checkpoint
+Batch 13: loaded checkpoint
+Batch 14: loaded checkpoint
+Batch 15: loaded checkpoint
+Batch 16: loaded checkpoint
+Batch 17: loaded checkpoint
+Batch 18: loaded checkpoint
+Batch 19/26: 22,986 words, 7 document blocks
+API attempt 21/30 (rolling 24h)
+Documents without triples in this block: ['VMJ.8058.pdf']; checking overall coverage at the end
+Batch 19: 37 triples; checkpoint saved
+Batch 20/26: 22,986 words, 6 document blocks
+API attempt 22/30 (rolling 24h)
+Documents without triples in this block: ['VMJ.8462.pdf', 'VMJ.8691.pdf', 'VMJ.9281.pdf']; checking overall coverage at the end
+Batch 20: 28 triples; checkpoint saved
+Batch 21/26: 22,986 words, 6 document blocks
+API attempt 23/30 (rolling 24h)
+JSON array was incomplete; salvaged 24 complete objects
+Recovered 38 individually valid JSON objects
+Documents without triples in this block: ['VMJ.9851.pdf', 'Vol2Issue3_74-82.pdf']; checking overall coverage at the end
+Batch 21: 38 triples; checkpoint saved
+Batch 22/26: 22,986 words, 6 document blocks
+API attempt 24/30 (rolling 24h)
+JSON array was incomplete; salvaged 34 complete objects
+Documents without triples in this block: ['admin,+25.8-92.pdf']; checking overall coverage at the end
+Batch 22: 34 triples; checkpoint saved
+Batch 23/26: 22,986 words, 8 document blocks
+API attempt 25/30 (rolling 24h)
+Documents without triples in this block: ['admin,+9.pdf', 'admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf']; checking overall coverage at the end
+Batch 23: 36 triples; checkpoint saved
+Batch 24/26: 22,986 words, 7 document blocks
+API attempt 26/30 (rolling 24h)
+JSON array was incomplete; salvaged 2 complete objects
+Recovered 31 individually valid JSON objects
+Documents without triples in this block: ['admin,+TAP+65_SO+2-2024_BAI+19.pdf']; checking overall coverage at the end
+Batch 24: 31 triples; checkpoint saved
+Batch 25/26: 22,986 words, 7 document blocks
+API attempt 27/30 (rolling 24h)
+Documents without triples in this block: ['bài+18.pdf']; checking overall coverage at the end
+Batch 25: 29 triples; checkpoint saved
+Batch 26/26: 22,974 words, 4 document blocks
+API attempt 28/30 (rolling 24h)
+JSON array was incomplete; salvaged 34 complete objects
+Recovered 35 individually valid JSON objects
+Batch 26: 35 triples; checkpoint saved
+Coverage repair for 16 documents: ['247-502-1-SM.pdf', '4547-Văn bản của bài báo-60846-1-10-20260128.pdf', 'Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf', 'VMJ.12008.pdf', 'VMJ.14360.pdf', 'VMJ.15116.pdf', 'VMJ.8058.pdf', 'VMJ.8462.pdf', 'VMJ.8691.pdf', 'VMJ.9281.pdf', 'VMJ.9851.pdf', 'Vol2Issue3_74-82.pdf', 'admin,+9.pdf', 'admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf', 'admin,+TAP+65_SO+2-2024_BAI+19.pdf', 'bài+18.pdf']
+API attempt 29/30 (rolling 24h)
+Stopped: Expecting value: line 1 column 1 (char 0)
+Standardizing entity names across all triples...
+Standardized 1120 entities into 1118 standard forms
+Processing 902 triples for visualization
+Found 1118 unique nodes
+Found 0 inferred relationships
+Detected 294 communities using Louvain method
+Knowledge graph visualization saved to /mnt/new-volume/Project/YGiBiTeo/knowledge/dataset-run/dataset_graph.html
+Graph Statistics: {
+  "nodes": 1118,
+  "edges": 902,
+  "original_edges": 902,
+  "inferred_edges": 0,
+  "communities": 294
+}
+{
+  "complete": false,
+  "completed_batches": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "total_batches": 26,
+  "input_documents": 120,
+  "input_pages": 1009,
+  "input_words": 597624,
+  "documents_with_triples": 104,
+  "missing_documents": [
+    "247-502-1-SM.pdf",
+    "4547-Văn bản của bài báo-60846-1-10-20260128.pdf",
+    "Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf",
+    "VMJ.12008.pdf",
+    "VMJ.14360.pdf",
+    "VMJ.15116.pdf",
+    "VMJ.8058.pdf",
+    "VMJ.8462.pdf",
+    "VMJ.8691.pdf",
+    "VMJ.9281.pdf",
+    "VMJ.9851.pdf",
+    "Vol2Issue3_74-82.pdf",
+    "admin,+9.pdf",
+    "admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf",
+    "admin,+TAP+65_SO+2-2024_BAI+19.pdf",
+    "bài+18.pdf"
+  ],
+  "verified_source_triples": 388,
+  "stats": {
+    "nodes": 1118,
+    "edges": 902,
+    "original_edges": 902,
+    "inferred_edges": 0,
+    "communities": 294
+  },
+  "inference_enabled": false,
+  "extraction_scope": "Key relationships, 15-25 per document block; maximum 120 per batch."
+}
+Prepared 120 PDFs, 597,624 words, 26 batches; full input coverage verified.
+Batch 1: loaded checkpoint
+Batch 2: loaded checkpoint
+Batch 3: loaded checkpoint
+Batch 4: loaded checkpoint
+Batch 5: loaded checkpoint
+Batch 6: loaded checkpoint
+Batch 7: loaded checkpoint
+Batch 8: loaded checkpoint
+Batch 9: loaded checkpoint
+Batch 10: loaded checkpoint
+Batch 11: loaded checkpoint
+Batch 12: loaded checkpoint
+Batch 13: loaded checkpoint
+Batch 14: loaded checkpoint
+Batch 15: loaded checkpoint
+Batch 16: loaded checkpoint
+Batch 17: loaded checkpoint
+Batch 18: loaded checkpoint
+Batch 19: loaded checkpoint
+Batch 20: loaded checkpoint
+Batch 21: loaded checkpoint
+Batch 22: loaded checkpoint
+Batch 23: loaded checkpoint
+Batch 24: loaded checkpoint
+Batch 25: loaded checkpoint
+Batch 26: loaded checkpoint
+Coverage repair for 16 documents: ['247-502-1-SM.pdf', '4547-Văn bản của bài báo-60846-1-10-20260128.pdf', 'Bài 7 Tạp chí số 7-trang-41-45-201-351_Văn bản của bài báo.pdf', 'VMJ.12008.pdf', 'VMJ.14360.pdf', 'VMJ.15116.pdf', 'VMJ.8058.pdf', 'VMJ.8462.pdf', 'VMJ.8691.pdf', 'VMJ.9281.pdf', 'VMJ.9851.pdf', 'Vol2Issue3_74-82.pdf', 'admin,+9.pdf', 'admin,+BAI+24_SO+64_TAP+1_SO+TET.pdf', 'admin,+TAP+65_SO+2-2024_BAI+19.pdf', 'bài+18.pdf']
+Documents without triples in this block: ['VMJ.15116.pdf', 'VMJ.8058.pdf']; checking overall coverage at the end
+Stopped: Coverage repair still has missing documents: ['VMJ.15116.pdf', 'VMJ.8058.pdf']
+Standardizing entity names across all triples...
+Standardized 1165 entities into 1163 standard forms
+Processing 930 triples for visualization
+Found 1163 unique nodes
+Found 0 inferred relationships
+Detected 309 communities using Louvain method
+Knowledge graph visualization saved to /mnt/new-volume/Project/YGiBiTeo/knowledge/dataset-run/dataset_graph.html
+Graph Statistics: {
+  "nodes": 1163,
+  "edges": 930,
+  "original_edges": 930,
+  "inferred_edges": 0,
+  "communities": 309
+}
+{
+  "complete": false,
+  "completed_batches": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "total_batches": 26,
+  "input_documents": 120,
+  "input_pages": 1009,
+  "input_words": 597624,
+  "documents_with_triples": 118,
+  "missing_documents": [
+    "VMJ.15116.pdf",
+    "VMJ.8058.pdf"
+  ],
+  "verified_source_triples": 399,
+  "stats": {
+    "nodes": 1163,
+    "edges": 930,
+    "original_edges": 930,
+    "inferred_edges": 0,
+    "communities": 309
+  },
+  "inference_enabled": false,
+  "extraction_scope": "Key relationships, 15-25 per document block; maximum 120 per batch."
+}
+Prepared 120 PDFs, 597,624 words, 26 batches; full input coverage verified.
+Batch 1: loaded checkpoint
+Batch 2: loaded checkpoint
+Batch 3: loaded checkpoint
+Batch 4: loaded checkpoint
+Batch 5: loaded checkpoint
+Batch 6: loaded checkpoint
+Batch 7: loaded checkpoint
+Batch 8: loaded checkpoint
+Batch 9: loaded checkpoint
+Batch 10: loaded checkpoint
+Batch 11: loaded checkpoint
+Batch 12: loaded checkpoint
+Batch 13: loaded checkpoint
+Batch 14: loaded checkpoint
+Batch 15: loaded checkpoint
+Batch 16: loaded checkpoint
+Batch 17: loaded checkpoint
+Batch 18: loaded checkpoint
+Batch 19: loaded checkpoint
+Batch 20: loaded checkpoint
+Batch 21: loaded checkpoint
+Batch 22: loaded checkpoint
+Batch 23: loaded checkpoint
+Batch 24: loaded checkpoint
+Batch 25: loaded checkpoint
+Batch 26: loaded checkpoint
+Coverage repair for 2 documents: ['VMJ.15116.pdf', 'VMJ.8058.pdf']
+API attempt 30/30 (rolling 24h)
+Standardizing entity names across all triples...
+Standardized 1172 entities into 1170 standard forms
+Processing 934 triples for visualization
+Found 1170 unique nodes
+Found 0 inferred relationships
+Detected 312 communities using Louvain method
+Knowledge graph visualization saved to /mnt/new-volume/Project/YGiBiTeo/knowledge/dataset-run/dataset_graph.html
+Graph Statistics: {
+  "nodes": 1170,
+  "edges": 934,
+  "original_edges": 934,
+  "inferred_edges": 0,
+  "communities": 312
+}
+{
+  "complete": true,
+  "completed_batches": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "total_batches": 26,
+  "input_documents": 120,
+  "input_pages": 1009,
+  "input_words": 597624,
+  "documents_with_triples": 120,
+  "missing_documents": [],
+  "verified_source_triples": 403,
+  "stats": {
+    "nodes": 1170,
+    "edges": 934,
+    "original_edges": 934,
+    "inferred_edges": 0,
+    "communities": 312
+  },
+  "inference_enabled": false,
+  "extraction_scope": "Key relationships, 15-25 per document block; maximum 120 per batch."
+}

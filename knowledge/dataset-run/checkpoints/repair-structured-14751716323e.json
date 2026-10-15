@@ -1,0 +1,62 @@
+{
+  "documents": [
+    "VMJ.15116.pdf",
+    "VMJ.8058.pdf"
+  ],
+  "triples": [
+    {
+      "subject": "bệnh đau bụng kinh nguyên phát",
+      "predicate": "có độ tuổi",
+      "object": "24,0 tuổi",
+      "subject_type": "concept",
+      "object_type": "date",
+      "source": "Độ tuổi trung vị là 24,0 (22,0-26,0) tuổi",
+      "document": "VMJ.15116.pdf",
+      "chunk": 27,
+      "document_word_start": 0,
+      "document_word_end": 4260,
+      "source_verified": true
+    },
+    {
+      "subject": "hội chứng Khí trệ huyết ứ",
+      "predicate": "chiếm tỷ lệ",
+      "object": "59,7%",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "Hội chứng bệnh Khí trệ huyết ứ chiếm 59,7%",
+      "document": "VMJ.15116.pdf",
+      "chunk": 27,
+      "document_word_start": 0,
+      "document_word_end": 4260,
+      "source_verified": true
+    },
+    {
+      "subject": "mật độ xương cột sống thắt lưng",
+      "predicate": "trung bình là",
+      "object": "-1,64 ± 1,53",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "mật độ xương trung bình ở cột sống thắt lưng là -1,64 ± 1,53",
+      "document": "VMJ.8058.pdf",
+      "chunk": 27,
+      "document_word_start": 0,
+      "document_word_end": 4399,
+      "source_verified": true
+    },
+    {
+      "subject": "tỷ lệ loãng xương",
+      "predicate": "cao nhất ở",
+      "object": "thể trạng gầy",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "Tỷ lệ loãng xương cao nhất ở nhóm thể trạng gầy, chiếm 75%",
+      "document": "VMJ.8058.pdf",
+      "chunk": 27,
+      "document_word_start": 0,
+      "document_word_end": 4399,
+      "source_verified": true
+    }
+  ],
+  "rejected": [],
+  "scope": "Bounded excerpts from documents omitted in the full-input main pass"
+}

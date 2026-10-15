@@ -1,0 +1,7 @@
+*.sqlite*
+*.lock
+current.json*
+bm25/
+model-cache/
+uploads/
+traces/

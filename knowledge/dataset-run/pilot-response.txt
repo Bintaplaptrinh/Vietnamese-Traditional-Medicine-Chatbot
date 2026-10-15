@@ -1,0 +1,102 @@
+```json
+[
+  {
+    "subject": "người người bệnh",
+    "subject_type": "person",
+    "predicate": "sử dụng",
+    "object": "thuốc y học cổ truyền",
+    "object_type": "technology"
+  },
+  {
+    "subject": "người người bệnh",
+    "subject_type": "person",
+    "predicate": "khám tại",
+    "object": "bệnh viện quân y 354",
+    "object_type": "organization"
+  },
+  {
+    "subject": "thuốc y học cổ truyền",
+    "subject_type": "technology",
+    "predicate": "không có",
+    "object": "tác dụng không mong muốn",
+    "object_type": "concept"
+  },
+  {
+    "subject": "người người bệnh",
+    "subject_type": "person",
+    "predicate": "sử dụng",
+    "object": "dạng viên nén",
+    "object_type": "product"
+  },
+  {
+    "subject": "người người bệnh",
+    "subject_type": "person",
+    "predicate": "sử dụng để",
+    "object": "chữa bệnh",
+    "object_type": "concept"
+  },
+  {
+    "subject": "người người bệnh",
+    "subject_type": "person",
+    "predicate": "điều trị",
+    "object": "bệnh mãn tính",
+    "object_type": "concept"
+  },
+  {
+    "subject": "người người bệnh",
+    "subject_type": "person",
+    "predicate": "sử dụng",
+    "object": "bệnh xương khớp",
+    "object_type": "concept"
+  },
+  {
+    "subject": "người người bệnh",
+    "subject_type": "person",
+    "predicate": "sử dụng",
+    "object": "bệnh tiêu hóa",
+    "object_type": "concept"
+  },
+  {
+    "subject": "ths lê thị hồng gấm",
+    "subject_type": "person",
+    "predicate": "chịu trách",
+    "object": "nội dung",
+    "object_type": "concept"
+  },
+  {
+    "subject": "bác sĩ bộ y tế",
+    "subject_type": "person",
+    "predicate": "chỉ định",
+    "object": "thuốc y học cổ truyền",
+    "object_type": "technology"
+  },
+  {
+    "subject": "y học cổ truyền",
+    "subject_type": "technology",
+    "predicate": "phát triển",
+    "object": "t việt nam",
+    "object_type": "place"
+  },
+  {
+    "subject": "bộ y tế",
+    "subject_type": "organization",
+    "predicate": "chỉ đạo",
+    "object": "phát triển y học cổ truyền",
+    "object_type": "concept"
+  },
+  {
+    "subject": "y học cổ truyền",
+    "subject_type": "technology",
+    "predicate": "kết hợp",
+    "object": "tây y",
+    "object_type": "technology"
+  },
+  {
+    "subject": "người người bệnh",
+    "subject_type": "person",
+    "predicate": "tự tin dụng",
+    "object": "thuốc y học cổ truyền",
+    "object_type": "technology"
+  }
+]
+```

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>Bloop — a little friend, a big imagination</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%232568f4'/%3E%3Cellipse cx='14' cy='18' rx='3' ry='5' fill='white'/%3E%3Cellipse cx='26' cy='18' rx='3' ry='5' fill='white'/%3E%3C/svg%3E">
+  <!-- CDN styles keep this app runnable with Python alone. -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/daisyui.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked@17/lib/marked.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="assets/vis-network.min.js" defer></script>
+  <script src="graph.js" defer></script>
+</head>
+<body>
+  <aside class="task-sidebar" aria-label="Tasks">
+    <span class="task-label">WORKSPACE</span>
+    <ul class="menu menu-md">
+      <li><button id="task-graph" class="menu-active" type="button" aria-controls="graph-view" aria-current="page"><span aria-hidden="true">◈</span> Graph</button></li>
+      <li><button id="task-chat" type="button" aria-controls="chat-view"><span aria-hidden="true">◌</span> Chat</button></li>
+    </ul>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Bloop home"><span class="brand-symbol" aria-hidden="true">b.</span>bloop<span class="brand-dot">°</span></a>
+      <span class="connection"><span aria-hidden="true"></span>YOUR LITTLE AI COMPANION</span>
+    </header>
+    <main>
+      <section id="graph-view" class="graph-view" aria-label="Đồ thị tri thức">
+        <div class="graph-heading"><div><span class="eyebrow">KNOWLEDGE WORKSPACE</span><h1>Graph<span>.</span></h1><p>Khám phá tri thức và nguồn tài liệu.</p></div><span id="graph-count" class="badge">Đang tải…</span></div>
+        <form id="graph-search" class="graph-toolbar">
+          <label for="graph-branch" class="sr-only">Nhánh ontology</label>
+          <select id="graph-branch" class="select select-sm"><option value="graph">Knowledge graph</option><option value="mesh">MeSH</option><option value="vietherbs">VietHerbs</option></select>
+          <label for="graph-query" class="sr-only">Tìm khái niệm</label><input id="graph-query" class="input input-sm" placeholder="Tìm tên, thuật ngữ…" maxlength="500">
+          <button class="btn btn-sm" type="submit">Tìm</button><button id="graph-reset" class="btn btn-sm" type="button">Toàn cảnh</button>
+        </form>
+        <p id="graph-status" class="graph-status" role="status" aria-live="polite"></p>
+        <div class="graph-workspace"><div id="knowledge-network" aria-label="Graph tương tác: kéo để di chuyển, cuộn để phóng to"></div><div id="graph-detail" class="graph-detail" aria-live="polite">Chọn một nút hoặc cạnh để xem thông tin và nguồn.</div>
+          <button id="add-pdf" class="btn btn-circle add-pdf" type="button" aria-label="Thêm tài liệu PDF" title="Thêm tài liệu PDF">+</button><input id="pdf-file" type="file" accept=".pdf,application/pdf" hidden>
+        </div>
+        <p id="upload-status" role="status" aria-live="polite"></p>
+        <details class="documents-panel"><summary>Tài liệu PDF <span id="document-count"></span></summary><ul id="document-list" class="document-list"></ul></details>
+      </section>
+      <div id="chat-view" class="chat-view" hidden>
+      <section class="mascot-stage" aria-label="Interactive mascot">
+        <div class="intro"><span class="eyebrow">A LITTLE FRIEND. A BIG IMAGINATION.</span><h1>Hey, I’m Bloop<span>.</span></h1><p>Something on your mind? I’m all ears.</p></div>
+        <div class="mascot-space">
+          <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+          <span class="spark spark-one" aria-hidden="true">✦</span><span class="spark spark-two" aria-hidden="true">+</span>
+          <button id="mascot" class="mascot" data-state="idle" aria-label="Touch Bloop to change expression. Hold to change size.">
+            <span class="face" aria-hidden="true"><span class="eye eye-left"></span><span class="eye eye-right"></span><span class="mouth"></span></span>
+            <img class="thinking-face" src="assets/thinking.gif" alt="" aria-hidden="true">
+            <span class="sleep-mark" aria-hidden="true">z<span>z</span></span>
+          </button>
+          <div class="mascot-shadow" aria-hidden="true"></div>
+        </div>
+        <p id="mascot-status" class="mascot-status" aria-live="polite">Tap to say hello <span>·</span> Hold to grow</p>
+      </section>
+      <section class="conversation" aria-label="Chat with Bloop">
+        <div id="messages" class="messages" role="log" aria-label="Conversation" aria-live="off" hidden></div>
+        <p id="error" class="error-message" role="alert" hidden></p>
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="message">Your message</label>
+          <input id="message" class="input input-ghost" placeholder="Tell me what’s on your mind…" autocomplete="off" maxlength="12000" required>
+          <div class="effort-control">
+            <div class="effort-caption"><label for="effort">Effort</label><output id="effort-label" for="effort">Thấp</output></div>
+            <input id="effort" class="range range-xs" type="range" min="0" max="2" step="1" value="0" aria-valuetext="Thấp" list="effort-marks">
+            <datalist id="effort-marks"><option value="0" label="Thấp"></option><option value="1" label="Vừa"></option><option value="2" label="Cao"></option></datalist>
+            <div class="effort-marks" aria-hidden="true"><span>·</span><span>·</span><span>·</span></div>
+          </div>
+          <label class="sr-only" for="source-mode">Nguồn thông tin</label>
+          <select id="source-mode" class="select select-sm source-mode" aria-label="Nguồn thông tin">
+            <option value="graph" selected>Kho tri thức</option>
+            <option value="web">Only internet</option>
+            <option value="hybrid">Hybrid</option>
+          </select>
+          <button id="send" class="btn btn-primary btn-circle" type="submit" aria-label="Send message"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form>
+        <p class="composer-note">A small space for your big ideas.</p>
+      </section>
+      </div>
+    </main>
+    <footer><span>MADE FOR A LITTLE CONNECTION</span><span>Powered by Gemma <span class="footer-dot">✦</span></span></footer>
+  </div>
+<dialog id="citation-dialog" class="modal" aria-labelledby="citation-title">
+    <div class="modal-box citation-box"><h2 id="citation-title">Nguồn / Citation</h2><div id="citation-content"></div><form method="dialog" class="modal-action"><button class="btn">Đóng</button></form></div>
+    <form method="dialog" class="modal-backdrop"><button>Đóng</button></form>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,256 @@
+```json
+{
+  "S001": [
+    {
+      "subject": "hệ hỗ trợ chẩn đoán",
+      "predicate": "sử dụng",
+      "object": "thuật toán suy diễn",
+      "subject_type": "technology",
+      "object_type": "technology",
+      "source": "chúng tôi đã xây dựng ứng dụng qua các bước: xây dựng cơ sở tri thức, xây dựng tập luật"
+    },
+    {
+      "subject": "tập luật",
+      "predicate": "chắt lọc từ",
+      "object": "y văn và hồ sơ bệnh án",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "tập luật được chắt lọc từ y văn, các lương y và hồ sơ bệnh án"
+    }
+  ],
+  "S002": [
+    {
+      "subject": "phương pháp điều trị",
+      "predicate": "kết hợp",
+      "object": "Y học cổ truyền và Y học hiện đại",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "Phương pháp điều trị kết hợp Y học cổ truyền và Y học hiện đại chiếm đa số (91,3%)"
+    },
+    {
+      "subject": "tình trạng bệnh khi ra viện",
+      "predicate": "là",
+      "object": "đỡ",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "Tình trạng bệnh khi ra viện chủ yếu là đỡ (86,7%)"
+    }
+  ],
+  "S003": [
+    {
+      "subject": "tuổi trung bình của đối tượng",
+      "predicate": "là",
+      "object": "30 tuổi",
+      "subject_type": "date",
+      "object_type": "date",
+      "source": "cho thấy tuổi trung bình là 30 tuổi"
+    },
+    {
+      "subject": "chứng trạng hay gặp",
+      "predicate": "là",
+      "object": "sốt",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "các chứng trạng hay gặp là sốt (54,17%)"
+    }
+  ],
+  "S004": [
+    {
+      "subject": "hệ chẩn đoán",
+      "predicate": "xây dựng",
+      "object": "một số bệnh phổ biến",
+      "subject_type": "technology",
+      "object_type": "concept",
+      "source": "chúng tôi xây dựng hệ chẩn đoán cho một số bệnh phổ biến mà Đông Y"
+    },
+    {
+      "subject": "phương pháp sử dụng",
+      "predicate": "là",
+      "object": "suy diễn tiến",
+      "subject_type": "concept",
+      "object_type": "technology",
+      "source": "Phương pháp được sử dụng là suy diễn tiến"
+    }
+  ],
+  "S005": [
+    {
+      "subject": "mật độ xương tại cột sống",
+      "predicate": "là",
+      "object": "-1,64 ± 1,53",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "mật độ xương trung bình tại cột sống thắt lưng là -1,64 ± 1,53"
+    },
+    {
+      "subject": "mật độ xương tại cổ xương đùi",
+      "predicate": "là",
+      "object": "-1,39 ± 1,06",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "tại cổ xương đùi là -1,39 ± 1,06"
+    }
+  ],
+  "S008": [
+    {
+      "subject": "Granisetron",
+      "predicate": "sử dụng trong",
+      "object": "dự phòng nôn, buồn nôn",
+      "subject_type": "product",
+      "object_type": "concept",
+      "source": "Granisetron sử dụng trong dự phòng nôn, buồn nôn sau mổ lấy thai"
+    },
+    {
+      "subject": "kháng Histamin",
+      "predicate": "giữ vai trò chủ đạo",
+      "object": "kiểm soát triệu chứng",
+      "subject_type": "product",
+      "object_type": "concept",
+      "source": "kháng Histamin và Corticoid giữ vai trò chủ đạo trong kiểm soát triệu chứng"
+    }
+  ],
+  "S009": [
+    {
+      "subject": "TĐCS",
+      "predicate": "cải thiện",
+      "object": "tầm vận động CSTL",
+      "subject_type": "technology",
+      "object_type": "concept",
+      "source": "TĐCS giúp cải thiện tầm vận động CSTL"
+    },
+    {
+      "subject": "điện châm kết hợp TĐCS",
+      "predicate": "tốt hơn",
+      "object": "điện châm và xoa bóp",
+      "subject_type": "technology",
+      "object_type": "technology",
+      "source": "điện châm và TĐCS có tác dụng cải thiện tầm vận động cột sống sau 14 ngày điều trị tốt hơn điện châm và xoa bóp"
+    }
+  ],
+  "S010": [
+    {
+      "subject": "đau thần kinh sau Zona",
+      "predicate": "là",
+      "object": "biến chứng thần kinh gặp nhất",
+      "subject_type": "event",
+      "object_type": "event",
+      "source": "đau thần kinh sau Zona là một biến chứng thần kinh gặp nhất"
+    },
+    {
+      "subject": "mất ngủ",
+      "predicate": "là",
+      "object": "tình trạng dai dẳng",
+      "subject_type": "event",
+      "object_type": "event",
+      "source": "đau thần kinh sau Zona là một tình trạng đau dai dẳng đặc trưng"
+    }
+  ],
+  "S011": [
+    {
+      "subject": "mất ngủ sau đột quỵ",
+      "predicate": "là",
+      "object": "biến chứng rất phổ biến",
+      "subject_type": "event",
+      "object_type": "event",
+      "source": "Mất ngủ sau đột quỵ (PSI: Post- stroke insomnia) là một biến chứng rất phổ biến"
+    },
+    {
+      "subject": "thể âm hư hỏa vượng",
+      "predicate": "chiếm tỷ lệ cao nhất",
+      "object": "40,8%",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "thể âm hư hỏa vượng chiếm tỷ lệ cao nhất (40,8%)"
+    }
+  ],
+  "S012": [
+    {
+      "subject": "suy tim mạn",
+      "predicate": "là",
+      "object": "hội chứng phức tạp",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "Suy tim mạn là một hội chứng phức tạp do bất thường về cấu trúc và/hoặc chức năng tim"
+    },
+    {
+      "subject": "mạch trầm",
+      "predicate": "là",
+      "object": "90,6%",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "mạch trầm; 90,6%"
+    }
+  ],
+  "S013": [
+    {
+      "subject": "Dương hư",
+      "predicate": "chiếm tỷ lệ cao nhất",
+      "object": "64,5%",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "Dương hư chiếm tỷ lệ cao nhất (64,5%)"
+    },
+    {
+      "subject": "Thấp nhiệt",
+      "predicate": "chiếm tỷ lệ thấp nhất",
+      "object": "7,7%",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "Thấp nhiệt chiếm tỷ lệ thấp nhất (7,7%)"
+    }
+  ],
+  "S014": [
+    {
+      "subject": "thể đàm thấp",
+      "predicate": "chiếm tỷ lệ cao nhất",
+      "object": "26,4%",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "thể đàm thấp chiếm tỷ lệ cao nhất (26,4%)"
+    },
+    {
+      "subject": "thể đàm thấp",
+      "predicate": "tương quan với",
+      "object": "chỉ số LDL C",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "thể đàm thấp và LDL - C, và HDL - C tương quan với nhau"
+    }
+  ],
+  "S015": [
+    {
+      "subject": "y học cổ truyền",
+      "predicate": "đánh giá",
+      "object": "cải thiện rối loạn kinh nguy",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "đánh giá hiệu quả cải thiện rối loạn kinh nguy"
+    },
+    {
+      "subject": "y học cổ truyền",
+      "predicate": "đánh giá",
+      "object": "phát triển nang trứng",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "phát triển nang trứng"
+    }
+  ],
+  "S016": [
+    {
+      "subject": "đau bụng kinh",
+      "predicate": "chiếm tỷ lệ",
+      "object": "88,6%",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "biểu hiện đau bụng kinh mức độ từ vừa đến nặng chiếm tỷ lệ 88,6%"
+    },
+    {
+      "subject": "Khí trệ",
+      "predicate": "có liên quan với",
+      "object": "mức độ đau bụng kinh",
+      "subject_type": "concept",
+      "object_type": "concept",
+      "source": "có liên quan giữa các dạng thể chất Khí trệ, Dương hư, Âm hư, Huyết ứ với mức độ đau bụng kinh"
+    }
+  ]
+}
+```

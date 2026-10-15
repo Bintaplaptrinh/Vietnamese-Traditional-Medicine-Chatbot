@@ -1,0 +1,15 @@
+# Local credentials; keep shareable templates.
+.env
+.env.*
+!.env.example
+
+# Generated files and local model weights.
+__pycache__/
+*.pyc
+*.log
+backend/.model-cache/
+.pytest_cache/
+
+# Local research and mascot tooling.
+docs/
+mascot_creator/

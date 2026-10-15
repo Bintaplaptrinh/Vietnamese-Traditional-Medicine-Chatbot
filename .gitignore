@@ -1,0 +1,6 @@
+# Local mascot tooling and research artifacts.
+/mascot_creator/
+/web/docs/
+
+# Source PDFs stay local; graph and ontology are versioned separately.
+/Dataset/
