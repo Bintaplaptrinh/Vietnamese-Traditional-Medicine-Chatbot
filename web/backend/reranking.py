@@ -34,7 +34,7 @@ class QwenReranker:
             torch.float16 if device.startswith("cuda") else torch.float32)
         self.tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, revision=REVISION, padding_side="left")
         self.model = AutoModelForCausalLM.from_pretrained(
-            MODEL_ID, revision=REVISION, torch_dtype=dtype, attn_implementation="sdpa").to(device).eval()
+            MODEL_ID, revision=REVISION, dtype=dtype, attn_implementation="sdpa").to(device).eval()
         prefix = '<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be "yes" or "no".<|im_end|>\n<|im_start|>user\n'
         suffix = '<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
         self.prefix = self.tokenizer.encode(prefix, add_special_tokens=False)

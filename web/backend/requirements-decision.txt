@@ -1,3 +1,3 @@
 # Local Qwen reranking; JEV uses httpx and TYPESAFE_API_KEY.
-transformers>=4.51,<6
+transformers>=4.56,<6
 torch>=2.2,<3

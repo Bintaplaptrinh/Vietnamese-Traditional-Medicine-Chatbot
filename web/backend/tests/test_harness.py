@@ -129,6 +129,9 @@ def test_fastapi_sse_metadata_and_validation():
                 health=(await client.get('/api/health')).json()
                 assert 'decision_model' in health and 'TYPESAFE_API_KEY' not in str(health)
                 assert health['reranker_model'] == 'Qwen/Qwen3-Reranker-0.6B'
+                assert health['skill_profile']['enabled'] is True
+                assert len(health['skill_profile']['available']) == 8
+                assert len(health['skill_profile']['fingerprint']) == 64
                 assert (await client.post('/api/chat',json={'messages':[{'role':'user','content':'A'}],'effort':'unlimited'})).status_code==422
                 assert (await client.post('/api/chat',json={'messages':[{'role':'user','content':'A'}],'route':'unknown'})).status_code==422
                 with patch('main.Harness.run',AsyncMock(return_value={'answer':'A','citations':[],'route':'graph','usage':{}})) as run:

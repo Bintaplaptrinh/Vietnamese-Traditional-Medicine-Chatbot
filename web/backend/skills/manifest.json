@@ -1,0 +1,289 @@
+{
+  "version": "1.0.0",
+  "upstream": {
+    "repository": "https://github.com/aipoch/medical-research-skills",
+    "revision": "686e09dfdb45d9fa1a08664f06bb93769b3c9d91",
+    "license": "MIT",
+    "license_file": "LICENSE-AIPOCH",
+    "license_sha256": "92cd32f3b4857f97a3ad6bf276c42dea2e93fd2bb714b08d75a558c9f215f596"
+  },
+  "adaptation": "Conversation profiles for Bloop; upstream manuscripts, tools and report templates are not runtime instructions.",
+  "skills": [
+    {
+      "id": "biomedical-search-strategy-builder",
+      "source_url": "https://github.com/aipoch/medical-research-skills/blob/686e09dfdb45d9fa1a08664f06bb93769b3c9d91/awesome-med-research-skills/Evidence%20Insight/biomedical-search-strategy-builder/SKILL.md",
+      "upstream_sha256": "9f01067112fce398b962f136f7544f5a8f2199cd11f31b664a4540192123bcad",
+      "source_files": [
+        {
+          "path": "upstream/biomedical-search-strategy-builder/SKILL.md",
+          "sha256": "9f01067112fce398b962f136f7544f5a8f2199cd11f31b664a4540192123bcad"
+        },
+        {
+          "path": "upstream/biomedical-search-strategy-builder/references/boolean-examples.md",
+          "sha256": "f1b6f8981e7f2b98ef19293af6e4f5fc56c1c893302d97afa928b9513556e414"
+        },
+        {
+          "path": "upstream/biomedical-search-strategy-builder/references/mesh-structure.md",
+          "sha256": "46c6939ed2b68444a651dda9d1d6b0504f6d50b10f4858358d1f93d09b346696"
+        }
+      ]
+    },
+    {
+      "id": "study-design-identifier",
+      "source_url": "https://github.com/aipoch/medical-research-skills/blob/686e09dfdb45d9fa1a08664f06bb93769b3c9d91/awesome-med-research-skills/Evidence%20Insight/study-design-identifier/SKILL.md",
+      "upstream_sha256": "7892eac4acc8d48739dac88d78050b1b126f0b53e3ddba476688e0b606dacb7d",
+      "source_files": [
+        {
+          "path": "upstream/study-design-identifier/SKILL.md",
+          "sha256": "7892eac4acc8d48739dac88d78050b1b126f0b53e3ddba476688e0b606dacb7d"
+        },
+        {
+          "path": "upstream/study-design-identifier/references/design-decision-rules.md",
+          "sha256": "7ffda14ba11e51a27783ab620ebf77cc217694156995bf91ad72e82ebe701c50"
+        },
+        {
+          "path": "upstream/study-design-identifier/references/edge-case-handling.md",
+          "sha256": "a98f6f195950fabe3049fbca0a5e2a13c472f822c94e651000dd5062242ec9b3"
+        },
+        {
+          "path": "upstream/study-design-identifier/references/evidence-grading-bridge.md",
+          "sha256": "f7cb6ba9dc39d5ed9693f008edd116358d0d6f54446f405342482a6660c3df6b"
+        },
+        {
+          "path": "upstream/study-design-identifier/references/output-section-guidance.md",
+          "sha256": "898ba94ced6ee4c7e296b73daa2aced64a430c76aa88b82e8e4019b129675cf5"
+        },
+        {
+          "path": "upstream/study-design-identifier/references/study-design-taxonomy.md",
+          "sha256": "9ea2e1712276ff2c40f6ba4d0a7bb7567e32552a3be21b6ec2cbe5629c707e47"
+        },
+        {
+          "path": "upstream/study-design-identifier/references/workflow-step-template.md",
+          "sha256": "a948dde025d607d6c97085bb8c51ea6361f817f24d71b481e2c99c9f4da7c1d6"
+        }
+      ]
+    },
+    {
+      "id": "paper-to-claim-verifier",
+      "source_url": "https://github.com/aipoch/medical-research-skills/blob/686e09dfdb45d9fa1a08664f06bb93769b3c9d91/awesome-med-research-skills/Evidence%20Insight/paper-to-claim-verifier/SKILL.md",
+      "upstream_sha256": "85393ab27d38f4977477145dc581bda9c2eb6e2c0ed6d9245ab0e3f421634e9c",
+      "source_files": [
+        {
+          "path": "upstream/paper-to-claim-verifier/SKILL.md",
+          "sha256": "85393ab27d38f4977477145dc581bda9c2eb6e2c0ed6d9245ab0e3f421634e9c"
+        },
+        {
+          "path": "upstream/paper-to-claim-verifier/references/causality-boundary-rules.md",
+          "sha256": "3bf52db7bfb258944b678a9d64ab3c72f88507d1bf42c0a45b0967f70250d6cd"
+        },
+        {
+          "path": "upstream/paper-to-claim-verifier/references/citation-drift-taxonomy.md",
+          "sha256": "76eab2d22aef363abb8c8b1878ccc173a02f9616cdd2924db881620e673e5f16"
+        },
+        {
+          "path": "upstream/paper-to-claim-verifier/references/claim-decomposition-rules.md",
+          "sha256": "63233773bce09ae235965ffa507c314940fc906bf3094367e6029514e141bdfe"
+        },
+        {
+          "path": "upstream/paper-to-claim-verifier/references/context-transfer-rules.md",
+          "sha256": "9d26e0eef51850721ed58d1446bb993d1ff526d7c0c7a3e3874ea0313cc8ca01"
+        },
+        {
+          "path": "upstream/paper-to-claim-verifier/references/evidence-support-judgment-rules.md",
+          "sha256": "265488a60e8a9b44d3825bfdda0041523a631c98cbe35a618deee08315755c5f"
+        },
+        {
+          "path": "upstream/paper-to-claim-verifier/references/literature-integrity-rules.md",
+          "sha256": "9dc1e899d60329febb32475a13a22e3d7f8d142895b098ecbfdbe748e273721c"
+        },
+        {
+          "path": "upstream/paper-to-claim-verifier/references/output-section-guidance.md",
+          "sha256": "0389f75bc172c2689504321f7f1efcd99c592a89341421f56043bc15d5d27b04"
+        },
+        {
+          "path": "upstream/paper-to-claim-verifier/references/source-tracing-rules.md",
+          "sha256": "457ac8b82931ffee719028099e7720032f1f82cd61e8e74dec89b49d5f61b941"
+        },
+        {
+          "path": "upstream/paper-to-claim-verifier/references/workflow-step-template.md",
+          "sha256": "c9eb7e3ef62f976431aa2135faad2c1e33e6bec1e6a3f5f7e4f7a7bce93d62ac"
+        }
+      ]
+    },
+    {
+      "id": "contradictory-findings-resolver",
+      "source_url": "https://github.com/aipoch/medical-research-skills/blob/686e09dfdb45d9fa1a08664f06bb93769b3c9d91/awesome-med-research-skills/Evidence%20Insight/contradictory-findings-resolver/SKILL.md",
+      "upstream_sha256": "77e6abd350a95ca65e4eba5ca80e27c0792a84f8934b84505f2503527e3e8560",
+      "source_files": [
+        {
+          "path": "upstream/contradictory-findings-resolver/SKILL.md",
+          "sha256": "77e6abd350a95ca65e4eba5ca80e27c0792a84f8934b84505f2503527e3e8560"
+        },
+        {
+          "path": "upstream/contradictory-findings-resolver/references/conflict-resolution-logic.md",
+          "sha256": "2f7771994b8eeb4c6eb00146dd269cceb49047069d233cffb5702d39cac6ed77"
+        },
+        {
+          "path": "upstream/contradictory-findings-resolver/references/conflict-type-taxonomy.md",
+          "sha256": "6d07787e38bfbd0ecba45a932ff66f89dcb8a0d5b561971f55952e63ebc654fe"
+        },
+        {
+          "path": "upstream/contradictory-findings-resolver/references/literature-integrity-rules.md",
+          "sha256": "ba012e89a0c3958900ad3606fe28dcb70f2e0d4e151863642b76d9d1ec521ada"
+        },
+        {
+          "path": "upstream/contradictory-findings-resolver/references/output-section-guidance.md",
+          "sha256": "be270d90408b548fd92f8bcb3ada465aa61f9f6e7db263e3f883c40d688812e1"
+        },
+        {
+          "path": "upstream/contradictory-findings-resolver/references/platform-model-and-bias-rules.md",
+          "sha256": "50a714469cf97e0bbbc177ad1b61741b1d49e9482d95d7b62d3f72adcbbcc1df"
+        },
+        {
+          "path": "upstream/contradictory-findings-resolver/references/population-endpoint-sample-source-rules.md",
+          "sha256": "28f2f368d9ccba810de0568950b719f6459378981a8931bf09d41ad1f4013902"
+        },
+        {
+          "path": "upstream/contradictory-findings-resolver/references/validation-and-evidence-depth-rules.md",
+          "sha256": "e29a78aefd2703063c87d5ceae2f979b9f7153395dd8ee15e4caa518f628ef89"
+        }
+      ]
+    },
+    {
+      "id": "claim-strength-calibrator",
+      "source_url": "https://github.com/aipoch/medical-research-skills/blob/686e09dfdb45d9fa1a08664f06bb93769b3c9d91/awesome-med-research-skills/Academic%20Writing/claim-strength-calibrator/SKILL.md",
+      "upstream_sha256": "f6ccc57e10481ef6f7bacbc574996a89e74c1b78cb38416a82b0213d3286b6e9",
+      "source_files": [
+        {
+          "path": "upstream/claim-strength-calibrator/SKILL.md",
+          "sha256": "f6ccc57e10481ef6f7bacbc574996a89e74c1b78cb38416a82b0213d3286b6e9"
+        },
+        {
+          "path": "upstream/claim-strength-calibrator/references/claim-rewrite-boundary-rules.md",
+          "sha256": "ad4035da7d21104fea33033d2a845857494c41cb4f62bbdd966b35b77c55f13a"
+        },
+        {
+          "path": "upstream/claim-strength-calibrator/references/clarification-first-rule.md",
+          "sha256": "d3d234a11fc985a71c9d3fd7596d3f141fe6322914e9a117247f607f50afa8be"
+        },
+        {
+          "path": "upstream/claim-strength-calibrator/references/evidence-level-mapping-rules.md",
+          "sha256": "308f3ad735bbd6930b34d36bbe562f06d61a1fd7f42ec5bac49aae4f47c798c1"
+        },
+        {
+          "path": "upstream/claim-strength-calibrator/references/hard-rules.md",
+          "sha256": "7a93c0882ae6a9ed03867470efbfca3660945b014ce6f0e5118533b49b7ffac5"
+        },
+        {
+          "path": "upstream/claim-strength-calibrator/references/logic-reporting-rule.md",
+          "sha256": "0fbec2cdd15abf7b97a1bf90eee315b41817ae3f2cc6e56fb49de7c623407fb3"
+        },
+        {
+          "path": "upstream/claim-strength-calibrator/references/overclaim-pattern-rules.md",
+          "sha256": "bbccc8e16d89e947fc2a0c56b00b2bb062f48c05c3a2f26101487fceb74c790a"
+        },
+        {
+          "path": "upstream/claim-strength-calibrator/references/severity-classification-rules.md",
+          "sha256": "89e09ad8050f640d49413fc3b1f9ae635a33badfd869ab44dfaa4ae62309199b"
+        }
+      ]
+    },
+    {
+      "id": "reference-integrity-checker",
+      "source_url": "https://github.com/aipoch/medical-research-skills/blob/686e09dfdb45d9fa1a08664f06bb93769b3c9d91/awesome-med-research-skills/Academic%20Writing/reference-integrity-checker/SKILL.md",
+      "upstream_sha256": "461f2a5f06eebc13ac18300a9a4ab28076ef2471b2f8a2865d3c671a976d762b",
+      "source_files": [
+        {
+          "path": "upstream/reference-integrity-checker/SKILL.md",
+          "sha256": "461f2a5f06eebc13ac18300a9a4ab28076ef2471b2f8a2865d3c671a976d762b"
+        },
+        {
+          "path": "upstream/reference-integrity-checker/references/claim-source-matching-rules.md",
+          "sha256": "1bc3a93519d9b8eda8a635991d005312052b2d44c14e0f1459b51cb4618fa00a"
+        },
+        {
+          "path": "upstream/reference-integrity-checker/references/clarification-first-rule.md",
+          "sha256": "d89f30d9c262b8d5a3b3f58c6484a08c04543591460ed415a4e7f83eb7b03cd2"
+        },
+        {
+          "path": "upstream/reference-integrity-checker/references/hard-rules.md",
+          "sha256": "b065399ff36a72752189e9451ff79602ec1eeeda60630b39eec264e3c853b5f8"
+        },
+        {
+          "path": "upstream/reference-integrity-checker/references/logic-reporting-rule.md",
+          "sha256": "5f1658f47b1bf4f519cfb4cf64324465cba8c48ceda2f21e1fa011dd29a8a589"
+        },
+        {
+          "path": "upstream/reference-integrity-checker/references/overextension-and-drift-rules.md",
+          "sha256": "b14115070edcdddafec1f86ffecf295187e904a450ec04d5c4e1766211eea1c3"
+        },
+        {
+          "path": "upstream/reference-integrity-checker/references/second-hand-citation-rules.md",
+          "sha256": "03458911376959bcef6fb2c2de5188e200be90ecfc613a8d649773def02f352d"
+        },
+        {
+          "path": "upstream/reference-integrity-checker/references/severity-classification-rules.md",
+          "sha256": "1f74ecb4262bb8183a5379f2b975e832f5064d69b27af0899d73577b944c36d5"
+        }
+      ]
+    },
+    {
+      "id": "medical-english-precision-editor",
+      "source_url": "https://github.com/aipoch/medical-research-skills/blob/686e09dfdb45d9fa1a08664f06bb93769b3c9d91/awesome-med-research-skills/Academic%20Writing/medical-english-precision-editor/SKILL.md",
+      "upstream_sha256": "31938f447357f270ec7da7ee7f63622bae2da9d4c3665255e6cd3291e4395b76",
+      "source_files": [
+        {
+          "path": "upstream/medical-english-precision-editor/SKILL.md",
+          "sha256": "31938f447357f270ec7da7ee7f63622bae2da9d4c3665255e6cd3291e4395b76"
+        },
+        {
+          "path": "upstream/medical-english-precision-editor/references/clarification-first-rule.md",
+          "sha256": "39e9fbcfcd8a9ac902add5d5e26bfe763ef2f1c112f7ca1189c920f2c8c16654"
+        },
+        {
+          "path": "upstream/medical-english-precision-editor/references/flow-and-cohesion-rules.md",
+          "sha256": "0b372520942bb1dc4da28aa381e09069a36146a91e2f33de3a6ed9a9392518d2"
+        },
+        {
+          "path": "upstream/medical-english-precision-editor/references/hard-rules.md",
+          "sha256": "59b14367273755b8f9de649c93ef4a2f254674920e73c313bdfacf68245f3d7f"
+        },
+        {
+          "path": "upstream/medical-english-precision-editor/references/logic-reporting-rule.md",
+          "sha256": "d58e370ac8edba0658731164c42e0c0ff6579f520f0511a8d3ed1c0b1ce54ced"
+        },
+        {
+          "path": "upstream/medical-english-precision-editor/references/meaning-preservation-rules.md",
+          "sha256": "b30ca84024c1477e9e01dfcfff898259f6258a9b998fd4fedf9416bc6669c09d"
+        },
+        {
+          "path": "upstream/medical-english-precision-editor/references/terminology-and-precision-rules.md",
+          "sha256": "427fcd1e2dcf0954546ae765e13c5a415720ed75a6c36701068e2051ec21d90b"
+        },
+        {
+          "path": "upstream/medical-english-precision-editor/references/tone-and-journal-style-rules.md",
+          "sha256": "507796c7bfecc7648f47f88af96ce0d176e19e602fa704a160a42064aecb6ed7"
+        }
+      ]
+    },
+    {
+      "id": "lay-summary-for-cross-disciplinary-teams",
+      "source_url": "https://github.com/aipoch/medical-research-skills/blob/686e09dfdb45d9fa1a08664f06bb93769b3c9d91/awesome-med-research-skills/Academic%20Writing/lay-summary-for-cross-disciplinary-teams/SKILL.md",
+      "upstream_sha256": "0f109e401f3fafb189ad7fc2e30f4b287f5b3614090715dd1f82b26c0ae1dbf9",
+      "source_files": [
+        {
+          "path": "upstream/lay-summary-for-cross-disciplinary-teams/SKILL.md",
+          "sha256": "0f109e401f3fafb189ad7fc2e30f4b287f5b3614090715dd1f82b26c0ae1dbf9"
+        },
+        {
+          "path": "upstream/lay-summary-for-cross-disciplinary-teams/assets/output-template.md",
+          "sha256": "f21cb942aacc09abe705a05de7164b568f301e55ce5532faf59646cb3d8053b5"
+        },
+        {
+          "path": "upstream/lay-summary-for-cross-disciplinary-teams/references/audience-guide.md",
+          "sha256": "b1f8bf92eec1f9bb5db2d89383795a56f4962d404ffddd8b74cdb5c20c6d404c"
+        }
+      ]
+    }
+  ]
+}

@@ -24,6 +24,7 @@ from reranking import QwenReranker, MODEL_ID as RERANKER_MODEL_ID
 from knowledge_store import build_store
 from document_jobs import DocumentJobs
 from ingestion import parse_pdf
+from medical_skills import get_medical_skills
 
 HERE = Path(__file__).resolve().parent
 load_dotenv(HERE / ".env")
@@ -35,6 +36,7 @@ BASE_URL = os.getenv("FPT_BASE_URL", "https://mkp-api.fptcloud.com").rstrip("/")
 
 @asynccontextmanager
 async def lifespan(app):
+    app.state.skills = get_medical_skills()
     app.state.knowledge = GraphKnowledge()
     async with httpx.AsyncClient(timeout=httpx.Timeout(60, connect=15)) as client:
         app.state.client = client
@@ -90,6 +92,7 @@ async def health():
         "graph_entities": len(app.state.knowledge.index.names),
         "decision_model": os.getenv("TYPESAFE_MODEL", "jev-latest"),
         "decision_configured": bool(os.getenv("TYPESAFE_API_KEY")),
+        "skill_profile": app.state.skills.info(),
         "shared_knowledge": app.state.knowledge.store.manifest,
         "index_status": app.state.index_status,
         "reranker_model": RERANKER_MODEL_ID,
@@ -171,7 +174,7 @@ async def chat(request: ChatRequest):
         vietnamese = language_hint(request.messages[-1].content) == "vi"
         try:
             result = await Harness(app.state.knowledge, app.state.client, BASE_URL, api_key, MODEL,
-                                   app.state.internet, app.state.reranker).run(request)
+                                   app.state.internet, app.state.reranker, skills=app.state.skills).run(request)
             yield event("result", **result)
             answer = result["answer"]
             # Validate grounding before exposing any answer text to the browser.

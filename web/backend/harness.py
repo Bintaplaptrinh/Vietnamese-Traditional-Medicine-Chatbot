@@ -11,6 +11,7 @@ from graph_chat import complete, language_hint
 from internet import Internet, DecisionUnavailable
 from reranking import QwenReranker, RerankerUnavailable
 from evidence import mask_evidence, pack_evidence, VERSION
+from medical_skills import get_medical_skills
 
 PROFILES = {
     "low": {"rounds": 1, "documents": 3, "calls": 5, "seconds": 90},
@@ -102,15 +103,17 @@ def grounded(result, facts, steps):
 
 
 class Harness:
-    def __init__(self, knowledge, client, base_url, api_key, model, internet=None, reranker=None):
+    def __init__(self, knowledge, client, base_url, api_key, model, internet=None, reranker=None, skills=None):
         self.knowledge, self.client = knowledge, client
         self.base_url, self.api_key, self.model = base_url, api_key, model
         self.internet = internet or Internet(client)
         self.reranker = reranker or QwenReranker()
+        self.skills = skills if skills is not None else get_medical_skills()
 
     async def run(self, request):
         self.trace = {"query": request.messages[-1].content, "route": request.route,
                       "effort": request.effort, "model": self.model, "drafts": [], "retrieval": [], "gates": []}
+        self.trace["skills"] = {**self.skills.info(), "planner": [], "drafts": []}
         limits = PROFILES[request.effort]
         budget = Budget(limits)
         start = time.monotonic()
@@ -129,6 +132,7 @@ class Harness:
         snapshots = {c.get("snapshot") for c in result.get("citations", [])} - {None}
         result["snapshot"] = next(iter(snapshots)) if len(snapshots) == 1 else store.manifest.get("snapshot") if store else None
         result.setdefault("verification_status", "insufficient")
+        result["skills"] = self.trace["skills"]
         result["usage"] = {**budget.report(), "elapsed_seconds": round(time.monotonic()-start, 2), "effort": request.effort}
         if store:
             from knowledge_store import DATA
@@ -152,7 +156,7 @@ class Harness:
 
     async def _run(self, request, budget):
         async def llm(prompt, payload, tokens):
-            budget.take(len(str(payload)), tokens)
+            budget.take(len(prompt) + len(json.dumps(payload, ensure_ascii=False)), tokens)
             return await complete(self.client, self.base_url, self.api_key, self.model, prompt, payload, max_tokens=tokens, usage_callback=budget.record_usage)
         async def rank(candidates):
             candidates = mask_evidence(candidates, getattr(request, "branches", None), getattr(request, "documents", None))
@@ -177,7 +181,10 @@ class Harness:
             return await asyncio.to_thread(self.knowledge.retrieve, local_queries)
 
         async def check(facts, round_number):
-            result = await llm(CHECK, {"language": lang, "question": question, "steps": steps, "evidence": facts}, 3000)
+            bundle = self.skills.draft(question, lang, facts)
+            self.trace["skills"]["drafts"].append({"round": round_number, "ids": list(bundle.ids)})
+            result = await llm(self.skills.compose(CHECK, bundle),
+                               {"language": lang, "question": question, "steps": steps, "evidence": facts}, 3000)
             self.trace["drafts"].append({k: result[k] for k in ("supported", "sections", "checks", "next_queries") if k in result})
             if not grounded(result, facts, steps):
                 return result, None
@@ -210,7 +217,13 @@ class Harness:
                 "checks": result["checks"], "rounds": round_number, "verification_status": "verified",
                 "verification": {k: v["choice"] for k, v in verdict.items()}}
         latest = request.messages[-1].content
-        plan = await llm(PLANNER, {"latest": latest, "history": [m.model_dump() for m in request.messages[-7:-1]]}, 1000)
+        bundle = self.skills.planner()
+        self.trace["skills"]["planner"] = list(bundle.ids)
+        plan = await llm(self.skills.compose(PLANNER, bundle),
+                         {"latest": latest, "history": [m.model_dump() for m in request.messages[-7:-1]],
+                          "allowed_sources": {"route": request.route,
+                                              "branches": getattr(request, "branches", []),
+                                              "documents": getattr(request, "documents", [])}}, 1000)
         lang = plan.get("language", language_hint(latest))
         question = plan.get("question") or latest
         if not isinstance(question, str):

@@ -4,7 +4,8 @@
   "license": "MIT",
   "license_sha256": "92cd32f3b4857f97a3ad6bf276c42dea2e93fd2bb714b08d75a558c9f215f596",
   "local_directory": "medical-research-skills",
-  "status": "reference_only",
+  "status": "adapted_runtime_profiles",
+  "runtime_manifest": "../backend/skills/manifest.json",
   "skills": [
     {
       "name": "biomedical-search-strategy-builder",
