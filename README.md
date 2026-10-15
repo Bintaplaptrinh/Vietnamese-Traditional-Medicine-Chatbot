@@ -11,7 +11,7 @@ documents, and check the sources behind each answer.
 Gemma trích xuất và viết câu trả lời. JEV kiểm tra từng phát biểu với nguồn được
 trích dẫn. Người dùng chọn kho tri thức, internet hoặc kết hợp cả hai.
 
-![Giao diện Graph của Bloop: chọn nguồn, tìm tên, xem node và nhập PDF](frontend/assets/workspace-preview.png)
+![Giao diện Graph của Bloop: chọn nguồn, tìm tên, xem node và nhập PDF](/web/frontend/assets/workspace-preview.png)
 
 *Ảnh từ browser fixture với dữ liệu mẫu.*
 
