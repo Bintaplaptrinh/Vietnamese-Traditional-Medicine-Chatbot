@@ -357,6 +357,27 @@ class KnowledgeStore:
         terms = list(dict.fromkeys(search_terms(query)))[:24]
         return " OR ".join('"' + term.replace('"', '""') + '"' for term in terms)
 
+    @staticmethod
+    def source_context(unit, document_units):
+        """Keep neighboring source lines together, with original page provenance."""
+        if not isinstance(unit.get("offset_start"), int) or unit.get("page") is None:
+            return {k: v for k, v in unit.items() if k not in {"raw_text", "normalized_text", "cells"}}
+        anchor = unit["offset_start"] // 1200 * 1200
+        neighbors = sorted((u for u in document_units
+                            if u.get("page") == unit["page"]
+                            and isinstance(u.get("offset_start"), int)
+                            and u["offset_start"] < anchor + 1450
+                            and u.get("offset_end", u["offset_start"]) > max(0, anchor - 250)),
+                           key=lambda u: u["offset_start"])
+        if not neighbors:
+            neighbors = [unit]
+        text = "".join(u["text"] for u in neighbors)
+        return {**{k: v for k, v in unit.items() if k not in {"raw_text", "normalized_text", "cells", "bbox", "block_id", "block_offset"}},
+                "record_id": identity("context", unit["document_id"], unit["page"], [u["record_id"] for u in neighbors]),
+                "text": text, "unit_type": "source_context",
+                "evidence_ids": [u["record_id"] for u in neighbors],
+                "offset_start": neighbors[0]["offset_start"], "offset_end": neighbors[-1]["offset_end"]}
+
     def retrieve(self, queries, branches=None, documents=None):
         with self.lock:
             self.refresh()
@@ -365,11 +386,21 @@ class KnowledgeStore:
             db = self.db()
             try:
                 lists = []
+                document_units = {}
+                def context(unit):
+                    doc = unit.get("document_id")
+                    if doc and doc not in document_units:
+                        document_units[doc] = [json.loads(r[0]) for r in db.execute(
+                            "SELECT payload FROM units WHERE document_id=?", (doc,))]
+                    return self.source_context(unit, document_units.get(doc, [unit]))
                 for query in list(dict.fromkeys(queries))[:7]:
                     match = self.match(query)
                     if not match:
                         continue
-                    labels = db.execute("SELECT DISTINCT concept_id FROM label_search WHERE label_search MATCH ? LIMIT 160", (match,)).fetchall()
+                    # Rank before limiting: common query words must not hide an exact
+                    # entity that happens to occur later in the ontology tables.
+                    hits = db.execute("SELECT concept_id FROM label_search WHERE label_search MATCH ? ORDER BY rank LIMIT 320", (match,)).fetchall()
+                    labels = list({row[0]: row for row in hits}.values())
                     labels = sorted(labels, key=lambda r: max(
                         (int(canonical(l[0]) in canonical(query)), len(set(search_terms(l[0])) & set(search_terms(query))))
                         for l in db.execute("SELECT label FROM labels WHERE concept_id=?", (r[0],))), reverse=True)[:24]
@@ -392,6 +423,21 @@ class KnowledgeStore:
                                           "source": concept["uri"], "ontology_version": VERSION})
                         adjacent = db.execute("SELECT payload FROM edges WHERE subject_id=? OR object_id=? LIMIT 24", (row[0], row[0])).fetchall()
                         if concept["branch"] == "graph":
+                            # Even an unverified edge can locate its original document;
+                            # only independently retrieved source text becomes evidence.
+                            if f" {canonical(concept['label'])} " in f" {canonical(query)} ":
+                                linked_docs = list(dict.fromkeys(json.loads(edge[0]).get("document_id") for edge in adjacent))
+                                phrase = '"' + " ".join(search_terms(concept["label"])) + '"'
+                                linked = []
+                                for doc in [d for d in linked_docs if d][:4]:
+                                    rows = db.execute("SELECT u.payload FROM unit_search JOIN units u ON u.id=unit_search.unit_id "
+                                                      "WHERE unit_search MATCH ? AND u.document_id=? LIMIT 8", (phrase, doc)).fetchall()
+                                    for source in rows:
+                                        linked.append({**context(json.loads(source[0])), "retrieved_by": "graph_document"})
+                                    if rows and document_units.get(doc):
+                                        first = min(document_units[doc], key=lambda u: (u.get("page", 0), u.get("offset_start", 0)))
+                                        linked.append({**context(first), "retrieved_by": "graph_document"})
+                                lists.append(linked)
                             frontier = {node for edge in adjacent for node in (json.loads(edge[0])["subject_id"], json.loads(edge[0])["object_id"])}
                             for node in list(frontier)[:16]:
                                 adjacent.extend(db.execute("SELECT payload FROM edges WHERE branch='graph' AND (subject_id=? OR object_id=?) LIMIT 8", (node, node)).fetchall())
@@ -419,7 +465,7 @@ class KnowledgeStore:
                             payload = json.loads(row[0])
                             # Raw text and cell records remain in the immutable source
                             # store; do not pay context budget for repeated copies.
-                            text_facts.append({k: v for k, v in payload.items() if k not in {"raw_text", "normalized_text", "cells"}})
+                            text_facts.append(context(payload))
                     lists.append(text_facts)
                 # Reciprocal rank fusion; repeat hits strengthen ranking but not identity.
                 scores, records = {}, {}
@@ -433,11 +479,20 @@ class KnowledgeStore:
             finally:
                 db.close()
 
+    def warmup(self):
+        """Load the current sparse index and exercise the query embedding path."""
+        with self.lock:
+            self.refresh()
+            if not self.manifest.get("bm25_model"):
+                return
+            self.bm25("startup warmup")
+
     def bm25(self, query):
         if self.client is None:
             from fastembed import SparseTextEmbedding
             from qdrant_client import QdrantClient, models
-            self.model = SparseTextEmbedding(model_name="Qdrant/bm25", language="english", cache_dir=str(DATA / "model-cache"))
+            if self.model is None:
+                self.model = SparseTextEmbedding(model_name="Qdrant/bm25", language="english", cache_dir=str(DATA / "model-cache"))
             self.client = QdrantClient(location=":memory:")
             self.client.create_collection("evidence", vectors_config={}, sparse_vectors_config={
                 "bm25": models.SparseVectorParams(modifier=models.Modifier.IDF)})

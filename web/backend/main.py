@@ -20,7 +20,7 @@ from pydantic import BaseModel, Field
 from graph_chat import GraphKnowledge, language_hint
 from harness import Harness
 from internet import Internet
-from reranking import QwenReranker, MODEL_ID as RERANKER_MODEL_ID
+from reranking import QwenReranker, RerankerUnavailable, MODEL_ID as RERANKER_MODEL_ID
 from knowledge_store import build_store
 from document_jobs import DocumentJobs
 from ingestion import parse_pdf
@@ -53,10 +53,27 @@ async def lifespan(app):
                 logging.exception("Shared knowledge indexing failed")
                 app.state.index_status = "failed"
         app.state.index_task = asyncio.create_task(initialize())
-        yield
-        await app.state.jobs.close()
-        await app.state.index_task
-        app.state.knowledge.store.close()
+        async def warm_reranker():
+            try:
+                await app.state.reranker.warmup()
+                logging.info("Local Qwen reranker ready")
+            except RerankerUnavailable:
+                # Preserve the existing retrieval fallback when Qwen is unavailable.
+                logging.exception("Local Qwen warmup failed; using retrieval ranking")
+
+        async def warm_knowledge():
+            await app.state.index_task
+            await asyncio.to_thread(app.state.knowledge.store.warmup)
+            logging.info("Local knowledge search ready")
+
+        try:
+            # Finish model loading and first inference before ASGI startup completes.
+            await asyncio.gather(warm_knowledge(), warm_reranker())
+            yield
+        finally:
+            await app.state.jobs.close()
+            await app.state.index_task
+            app.state.knowledge.store.close()
 
 
 app = FastAPI(title="Bloop Agent Chat", lifespan=lifespan)
@@ -96,7 +113,8 @@ async def health():
         "shared_knowledge": app.state.knowledge.store.manifest,
         "index_status": app.state.index_status,
         "reranker_model": RERANKER_MODEL_ID,
-        "reranker_local_ready": app.state.reranker.model is not None and not app.state.reranker.failed,
+        "reranker_local_ready": app.state.reranker.ready and not app.state.reranker.failed,
+        "bm25_local_ready": app.state.knowledge.store.client is not None,
         "search_provider": "searxng" if os.getenv("SEARXNG_URL") else "brave" if os.getenv("BRAVE_SEARCH_API_KEY") else "ddgs",
         "crawler": "crawl4ai" if os.getenv("CRAWL4AI_URL") else "jina",
     }

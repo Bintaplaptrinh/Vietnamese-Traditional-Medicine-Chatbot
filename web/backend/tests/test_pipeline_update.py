@@ -129,7 +129,9 @@ def test_upload_api_validates_pdf_and_is_idempotent(tmp_path, monkeypatch):
     digest = hashlib.sha256(data).hexdigest()
     monkeypatch.setenv('PDF_UPLOAD_MAX_MB', '1')
     async def run():
-        with patch('main.build_store', return_value={}):
+        with patch('main.build_store', return_value={}), \
+                patch('main.QwenReranker.warmup', AsyncMock()), \
+                patch('knowledge_store.KnowledgeStore.warmup', Mock()):
             async with main.lifespan(main.app):
                 main.app.state.jobs.folder = tmp_path
                 main.app.state.jobs.submit = Mock(return_value={'id': digest, 'status': 'queued'})
@@ -146,3 +148,42 @@ def test_upload_api_validates_pdf_and_is_idempotent(tmp_path, monkeypatch):
                     main.app.state.jobs.submit.assert_called_once()
                     assert (await client.get('/api/documents/not-a-hash')).status_code == 404
     asyncio.run(run())
+
+
+def test_unverified_edge_locates_source_context_without_becoming_evidence(tmp_path, monkeypatch):
+    from knowledge_store import add_concept
+    monkeypatch.setattr('knowledge_store.DATA', tmp_path)
+    (tmp_path / 'current.json').write_text(json.dumps({'snapshot': 'fixture'}))
+    db = connect(tmp_path / 'fixture.sqlite'); schema(db)
+    # Common query words used to consume the seed limit before exact entities.
+    for i in range(400):
+        add_concept(db, f'decoy:{i}', 'graph', f'phương pháp điều trị bệnh phổ biến {i}')
+    add_concept(db, 'thread', 'graph', 'cấy chỉ')
+    add_concept(db, 'condition', 'graph', 'thoái hóa cột sống')
+    edge = {'record_id': 'unverified', 'kind': 'graph', 'branch': 'graph',
+            'subject_id': 'thread', 'object_id': 'condition', 'subject': 'cấy chỉ',
+            'predicate': 'điều trị', 'object': 'thoái hóa cột sống',
+            'document_id': 'doc:source', 'source_verified': False}
+    db.execute('INSERT INTO edges VALUES (?,?,?,?,?,?)', ('unverified', 'graph', 'thread', 'điều trị', 'condition', json.dumps(edge)))
+    offset = 0
+    for i, text in enumerate(['Khảo sát điều trị thoái hóa cột sống.\n', 'Các kỹ thuật được ghi nhận gồm\n', 'cấy chỉ và xoa bóp bấm huyệt.\n']):
+        unit = {'record_id': f'line:{i}', 'kind': 'text', 'branch': 'graph', 'document_id': 'doc:source',
+                'document': 'source.pdf', 'page': 1, 'offset_start': offset,
+                'offset_end': offset + len(text), 'text': text, 'source_verified': True}
+        offset += len(text)
+        db.execute('INSERT INTO units VALUES (?,?,?,?)', (unit['record_id'], 'doc:source', text, json.dumps(unit)))
+        db.execute('INSERT INTO unit_search VALUES (?,?)', (unit['record_id'], text))
+    db.commit(); db.close()
+    store = KnowledgeStore()
+    # Even if BM25 misses the document, graph linkage must recover original text.
+    store.manifest['bm25_model'] = 'Qdrant/bm25'
+    store.refresh = lambda: None
+    store.bm25 = lambda query: []
+    facts = store.retrieve(['phương pháp cấy chỉ điều trị bệnh gì'])
+    assert not any(f['record_id'] == 'unverified' for f in facts)
+    source = next(f for f in facts if f.get('retrieved_by') == 'graph_document')
+    assert source['kind'] == 'text' and source['page'] == 1
+    assert source['evidence_ids'] == ['line:0', 'line:1', 'line:2']
+    assert source['text'] == 'Khảo sát điều trị thoái hóa cột sống.\nCác kỹ thuật được ghi nhận gồm\ncấy chỉ và xoa bóp bấm huyệt.\n'
+    assert not store.retrieve(['cấy chỉ'], documents=['another-document'])
+    assert not store.retrieve(['cấy chỉ'], branches=['mesh'])

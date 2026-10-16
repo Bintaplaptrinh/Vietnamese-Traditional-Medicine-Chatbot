@@ -77,6 +77,17 @@ function touch() {
   resetSleep();
 }
 
+mascot.addEventListener('pointermove', (event) => {
+  if (reducedMotion.matches || event.pointerType !== 'mouse') return;
+  const bounds = mascot.getBoundingClientRect();
+  mascot.style.setProperty('--look-x', `${(event.clientX - bounds.left - bounds.width / 2) * .055}px`);
+  mascot.style.setProperty('--look-y', `${(event.clientY - bounds.top - bounds.height / 2) * .04}px`);
+});
+mascot.addEventListener('pointerleave', () => {
+  mascot.style.removeProperty('--look-x');
+  mascot.style.removeProperty('--look-y');
+});
+
 mascot.addEventListener('pointerdown', (e) => {
   if (busy) return;
   held = false;
@@ -183,7 +194,8 @@ form.addEventListener('submit', async (e) => {
   bubble('user', text);
   input.value = '';
   const reply = bubble('assistant', '');
-  showThinking(reply);
+  const requestRoute = searchOverride ? 'web' : sourceMode.value;
+  showThinking(reply, requestRoute);
   effort.disabled = true;
   sourceMode.disabled = true;
   let answer = '';
@@ -195,7 +207,7 @@ form.addEventListener('submit', async (e) => {
     const response = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: [...history.slice(-38), { role: 'user', content: text }], effort: effortValues[Number(effort.value)], route: searchOverride ? 'web' : sourceMode.value, ask_user: true }),
+      body: JSON.stringify({ messages: [...history.slice(-38), { role: 'user', content: text }], effort: effortValues[Number(effort.value)], route: requestRoute, ask_user: true }),
       signal: controller.signal,
     });
     if (!response.ok) {
@@ -258,13 +270,18 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
-function showThinking(reply) {
+function showThinking(reply, route) {
   reply.classList.add('thinking-bubble');
   reply.setAttribute('role', 'status');
   reply.setAttribute('aria-label', 'Bloop đang suy nghĩ');
-  const avatar = document.createElement('img');
-  avatar.src = 'assets/thinking.gif'; avatar.alt = ''; avatar.className = 'thinking-avatar'; avatar.setAttribute('aria-hidden', 'true');
-  const label = document.createElement('span'); label.className = 'thinking-label'; label.textContent = 'Thinking';
+  const avatar = document.createElement('span');
+  avatar.className = 'thinking-avatar'; avatar.setAttribute('aria-hidden', 'true');
+  const body = document.createElement('span'); body.className = 'mascot-body';
+  for (const side of ['left', 'right']) {
+    const eye = document.createElement('span'); eye.className = `eye eye-${side}`; body.append(eye);
+  }
+  avatar.append(body);
+  const label = document.createElement('span'); label.className = 'thinking-label'; label.textContent = route === 'web' ? 'Searching the internet' : route === 'hybrid' ? 'Searching knowledge & internet' : 'Thinking';
   const dots = document.createElement('span'); dots.className = 'thinking-dots'; dots.setAttribute('aria-hidden', 'true');
   for (let i = 0; i < 3; i++) { const dot = document.createElement('span'); dot.textContent = '.'; dots.append(dot); }
   reply.append(avatar, label, dots);

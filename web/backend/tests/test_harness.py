@@ -1,6 +1,6 @@
 import asyncio
 from types import SimpleNamespace
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock, Mock, patch
 
 import httpx
 import pytest
@@ -101,9 +101,14 @@ def test_jev_contract_and_filter(monkeypatch):
 def test_full_multi_hop_is_not_dropped_at_low_effort():
     async def run():
         plan={**PLAN,'steps':['A','B','C','D']}
+        app = harness()
+        app.internet.decisions.predict = AsyncMock(return_value={
+            'claim:0': {'choice': 'supported'}, 'step:0': {'choice': 'supported'},
+            'step:1': {'choice': 'supported'}, 'step:2': {'choice': 'unknown'}, 'step:3': {'choice': 'unknown'}})
         with patch('harness.complete',AsyncMock(side_effect=[plan,GOOD])):
-            result=await harness().run(request())
+            result=await app.run(request())
             assert result['route']=='clarification'
+        assert set(app.internet.decisions.predict.call_args.args[1]) == {'claim:0', 'step:0', 'step:1', 'step:2', 'step:3'}
     asyncio.run(run())
 
 
@@ -121,7 +126,9 @@ def test_deadline_returns_bounded_clarification(monkeypatch):
 def test_fastapi_sse_metadata_and_validation():
     import main
     async def run():
-        with patch('main.build_store', return_value={}):
+        with patch('main.build_store', return_value={}), \
+                patch('main.QwenReranker.warmup', AsyncMock()), \
+                patch('knowledge_store.KnowledgeStore.warmup', Mock()):
             await check()
     async def check():
         async with main.lifespan(main.app):
@@ -308,8 +315,13 @@ def test_hybrid_missing_hop_remains_unsupported():
     async def run():
         docs = [{'url': 'https://example.com', 'title': 'A', 'text': 'A relates B'}]
         internet = SimpleNamespace(search=AsyncMock(return_value=docs), filter=AsyncMock(return_value=docs))
+        app = harness(internet)
+        app.internet.decisions.predict = AsyncMock(return_value={
+            'claim:0': {'choice': 'supported'}, 'step:0': {'choice': 'supported'},
+            'step:1': {'choice': 'unknown'}})
         with patch('harness.complete', AsyncMock(side_effect=[PLAN, {**GOOD, 'checks': GOOD['checks'][:1]}])):
-            result = await harness(internet).run(request('hybrid'))
+            result = await app.run(request('hybrid'))
+        assert app.internet.decisions.predict.await_count == 1
         assert result['reason'] == 'evidence_insufficient' and result['citations'] == []
     asyncio.run(run())
 
@@ -340,4 +352,147 @@ def test_qwen_failure_preserves_retrieval_and_requires_answer_verification():
             result = await app.run(request('graph'))
         assert result['verification_status'] == 'verified' and result['citations']
         assert llm.await_count == 2 and app.internet.decisions.predict.await_count == 1
+    asyncio.run(run())
+
+
+def test_overview_verification_receives_user_scope_not_only_planner_expansions():
+    """A treatment overview must not become a demand for surgical indications."""
+    async def run():
+        app = harness(facts=[{'id': 1, 'kind': 'text', 'record_id': 'source:spine',
+                              'text': 'Tài liệu khảo sát ghi nhận các phương pháp điều trị THCS.',
+                              'document': '121.pdf', 'page': 8}])
+        req = request('graph')
+        req.messages[0].content = 'các cách điều trị thoái hóa cột sống'
+        plan = {'language': 'vi', 'question': req.messages[0].content,
+                'queries': [req.messages[0].content], 'steps': [req.messages[0].content]}
+        draft = {'supported': True,
+                 'sections': [{'text': 'Tài liệu khảo sát ghi nhận các phương pháp điều trị THCS.', 'citations': [1]}],
+                 'checks': [{'step': 0, 'sufficient': True, 'citations': [1]}]}
+        with patch('harness.complete', AsyncMock(side_effect=[plan, draft])):
+            result = await app.run(req)
+        state, questions, _ = app.internet.decisions.predict.call_args.args
+        assert state['user_question'] == req.messages[0].content
+        assert state['needs'] == {'0': req.messages[0].content}
+        assert state['claims']['0']['evidence'][0]['document'] == '121.pdf'
+        assert 'user_question' in questions['step:0']['instructions']
+        assert 'unless user_question explicitly requests them' in questions['step:0']['instructions']
+        assert result['verification_status'] == 'verified'
+        assert result['citations'][0]['record_id'] == 'source:spine'
+    asyncio.run(run())
+
+
+def test_overview_scope_does_not_bypass_unknown_claim_verdict():
+    async def run():
+        app = harness()
+        plan = {**PLAN, 'steps': ['Các cách điều trị thoái hóa cột sống']}
+        draft = {**GOOD, 'checks': GOOD['checks'][:1]}
+        app.internet.decisions.predict = AsyncMock(return_value={
+            'claim:0': {'choice': 'unknown'}, 'step:0': {'choice': 'supported'}})
+        with patch('harness.complete', AsyncMock(side_effect=[plan, draft])):
+            result = await app.run(request('graph'))
+        assert result['verification_status'] == 'insufficient'
+        assert result['citations'] == []
+    asyncio.run(run())
+
+
+@pytest.mark.parametrize('coverage', ['supported', 'unknown'])
+def test_supported_sections_are_reverified_after_pruning(coverage):
+    async def run():
+        facts = [
+            {'id': 1, 'record_id': 'one', 'kind': 'text', 'text': 'Documented option A.'},
+            {'id': 2, 'record_id': 'two', 'kind': 'text', 'text': 'An unclear option B.'},
+        ]
+        app = harness(facts=facts)
+        plan = {**PLAN, 'steps': ['Documented options']}
+        draft = {'supported': True, 'sections': [
+            {'text': 'Documented option A.', 'citations': [1]},
+            {'text': 'Unsupported extra detail B.', 'citations': [2]}],
+            'checks': [{'step': 0, 'sufficient': True, 'citations': [1, 2]}]}
+        verdicts = [
+            {'claim:0': {'choice': 'supported'}, 'claim:1': {'choice': 'unknown'},
+             'step:0': {'choice': 'supported'}},
+            {'step:0': {'choice': coverage}},
+        ]
+        async def verify(state, questions, budget):
+            budget.take()
+            return verdicts.pop(0)
+        app.internet.decisions.predict = AsyncMock(side_effect=verify)
+        with patch('harness.complete', AsyncMock(side_effect=[plan, draft])):
+            result = await app.run(request('graph'))
+        assert app.internet.decisions.predict.await_count == 2
+        second_state, second_questions, _ = app.internet.decisions.predict.call_args.args
+        assert set(second_questions) == {'step:0'}
+        assert list(second_state['claims']) == ['0']
+        assert second_state['claims']['0']['claim'] == 'Documented option A.'
+        assert result['usage']['model_calls'] <= PROFILES['low']['calls']
+        if coverage == 'supported':
+            assert result['verification_status'] == 'verified'
+            assert 'Unsupported extra detail' not in result['answer']
+            assert [fact['record_id'] for fact in result['citations']] == ['one']
+            assert result['checks'][0]['citations'] == [1]
+        else:
+            assert result['verification_status'] == 'insufficient'
+            assert result['citations'] == []
+    asyncio.run(run())
+
+
+def test_contradicted_claim_is_not_repaired_by_dropping_it():
+    async def run():
+        app = harness()
+        draft = {**GOOD, 'sections': [*GOOD['sections'], {'text': 'Conflicting claim.', 'citations': [1]}]}
+        app.internet.decisions.predict = AsyncMock(return_value={
+            'claim:0': {'choice': 'supported'}, 'claim:1': {'choice': 'contradicted'},
+            'step:0': {'choice': 'supported'}, 'step:1': {'choice': 'supported'}})
+        with patch('harness.complete', AsyncMock(side_effect=[PLAN, draft])):
+            result = await app.run(request('graph'))
+        assert result['verification_status'] == 'insufficient'
+        assert app.internet.decisions.predict.await_count == 1
+    asyncio.run(run())
+
+
+def test_missing_draft_check_entries_do_not_skip_independent_need_verification():
+    async def run():
+        app = harness()
+        # Reproduces the two planned needs / one self-check mismatch in the trace.
+        with patch('harness.complete', AsyncMock(side_effect=[PLAN, {**GOOD, 'checks': GOOD['checks'][:1]}])):
+            result = await app.run(request('graph'))
+        questions = app.internet.decisions.predict.call_args.args[1]
+        assert {'step:0', 'step:1'} <= set(questions)
+        assert result['verification_status'] == 'verified'
+        assert len(result['checks']) == 2
+    asyncio.run(run())
+
+
+@pytest.mark.parametrize('route', ['graph', 'web'])
+def test_schema_placeholder_never_becomes_a_user_answer(route):
+    async def run():
+        docs = [{'url': 'https://example.com', 'title': 'A', 'text': 'Original source A relates B.'}]
+        internet = SimpleNamespace(search=AsyncMock(return_value=docs), filter=AsyncMock(return_value=docs))
+        app = harness(internet)
+        draft = {'supported': False, 'sections': [], 'checks': [],
+                 'clarification': 'question about missing context in requested language',
+                 'next_queries': ['missing evidence search']}
+        with patch('harness.complete', AsyncMock(side_effect=[PLAN, draft])):
+            result = await app.run(request(route))
+        assert result['answer'].startswith('Chưa đủ bằng chứng.')
+        assert 'requested language' not in result['answer']
+        if route == 'web':
+            assert app.trace['web_search'][0]['queries'] == ['A', 'B']
+            assert app.trace['web_search'][0]['fetched_urls'] == ['https://example.com']
+    asyncio.run(run())
+
+
+def test_web_route_searches_planned_translations_and_does_not_retrieve_local():
+    async def run():
+        docs = [{'url': 'https://example.com', 'title': 'A', 'text': 'Original source A relates B.'}]
+        internet = SimpleNamespace(search=AsyncMock(return_value=docs), filter=AsyncMock(return_value=docs))
+        app = harness(internet)
+        app.knowledge.retrieve = Mock(side_effect=AssertionError('Web route must not retrieve graph'))
+        plan = {**PLAN, 'question': 'Cấy chỉ điều trị bệnh gì?',
+                'queries': ['Cấy chỉ điều trị bệnh gì?', 'acupoint thread embedding conditions']}
+        with patch('harness.complete', AsyncMock(side_effect=[plan, GOOD])):
+            result = await app.run(request('web'))
+        assert internet.search.call_args.args[0] == [plan['question'], plan['queries'][1]]
+        assert result['route'] == 'web' and result['verification_status'] == 'verified'
+        assert app.trace['web_search'][0]['retained_urls'] == ['https://example.com']
     asyncio.run(run())

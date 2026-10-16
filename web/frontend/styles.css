@@ -17,27 +17,40 @@ h1 { margin: 15px 0 10px; font-size: clamp(32px, 5vw, 47px); line-height: 1.14; 
 h1 > span { color: var(--color-primary); }
 .intro p { margin: 0; font-size: 14px; color: #8190a8; }
 .mascot-space { position: relative; height: 320px; width: min(100%, 460px); display: grid; place-items: center; margin: 12px auto 0; }
-.mascot { --mascot-scale: 1; width: 204px; height: 204px; border: 0; border-radius: 50%; background: radial-gradient(circle at 32% 23%, #5c94ff 0%, #3075fc 38%, #2568f4 68%, #1953d8 100%); box-shadow: inset 0 -7px 14px #194bb82b, inset 0 2px 3px #a4c5ff70; position: relative; cursor: pointer; touch-action: none; user-select: none; z-index: 2; animation: idle 4s ease-in-out infinite; transition: width .5s, height .5s, scale .5s; scale: var(--mascot-scale); }
-.mascot:focus-visible { outline: 3px solid var(--color-base-content); outline-offset: 10px; }
-.face { position: absolute; inset: 0; transform: translateY(4px); }
-.eye { position: absolute; top: 38%; width: 18px; height: 31px; border-radius: 50%; background: white; transition: height .25s, width .25s, top .25s, transform .25s; }
-.eye-left { left: 32%; }.eye-right { right: 32%; }
-.mouth { position: absolute; top: 59%; left: calc(50% - 10px); width: 20px; height: 10px; border-bottom: 3px solid #fff; border-radius: 0 0 20px 20px; transition: all .25s; }
-.mascot[data-state="wide"] .eye { height: 43px; width: 26px; top: 33%; }
-.mascot[data-state="wide"] .mouth { border: 0; width: 11px; height: 14px; left: calc(50% - 5.5px); background: #fff; border-radius: 50%; top: 61%; }
-.mascot[data-state="wink"] .eye-right { height: 5px; top: 46%; transform: rotate(-9deg); }
-.mascot[data-state="wink"] .mouth { width: 25px; height: 13px; left: calc(50% - 12.5px); }
-.mascot[data-state="sleep"] .eye { height: 5px; top: 46%; transform: rotate(8deg); }
-.mascot[data-state="sleep"] .eye-right { transform: rotate(-8deg); }
-.mascot[data-state="sleep"] .mouth { width: 8px; height: 8px; left: calc(50% - 4px); border: 2px solid white; border-radius: 50%; }
-.sleep-mark { display: none; position: absolute; top: -6px; right: 8px; font-size: 24px; color: var(--color-primary); animation: snooze 2.4s infinite; }
+/* Layered jelly: floating, shape and expression animations stay independent. */
+.mascot { --mascot-scale: 1; width: 204px; height: 204px; padding: 0; border: 0; border-radius: 44%; background: transparent; position: relative; cursor: pointer; touch-action: manipulation; user-select: none; z-index: 2; animation: jelly-float 4.8s ease-in-out infinite; transition: scale .7s cubic-bezier(.22,1.5,.36,1); scale: var(--mascot-scale); }
+.mascot:focus-visible { outline: 3px solid var(--color-base-content); outline-offset: 16px; }
+.mascot-body { position: absolute; inset: 7% 3% 3%; border-radius: 46% 54% 39% 44% / 56% 49% 43% 38%; background: radial-gradient(ellipse at 23% 66%, #40e9f4 0%, #61d9f000 49%), radial-gradient(ellipse at 74% 28%, #e5a2ff 0%, #ca80f300 48%), radial-gradient(ellipse at 63% 85%, #a158ed 0%, #a158ed00 55%), linear-gradient(135deg, #8bcaff 5%, #a080f4 47%, #bf7bed 76%, #73dfea); box-shadow: inset 3px 4px 8px #e3eaff80, inset -5px -8px 13px #8242cc55, inset 0 -3px 2px #baffffb0, 0 12px 25px #9065d91a; animation: jelly-morph 6s ease-in-out infinite; transition: scale .65s cubic-bezier(.22,1.5,.36,1); }
+.mascot-body::after { content: ""; position: absolute; inset: 3%; border-radius: inherit; border-bottom: 2px solid #dbffffa6; border-right: 1px solid #f6ddff70; pointer-events: none; }
+.mascot-gloss { position: absolute; left: 16%; top: 9%; width: 42%; height: 19%; border-radius: 50%; background: linear-gradient(165deg, #ffffff8c, #ffffff00 75%); transform: rotate(-28deg); filter: blur(3px); }
+.face { position: absolute; inset: 0; translate: var(--look-x, 0px) var(--look-y, 0px); transition: translate .6s cubic-bezier(.22,1,.36,1); }
+.eye { position: absolute; top: 43%; width: 10px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 0 9px #ffffff65; transition: scale .4s, rotate .4s; }
+.eye-left { left: 35%; }.eye-right { right: 29%; }
+.mascot[data-state="idle"] .eye { animation: jelly-blink 5.6s infinite; }
+.mouth { position: absolute; top: 58%; left: 49%; width: 13px; height: 8px; border-bottom: 2px solid #fff; border-radius: 0 0 16px 16px; transition: scale .4s, border-radius .4s, background .4s; }
+.cheek { position: absolute; top: 55%; width: 24px; height: 13px; border-radius: 50%; background: #ff9eda; filter: blur(5px); opacity: .65; transition: opacity .5s; }
+.cheek-left { left: 22%; }.cheek-right { right: 15%; }
+.mascot[data-state="wide"] .eye { scale: 1.15 1.3; }
+.mascot[data-state="wide"] .mouth { scale: .7 1.5; background: #fff; border-radius: 50%; }
+.mascot[data-state="wink"] .eye-right { scale: 1.25 .2; rotate: -12deg; }
+.mascot[data-state="wink"] .cheek { opacity: 1; }
+.mascot[data-state="wink"] .mouth { scale: 1.3 1.15; }
+.mascot[data-state="sleep"] .eye { scale: 1.2 .16; rotate: 8deg; }
+.mascot[data-state="sleep"] .eye-right { rotate: -8deg; }
+.mascot[data-state="sleep"] .mouth { scale: .5 .6; }
+.mascot[data-state="thinking"] .eye { scale: 1 .7; }
+.mascot[data-state="thinking"] .face { translate: 5px -3px; }
+.mascot:active .mascot-body { scale: 1.08 .91; }
+.mascot-bubble { position: absolute; right: -13%; top: 20%; width: 29px; height: 31px; border-radius: 48% 52% 56% 44%; background: radial-gradient(circle at 26% 25%, #c9f7ff, #ad8af6 50%, #b46de9 75%, #71e5f3); box-shadow: inset 0 -2px 3px #e3ffff8c; animation: jelly-satellite 4.8s ease-in-out infinite; }
+.sleep-mark { display: none; position: absolute; top: -6px; right: 8px; font-size: 24px; color: #a080d7; animation: snooze 2.4s infinite; }
 .sleep-mark span { position: absolute; top: -14px; right: -15px; font-size: 17px; }
 .mascot[data-state="sleep"] .sleep-mark { display: block; }
-.thinking-face { display: none; position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 50%; }
-.mascot[data-state="thinking"] .face { visibility: hidden; }
-.mascot[data-state="thinking"] .thinking-face { display: block; }
-.mascot[data-state="thinking"] { animation: thinking-bob 1.6s ease-in-out infinite; }
-.mascot-shadow { position: absolute; bottom: 28px; width: 146px; height: 15px; border-radius: 50%; background: #2568f41c; filter: blur(7px); animation: shadow 4s ease-in-out infinite; }
+.mascot[data-state="sleep"] .mascot-bubble { opacity: .35; }
+.mascot-shadow { position: absolute; bottom: 28px; width: 146px; height: 15px; border-radius: 50%; background: #9867cf24; filter: blur(7px); animation: shadow 4.8s ease-in-out infinite; }
+@keyframes jelly-float { 0%,100% { transform: translateY(6px) rotate(-4deg); } 50% { transform: translateY(-10px) rotate(4deg); } }
+@keyframes jelly-morph { 0%,100% { border-radius: 46% 54% 39% 44% / 56% 49% 43% 38%; transform: scale(1, .97); } 33% { border-radius: 39% 46% 48% 51% / 44% 39% 55% 48%; transform: scale(.96, 1.03); } 66% { border-radius: 53% 40% 44% 38% / 48% 56% 36% 47%; transform: scale(1.03, .98); } }
+@keyframes jelly-blink { 0%,42%,46%,100% { scale: 1 1; } 44% { scale: 1 .12; } }
+@keyframes jelly-satellite { 0%,100% { transform: translateY(-6px) scale(.93); } 50% { transform: translateY(12px) scale(1.07); } }
 .orbit { position: absolute; width: 290px; height: 290px; border: 1px solid #edf2fc; border-radius: 50%; pointer-events: none; }
 .orbit-two { width: 360px; height: 360px; border-style: dashed; opacity: .6; }
 .spark { position: absolute; color: #93b6ff; font-size: 25px; }.spark-one { top: 70px; right: 68px; }.spark-two { bottom: 65px; left: 55px; font-size: 17px; }
@@ -102,7 +115,7 @@ footer > span:last-child { letter-spacing: .2px; }.footer-dot { margin-left: 6px
 .chat-started .messages { flex: 1; min-height: 0; max-height: none; overscroll-behavior-y: contain; padding: 0 8px 12px; }
 .chat-started :is(.composer, .composer-note, .error-message) { flex-shrink: 0; }
 @media (max-width: 600px) { .chat-started main { padding: 20px 0 10px; } }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }.mascot[data-state="thinking"] .thinking-face { display: none; }.mascot[data-state="thinking"] .face { visibility: visible; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 
 .agent-controls { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:8px 0; font-size:12px; }
 .agent-controls label { display:flex; align-items:center; gap:6px; }
@@ -137,7 +150,9 @@ footer > span:last-child { letter-spacing: .2px; }.footer-dot { margin-left: 6px
 .effort-marks { display: flex; justify-content: space-between; padding: 0 4px; font-size: 15px; height: 10px; line-height: 10px; color: color-mix(in srgb, var(--color-base-content) 45%, transparent); }
 .source-mode { flex-shrink: 0; width: 132px; border-radius: 999px; background-color: var(--color-base-200); }
 .thinking-bubble { display: flex; align-items: center; gap: 8px; background: transparent; padding: 8px 12px; min-height: 52px; }
-.thinking-avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+.thinking-avatar { position: relative; display: inline-block; width: 36px; height: 36px; }
+.thinking-avatar .eye { width: 3px; height: 5px; }
+.thinking-avatar .mascot-body { box-shadow: inset 0 -1px 2px #c8ffff; }
 .thinking-label { color: color-mix(in srgb, var(--color-base-content) 45%, transparent); animation: thinking-glow 1.8s ease-in-out infinite; }
 .thinking-dots { display: inline-flex; margin-left: -6px; color: color-mix(in srgb, var(--color-base-content) 55%, transparent); }
 .thinking-dots span { animation: thinking-dot 1.2s ease-in-out infinite; }
@@ -164,7 +179,7 @@ footer > span:last-child { letter-spacing: .2px; }.footer-dot { margin-left: 6px
 /* Metadata shares the bubble column instead of creating another grid column. */
 .chat-start { display: flex; flex-direction: column; align-items: flex-start; }
 .chat-end { display: flex; flex-direction: column; align-items: flex-end; }
-.thinking-avatar { flex-shrink: 0; background: var(--color-primary); }
+.thinking-avatar { flex-shrink: 0; }
 .composer .input { text-overflow: ellipsis; }
 
 .task-sidebar { position: fixed; inset: 0 auto 0 0; width: 144px; padding: 42px 12px; border-right: 1px solid var(--color-base-300); background: var(--color-base-100); z-index: 5; }

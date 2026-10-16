@@ -97,6 +97,7 @@ class Internet:
     async def search(self, queries, limit, seen):
         """SearXNG or Brave search; sources are crawled, snippets are never evidence."""
         docs = []
+        self.last_status = "searching"
         encountered = set(seen)
         for query in queries:
             candidate_limit = min(12, max(6, limit * 2))
@@ -137,7 +138,12 @@ class Internet:
                 if content.strip():
                     docs.append({"url": url, "title": str(hit.get("title", url))[:300], "text": content[:64000]})
                 if len(docs) >= limit:
+                    self.last_status = "ok"
                     return docs
+        if docs:
+            self.last_status = "ok"
+        elif self.last_status != "search_unavailable":
+            self.last_status = "no_readable_sources"
         return docs
 
     async def read(self, url):

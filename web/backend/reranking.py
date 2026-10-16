@@ -1,4 +1,4 @@
-"""Lazy Qwen3 yes/no reranking shared by graph and hybrid retrieval."""
+"""Shared Qwen3 reranking, warmed before the application accepts requests."""
 import asyncio
 import json
 import math
@@ -22,6 +22,7 @@ class QwenReranker:
         self.lock = asyncio.Lock()
         self.task = None
         self.failed = False
+        self.ready = False
 
     def _load(self):
         import torch
@@ -79,17 +80,7 @@ class QwenReranker:
             if self.failed or (self.task is not None and not self.task.done()):
                 raise RerankerUnavailable()
             budget.take(len(question) + sum(map(len, texts)), local=True)
-            self.task = asyncio.create_task(asyncio.to_thread(self._score, question, texts))
-            # Consume background worker errors even if the request times out/cancels.
-            self.task.add_done_callback(lambda task: task.exception() if not task.cancelled() else None)
-            try:
-                scores = await asyncio.wait_for(asyncio.shield(self.task),
-                                               float(os.getenv("QWEN_RERANKER_TIMEOUT_SECONDS", "60")))
-                if len(scores) != len(texts) or any(type(s) not in (int, float) or not math.isfinite(s) or not 0 <= s <= 1 for s in scores):
-                    raise ValueError("Invalid reranker scores")
-            except (TimeoutError, ImportError, OSError, RuntimeError, ValueError, TypeError, AttributeError) as exc:
-                self.failed = True
-                raise RerankerUnavailable() from exc
+            scores = await self._run_scores(question, texts, float(os.getenv("QWEN_RERANKER_TIMEOUT_SECONDS", "60")))
         best = [0.0] * len(evidence)
         for owner, score in zip(owners, scores):
             best[owner] = max(best[owner], score)
@@ -99,3 +90,27 @@ class QwenReranker:
         # Graph selection uses the measured top-10 baseline. IDs are assigned later.
         # The harness packs for need coverage and retains conflict companions.
         return ranked
+
+    async def warmup(self):
+        """Load weights and run inference without charging a request budget."""
+        async with self.lock:
+            if self.ready:
+                return
+            await self._run_scores("startup warmup", ["startup warmup"],
+                                   float(os.getenv("QWEN_RERANKER_STARTUP_TIMEOUT_SECONDS", "180")))
+
+    async def _run_scores(self, question, texts, timeout):
+        # Called under the shared lock by warmup and normal requests alike.
+        if self.failed or (self.task is not None and not self.task.done()):
+            raise RerankerUnavailable()
+        self.task = asyncio.create_task(asyncio.to_thread(self._score, question, texts))
+        self.task.add_done_callback(lambda task: task.exception() if not task.cancelled() else None)
+        try:
+            scores = await asyncio.wait_for(asyncio.shield(self.task), timeout)
+            if len(scores) != len(texts) or any(type(s) not in (int, float) or not math.isfinite(s) or not 0 <= s <= 1 for s in scores):
+                raise ValueError("Invalid reranker scores")
+        except (TimeoutError, ImportError, OSError, RuntimeError, ValueError, TypeError, AttributeError) as exc:
+            self.failed = True
+            raise RerankerUnavailable() from exc
+        self.ready = True
+        return scores
