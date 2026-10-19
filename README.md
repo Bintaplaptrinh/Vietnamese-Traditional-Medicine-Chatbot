@@ -8,7 +8,7 @@ nguồn qua từng trích dẫn.
 Ask questions about Vietnamese traditional medicine, explore knowledge from PDF
 documents, and check the sources behind each answer.
 
-Gemma trích xuất và viết câu trả lời. JEV kiểm tra từng phát biểu với nguồn được
+LLM trích xuất và viết câu trả lời. Decision Model kiểm tra từng phát biểu với nguồn được
 trích dẫn. Người dùng chọn kho tri thức, internet hoặc kết hợp cả hai.
 
 ![Giao diện Graph của Bloop: chọn nguồn, tìm tên, xem node và nhập PDF](web/frontend/assets/workspace-preview.png)
@@ -52,7 +52,7 @@ Graph trong `knowledge/dataset-run/` vẫn được lưu trong Git. Thư mục `
 được ignore; thêm PDF vào đó hoặc nhập từng PDF qua giao diện.
 
 Có thể tạo index trước bằng `python backend/knowledge_store.py`. CLI này không
-gọi FPT/JEV; FastEmbed tải tài nguyên lần đầu rồi cache trong
+gọi FPT/Decision Model; FastEmbed tải tài nguyên lần đầu rồi cache trong
 `knowledge/shared/model-cache`. CLI dùng biến môi trường của shell; server đọc
 `backend/.env`. API key nằm ở backend; static files chỉ phục vụ `frontend/`.
 
@@ -63,12 +63,12 @@ flowchart TD
     PDF["PDF: tối đa 40 MB / 500 trang"] --> PARSE["Kiểm tra SHA-256, đọc text và hàng bảng"]
     PARSE --> UNITS["Source units: nguyên văn, trang, bbox và offsets"]
     UNITS --> TEXT["Lập chỉ mục text"]
-    UNITS --> GEMMA["Gemma trích xuất phát biểu có type và context"]
-    GEMMA --> GATE["Kiểm tra quote, type và domain/range"]
-    GATE -->|Hợp lệ| JEV["JEV đối chiếu phát biểu với source unit"]
+    UNITS --> LLM["LLM trích xuất phát biểu có type và context"]
+    LLM --> GATE["Kiểm tra quote, type và domain/range"]
+    GATE -->|Hợp lệ| DECISION_MODEL["Decision Model đối chiếu phát biểu với source unit"]
     GATE -->|Không hợp lệ| QUARANTINE["quarantine"]
-    JEV -->|supported| ACCEPTED["accepted"]
-    JEV -->|contradicted / unknown| QUARANTINE
+    DECISION_MODEL -->|supported| ACCEPTED["accepted"]
+    DECISION_MODEL -->|contradicted / unknown| QUARANTINE
     TEXT --> SNAPSHOT["Snapshot chung: graph, text, ontology và BM25"]
     ACCEPTED --> SNAPSHOT
     QUARANTINE -. "Giữ để xem trong Graph; loại khỏi bằng chứng trả lời" .-> SNAPSHOT
@@ -87,14 +87,14 @@ cả candidate; trạng thái hiển thị không tự biến một quan hệ th
 
 ```mermaid
 flowchart TD
-    ASK["Câu hỏi và lịch sử"] --> PLAN["Gemma chia tối đa 4 nhu cầu bằng chứng"]
+    ASK["Câu hỏi và lịch sử"] --> PLAN["LLM + search skill: tối đa 4 nhu cầu bằng chứng"]
     PLAN --> LOCAL["Kho tri thức: graph 2 hop, ontology và text BM25"]
-    PLAN -->|Route cho phép| WEB["Web: tìm kiếm, đọc trang và JEV đánh giá excerpts"]
+    PLAN -->|Route cho phép| WEB["Web: tìm kiếm, đọc trang và Decision Model đánh giá excerpts"]
     LOCAL --> POOL["Hợp nguồn theo route; masks và loại bản sao"]
     WEB --> POOL
     POOL --> RANK["Graph/hybrid: Qwen nếu pool lớn hơn 10; pack theo nhu cầu"]
-    RANK --> DRAFT["Gemma viết từng phát biểu kèm citation IDs"]
-    DRAFT --> VERIFY["Kiểm tra cấu trúc; JEV kiểm chứng từng phát biểu và từng nhu cầu"]
+    RANK --> DRAFT["LLM + skills: viết từng phát biểu kèm citation IDs"]
+    DRAFT --> VERIFY["Kiểm tra cấu trúc; Decision Model kiểm chứng từng phát biểu và từng nhu cầu"]
     VERIFY -->|Tất cả supported| ANSWER["verified: trả lời có citations"]
     VERIFY -->|Cần bổ sung, còn budget| RETRY["Truy hồi thêm trong phạm vi nguồn cho phép"]
     RETRY --> POOL
@@ -105,12 +105,18 @@ flowchart TD
 Draft được giữ ở backend trong lúc kiểm tra. SSE chỉ gửi câu trả lời sau answer
 gate; kết quả có citations, `verification_status`, `trace_id`, snapshot và usage.
 
+Tám **medical research skills** định hướng tìm tài liệu, mức khẳng định, trích dẫn
+và văn phong. Mỗi draft dùng claim verification, strength calibration và reference
+integrity; chọn thêm study design/conflict resolver khi phù hợp. Câu trả lời tiếng
+Anh dùng precision editor, tiếng Việt dùng plain language profile. Hướng dẫn viết
+chạy trước Decision Model, không thêm API call. [Các profile và cách chọn](web/backend/skills/NOTICE.md).
+
 ## Vì sao dùng luồng này?
 
 | Nhu cầu | Cách xử lí và bằng chứng cụ thể |
 | --- | --- |
 | Giữ đường về PDF gốc | Units lưu page, bbox và offsets; quote phải có trong nguồn. [Test provenance và quote](web/backend/tests/test_pipeline_update.py). |
-| Tránh draft tự xác nhận đúng | JEV nhận request riêng. Test giả lập `unknown` trả `insufficient`, không phát hành draft. [Test independent verifier](web/backend/tests/test_pipeline_update.py). |
+| Tránh draft tự xác nhận đúng | Decision Model nhận request riêng. Test giả lập `unknown` trả `insufficient`, không phát hành draft. [Test independent verifier](web/backend/tests/test_pipeline_update.py). |
 | Tìm được cả thông tin ngoài graph | Snapshot đã kiểm tra có **120 PDF / 28.850 source units**; retrieval tìm cả text, graph và ontology. [Đường retrieval](web/backend/knowledge_store.py). |
 | Giữ retrieval khi reranker lỗi | Qwen lỗi thì giữ thứ tự retrieval, vẫn kiểm chứng câu trả lời. Pool ≤10 bỏ rerank. [Tests fallback và pool nhỏ](web/backend/tests/test_harness.py). |
 | Giữ tên và nguồn tách biệt | Namespace riêng; giữ dấu `tri` / `trĩ`; dedup theo nguồn/ngữ cảnh và giữ các assertion khác nhau để kiểm tra. [Tests identity và masks](web/backend/tests/test_pipeline_update.py). |
@@ -122,13 +128,13 @@ pipeline; chưa phải phép đo độ đúng của mọi câu trả lời trên
 
 | Thành phần | Vai trò |
 | --- | --- |
-| Gemma qua FPT, mặc định `gemma-4-31B-it` | Lập kế hoạch, trích xuất typed claims và viết draft |
-| JEV, mặc định `jev-latest` | Quyết định support cho claims, đánh giá web excerpts và kiểm chứng đáp án |
+| LLM qua FPT, mặc định `gemma-4-31B-it` | Lập kế hoạch, trích xuất typed claims và viết draft |
+| Decision Model, mặc định `jev-latest` | Quyết định support cho claims, đánh giá web excerpts và kiểm chứng đáp án |
 | `Qwen/Qwen3-Reranker-0.6B`, local | Rerank pool lớn cho graph/hybrid; chọn CUDA hoặc CPU |
 | `Qdrant/bm25` + `Modifier.IDF` | Sparse retrieval trên text PDF; lưu vectors thành JSONL, nạp Qdrant memory theo snapshot |
 | PhoBERT Medical / BamiBERT | Đang thử nghiệm cho NER; chưa nằm trong runtime |
 
-`KNOWLEDGE_BM25=0` chuyển sang candidate lookup FTS giữ dấu. Thiếu JEV key hoặc
+`KNOWLEDGE_BM25=0` chuyển sang candidate lookup FTS giữ dấu. Thiếu Decision Model key hoặc
 verifier lỗi thì kết quả chưa được xác minh; NER và Qwen không thay answer gate.
 
 ## Chọn nguồn và effort
@@ -136,7 +142,7 @@ verifier lỗi thì kết quả chưa được xác minh; NER và Qwen không th
 | Route | Hành vi |
 | --- | --- |
 | `graph` | Chỉ kho tri thức; thiếu nguồn thì hỏi thêm |
-| `web` | Chỉ internet; đọc nguồn, JEV đánh giá excerpts rồi pack; không dùng Qwen |
+| `web` | Chỉ internet; đọc nguồn, Decision Model đánh giá excerpts rồi pack; không dùng Qwen |
 | `hybrid` | Ghép local với web khi được phép rồi rerank/pack |
 | `auto` | Thử local; chỉ chuyển web khi `ask_user=false` và source mask cho phép |
 
@@ -153,7 +159,7 @@ chưa phải giới hạn chi phí tiền tệ.
 
 | Endpoint | Công dụng |
 | --- | --- |
-| `GET /api/health` | Model, cấu hình và trạng thái snapshot/index |
+| `GET /api/health` | Model, skill profile và trạng thái snapshot/index |
 | `GET /api/graph?branch=mesh&q=...&limit=80` | Vùng graph có giới hạn, tách namespace |
 | `GET /api/documents` | Danh sách tài liệu và jobs |
 | `POST /api/documents` | Multipart `file`; upload mới trả 202 và job ID |
@@ -168,7 +174,9 @@ curl -N http://127.0.0.1:8000/api/chat \
 ```
 
 Trace theo query nằm trong `knowledge/shared/traces`: plan, IDs bằng chứng,
-draft sections, verdict, snapshot và usage. Không lưu khóa API hoặc chuỗi suy nghĩ.
+draft sections, verdict, snapshot và usage. Trường `skills` trong kết quả/trace ghi
+phiên bản, fingerprint và IDs đã dùng cho planner và từng draft. Không lưu khóa API
+hoặc chuỗi suy nghĩ.
 
 ## Những phần chính trong code
 
@@ -178,8 +186,9 @@ draft sections, verdict, snapshot và usage. Không lưu khóa API hoặc chuỗ
 | [ingestion.py](web/backend/ingestion.py), [document_jobs.py](web/backend/document_jobs.py) | Parse PDF, extraction, admission và checkpoint |
 | [knowledge_store.py](web/backend/knowledge_store.py) | Import ontology, snapshot và retrieval |
 | [harness.py](web/backend/harness.py) | Planner, budget, chọn nguồn và answer gate |
+| [medical_skills.py](web/backend/medical_skills.py), [skills](web/backend/skills/NOTICE.md) | Chọn và nạp profile nghiên cứu/văn phong từ package local |
 | [evidence.py](web/backend/evidence.py), [reranking.py](web/backend/reranking.py) | Masks, dedup, coverage packing và Qwen |
-| [internet.py](web/backend/internet.py) | JEV typed Choice API, search và đọc web |
+| [internet.py](web/backend/internet.py) | Decision Model typed Choice API, search và đọc web |
 | [schemas](web/backend/schemas), [evidence policy](web/backend/policies/evidence_policy.json) | Hợp đồng JSON và policy bằng chứng |
 
 ## Kiểm tra
@@ -191,11 +200,12 @@ conda activate bqp
 FPT_API_KEY=fixture-key TYPESAFE_API_KEY=fixture-key \
   PYTHONPATH=backend python -m pytest \
   backend/tests/test_harness.py backend/tests/test_reranking.py \
-  backend/tests/test_pipeline_update.py -q
+  backend/tests/test_pipeline_update.py backend/tests/test_medical_skills.py -q
 node frontend/tests/browser.cjs
 ```
 
-Ngày **15/10/2026**: **39 backend tests qua**; browser fixture qua Graph/Chat,
+Ngày **15/10/2026**: **49 backend tests qua**, gồm chọn/nạp skill và giữ Decision Model gate;
+browser fixture qua Graph/Chat,
 ontology selectors, upload/status, citations, viewport 320–768 px và reduced
 motion. Fixture không gọi model API; browser cần Chrome và tải các thư viện CDN
 mà frontend đang dùng. `backend/tests/smoke_live.py` là phép thử riêng có gọi API thật.
@@ -227,7 +237,7 @@ câu trả lời trỏ về tài liệu/trang hoặc URL cụ thể đã dùng l
 | Nguồn | Phần được sử dụng |
 | --- | --- |
 | [AI Powered Knowledge Graph Generator — Robert McDermott](https://github.com/robert-mcdermott/ai-knowledge-graph) | Thư viện graph trong `knowledge/ai-knowledge-graph`; tái sử dụng graph index và truy hồi lân cận |
-| [Medical Research Skills — AIPOCH](https://github.com/aipoch/medical-research-skills) | Nguồn tham khảo cho kỹ năng nghiên cứu, kiểm tra claim/citation và văn phong y khoa; đã clone, chưa nạp vào runtime. [Danh sách skill và phiên bản](web/references/README.md) |
+| [Medical Research Skills — AIPOCH](https://github.com/aipoch/medical-research-skills) | Tám profile đã tích hợp vào planner/draft: nghiên cứu, kiểm tra claim/citation và văn phong y khoa. Kèm bản nguồn, giấy phép MIT và manifest phiên bản. [Danh sách skill và phiên bản](web/references/README.md) |
 | [PyMuPDF](https://github.com/pymupdf/PyMuPDF), [PyOxigraph](https://github.com/oxigraph/oxigraph/tree/main/python) | Đọc PDF và parse ontology RDF/OWL |
 | [Qdrant/bm25](https://huggingface.co/Qdrant/bm25), [FastEmbed](https://github.com/qdrant/fastembed), [Qdrant Client](https://github.com/qdrant/qdrant-client) | Tạo sparse vectors và truy hồi BM25 |
 | [Qwen3-Reranker-0.6B](https://huggingface.co/Qwen/Qwen3-Reranker-0.6B) | Reranking local cho bằng chứng |
@@ -241,8 +251,8 @@ câu trả lời trỏ về tài liệu/trang hoặc URL cụ thể đã dùng l
 
 ### Dịch vụ suy luận và tìm kiếm
 
-[FPT Cloud](https://fptcloud.com/) cung cấp endpoint Gemma đang cấu hình;
-[TypeSafe / JEV](https://docs.typesafe.ai/introduction/quickstart) cung cấp typed
+[FPT Cloud](https://fptcloud.com/) cung cấp endpoint LLM đang cấu hình;
+[TypeSafe / Decision Model](https://docs.typesafe.ai/introduction/quickstart) cung cấp typed
 decisions và verification. [Brave Search API](https://brave.com/search/api/) là
 một lựa chọn provider tìm kiếm. Các dịch vụ này được ghi nhận riêng với các thư
 viện mã nguồn mở ở trên; từng nguồn dữ liệu, mô hình và dịch vụ có điều khoản sử
