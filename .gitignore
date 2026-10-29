@@ -4,3 +4,5 @@
 
 # Source PDFs stay local; graph and ontology are versioned separately.
 /Dataset/
+/paper
+/reports
