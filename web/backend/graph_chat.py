@@ -145,7 +145,26 @@ class GraphKnowledge:
         return facts
 
 
+class ModelResponseError(ValueError):
+    """The provider answered, but did not return a usable JSON completion."""
+
+
+def thinking_options(model):
+    """Provider-specific controls for bounded, non-thinking JSON generation."""
+    enabled = os.getenv("FPT_ENABLE_THINKING", "0") == "1"
+    name = model.casefold()
+    if "gemma-4" in name:
+        return {"chat_template_kwargs": {"enable_thinking": enabled}}
+    if "deepseek-v4" in name or "deepseek-flash" in name:
+        return {"thinking": {"type": "enabled" if enabled else "disabled"},
+                "chat_template_kwargs": {"thinking": enabled}}
+    return {}
+
+
 async def complete(client, base_url, api_key, model, system, payload, max_tokens=3000, usage_callback=None):
+    from model_limits import output_tokens
+    if not 1 <= max_tokens <= output_tokens():
+        raise ModelResponseError(f"Output token limit exceeded: requested={max_tokens} limit={output_tokens()}")
     response = await client.post(
         f"{base_url}/chat/completions",
         headers={"Authorization": f"Bearer {api_key}"},
@@ -153,20 +172,34 @@ async def complete(client, base_url, api_key, model, system, payload, max_tokens
             {"role": "system", "content": system},
             {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
         ], "temperature": 0.2, "max_tokens": max_tokens, "top_p": 1, "stream": False,
+        **thinking_options(model),
         **({"response_format": {"type": "json_object"}} if os.getenv("FPT_JSON_MODE", "0") == "1" else {})},
     )
     response.raise_for_status()
-    body = response.json()
+    try:
+        body = response.json()
+    except ValueError as exc:
+        raise ModelResponseError("Model provider returned invalid JSON") from exc
+    if not isinstance(body, dict):
+        raise ModelResponseError("Model provider response must be an object")
     body = body.get("data", body)
+    if not isinstance(body, dict):
+        raise ModelResponseError("Model provider completion data must be an object")
     if usage_callback is not None:
         usage_callback(body.get("usage"))
     choices = body.get("choices") or []
-    if not choices or choices[0].get("finish_reason") == "length":
-        raise ValueError("FPT returned an empty or incomplete response")
-    content = choices[0].get("message", {}).get("content")
+    if not isinstance(choices, list) or not choices or not isinstance(choices[0], dict):
+        raise ModelResponseError("Model provider returned no completion choices")
+    if choices[0].get("finish_reason") == "length":
+        raise ModelResponseError(f"Model completion exceeded max_tokens={max_tokens}")
+    message = choices[0].get("message")
+    content = message.get("content") if isinstance(message, dict) else None
     if not isinstance(content, str) or not content.strip():
-        raise ValueError("FPT returned an empty response")
-    return json_object(content)
+        raise ModelResponseError("Model provider returned empty completion content")
+    try:
+        return json_object(content)
+    except ValueError as exc:
+        raise ModelResponseError("Model completion did not contain a valid JSON object") from exc
 
 
 async def answer_from_graph(knowledge, client, base_url, api_key, model, messages):

@@ -9,12 +9,15 @@ const networkContainer = document.querySelector('#knowledge-network');
 const graphDetail = document.querySelector('#graph-detail');
 const branchSelect = document.querySelector('#graph-branch');
 const queryInput = document.querySelector('#graph-query');
+const rendererStatus = document.querySelector('#graph-renderer');
+const layoutButton = document.querySelector('#graph-layout');
 let network;
 let graphController;
 let loadVersion = 0;
 let indexingTimer;
 
 function selectTask(task) {
+  window.dispatchEvent(new CustomEvent('workspace:task', { detail: task }));
   const graph = task === 'graph';
   graphView.hidden = !graph; chatView.hidden = graph;
   appShell.classList.toggle('graph-open', graph);
@@ -24,7 +27,10 @@ function selectTask(task) {
     else button.removeAttribute('aria-current');
   }
   if (graph) { if (network) network.redraw(); loadGraph(); loadDocuments(); }
-  else { if (!busy) input.focus(); }
+  else {
+    ++loadVersion; graphController?.abort(); clearTimeout(indexingTimer); network?.stopLayout();
+    if (!busy) input.focus();
+  }
 }
 graphButton.addEventListener('click', () => selectTask('graph'));
 chatButton.addEventListener('click', () => selectTask('chat'));
@@ -32,7 +38,10 @@ chatButton.addEventListener('click', () => selectTask('chat'));
 async function api(url, options) {
   const response = await fetch(url, options);
   const value = await response.json();
-  if (!response.ok) throw new Error(typeof value.detail === 'string' ? value.detail : 'Không thể xử lý yêu cầu.');
+  if (!response.ok) {
+    const error = new Error(typeof value.detail === 'string' ? value.detail : 'Không thể xử lý yêu cầu.');
+    error.status = response.status; throw error;
+  }
   return value;
 }
 
@@ -43,10 +52,20 @@ function describeNode(node, edges) {
   const id = document.createElement('p'); id.textContent = node.uri || node.id;
   graphDetail.append(name, meta, id);
   const relations = edges.filter(edge => edge.from === node.id || edge.to === node.id);
-  for (const edge of relations.slice(0, 15)) {
-    const button = document.createElement('button'); button.type = 'button'; button.className = 'btn btn-sm'; button.textContent = edge.label;
-    button.addEventListener('click', () => describeEdge(edge)); graphDetail.append(button);
-  }
+  const count = document.createElement('p'); count.textContent = `${relations.length} quan hệ`; graphDetail.append(count);
+  let shown = 0;
+  const more = document.createElement('button'); more.type = 'button'; more.className = 'btn btn-sm';
+  const appendRelations = () => {
+    more.remove();
+    for (const edge of relations.slice(shown, shown + 25)) {
+      const button = document.createElement('button'); button.type = 'button'; button.className = 'btn btn-sm';
+      button.textContent = `${edge.from === node.id ? '→' : '←'} ${edge.label} · ${edge.from === node.id ? edge.object || edge.to : edge.subject || edge.from}`;
+      button.addEventListener('click', () => describeEdge(edge)); graphDetail.append(button);
+    }
+    shown += 25;
+    if (shown < relations.length) { more.textContent = `Thêm quan hệ (${relations.length - shown})`; graphDetail.append(more); }
+  };
+  more.addEventListener('click', appendRelations); appendRelations();
 }
 
 function describeEdge(edge) {
@@ -60,58 +79,74 @@ function describeEdge(edge) {
   }
 }
 
-function renderNetwork(data) {
+async function renderNetwork(data, version) {
   if (network) network.destroy();
   network = null; networkContainer.replaceChildren();
   graphDetail.textContent = 'Chọn một nút hoặc cạnh để xem thông tin và nguồn.';
-  if (!window.vis) {
-    const list = document.createElement('ul');
-    for (const node of data.nodes) {
-      const row = document.createElement('li'); const button = document.createElement('button'); button.type = 'button'; button.className = 'btn btn-sm'; button.textContent = node.label;
-      button.addEventListener('click', () => describeNode(node, data.edges)); row.append(button); list.append(row);
-    }
-    networkContainer.append(list); return;
-  }
-  const nodes = data.nodes.map(node => ({id: node.id, label: node.label, group: node.branch}));
-  const edges = data.edges.map(edge => ({id: edge.id, from: edge.from, to: edge.to, label: edge.label, arrows: 'to',
-    dashes: edge.review_status && edge.review_status !== 'accepted', color: edge.review_status === 'quarantine' ? '#b66b2e' : undefined}));
-  network = new vis.Network(networkContainer, {nodes, edges}, {
-    nodes: {shape: 'dot', size: 12, font: {size: 13}}, edges: {font: {size: 10, align: 'middle'}, smooth: false},
-    groups: {graph: {color: '#8bb6ff'}, mesh: {color: '#c4a4eb'}, vietherbs: {color: '#8ccab0'}},
-    interaction: {hover: true, keyboard: {enabled: true, bindToWindow: false}},
-    physics: {stabilization: {iterations: 160}, enabled: !reducedMotion.matches},
+  layoutButton.disabled = true; rendererStatus.textContent = '';
+  if (!data.nodes.length) return;
+  rendererStatus.textContent = 'Đang chuẩn bị graph đầy đủ…';
+  const current = network = new FullGraphNetwork(networkContainer, data, {
+    onNode: describeNode, onEdge: describeEdge,
+    onStatus: text => { if (version === loadVersion) rendererStatus.textContent = text; },
+    onRestore: () => {
+      if (version === loadVersion) renderNetwork(data, version).catch(error => { rendererStatus.textContent = error.message; });
+    },
+    onLayout: running => {
+      layoutButton.textContent = running ? 'Dừng sắp xếp' : 'Sắp xếp';
+      layoutButton.setAttribute('aria-pressed', String(running));
+    },
   });
-  network.on('click', selection => {
-    if (selection.nodes.length) describeNode(data.nodes.find(n => n.id === selection.nodes[0]), data.edges);
-    else if (selection.edges.length) describeEdge(data.edges.find(e => e.id === selection.edges[0]));
-  });
-  // Provide keyboard-accessible nodes alongside the canvas graph.
-  const accessible = document.createElement('select'); accessible.className = 'select select-sm graph-node-select'; accessible.setAttribute('aria-label', 'Chọn nút graph');
-  const placeholder = document.createElement('option'); placeholder.textContent = 'Chọn một nút…'; placeholder.value = ''; accessible.append(placeholder);
-  for (const node of data.nodes) { const option = document.createElement('option'); option.value = node.id; option.textContent = node.label; accessible.append(option); }
-  accessible.addEventListener('change', () => { const node = data.nodes.find(n => n.id === accessible.value); if (node) { describeNode(node, data.edges); network.selectNodes([node.id]); network.focus(node.id); } });
-  networkContainer.append(accessible);
+  await current.initialize(() => version === loadVersion);
+  if (version === loadVersion) layoutButton.disabled = !current.renderer || !data.edges.length;
 }
 
-async function loadGraph() {
+async function loadGraph(restarted = false) {
   const version = ++loadVersion;
   if (graphController) graphController.abort();
   graphController = new AbortController(); clearTimeout(indexingTimer);
+  network?.destroy(); network = null; networkContainer.replaceChildren();
+  layoutButton.disabled = true; rendererStatus.textContent = '';
   graphStatus.textContent = 'Đang tải graph…';
+  document.querySelector('#graph-count').textContent = 'Đang tải…';
+  const params = new URLSearchParams({branch: branchSelect.value, q: queryInput.value, limit: '5000'});
+  const data = {nodes: [], edges: []};
   try {
-    const data = await api(`/api/graph?${new URLSearchParams({branch: branchSelect.value, q: queryInput.value, limit: '80'})}`, {signal: graphController.signal});
-    if (version !== loadVersion) return;
+    let page;
+    do {
+      page = await api(`/api/graph?${params}`, {signal: graphController.signal});
+      if (version !== loadVersion) return;
+      if (data.snapshot && data.snapshot !== page.snapshot) throw Object.assign(new Error('Kho tri thức đã cập nhật.'), {status: 409});
+      data.snapshot = page.snapshot; data.status = page.status;
+      for (const node of page.nodes) data.nodes.push(node);
+      for (const edge of page.edges) data.edges.push(edge);
+      graphStatus.textContent = `Đang tải đầy đủ: ${data.nodes.length} nút · ${data.edges.length} cạnh…`;
+      if (page.next) {
+        if (String(page.next.after_node) === params.get('after_node') && String(page.next.after_edge) === params.get('after_edge')) throw new Error('Không thể tải trang graph tiếp theo.');
+        params.set('snapshot', page.snapshot);
+        for (const [key, value] of Object.entries(page.next)) params.set(key, value);
+      }
+    } while (page.next);
     document.querySelector('#graph-count').textContent = `${data.nodes.length} nút · ${data.edges.length} cạnh`;
     graphStatus.textContent = data.status === 'failed' ? 'Chưa thể tạo kho tri thức. Kiểm tra cấu hình và log backend.' : data.status === 'indexing' ? 'Đang tạo kho tri thức chung. Graph sẽ xuất hiện khi hoàn tất.' :
-      !data.nodes.length ? 'Không tìm thấy khái niệm phù hợp.' : data.limited ? 'Đang hiển thị tối đa 80 cạnh. Tìm tên để xem vùng graph cụ thể.' : 'Các cạnh nét đứt là phát biểu chưa được chấp nhận.';
-    renderNetwork(data);
+      !data.nodes.length ? 'Không tìm thấy khái niệm phù hợp.' : 'Đã tải toàn bộ kết quả. Cạnh tím: chưa chấp nhận · Cạnh nâu: cách ly.';
+    await renderNetwork(data, version);
     if (data.status === 'indexing' && !graphView.hidden) indexingTimer = setTimeout(loadGraph, 5000);
-  } catch (err) { if (err.name !== 'AbortError' && version === loadVersion) graphStatus.textContent = err.message; }
+  } catch (err) {
+    if (err.name === 'AbortError' || version !== loadVersion) return;
+    if (err.status === 409 && !restarted) return loadGraph(true);
+    graphStatus.textContent = `${err.message} Chọn Toàn cảnh để tải lại.`;
+    document.querySelector('#graph-count').textContent = 'Chưa tải xong';
+  }
 }
 
 document.querySelector('#graph-search').addEventListener('submit', event => { event.preventDefault(); loadGraph(); });
-branchSelect.addEventListener('change', loadGraph);
+branchSelect.addEventListener('change', () => loadGraph());
 document.querySelector('#graph-reset').addEventListener('click', () => { queryInput.value = ''; loadGraph(); });
+document.querySelector('#graph-fit').addEventListener('click', () => network?.fit());
+layoutButton.addEventListener('click', () => network?.toggleLayout());
+document.addEventListener('visibilitychange', () => { if (document.hidden) network?.stopLayout(); });
+reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) network?.stopLayout(); });
 
 const statusLabels = {queued: 'Đang chờ', parsing: 'Đang đọc PDF', extracting: 'Đang trích xuất và kiểm tra', indexing: 'Đang cập nhật graph', ready: 'Hoàn tất',
   partial: 'Đã nhập; trích xuất chưa đầy đủ', needs_ocr: 'Cần OCR một số trang', interrupted: 'Tiến trình bị gián đoạn', failed: 'Xử lý thất bại', already_indexed: 'Tài liệu đã có trong kho'};

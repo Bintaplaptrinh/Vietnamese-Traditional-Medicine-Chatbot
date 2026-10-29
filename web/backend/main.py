@@ -17,7 +17,7 @@ from fastapi.responses import StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from graph_chat import GraphKnowledge, language_hint
+from graph_chat import GraphKnowledge, ModelResponseError, language_hint
 from harness import Harness
 from internet import Internet
 from reranking import QwenReranker, RerankerUnavailable, MODEL_ID as RERANKER_MODEL_ID
@@ -25,6 +25,9 @@ from knowledge_store import build_store
 from document_jobs import DocumentJobs
 from ingestion import parse_pdf
 from medical_skills import get_medical_skills
+from local_model import LFM3, LocalModelUnavailable, MODEL_ID as LOCAL_MODEL_ID, context_size
+from model_router import ModelRouter
+from model_limits import context_tokens, output_tokens
 
 HERE = Path(__file__).resolve().parent
 load_dotenv(HERE / ".env")
@@ -38,11 +41,15 @@ BASE_URL = os.getenv("FPT_BASE_URL", "https://mkp-api.fptcloud.com").rstrip("/")
 async def lifespan(app):
     app.state.skills = get_medical_skills()
     app.state.knowledge = GraphKnowledge()
-    async with httpx.AsyncClient(timeout=httpx.Timeout(60, connect=15)) as client:
+    async with httpx.AsyncClient(timeout=httpx.Timeout(float(os.getenv("MODEL_TIMEOUT_SECONDS", "600")), connect=15)) as client:
         app.state.client = client
         app.state.internet = Internet(client)
         app.state.reranker = QwenReranker()
-        app.state.jobs = DocumentJobs(client, app.state.internet.decisions, BASE_URL, os.getenv("FPT_API_KEY"), MODEL)
+        app.state.local_model = LFM3()
+        app.state.model_router = ModelRouter(client, BASE_URL, os.getenv("FPT_API_KEY"), MODEL,
+                                             app.state.internet.decisions, app.state.local_model)
+        app.state.jobs = DocumentJobs(client, app.state.internet.decisions, BASE_URL, os.getenv("FPT_API_KEY"), MODEL,
+                                      router=app.state.model_router)
         app.state.index_status = "indexing"
         async def initialize():
             try:
@@ -66,9 +73,16 @@ async def lifespan(app):
             await asyncio.to_thread(app.state.knowledge.store.warmup)
             logging.info("Local knowledge search ready")
 
+        async def warm_lfm3():
+            try:
+                await app.state.local_model.warmup()
+                logging.info("Local LFM3 ready")
+            except (LocalModelUnavailable, ModelResponseError):
+                logging.exception("LFM3 warmup failed; using API Model")
+
         try:
             # Finish model loading and first inference before ASGI startup completes.
-            await asyncio.gather(warm_knowledge(), warm_reranker())
+            await asyncio.gather(warm_knowledge(), warm_reranker(), warm_lfm3())
             yield
         finally:
             await app.state.jobs.close()
@@ -81,7 +95,7 @@ app = FastAPI(title="Bloop Agent Chat", lifespan=lifespan)
 
 class Message(BaseModel):
     role: Literal["user", "assistant"]
-    content: str = Field(min_length=1, max_length=12000)
+    content: str = Field(min_length=1, max_length=4 * context_tokens())
 
 
 class ChatRequest(BaseModel):
@@ -114,6 +128,13 @@ async def health():
         "index_status": app.state.index_status,
         "reranker_model": RERANKER_MODEL_ID,
         "reranker_local_ready": app.state.reranker.ready and not app.state.reranker.failed,
+        "local_model": LOCAL_MODEL_ID,
+        "local_model_context_tokens": context_size(),
+        "model_context_tokens": context_tokens(),
+        "model_max_output_tokens": output_tokens(),
+        "local_model_runtime": getattr(app.state.local_model, "runtime_info", {}),
+        "local_model_ready": app.state.local_model.ready and not app.state.local_model.failed,
+        "model_routing": "jev",
         "bm25_local_ready": app.state.knowledge.store.client is not None,
         "search_provider": "searxng" if os.getenv("SEARXNG_URL") else "brave" if os.getenv("BRAVE_SEARCH_API_KEY") else "ddgs",
         "crawler": "crawl4ai" if os.getenv("CRAWL4AI_URL") else "jina",
@@ -121,8 +142,15 @@ async def health():
 
 
 @app.get("/api/graph")
-async def graph(branch: Literal["graph", "mesh", "vietherbs"] = "graph", q: str = Query(default="", max_length=500), limit: int = Query(default=80, ge=1, le=150)):
-    result = await asyncio.to_thread(app.state.knowledge.store.graph, branch, q, limit)
+async def graph(branch: Literal["graph", "mesh", "vietherbs"] = "graph", q: str = Query(default="", max_length=500),
+                limit: int = Query(default=5000, ge=1, le=10000), after_node: int = Query(default=0, ge=0),
+                after_edge: int = Query(default=0, ge=0), snapshot: str | None = Query(default=None, max_length=200)):
+    try:
+        result = await asyncio.to_thread(app.state.knowledge.store.graph, branch, q, limit, after_node, after_edge, snapshot)
+    except ValueError as exc:
+        if str(exc) == "graph_snapshot_changed":
+            raise HTTPException(409, "Kho tri thức đã cập nhật. Đang tải lại graph.") from exc
+        raise
     if result["status"] == "indexing" and app.state.index_status == "failed":
         result["status"] = "failed"
     return result
@@ -183,16 +211,19 @@ async def retry_document(job_id: str):
 @app.post("/api/chat")
 async def chat(request: ChatRequest):
     api_key = os.getenv("FPT_API_KEY")
-    if not api_key:
-        raise HTTPException(503, "Set FPT_API_KEY in backend/.env first.")
+    if not api_key and not (app.state.local_model.ready and not app.state.local_model.failed):
+        raise HTTPException(503, "API Model and LFM3 are both unavailable.")
     if request.messages[-1].role != "user":
         raise HTTPException(422, "The last message must be from the user.")
 
     async def stream():
         vietnamese = language_hint(request.messages[-1].content) == "vi"
+        runner = None
         try:
-            result = await Harness(app.state.knowledge, app.state.client, BASE_URL, api_key, MODEL,
-                                   app.state.internet, app.state.reranker, skills=app.state.skills).run(request)
+            runner = Harness(app.state.knowledge, app.state.client, BASE_URL, api_key, MODEL,
+                             app.state.internet, app.state.reranker, skills=app.state.skills,
+                             router=app.state.model_router)
+            result = await runner.run(request)
             yield event("result", **result)
             answer = result["answer"]
             # Validate grounding before exposing any answer text to the browser.
@@ -218,16 +249,27 @@ async def chat(request: ChatRequest):
             yield event("error", message="Phản hồi mất quá nhiều thời gian. Vui lòng thử lại." if vietnamese else "The response took too long. Please try again.")
         except httpx.RequestError:
             yield event("error", message="Không thể kết nối tới FPT. Hãy kiểm tra kết nối và thử lại." if vietnamese else "Could not reach FPT. Check your connection and try again.")
+        except ModelResponseError:
+            logging.exception("Invalid model completion (route=%s, model=%s, stage=%s)", request.route, MODEL,
+                              getattr(runner, "trace", {}).get("stage", "initialization"))
+            yield event("error", code="invalid_model_response", message=(
+                "Mô hình trả về dữ liệu không hợp lệ hoặc chưa hoàn tất. Vui lòng thử lại."
+                if vietnamese else "The model returned an invalid or incomplete response. Please try again."))
         except OSError:
+            logging.exception("Knowledge chat I/O failed (route=%s, stage=%s)", request.route,
+                              getattr(runner, "trace", {}).get("stage", "initialization"))
             yield event("error", message="Không thể đọc đồ thị tri thức. Vui lòng kiểm tra cấu hình." if vietnamese else "Could not read the knowledge graph. Please check its configuration.")
         except (ValueError, TypeError, KeyError, AttributeError):
+            logging.exception("Chat pipeline failed (route=%s, model=%s, stage=%s)", request.route, MODEL,
+                              getattr(runner, "trace", {}).get("stage", "initialization"))
             yield event("error", message="Không thể xử lý dữ liệu phản hồi hoặc đồ thị tri thức. Vui lòng thử lại." if vietnamese else "Could not process the response or knowledge graph data. Please try again.")
 
     return StreamingResponse(stream(), media_type="text/event-stream", headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
-# Mount only the frontend; backend settings never become public files.
-app.mount("/", StaticFiles(directory=HERE.parent / "frontend", html=True), name="frontend")
+# Serve only the exported Next.js build, never application source or settings.
+# check_dir=False permits API-only startup before the first frontend build.
+app.mount("/", StaticFiles(directory=HERE.parent / "frontend" / "out", html=True, check_dir=False), name="frontend")
 
 if __name__ == "__main__":
     uvicorn.run(app, host=os.getenv("HOST", "127.0.0.1"), port=int(os.getenv("PORT", "8000")))

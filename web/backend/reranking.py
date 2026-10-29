@@ -4,6 +4,8 @@ import json
 import math
 import os
 
+from model_runtime import model_dependencies, serialized_model_load
+
 
 MODEL_ID = "Qwen/Qwen3-Reranker-0.6B"
 # The checkpoint measured by docs/benchmark, rather than a moving model revision.
@@ -24,9 +26,9 @@ class QwenReranker:
         self.failed = False
         self.ready = False
 
+    @serialized_model_load
     def _load(self):
-        import torch
-        from transformers import AutoModelForCausalLM, AutoTokenizer
+        torch, AutoModelForCausalLM, AutoTokenizer = model_dependencies("AutoModelForCausalLM", "AutoTokenizer")
 
         device = os.getenv("QWEN_RERANKER_DEVICE", "auto")
         if device == "auto":

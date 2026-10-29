@@ -69,31 +69,45 @@ def mask_evidence(facts, branches=None, documents=None):
     return kept
 
 
-def pack_evidence(ranked, steps, max_chars=24000, max_items=32):
+def model_evidence(fact):
+    """Only answer-bearing content and source qualifiers cross the API boundary."""
+    fields = ("id", "kind", "branch", "evidence_role", "subject", "predicate", "object",
+              "document", "page", "url", "uri", "title", "context", "polarity",
+              "source_verified", "inferred", "conflict_group", "mapping_status",
+              "evidence_type", "subject_type", "object_type", "semantic_support", "review_status")
+    result = {key: fact[key] for key in fields if fact.get(key) is not None}
+    result["text"] = fact.get("text") or fact.get("source", "")
+    return result
+
+
+def pack_evidence(ranked, steps, max_chars=24000, max_items=32, compact=False, per_step=2):
     """Reserve coverage per need and retain conflict companions before filling budget."""
     ranked = mask_evidence(ranked)
     chosen, seen, size = [], set(), 0
 
+    def cost(fact):
+        return len(json.dumps(model_evidence(fact) if compact else fact, ensure_ascii=False))
+
     def add(fact):
         nonlocal size
         key = fact.get("record_id") or identity("evidence", fact)
-        cost = len(json.dumps(fact, ensure_ascii=False))
-        if key in seen or len(chosen) >= max_items or size + cost > max_chars:
+        chars = cost(fact)
+        if key in seen or len(chosen) >= max_items or size + chars > max_chars:
             return False
-        chosen.append(fact); seen.add(key); size += cost
+        chosen.append(fact); seen.add(key); size += chars
         return True
 
     for step in steps:
         terms = set(search_terms(step))
         candidates = sorted(ranked, key=lambda f: len(terms & set(search_terms(
             f.get("text", "") + " " + f.get("source", "") + " " + f.get("subject", "") + " " + f.get("object", "")))), reverse=True)
-        for fact in candidates[:2]:
+        for fact in candidates[:per_step]:
             add(fact)
     for fact in ranked:
         group = fact.get("conflict_group")
         bundle = [f for f in ranked if group and f.get("conflict_group") == group] or [fact]
         pending = [f for f in bundle if (f.get("record_id") or identity("evidence", f)) not in seen]
-        if size + sum(len(json.dumps(f, ensure_ascii=False)) for f in pending) <= max_chars and len(chosen) + len(pending) <= max_items:
+        if size + sum(cost(f) for f in pending) <= max_chars and len(chosen) + len(pending) <= max_items:
             for companion in pending:
                 add(companion)
     # If a conflict companion cannot fit, remove the whole group rather than hide it.

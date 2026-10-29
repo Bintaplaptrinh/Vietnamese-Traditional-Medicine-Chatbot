@@ -1,3 +1,4 @@
-# Local Qwen reranking; JEV uses httpx and TYPESAFE_API_KEY.
-transformers>=4.56,<6
+# Pinned custom LFM3 code and Qwen share this tested Transformers runtime.
+transformers==5.17.0
 torch>=2.2,<3
+lm-format-enforcer>=0.11,<0.12

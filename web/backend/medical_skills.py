@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import re
 import unicodedata
+from visualisation import VISUAL_INSTRUCTIONS
 
 
 SKILLS_ROOT = Path(__file__).resolve().parent / "skills"
@@ -17,7 +18,18 @@ STRENGTH = "claim-strength-calibrator"
 REFERENCES = "reference-integrity-checker"
 ENGLISH = "medical-english-precision-editor"
 PLAIN = "lay-summary-for-cross-disciplinary-teams"
-REQUIRED = frozenset({SEARCH, CLAIMS, STUDY, CONFLICTS, STRENGTH, REFERENCES, ENGLISH, PLAIN})
+VISUALISE = "visualise"
+REQUIRED = frozenset({SEARCH, CLAIMS, STUDY, CONFLICTS, STRENGTH, REFERENCES, ENGLISH, PLAIN, VISUALISE})
+
+VISUAL_INTENT = re.compile(
+    r"sơ đồ|so do|biểu đồ|bieu do|đồ thị|do thi|vẽ|trực quan|truc quan|minh họa|minh hoạ|minh hoa|"
+    r"so sánh|so sanh|quy trình|quy trinh|các bước|cac buoc|chu trình|chu trinh|"
+    r"(?:các|những)\s+(?:biện pháp|cách|lưu ý|mẹo)|(?:cac|nhung)\s+(?:bien phap|cach|luu y|meo)|"
+    r"\b(?:checklist|list (?:of )?(?:measures|tips|options)|prevention measures)\b|"
+    r"\b(visuali[sz]\w*|chart|diagram|flowchart|draw|illustrate|plot|compare|comparison|steps?|procedure|step.by.step)\b", re.I)
+TEXT_ONLY = re.compile(
+    r"chỉ (?:dùng )?văn bản|chi (?:dung )?van ban|không (?:vẽ|dùng (?:biểu đồ|sơ đồ)|trực quan)|"
+    r"\b(?:text only|plain text|no (?:charts?|diagrams?|visuals?)|do not visuali[sz]e)\b", re.I)
 
 STUDY_INTENT = re.compile(
     r"nghiên cứu|nghien cuu|thử nghiệm|thu nghiem|hiệu quả|hieu qua|"
@@ -61,8 +73,10 @@ class MedicalSkills:
                 raise ValueError("Unexpected or duplicate skill IDs")
             self.version = manifest["version"]
             self.upstream = manifest["upstream"]
+            self.visualisation_upstream = manifest["visualisation_upstream"]
             if not isinstance(self.version, str) or not self.version or not re.fullmatch(
-                    r"[0-9a-f]{40}", self.upstream["revision"]):
+                    r"[0-9a-f]{40}", self.upstream["revision"]) or not re.fullmatch(
+                    r"[0-9a-f]{40}", self.visualisation_upstream["revision"]):
                 raise ValueError("Invalid skill version or upstream revision")
             self.bodies = {}
             digest = hashlib.sha256(manifest_bytes)
@@ -81,13 +95,18 @@ class MedicalSkills:
             digest.update(HOST_ADAPTER.encode())
             digest.update(STUDY_INTENT.pattern.encode())
             digest.update(CONFLICT_INTENT.pattern.encode())
+            digest.update(VISUAL_INTENT.pattern.encode())
+            digest.update(TEXT_ONLY.pattern.encode())
+            digest.update(VISUAL_INSTRUCTIONS.encode())
             self.fingerprint = digest.hexdigest()
         except (OSError, ValueError, KeyError, TypeError) as exc:
             raise SkillConfigurationError("Packaged medical skill profiles are missing or invalid") from exc
 
     def info(self):
         return {"enabled": True, "version": self.version, "fingerprint": self.fingerprint,
-                "upstream_revision": self.upstream["revision"], "available": sorted(self.bodies)}
+                "upstream_revision": self.upstream["revision"],
+                "visualisation_upstream_revision": self.visualisation_upstream["revision"],
+                "available": sorted(self.bodies)}
 
     def bundle(self, identifiers):
         ids = tuple(dict.fromkeys(identifiers))
@@ -99,7 +118,7 @@ class MedicalSkills:
     def planner(self):
         return self.bundle([SEARCH])
 
-    def draft(self, question, language, facts):
+    def draft(self, question, language, facts, requested_question=None):
         ids = [CLAIMS, STRENGTH, REFERENCES]
         normalized = unicodedata.normalize("NFC", question)
         if STUDY_INTENT.search(normalized) or any(
@@ -110,11 +129,15 @@ class MedicalSkills:
         if CONFLICT_INTENT.search(normalized) or any(fact.get("conflict_group") for fact in facts):
             ids.append(CONFLICTS)
         ids.append(ENGLISH if language == "en" else PLAIN)
+        visual_question = unicodedata.normalize("NFC", requested_question or question)
+        if VISUAL_INTENT.search(visual_question) and not TEXT_ONLY.search(visual_question):
+            ids.append(VISUALISE)
         return self.bundle(ids)
 
     @staticmethod
     def compose(host_prompt, bundle):
-        return host_prompt + "\n\n" + bundle.instructions + "\n\nReturn only the host JSON contract above."
+        visual = "\n\n" + VISUAL_INSTRUCTIONS if VISUALISE in bundle.ids else ""
+        return host_prompt + "\n\n" + bundle.instructions + visual + "\n\nReturn only the host JSON contract above."
 
 
 @lru_cache(maxsize=1)

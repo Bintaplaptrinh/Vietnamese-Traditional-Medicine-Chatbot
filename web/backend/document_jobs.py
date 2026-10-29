@@ -23,9 +23,10 @@ def save(path, payload):
 
 
 class DocumentJobs:
-    def __init__(self, client, decisions, base_url, api_key, model):
+    def __init__(self, client, decisions, base_url, api_key, model, router=None):
         self.client, self.decisions = client, decisions
         self.base_url, self.api_key, self.model = base_url, api_key, model
+        self.router = router
         self.semaphore = asyncio.Semaphore(1)
         self.tasks = set()
         self.folder = DATA / "uploads"
@@ -76,7 +77,7 @@ class DocumentJobs:
                 update(status="parsing")
                 document, units = await asyncio.to_thread(parse_pdf, data, receipt["name"])
                 update(document=document, total_units=len(units), status="extracting")
-                if self.api_key and os.getenv("TYPESAFE_API_KEY") and units:
+                if (self.api_key or self.router is not None) and os.getenv("TYPESAFE_API_KEY") and units:
                     calls = max(2, min(400, int(os.getenv("INGESTION_MAX_CALLS", "160"))))
                     budget = Budget({"calls": calls, "input_chars": 2000000, "output_tokens": 600000})
                     prior = receipt.get("claims", [])
@@ -85,7 +86,8 @@ class DocumentJobs:
                         update(claims=prior + claims, processed_units=processed + count, errors=errors)
                     async with asyncio.timeout(int(os.getenv("INGESTION_TIMEOUT_SECONDS", "1800"))):
                         result = await extract_document(document, units[processed:], self.client, self.base_url,
-                                                        self.api_key, self.model, self.decisions, budget, checkpoint)
+                                                        self.api_key, self.model, self.decisions, budget, checkpoint,
+                                                        router=self.router)
                     result["claims"] = prior + result["claims"]
                     result["processed_units"] += processed
                     result["total_units"] = len(units)

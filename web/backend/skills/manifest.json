@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "upstream": {
     "repository": "https://github.com/aipoch/medical-research-skills",
     "revision": "686e09dfdb45d9fa1a08664f06bb93769b3c9d91",
@@ -284,6 +284,34 @@
           "sha256": "b1f8bf92eec1f9bb5db2d89383795a56f4962d404ffddd8b74cdb5c20c6d404c"
         }
       ]
+    },
+    {
+      "id": "visualise",
+      "repository": "https://github.com/althetinkerer/opengenerativeui",
+      "revision": "38e8c5e41f8f6c010bb71175a8c54081d9b7f385",
+      "source_url": "https://github.com/althetinkerer/opengenerativeui/blob/38e8c5e41f8f6c010bb71175a8c54081d9b7f385/apps/agent/skills/master-playbook/SKILL.md",
+      "upstream_sha256": "74eb616bca3d35880f99141dc46f70c43dbb5c44bf4d0e5d1e1cf82aa4c6a868",
+      "source_files": [
+        {
+          "path": "visualise/references/opengenerativeui/master-playbook.md",
+          "sha256": "74eb616bca3d35880f99141dc46f70c43dbb5c44bf4d0e5d1e1cf82aa4c6a868"
+        },
+        {
+          "path": "visualise/references/opengenerativeui/svg-diagrams.md",
+          "sha256": "581d9944c69dce8477a455be4fddc11b99aca2ca6b5e0c6285821f27f371824c"
+        },
+        {
+          "path": "visualise/references/opengenerativeui/advanced-visualization.md",
+          "sha256": "762d6e9fca95bb9d42376692c7dc31f22d3d6c8580dfd6710bad7f72de97975c"
+        }
+      ]
     }
-  ]
+  ],
+  "visualisation_upstream": {
+    "repository": "https://github.com/althetinkerer/opengenerativeui",
+    "revision": "38e8c5e41f8f6c010bb71175a8c54081d9b7f385",
+    "license": "MIT",
+    "license_file": "visualise/references/opengenerativeui/LICENSE",
+    "license_sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b"
+  }
 }

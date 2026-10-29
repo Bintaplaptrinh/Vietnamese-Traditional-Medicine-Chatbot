@@ -131,6 +131,7 @@ def test_upload_api_validates_pdf_and_is_idempotent(tmp_path, monkeypatch):
     async def run():
         with patch('main.build_store', return_value={}), \
                 patch('main.QwenReranker.warmup', AsyncMock()), \
+                patch('main.LFM3.warmup', AsyncMock()), \
                 patch('knowledge_store.KnowledgeStore.warmup', Mock()):
             async with main.lifespan(main.app):
                 main.app.state.jobs.folder = tmp_path

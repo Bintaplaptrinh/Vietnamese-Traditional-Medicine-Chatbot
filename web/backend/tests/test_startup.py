@@ -13,6 +13,7 @@ from reranking import QwenReranker, RerankerUnavailable
 
 @pytest.fixture(autouse=True)
 def inline_workers(monkeypatch):
+    monkeypatch.setattr('main.LFM3', lambda: SimpleNamespace(warmup=AsyncMock(), ready=True, failed=False))
     async def inline(function, *args):
         return function(*args)
     monkeypatch.setattr(asyncio, 'to_thread', inline)

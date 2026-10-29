@@ -176,6 +176,18 @@ class Internet:
         return content
 
     @staticmethod
+    def article_text(text):
+        """Keep the article body, excluding reader headers and related-link menus."""
+        start = re.search(r"^Markdown Content:\s*\n", text, re.M)
+        body = text[start.end():] if start else text
+        footer = re.search(
+            r"^(?:#{1,6}\s*)?(?:Xem thêm|Bài viết cùng chủ đề|Bài viết liên quan|Các bài viết liên quan|"
+            r"Tin liên quan|Cùng chuyên mục|Related (?:articles|posts))\s*:?\s*$", body, re.M | re.I)
+        if footer and footer.start() > 300:
+            body = body[:footer.start()]
+        return body.strip()
+
+    @staticmethod
     def excerpts(question, text):
         """Choose bounded excerpts across the page, rather than its navigation prefix.
 
@@ -221,7 +233,7 @@ class Internet:
             batch = documents[offset:offset + 3]
             chunks = []
             for doc in batch:
-                for text in self.excerpts(question, doc['text']):
+                for text in self.excerpts(question, self.article_text(doc['text'])):
                     chunks.append({'doc': doc, 'text': text})
             if not chunks:
                 continue
@@ -254,6 +266,10 @@ class Internet:
                 # candidates; ranking must not delete the only definition.
                 # This never bypasses the final per-step evidence validation.
                 uncertain = not relevant
-                kept.append({**doc, 'text': '\n\n'.join(c['text'] for _,c in selected),
+                # Relevance windows score the page, but short list items often
+                # lack query keywords. Keep coherent source text for answering.
+                from retrieval import excerpt
+                article, _ = excerpt(self.article_text(doc['text']), question, 12000)
+                kept.append({**doc, 'text': article or '\n\n'.join(c['text'] for _,c in selected),
                              'decision_score': max(scores), 'decision_uncertain': uncertain})
         return sorted(kept, key=lambda d: (not d['decision_uncertain'], d['decision_score']), reverse=True)
