@@ -1,4 +1,5 @@
 import asyncio
+import json
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, Mock, patch
 
@@ -37,7 +38,7 @@ def harness(internet=None, facts=FACTS, reranker=None):
     internet.decisions = getattr(internet, 'decisions', SimpleNamespace())
     internet.decisions.predict = AsyncMock(side_effect=verify)
     return Harness(graph,None,'','','',internet,
-                   reranker or SimpleNamespace(rerank=AsyncMock(side_effect=rank)))
+                   reranker or SimpleNamespace(rerank=AsyncMock(side_effect=rank)), planner='llm')
 
 
 def test_grounding_rejects_missing_hop_and_forged_ids():
@@ -128,6 +129,7 @@ def test_fastapi_sse_metadata_and_validation():
     async def run():
         with patch('main.build_store', return_value={}), \
                 patch('main.QwenReranker.warmup', AsyncMock()), \
+                patch('main.LFM3.warmup', AsyncMock()), \
                 patch('knowledge_store.KnowledgeStore.warmup', Mock()):
             await check()
     async def check():
@@ -137,7 +139,7 @@ def test_fastapi_sse_metadata_and_validation():
                 assert 'decision_model' in health and 'TYPESAFE_API_KEY' not in str(health)
                 assert health['reranker_model'] == 'Qwen/Qwen3-Reranker-0.6B'
                 assert health['skill_profile']['enabled'] is True
-                assert len(health['skill_profile']['available']) == 8
+                assert len(health['skill_profile']['available']) == 9
                 assert len(health['skill_profile']['fingerprint']) == 64
                 assert (await client.post('/api/chat',json={'messages':[{'role':'user','content':'A'}],'effort':'unlimited'})).status_code==422
                 assert (await client.post('/api/chat',json={'messages':[{'role':'user','content':'A'}],'route':'unknown'})).status_code==422
@@ -173,6 +175,46 @@ def test_low_effort_filters_three_sources_in_one_decision_batch():
         result = await internet.filter('topic', docs, budget)
         assert len(result) == 3 and internet.decisions.predict_batch.await_count == 1
         assert budget.calls == 2
+    asyncio.run(run())
+
+
+def test_web_filter_keeps_short_actions_outside_keyword_scoring_windows():
+    async def run():
+        question = 'Các biện pháp an toàn trong phòng thực hành'
+        intro = 'Các biện pháp an toàn trong phòng thực hành được giới thiệu trong bài viết này. '
+        actions = ['1. Đeo kính bảo hộ.', '2. Buộc tóc gọn.', '3. Đóng nắp chai.']
+        body = '\n\n'.join([intro * 2, *actions, intro * 2, intro * 2])
+        text = 'Title: Fixture\nURL Source: https://example.com\nMarkdown Content:\n' + body
+        text += '\n\nXem thêm:\n\n[Thông tin khác](https://example.com/other)'
+        # These short actions contain no topic keywords and are not scoring windows.
+        assert not any(action in chunk for action in actions for chunk in Internet.excerpts(question, body))
+        internet = Internet(None)
+        async def predict(states, questions, budget):
+            budget.take()
+            return [{'relevance': {'choice': 'context', 'probabilities': {
+                'direct': .2, 'context': .7, 'irrelevant': .1}}} for _ in states]
+        internet.decisions.predict_batch = AsyncMock(side_effect=predict)
+        result = await internet.filter(question, [{'url': 'https://example.com', 'text': text}], Budget(PROFILES['low']))
+        assert all(action in result[0]['text'] for action in actions)
+        assert result[0]['text'] in text and 'Xem thêm' not in result[0]['text']
+        assert 'URL Source' not in result[0]['text']
+    asyncio.run(run())
+
+
+@pytest.mark.parametrize('route', ['web', 'hybrid'])
+def test_standalone_web_question_uses_lexical_plan_and_keeps_verification(route):
+    async def run():
+        docs = [{'url': 'https://example.com', 'title': 'A', 'text': 'A liên quan B.'}]
+        internet = SimpleNamespace(search=AsyncMock(return_value=docs), filter=AsyncMock(return_value=docs))
+        runner = harness(internet, facts=[])
+        runner.planner = 'lexical'
+        with patch('harness.complete', AsyncMock(return_value=GOOD)) as generate:
+            result = await runner.run(request(route))
+        assert runner.trace['planner_mode'] == 'lexical'
+        assert generate.await_count == 1
+        assert result['verification_status'] == 'verified'
+        assert result['citations'][0]['kind'] == 'web'
+        assert all(row['step:0'] == 'supported' for row in runner.trace['gates'])
     asyncio.run(run())
 
 
@@ -264,7 +306,9 @@ def test_small_graph_pool_skips_reranking_and_never_searches():
         app.reranker.rerank.assert_not_awaited()
         internet.search.assert_not_awaited()
         internet.filter.assert_not_awaited()
-        assert llm.call_args.args[5]['evidence'][0]['kind'] == 'graph'
+        evidence = json.loads(llm.call_args.args[4].split('UNTRUSTED RETRIEVED KNOWLEDGE JSON:\n', 1)[1])
+        assert evidence[0]['kind'] == 'graph'
+        assert 'evidence' not in llm.call_args.args[5]
         assert response['route'] == 'graph'
     asyncio.run(run())
 
@@ -336,7 +380,7 @@ def test_hybrid_second_round_reranks_full_pool_with_unique_ids():
         with patch('harness.complete', AsyncMock(side_effect=[PLAN, {'supported': False, 'next_queries': ['missing B']}, GOOD])) as llm:
             result = await app.run(request('hybrid', 'medium'))
         assert result['rounds'] == 2 and app.reranker.rerank.await_count == 0
-        evidence = llm.call_args.args[5]['evidence']
+        evidence = json.loads(llm.call_args.args[4].split('UNTRUSTED RETRIEVED KNOWLEDGE JSON:\n', 1)[1])
         assert [fact['id'] for fact in evidence] == [1, 2, 3]
         assert {fact.get('url') for fact in evidence if fact['kind'] == 'web'} == {'https://example.com/a', 'https://example.com/b'}
     asyncio.run(run())
@@ -373,7 +417,7 @@ def test_overview_verification_receives_user_scope_not_only_planner_expansions()
         state, questions, _ = app.internet.decisions.predict.call_args.args
         assert state['user_question'] == req.messages[0].content
         assert state['needs'] == {'0': req.messages[0].content}
-        assert state['claims']['0']['evidence'][0]['document'] == '121.pdf'
+        assert state['evidence'][str(state['claims']['0']['evidence_ids'][0])]['document'] == '121.pdf'
         assert 'user_question' in questions['step:0']['instructions']
         assert 'unless user_question explicitly requests them' in questions['step:0']['instructions']
         assert result['verification_status'] == 'verified'

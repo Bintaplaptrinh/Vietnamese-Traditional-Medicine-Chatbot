@@ -9,7 +9,15 @@ __pycache__/
 *.log
 backend/.model-cache/
 .pytest_cache/
+node_modules/
 
 # Local research and mascot tooling.
 docs/
 mascot_creator/
+/references
+
+# Next.js build output and generated public runtime assets.
+frontend/.next/
+frontend/out/
+frontend/public/
+frontend/tsconfig.tsbuildinfo

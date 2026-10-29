@@ -509,26 +509,56 @@ class KnowledgeStore:
         result = self.client.query_points("evidence", query=models.SparseVector(indices=vector.indices.tolist(), values=vector.values.tolist()), using="bm25", limit=32)
         return [p.payload["record_id"] for p in result.points if p.score > 0]
 
-    def graph(self, branch="graph", query="", limit=80):
+    def graph(self, branch="graph", query="", limit=None, after_node=0, after_edge=0, snapshot=None):
+        """Return the complete scope, optionally in keyset pages from one snapshot.
+
+        Node and edge cursors advance independently so isolated concepts are also
+        included. Search returns every matching concept and its one-hop neighbors.
+        """
         with self.lock:
             self.refresh()
             if not self.manifest:
                 return {"nodes": [], "edges": [], "status": "indexing"}
+            if snapshot and snapshot != self.manifest["snapshot"]:
+                raise ValueError("graph_snapshot_changed")
+            if limit is not None and limit < 1:
+                raise ValueError("graph_page_size")
             db = self.db()
             try:
-                if query and self.match(query):
-                    seed = [r[0] for r in db.execute("SELECT DISTINCT concept_id FROM label_search WHERE label_search MATCH ? AND branch=? LIMIT 12", (self.match(query), branch))]
-                    rows = []
-                    for cid in seed:
-                        rows.extend(db.execute("SELECT * FROM edges WHERE subject_id=? OR object_id=? LIMIT ?", (cid, cid, limit)))
-                    rows = list({r["id"]: r for r in rows}.values())[:limit]
+                params = {"branch": branch, "match": self.match(query)}
+                if query.strip():
+                    scope = """WITH seed AS (
+                        SELECT DISTINCT concept_id FROM label_search
+                        WHERE label_search MATCH :match AND branch=:branch
+                    ), scoped_edges AS (
+                        SELECT rowid AS cursor, * FROM edges WHERE branch=:branch AND
+                        (subject_id IN (SELECT concept_id FROM seed) OR object_id IN (SELECT concept_id FROM seed))
+                    ), scoped_nodes AS (
+                        SELECT rowid AS cursor, * FROM concepts WHERE branch=:branch AND
+                        (id IN (SELECT concept_id FROM seed) OR id IN (SELECT subject_id FROM scoped_edges)
+                         OR id IN (SELECT object_id FROM scoped_edges))
+                    ) """ if params["match"] else """WITH scoped_edges AS (
+                        SELECT rowid AS cursor, * FROM edges WHERE 0
+                    ), scoped_nodes AS (SELECT rowid AS cursor, * FROM concepts WHERE 0) """
                 else:
-                    seed = []
-                    rows = db.execute("SELECT * FROM edges WHERE branch=? LIMIT ?", (branch, limit)).fetchall()
-                node_ids = set(seed) | {r[k] for r in rows for k in ("subject_id", "object_id")}
-                nodes = [dict(r) for cid in node_ids for r in db.execute("SELECT * FROM concepts WHERE id=?", (cid,))]
-                edges = [{"id": r["id"], "from": r["subject_id"], "to": r["object_id"], "label": r["predicate"].rsplit('#',1)[-1], **json.loads(r["payload"])} for r in rows]
-                return {"nodes": nodes, "edges": edges, "status": "ready", "snapshot": self.manifest["snapshot"], "limited": len(rows) >= limit}
+                    scope = """WITH scoped_edges AS (
+                        SELECT rowid AS cursor, * FROM edges WHERE branch=:branch
+                    ), scoped_nodes AS (SELECT rowid AS cursor, * FROM concepts WHERE branch=:branch) """
+                params.update(after_node=after_node, after_edge=after_edge, take=limit + 1 if limit else -1)
+                node_rows = db.execute(scope + "SELECT * FROM scoped_nodes WHERE cursor>:after_node ORDER BY cursor LIMIT :take", params).fetchall()
+                edge_rows = db.execute(scope + "SELECT * FROM scoped_edges WHERE cursor>:after_edge ORDER BY cursor LIMIT :take", params).fetchall()
+                more = limit is not None and (len(node_rows) > limit or len(edge_rows) > limit)
+                if limit:
+                    node_rows, edge_rows = node_rows[:limit], edge_rows[:limit]
+                nodes = [{k: r[k] for k in r.keys() if k != "cursor"} for r in node_rows]
+                edges = [{**json.loads(r["payload"]), "id": r["id"], "from": r["subject_id"], "to": r["object_id"], "label": r["predicate"].rsplit('#', 1)[-1]} for r in edge_rows]
+                result = {"nodes": nodes, "edges": edges, "status": "ready", "snapshot": self.manifest["snapshot"], "limited": more,
+                          "next": {"after_node": node_rows[-1]["cursor"] if node_rows else after_node,
+                                   "after_edge": edge_rows[-1]["cursor"] if edge_rows else after_edge} if more else None}
+                if not after_node and not after_edge:
+                    result["total_nodes"] = db.execute(scope + "SELECT count(*) FROM scoped_nodes", params).fetchone()[0]
+                    result["total_edges"] = db.execute(scope + "SELECT count(*) FROM scoped_edges", params).fetchone()[0]
+                return result
             finally:
                 db.close()
 

@@ -131,19 +131,23 @@ def validate_candidate(candidate, unit):
     return None
 
 
-async def extract_document(document, units, client, base_url, api_key, model, decisions, budget, checkpoint=None):
+async def extract_document(document, units, client, base_url, api_key, model, decisions, budget, checkpoint=None, router=None):
     from graph_chat import complete
     claims = []
     errors = []
     processed = 0
     for unit in units:
         # Preserve budget for admission; no implicit retries or unbounded ingestion calls.
-        if budget.calls + 2 > budget.limits["calls"]:
+        if budget.calls + (3 if router is not None else 2) > budget.limits["calls"]:
             break
-        budget.take(len(unit["text"]), 2500)
         try:
-            result = await complete(client, base_url, api_key, model, EXTRACTION,
-                                    {"unit": unit, "ontology_version": VERSION}, max_tokens=2500, usage_callback=budget.record_usage)
+            payload = {"unit": unit, "ontology_version": VERSION}
+            if router is not None:
+                result = await router.complete(EXTRACTION, payload, 2500, budget, task="claim_extraction")
+            else:
+                budget.take(len(unit["text"]), 2500)
+                result = await complete(client, base_url, api_key, model, EXTRACTION,
+                                        payload, max_tokens=2500, usage_callback=budget.record_usage)
             candidates = result.get("claims")
             if not isinstance(candidates, list) or len(candidates) > 12:
                 raise ValueError("Invalid claims output")
